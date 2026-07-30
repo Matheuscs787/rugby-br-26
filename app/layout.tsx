@@ -41,7 +41,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       images: [
         {
-          url: `${baseUrl}/og.png?v=3-sevens`,
+          url: `${baseUrl}/og.png?v=4-sevens`,
           width: 1200,
           height: 800,
           alt: "Rugby BR 26 — campo tático com duas equipes de rugby",
@@ -52,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Rugby BR 26 — rápido, físico, brasileiro",
       description,
-      images: [`${baseUrl}/og.png?v=3-sevens`],
+      images: [`${baseUrl}/og.png?v=4-sevens`],
     },
   };
 }

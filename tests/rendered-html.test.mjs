@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -49,7 +49,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v3-sevens-fix/);
+  assert.match(serviceWorker, /rugby-br-26-v4-sevens-tactics/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const MATCH_SECONDS = 120/);
   assert.match(gameSource, /const PLAYERS_PER_SIDE = 7/);
@@ -57,7 +57,13 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /Sound is optional and must never prevent a match from starting/);
   assert.match(gameSource, /const beginDropAim/);
   assert.match(gameSource, /const finishDropAim/);
-  assert.match(gameSource, /const performSwerve/);
+  assert.match(gameSource, /const performBlock/);
+  assert.match(gameSource, /const kickBall/);
+  assert.match(gameSource, /flightDuration/);
+  assert.match(gameSource, /const substitutePlayer/);
+  assert.match(gameSource, /SWEEPER_SLOT/);
+  assert.match(gameSource, /arrangeRestart/);
+  assert.match(gameSource, /logo: "\/clubs\/farrapos\.png"/);
   assert.match(gameSource, /const endPausedMatch/);
   assert.match(gameSource, /targetSlot\?: number/);
   assert.match(gameSource, /Tornados Indaiatuba/);
@@ -66,5 +72,7 @@ test("ships lightweight PWA and game assets", async () => {
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));
   await access(new URL("../public/og.png", import.meta.url));
+  const clubLogos = await readdir(new URL("../public/clubs", import.meta.url));
+  assert.equal(clubLogos.length, 24);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));
 });

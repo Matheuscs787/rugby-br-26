@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type Division = 1 | 2;
+type UniformPattern = "solid" | "hoops" | "sash" | "quarters";
 type Team = {
   id: string;
   name: string;
@@ -12,6 +13,8 @@ type Team = {
   primary: string;
   secondary: string;
   short: string;
+  logo: string;
+  pattern: UniformPattern;
 };
 
 type Player = {
@@ -22,6 +25,11 @@ type Player = {
   y: number;
   stun: number;
   tackleLock: number;
+  stamina: number;
+  jersey: number;
+  routeX: number;
+  routeY: number;
+  routeTime: number;
 };
 
 type Ball = {
@@ -32,6 +40,8 @@ type Ball = {
   owner: Player | null;
   target: Player | null;
   air: number;
+  flightDuration: number;
+  kind: "held" | "pass" | "kick" | "restart" | "loose";
 };
 
 type Match = {
@@ -46,6 +56,9 @@ type Match = {
   actionLock: number;
   cpuActionLock: number;
   kickoff: number;
+  restartSide: 0 | 1 | null;
+  blockWindow: number;
+  substitutesLeft: [number, number];
   message: string;
   messageUntil: number;
 };
@@ -56,6 +69,9 @@ type Hud = {
   paused: boolean;
   over: boolean;
   message: string;
+  stamina: number[];
+  jerseys: number[];
+  substitutesLeft: number;
 };
 
 type AimPoint = {
@@ -72,32 +88,34 @@ const PLAYER_RADIUS = 17;
 const MATCH_SECONDS = 120;
 const PLAYERS_PER_SIDE = 7;
 const MID_SLOT = Math.floor(PLAYERS_PER_SIDE / 2);
+const SWEEPER_SLOT = 6;
+const REPLACEMENTS_PER_SIDE = 5;
 
 const TEAMS: Team[] = [
-  { id: "farrapos", name: "Farrapos", state: "RS", division: 1, group: "Grupo A", primary: "#7d1731", secondary: "#f2c84b", short: "FAR" },
-  { id: "charrua", name: "Charrua", state: "RS", division: 1, group: "Grupo A", primary: "#151515", secondary: "#e6a62d", short: "CHA" },
-  { id: "joaca", name: "Joaca", state: "SC", division: 1, group: "Grupo A", primary: "#184b9b", secondary: "#ed553b", short: "JOA" },
-  { id: "desterro", name: "Desterro", state: "SC", division: 1, group: "Grupo A", primary: "#146b45", secondary: "#f1f0da", short: "DES" },
-  { id: "poli", name: "Poli", state: "SP", division: 1, group: "Grupo B", primary: "#12284c", secondary: "#f3c74f", short: "POL" },
-  { id: "sao-jose", name: "São José", state: "SP", division: 1, group: "Grupo B", primary: "#111111", secondary: "#f0c12b", short: "SJC" },
-  { id: "tornados", name: "Tornados Indaiatuba", state: "SP", division: 1, group: "Grupo B", primary: "#1c59ad", secondary: "#d7eefb", short: "TOR" },
-  { id: "rio-branco", name: "Rio Branco", state: "SP", division: 1, group: "Grupo B", primary: "#efeee7", secondary: "#1e1e1e", short: "RBR" },
-  { id: "jacarei", name: "Jacareí", state: "SP", division: 1, group: "Grupo C", primary: "#e86c23", secondary: "#172d55", short: "JAC" },
-  { id: "spac", name: "SPAC", state: "SP", division: 1, group: "Grupo C", primary: "#bd2636", secondary: "#f3eee2", short: "SPA" },
-  { id: "pasteur", name: "Pasteur", state: "SP", division: 1, group: "Grupo C", primary: "#2563a9", secondary: "#f4f4ed", short: "PAS" },
-  { id: "nova-lima", name: "Nova Lima", state: "MG", division: 1, group: "Grupo C", primary: "#28225f", secondary: "#df385b", short: "NOL" },
-  { id: "brummers", name: "Brummers", state: "RS", division: 2, group: "Taça RS–SC", primary: "#b62c38", secondary: "#191919", short: "BRU" },
-  { id: "colonos", name: "Colonos", state: "RS", division: 2, group: "Taça RS–SC", primary: "#176847", secondary: "#ebe7cd", short: "COL" },
-  { id: "serra-gaucha", name: "Serra Gaúcha", state: "RS", division: 2, group: "Taça RS–SC", primary: "#6e1f3d", secondary: "#e9b749", short: "SEG" },
-  { id: "joinville", name: "Joinville", state: "SC", division: 2, group: "Taça RS–SC", primary: "#163e77", secondary: "#58a7d7", short: "JOI" },
-  { id: "pe-vermelho", name: "Pé Vermelho", state: "PR", division: 2, group: "Taça PR–SP", primary: "#9f2033", secondary: "#151515", short: "PVE" },
-  { id: "leoes", name: "Leões de Paraisópolis", state: "SP", division: 2, group: "Taça PR–SP", primary: "#146c48", secondary: "#f19b35", short: "LEO" },
-  { id: "urutu", name: "Urutu", state: "SP", division: 2, group: "Taça PR–SP", primary: "#b9292f", secondary: "#f4c33d", short: "URU" },
-  { id: "iguanas", name: "Iguanas SJC", state: "SP", division: 2, group: "Taça PR–SP", primary: "#2c7b3f", secondary: "#d8e85c", short: "IGU" },
-  { id: "niteroi", name: "Niterói", state: "RJ", division: 2, group: "Taça RJ–MG–ES", primary: "#be2737", secondary: "#1b1b1b", short: "NIT" },
-  { id: "rio", name: "Rio", state: "RJ", division: 2, group: "Taça RJ–MG–ES", primary: "#1d1d1d", secondary: "#e1a627", short: "RIO" },
-  { id: "carioca", name: "Carioca", state: "RJ", division: 2, group: "Taça RJ–MG–ES", primary: "#123c73", secondary: "#71b8d6", short: "CAR" },
-  { id: "vitoria", name: "Vitória", state: "ES", division: 2, group: "Taça RJ–MG–ES", primary: "#b32937", secondary: "#f1e8d5", short: "VIT" },
+  { id: "farrapos", name: "Farrapos", state: "RS", division: 1, group: "Grupo A", primary: "#7d1731", secondary: "#f2c84b", short: "FAR", logo: "/clubs/farrapos.png", pattern: "hoops" },
+  { id: "charrua", name: "Charrua", state: "RS", division: 1, group: "Grupo A", primary: "#151515", secondary: "#e6a62d", short: "CHA", logo: "/clubs/charrua.jpg", pattern: "hoops" },
+  { id: "joaca", name: "Joaca", state: "SC", division: 1, group: "Grupo A", primary: "#184b9b", secondary: "#ed553b", short: "JOA", logo: "/clubs/joaca.png", pattern: "quarters" },
+  { id: "desterro", name: "Desterro", state: "SC", division: 1, group: "Grupo A", primary: "#146b45", secondary: "#f1f0da", short: "DES", logo: "/clubs/desterro.jpeg", pattern: "hoops" },
+  { id: "poli", name: "Poli", state: "SP", division: 1, group: "Grupo B", primary: "#12284c", secondary: "#f3c74f", short: "POL", logo: "/clubs/poli.png", pattern: "hoops" },
+  { id: "sao-jose", name: "São José", state: "SP", division: 1, group: "Grupo B", primary: "#111111", secondary: "#f0c12b", short: "SJC", logo: "/clubs/sao-jose.png", pattern: "sash" },
+  { id: "tornados", name: "Tornados Indaiatuba", state: "SP", division: 1, group: "Grupo B", primary: "#1c59ad", secondary: "#d7eefb", short: "TOR", logo: "/clubs/tornados.png", pattern: "quarters" },
+  { id: "rio-branco", name: "Rio Branco", state: "SP", division: 1, group: "Grupo B", primary: "#efeee7", secondary: "#1e1e1e", short: "RBR", logo: "/clubs/rio-branco.png", pattern: "sash" },
+  { id: "jacarei", name: "Jacareí", state: "SP", division: 1, group: "Grupo C", primary: "#e86c23", secondary: "#172d55", short: "JAC", logo: "/clubs/jacarei.png", pattern: "hoops" },
+  { id: "spac", name: "SPAC", state: "SP", division: 1, group: "Grupo C", primary: "#bd2636", secondary: "#f3eee2", short: "SPA", logo: "/clubs/spac.png", pattern: "hoops" },
+  { id: "pasteur", name: "Pasteur", state: "SP", division: 1, group: "Grupo C", primary: "#2563a9", secondary: "#f4f4ed", short: "PAS", logo: "/clubs/pasteur.jpg", pattern: "hoops" },
+  { id: "nova-lima", name: "Nova Lima", state: "MG", division: 1, group: "Grupo C", primary: "#28225f", secondary: "#df385b", short: "NOL", logo: "/clubs/nova-lima.png", pattern: "quarters" },
+  { id: "brummers", name: "Brummers", state: "RS", division: 2, group: "Taça RS–SC", primary: "#b62c38", secondary: "#191919", short: "BRU", logo: "/clubs/brummers.jpeg", pattern: "hoops" },
+  { id: "colonos", name: "Colonos", state: "RS", division: 2, group: "Taça RS–SC", primary: "#176847", secondary: "#ebe7cd", short: "COL", logo: "/clubs/colonos.jpg", pattern: "sash" },
+  { id: "serra-gaucha", name: "Serra Gaúcha", state: "RS", division: 2, group: "Taça RS–SC", primary: "#6e1f3d", secondary: "#e9b749", short: "SEG", logo: "/clubs/serra-gaucha.png", pattern: "hoops" },
+  { id: "joinville", name: "Joinville", state: "SC", division: 2, group: "Taça RS–SC", primary: "#163e77", secondary: "#58a7d7", short: "JOI", logo: "/clubs/joinville.png", pattern: "quarters" },
+  { id: "pe-vermelho", name: "Pé Vermelho", state: "PR", division: 2, group: "Taça PR–SP", primary: "#9f2033", secondary: "#151515", short: "PVE", logo: "/clubs/pe-vermelho.png", pattern: "sash" },
+  { id: "leoes", name: "Leões de Paraisópolis", state: "SP", division: 2, group: "Taça PR–SP", primary: "#146c48", secondary: "#f19b35", short: "LEO", logo: "/clubs/leoes.jpg", pattern: "hoops" },
+  { id: "urutu", name: "Urutu", state: "SP", division: 2, group: "Taça PR–SP", primary: "#b9292f", secondary: "#f4c33d", short: "URU", logo: "/clubs/urutu.png", pattern: "sash" },
+  { id: "iguanas", name: "Iguanas SJC", state: "SP", division: 2, group: "Taça PR–SP", primary: "#2c7b3f", secondary: "#d8e85c", short: "IGU", logo: "/clubs/iguanas.jpg", pattern: "quarters" },
+  { id: "niteroi", name: "Niterói", state: "RJ", division: 2, group: "Taça RJ–MG–ES", primary: "#be2737", secondary: "#1b1b1b", short: "NIT", logo: "/clubs/niteroi.jpg", pattern: "hoops" },
+  { id: "rio", name: "Rio", state: "RJ", division: 2, group: "Taça RJ–MG–ES", primary: "#1d1d1d", secondary: "#e1a627", short: "RIO", logo: "/clubs/rio.png", pattern: "sash" },
+  { id: "carioca", name: "Carioca", state: "RJ", division: 2, group: "Taça RJ–MG–ES", primary: "#123c73", secondary: "#71b8d6", short: "CAR", logo: "/clubs/carioca.png", pattern: "hoops" },
+  { id: "vitoria", name: "Vitória", state: "ES", division: 2, group: "Taça RJ–MG–ES", primary: "#b32937", secondary: "#f1e8d5", short: "VIT", logo: "/clubs/vitoria.jpg", pattern: "quarters" },
 ];
 
 const keyState = new Set<string>();
@@ -126,6 +144,11 @@ function makePlayers(): Player[] {
       y,
       stun: 0,
       tackleLock: 0,
+      stamina: 100,
+      jersey: slot + 1,
+      routeX: 0,
+      routeY: 0,
+      routeTime: 0,
     })),
     ...lanes.map((y, slot) => ({
       id: slot + PLAYERS_PER_SIDE,
@@ -135,16 +158,48 @@ function makePlayers(): Player[] {
       y,
       stun: 0,
       tackleLock: 0,
+      stamina: 100,
+      jersey: slot + 1,
+      routeX: 0,
+      routeY: 0,
+      routeTime: 0,
     })),
   ];
 }
 
+function arrangeRestart(players: Player[], kickingSide: 0 | 1) {
+  players.forEach((player) => {
+    const lane = 100 + player.slot * 70;
+    const isKicker = player.side === kickingSide && player.slot === MID_SLOT;
+    if (kickingSide === 0) {
+      player.x = player.side === 0 ? (isKicker ? FIELD_W / 2 - 8 : FIELD_W / 2 - 56 - Math.abs(player.slot - MID_SLOT) * 12) : 760 + Math.abs(player.slot - MID_SLOT) * 10;
+    } else {
+      player.x = player.side === 1 ? (isKicker ? FIELD_W / 2 + 8 : FIELD_W / 2 + 56 + Math.abs(player.slot - MID_SLOT) * 12) : 340 - Math.abs(player.slot - MID_SLOT) * 10;
+    }
+    player.y = lane;
+    player.stun = 0;
+    player.tackleLock = 0;
+    player.routeTime = 0;
+  });
+}
+
 function freshMatch(): Match {
   const players = makePlayers();
-  const firstCarrier = players[MID_SLOT];
+  arrangeRestart(players, 0);
+  const firstKicker = players[MID_SLOT];
   return {
     players,
-    ball: { x: firstCarrier.x, y: firstCarrier.y, vx: 0, vy: 0, owner: firstCarrier, target: null, air: 0 },
+    ball: {
+      x: firstKicker.x,
+      y: firstKicker.y,
+      vx: 0,
+      vy: 0,
+      owner: firstKicker,
+      target: null,
+      air: 0,
+      flightDuration: 0,
+      kind: "held",
+    },
     score: [0, 0],
     seconds: MATCH_SECONDS,
     running: true,
@@ -153,9 +208,12 @@ function freshMatch(): Match {
     lastFrame: performance.now(),
     actionLock: 0,
     cpuActionLock: 0.7,
-    kickoff: 0,
-    message: "Bola em jogo!",
-    messageUntil: 1.6,
+    kickoff: 1.15,
+    restartSide: 0,
+    blockWindow: 0,
+    substitutesLeft: [REPLACEMENTS_PER_SIDE, REPLACEMENTS_PER_SIDE],
+    message: "Drop-kick inicial: seu time chuta",
+    messageUntil: 2,
   };
 }
 
@@ -264,7 +322,7 @@ function drawField(
       player.side === 0 &&
       player !== match.ball.owner &&
       player.stun <= 0 &&
-      player.x < match.ball.owner.x - 18;
+      player.x <= match.ball.owner.x + 4;
     const pulse = 1 + Math.sin(now / 120) * 0.08;
 
     if (isPassOption && !match.over) {
@@ -290,33 +348,77 @@ function drawField(
     ctx.ellipse(player.x + 4, player.y + 11, 20, 10, 0, 0, Math.PI * 2);
     ctx.fill();
 
-    const body = ctx.createLinearGradient(player.x - 15, player.y - 15, player.x + 15, player.y + 15);
-    body.addColorStop(0, team.secondary);
-    body.addColorStop(0.28, team.primary);
-    body.addColorStop(1, team.primary);
-    ctx.fillStyle = player.stun > 0 ? "#718079" : body;
+    ctx.save();
     ctx.beginPath();
     ctx.arc(player.x, player.y, PLAYER_RADIUS, 0, Math.PI * 2);
-    ctx.fill();
+    ctx.clip();
+    ctx.fillStyle = player.stun > 0 ? "#718079" : team.primary;
+    ctx.fillRect(player.x - PLAYER_RADIUS, player.y - PLAYER_RADIUS, PLAYER_RADIUS * 2, PLAYER_RADIUS * 2);
+    if (player.stun <= 0 && team.pattern === "hoops") {
+      ctx.fillStyle = team.secondary;
+      ctx.fillRect(player.x - PLAYER_RADIUS, player.y - 9, PLAYER_RADIUS * 2, 6);
+      ctx.fillRect(player.x - PLAYER_RADIUS, player.y + 5, PLAYER_RADIUS * 2, 6);
+    } else if (player.stun <= 0 && team.pattern === "sash") {
+      ctx.strokeStyle = team.secondary;
+      ctx.lineWidth = 8;
+      ctx.beginPath();
+      ctx.moveTo(player.x - 18, player.y - 18);
+      ctx.lineTo(player.x + 18, player.y + 18);
+      ctx.stroke();
+    } else if (player.stun <= 0 && team.pattern === "quarters") {
+      ctx.fillStyle = team.secondary;
+      ctx.fillRect(player.x, player.y - PLAYER_RADIUS, PLAYER_RADIUS, PLAYER_RADIUS);
+      ctx.fillRect(player.x - PLAYER_RADIUS, player.y, PLAYER_RADIUS, PLAYER_RADIUS);
+    }
+    ctx.restore();
+    ctx.beginPath();
+    ctx.arc(player.x, player.y, PLAYER_RADIUS, 0, Math.PI * 2);
     ctx.strokeStyle = "rgba(4,14,10,.62)";
     ctx.lineWidth = 2;
     ctx.stroke();
 
+    const staminaWidth = 30;
+    ctx.fillStyle = "rgba(2,12,9,.66)";
+    ctx.fillRect(player.x - staminaWidth / 2, player.y - 27, staminaWidth, 4);
+    ctx.fillStyle = player.stamina < 28 ? "#ff6a3d" : player.stamina < 52 ? "#f2c84b" : "#dfff49";
+    ctx.fillRect(player.x - staminaWidth / 2, player.y - 27, staminaWidth * (player.stamina / 100), 4);
+
+    if (player.side === 1 && player.slot === SWEEPER_SLOT) {
+      ctx.fillStyle = "rgba(6,22,17,.82)";
+      ctx.font = "900 9px ui-sans-serif, system-ui";
+      ctx.textAlign = "center";
+      ctx.fillText("SWEEPER", player.x, player.y - 34);
+    }
+
     ctx.fillStyle = team.secondary;
-    ctx.font = "900 11px ui-sans-serif, system-ui";
+    ctx.font = "900 10px ui-sans-serif, system-ui";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(String(player.slot + 1), player.x, player.y + 0.5);
+    ctx.fillText(String(player.jersey), player.x, player.y + 0.5);
   });
 
   const ball = match.ball;
+  const flightProgress =
+    ball.flightDuration > 0 && ball.air > 0
+      ? 1 - ball.air / ball.flightDuration
+      : 0;
+  const lift =
+    ball.air > 0
+      ? Math.sin(Math.PI * clamp(flightProgress, 0, 1)) * (ball.kind === "pass" ? 20 : 54)
+      : 0;
+
+  ctx.fillStyle = `rgba(0,0,0,${ball.air > 0 ? 0.12 : 0.2})`;
+  ctx.beginPath();
+  ctx.ellipse(ball.x + 3, ball.y + 7, 13 + lift * 0.08, 6, 0, 0, Math.PI * 2);
+  ctx.fill();
+
   ctx.save();
-  ctx.translate(ball.x, ball.y);
+  ctx.translate(ball.x, ball.y - lift);
   ctx.rotate(Math.atan2(ball.vy, ball.vx) + now / 180);
   ctx.fillStyle = "#ead9b8";
   ctx.beginPath();
   ctx.ellipse(0, 0, 12, 7, 0, 0, Math.PI * 2);
-  ctx.fill();
+    ctx.fill();
   ctx.strokeStyle = "#5f3825";
   ctx.lineWidth = 2;
   ctx.stroke();
@@ -385,7 +487,8 @@ function TeamBadge({ team, large = false }: { team: Team; large?: boolean }) {
       style={{ "--team-a": team.primary, "--team-b": team.secondary } as React.CSSProperties}
       aria-hidden="true"
     >
-      {team.short}
+      <img src={team.logo} alt="" loading="lazy" />
+      <small>{team.short}</small>
     </span>
   );
 }
@@ -405,6 +508,9 @@ export function RugbyGame() {
     paused: false,
     over: false,
     message: "",
+    stamina: Array(PLAYERS_PER_SIDE).fill(100),
+    jerseys: Array.from({ length: PLAYERS_PER_SIDE }, (_, slot) => slot + 1),
+    substitutesLeft: REPLACEMENTS_PER_SIDE,
   });
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -412,7 +518,7 @@ export function RugbyGame() {
   const animationRef = useRef<number | null>(null);
   const lastHudRef = useRef(0);
   const joystickRef = useRef({ x: 0, y: 0, active: false });
-  const actionRef = useRef({ sprint: false, block: false });
+  const actionRef = useRef({ sprint: false });
   const aimRef = useRef<AimPoint>({ active: false, x: FIELD_W - TRY_LINE, y: CENTRE_Y });
   const gestureRef = useRef({ active: false, x: 0, y: 0 });
   const audioRef = useRef<AudioContext | null>(null);
@@ -457,21 +563,47 @@ export function RugbyGame() {
     match.messageUntil = duration;
   }, []);
 
-  const resetFormation = useCallback(
-    (match: Match, possession: 0 | 1) => {
-      const reset = makePlayers();
-      match.players.splice(0, match.players.length, ...reset);
-      const owner =
-        possession === 0
-          ? match.players[MID_SLOT]
-          : match.players[PLAYERS_PER_SIDE + MID_SLOT];
-      match.ball = { x: owner.x, y: owner.y, vx: 0, vy: 0, owner, target: null, air: 0 };
-      match.kickoff = 1.15;
-      match.actionLock = 0.4;
-      match.cpuActionLock = 0.8;
-    },
-    [],
-  );
+  const prepareRestart = useCallback((match: Match, kickingSide: 0 | 1) => {
+    arrangeRestart(match.players, kickingSide);
+
+    if (match.substitutesLeft[1] > 0) {
+      const tiredDefender = match.players
+        .filter((player) => player.side === 1)
+        .sort((a, b) => a.stamina - b.stamina)[0];
+      if (tiredDefender && tiredDefender.stamina < 26) {
+        const used = REPLACEMENTS_PER_SIDE - match.substitutesLeft[1];
+        tiredDefender.stamina = 100;
+        tiredDefender.jersey = 8 + used;
+        match.substitutesLeft[1] -= 1;
+      }
+    }
+
+    const kicker = match.players.find(
+      (player) => player.side === kickingSide && player.slot === MID_SLOT,
+    );
+    if (!kicker) return;
+    match.ball = {
+      x: kicker.x,
+      y: kicker.y,
+      vx: 0,
+      vy: 0,
+      owner: kicker,
+      target: null,
+      air: 0,
+      flightDuration: 0,
+      kind: "held",
+    };
+    match.kickoff = 1.15;
+    match.restartSide = kickingSide;
+    match.blockWindow = 0;
+    match.actionLock = 0.45;
+    match.cpuActionLock = 0.8;
+    setMessage(
+      match,
+      `${kickingSide === 0 ? "Seu time" : "Adversário"} marcou e cobra o reinício`,
+      1.8,
+    );
+  }, [setMessage]);
 
   const passBall = useCallback(
     (side: 0 | 1, targetSlot?: number) => {
@@ -482,9 +614,9 @@ export function RugbyGame() {
       const candidates = match.players
         .filter((player) => {
           if (player.side !== side || player === owner || player.stun > 0) return false;
-          return side === 0 ? player.x < owner.x - 18 : player.x > owner.x + 18;
+          return side === 0 ? player.x <= owner.x + 4 : player.x >= owner.x - 4;
         })
-        .sort((a, b) => Math.abs(a.y - owner.y) + distance(a, owner) * 0.25 - (Math.abs(b.y - owner.y) + distance(b, owner) * 0.25));
+        .sort((a, b) => Math.abs(a.y - owner.y) * 0.7 + Math.abs(a.x - owner.x) * 0.2 - (Math.abs(b.y - owner.y) * 0.7 + Math.abs(b.x - owner.x) * 0.2));
       const target =
         targetSlot === undefined
           ? candidates[0]
@@ -494,19 +626,26 @@ export function RugbyGame() {
           setMessage(
             match,
             targetSlot === undefined
-              ? "Sem apoio atrás!"
-              : `O jogador ${targetSlot + 1} precisa estar atrás da bola`,
+              ? "Sem apoio lateral ou atrás!"
+              : `O jogador ${targetSlot + 1} precisa estar na linha ou atrás da bola`,
             1.25,
           );
         }
         return;
       }
+      const legalTargetX =
+        side === 0
+          ? Math.min(target.x, owner.x - 3)
+          : Math.max(target.x, owner.x + 3);
       match.ball.owner = null;
       match.ball.target = target;
-      match.ball.air = clamp(distance(owner, target) / 430, 0.2, 0.5);
-      match.ball.vx = (target.x - owner.x) / match.ball.air;
+      match.ball.air = clamp(Math.hypot(legalTargetX - owner.x, target.y - owner.y) / 470, 0.18, 0.46);
+      match.ball.flightDuration = match.ball.air;
+      match.ball.kind = "pass";
+      match.ball.vx = (legalTargetX - owner.x) / match.ball.air;
       match.ball.vy = (target.y - owner.y) / match.ball.air;
       match.actionLock = 0.28;
+      owner.stamina = Math.max(0, owner.stamina - 0.8);
       if (side === 0) {
         setMessage(match, `Passe para o ${target.slot + 1}`);
         beep(480, 0.06);
@@ -548,73 +687,85 @@ export function RugbyGame() {
       match.actionLock = 1;
       if (inRange && precision <= 58) {
         match.score[0] += 3;
-        setMessage(match, "DROP GOAL! · +3", 1.6);
+        owner.stamina = Math.max(0, owner.stamina - 7);
+        prepareRestart(match, 0);
+        setMessage(match, "DROP GOAL! · +3 · seu time reinicia", 1.8);
         beep(760, 0.22);
-        resetFormation(match, 1);
       } else {
-        setMessage(match, "Drop para fora — posse adversária", 1.5);
+        prepareRestart(match, 1);
+        setMessage(match, "Drop para fora — drop-out adversário", 1.6);
         beep(160, 0.14);
-        resetFormation(match, 1);
       }
     },
-    [beep, resetFormation, setMessage],
+    [beep, prepareRestart, setMessage],
   );
 
-  const performSwerve = useCallback(
-    (direction?: number) => {
-      const match = matchRef.current;
-      if (!match || match.paused || match.over || match.actionLock > 0) return;
-      const owner = match.ball.owner;
-      if (!owner || owner.side !== 0 || owner.stun > 0) return;
-      const inputDirection =
-        direction ??
-        (keyState.has("ArrowDown") || keyState.has("KeyS")
-          ? 1
-          : keyState.has("ArrowUp") || keyState.has("KeyW")
-            ? -1
-            : owner.y < CENTRE_Y
-              ? 1
-              : -1);
-      owner.x = clamp(owner.x + 28, 34, FIELD_W - 34);
-      owner.y = clamp(owner.y + Math.sign(inputDirection || 1) * 76, 54, FIELD_H - 54);
-      owner.tackleLock = 0.46;
-      match.actionLock = 0.46;
-      setMessage(match, "Swerve! Defesa quebrada", 0.9);
-      beep(560, 0.07);
-    },
-    [beep, setMessage],
-  );
+  const performBlock = useCallback(() => {
+    const match = matchRef.current;
+    if (!match || match.paused || match.over || match.actionLock > 0) return;
+    const owner = match.ball.owner;
+    if (!owner || owner.side !== 0 || owner.stun > 0) return;
+    const supports = match.players
+      .filter((player) => player.side === 0 && player !== owner && player.stun <= 0)
+      .sort((a, b) => distance(a, owner) - distance(b, owner));
+    const upper = supports.find((player) => player.y < owner.y) ?? supports[0];
+    const lower =
+      supports.find((player) => player.y > owner.y && player !== upper) ??
+      supports.find((player) => player !== upper);
+    if (!upper || !lower) {
+      setMessage(match, "Sem dois apoios para o block", 1.1);
+      return;
+    }
+    const upperY = upper.y;
+    upper.routeX = owner.x - 12;
+    upper.routeY = clamp(lower.y, 62, FIELD_H - 62);
+    upper.routeTime = 0.78;
+    lower.routeX = owner.x - 12;
+    lower.routeY = clamp(upperY, 62, FIELD_H - 62);
+    lower.routeTime = 0.78;
+    upper.stamina = Math.max(0, upper.stamina - 4);
+    lower.stamina = Math.max(0, lower.stamina - 4);
+    match.blockWindow = 0.82;
+    match.actionLock = 0.62;
+    setMessage(match, `Block: camisas ${upper.jersey} e ${lower.jersey} cruzando`, 1.2);
+    beep(410, 0.08);
+  }, [beep, setMessage]);
 
   const kickBall = useCallback(() => {
     const match = matchRef.current;
     if (!match || match.paused || match.over || match.actionLock > 0) return;
     const owner = match.ball.owner;
     if (!owner || owner.side !== 0) return;
-    const inRange = owner.x > 680;
-    const aligned = Math.abs(owner.y - CENTRE_Y) < 170;
-    match.actionLock = 1;
-    if (inRange && aligned) {
-      match.score[0] += 3;
-      setMessage(match, "CHUTE CONVERTIDO · +3", 1.5);
-      beep(740, 0.2);
-      resetFormation(match, 1);
-    } else {
-      setMessage(match, "Chute curto — posse adversária", 1.4);
-      beep(180, 0.14);
-      resetFormation(match, 1);
-    }
-  }, [beep, resetFormation, setMessage]);
+    const directionY =
+      keyState.has("ArrowUp") || keyState.has("KeyW")
+        ? -1
+        : keyState.has("ArrowDown") || keyState.has("KeyS")
+          ? 1
+          : 0;
+    const flight = 0.82;
+    match.ball.owner = null;
+    match.ball.target = null;
+    match.ball.kind = "kick";
+    match.ball.air = flight;
+    match.ball.flightDuration = flight;
+    match.ball.vx = 455;
+    match.ball.vy = directionY * 135;
+    match.actionLock = 0.52;
+    owner.stamina = Math.max(0, owner.stamina - 7);
+    setMessage(match, "Chute à frente — corra para recuperar!", 1.25);
+    beep(620, 0.09);
+  }, [beep, setMessage]);
 
   const tackle = useCallback(
     (match: Match, carrier: Player, tackler: Player) => {
       if (carrier.tackleLock > 0 || tackler.tackleLock > 0) return;
 
-      if (carrier.side === 0 && actionRef.current.block) {
-        carrier.stun = 0.12;
-        carrier.tackleLock = 0.58;
-        tackler.stun = 0.92;
-        tackler.tackleLock = 1;
-        setMessage(match, "Bloqueio no contato!", 0.9);
+      if (carrier.side === 0 && match.blockWindow > 0) {
+        carrier.tackleLock = 0.48;
+        tackler.stun = 0.46;
+        tackler.tackleLock = 0.62;
+        match.blockWindow = 0;
+        setMessage(match, "Block funcionou — defensor mordeu o cruzamento", 1);
         beep(410, 0.08);
         return;
       }
@@ -623,6 +774,8 @@ export function RugbyGame() {
       tackler.stun = 0.72;
       carrier.tackleLock = 1;
       tackler.tackleLock = 1;
+      carrier.stamina = Math.max(0, carrier.stamina - 3);
+      tackler.stamina = Math.max(0, tackler.stamina - 5);
 
       const support = match.players
         .filter((player) => player.side === carrier.side && player !== carrier && player.stun <= 0)
@@ -630,9 +783,7 @@ export function RugbyGame() {
       const pressure = match.players
         .filter((player) => player.side !== carrier.side)
         .sort((a, b) => distance(a, carrier) - distance(b, carrier))[0];
-      const blockingTackler = tackler.side === 0 && actionRef.current.block;
       const retained =
-        !blockingTackler &&
         Boolean(support) &&
         distance(support, carrier) < distance(pressure, carrier) + 55;
       const nextSide = retained ? carrier.side : ((1 - carrier.side) as 0 | 1);
@@ -662,12 +813,30 @@ export function RugbyGame() {
       if (match.kickoff > 0) {
         match.kickoff -= dt;
         match.messageUntil -= dt;
+        if (match.kickoff <= 0 && match.restartSide !== null) {
+          const kickingSide = match.restartSide;
+          const kicker = match.ball.owner;
+          const flight = 0.86;
+          match.restartSide = null;
+          match.ball.owner = null;
+          match.ball.target = null;
+          match.ball.kind = "restart";
+          match.ball.air = flight;
+          match.ball.flightDuration = flight;
+          match.ball.vx = kickingSide === 0 ? 365 : -365;
+          match.ball.vy = Math.sin(match.seconds * 1.7) * 82;
+          match.actionLock = 0.22;
+          if (kicker) kicker.stamina = Math.max(0, kicker.stamina - 3);
+          setMessage(match, "Drop-kick de reinício — bola viva!", 1.25);
+          beep(590, 0.08);
+        }
         return;
       }
 
       match.seconds -= dt;
       match.actionLock = Math.max(0, match.actionLock - dt);
       match.cpuActionLock = Math.max(0, match.cpuActionLock - dt);
+      match.blockWindow = Math.max(0, match.blockWindow - dt);
       match.messageUntil = Math.max(0, match.messageUntil - dt);
       match.players.forEach((player) => {
         player.stun = Math.max(0, player.stun - dt);
@@ -707,12 +876,19 @@ export function RugbyGame() {
       const inputY = joystickRef.current.active ? joystickRef.current.y : keyboardY;
       const inputLength = Math.hypot(inputX, inputY) || 1;
       const sprinting = actionRef.current.sprint || keyState.has("ShiftLeft") || keyState.has("ShiftRight");
-      const blocking = actionRef.current.block || keyState.has("KeyR");
+      const hasMovementInput = Math.hypot(inputX, inputY) > 0.08;
+      const staminaFactor = (player: Player) => 0.58 + player.stamina * 0.0042;
 
       if (controlled && controlled.stun <= 0) {
-        const speed = blocking ? 132 : sprinting ? 244 : 190;
+        const speed = (sprinting ? 244 : 190) * staminaFactor(controlled);
         controlled.x += (inputX / inputLength) * speed * dt;
         controlled.y += (inputY / inputLength) * speed * dt;
+        if (hasMovementInput) {
+          controlled.stamina = Math.max(
+            0,
+            controlled.stamina - dt * (sprinting ? 2.65 : 0.92),
+          );
+        }
       }
 
       const moveToward = (player: Player, tx: number, ty: number, speed: number) => {
@@ -720,15 +896,32 @@ export function RugbyGame() {
         const dx = tx - player.x;
         const dy = ty - player.y;
         const length = Math.hypot(dx, dy) || 1;
+        const actualSpeed = speed * staminaFactor(player);
+        player.x += (dx / length) * actualSpeed * dt;
+        player.y += (dy / length) * actualSpeed * dt;
+        if (length > 10) {
+          player.stamina = Math.max(0, player.stamina - dt * 0.54);
+        }
+      };
+
+      const runBlockRoute = (player: Player) => {
+        if (player.routeTime <= 0) return false;
+        player.routeTime = Math.max(0, player.routeTime - dt);
+        const dx = player.routeX - player.x;
+        const dy = player.routeY - player.y;
+        const length = Math.hypot(dx, dy) || 1;
+        const speed = 252 * staminaFactor(player);
         player.x += (dx / length) * speed * dt;
         player.y += (dy / length) * speed * dt;
+        return true;
       };
 
       homePlayers.forEach((player) => {
         if (player === controlled) return;
+        if (runBlockRoute(player)) return;
         if (ballOwner?.side === 0) {
           const laneOffset = (player.slot - MID_SLOT) * 57;
-          moveToward(player, ballOwner.x - 82 - Math.abs(player.slot - ballOwner.slot) * 22, ballOwner.y + laneOffset, 142);
+          moveToward(player, ballOwner.x - 40 - Math.abs(player.slot - ballOwner.slot) * 9, ballOwner.y + laneOffset, 146);
         } else {
           const target = ballOwner ?? match.ball;
           const chaseRank = [...homePlayers].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
@@ -737,6 +930,7 @@ export function RugbyGame() {
       });
 
       awayPlayers.forEach((player) => {
+        if (runBlockRoute(player)) return;
         if (ballOwner?.side === 1) {
           if (player === ballOwner) {
             if (player.stun <= 0) {
@@ -747,12 +941,21 @@ export function RugbyGame() {
               player.y += clamp(dy, -110 * dt, 110 * dt);
             }
           } else {
-            moveToward(player, ballOwner.x + 90 + Math.abs(player.slot - ballOwner.slot) * 22, ballOwner.y + (player.slot - MID_SLOT) * 52, 140);
+            moveToward(player, ballOwner.x + 40 + Math.abs(player.slot - ballOwner.slot) * 9, ballOwner.y + (player.slot - MID_SLOT) * 52, 143);
           }
         } else {
           const target = ballOwner ?? match.ball;
-          const rank = [...awayPlayers].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
-          moveToward(player, target.x - rank * 26, target.y + (player.slot - MID_SLOT) * 26, rank < 2 ? 183 : 140);
+          if (player.slot === SWEEPER_SLOT) {
+            const kickIsComing = !ballOwner && (match.ball.kind === "kick" || match.ball.kind === "restart");
+            const sweeperX = kickIsComing
+              ? clamp(match.ball.x + 42, FIELD_W * 0.58, FIELD_W - TRY_LINE - 28)
+              : clamp(target.x + 210, FIELD_W * 0.62, FIELD_W - TRY_LINE - 34);
+            moveToward(player, sweeperX, target.y, kickIsComing ? 205 : 154);
+          } else {
+            const defenders = awayPlayers.filter((candidate) => candidate.slot !== SWEEPER_SLOT);
+            const rank = [...defenders].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
+            moveToward(player, target.x + 34 + rank * 22, target.y + (player.slot - MID_SLOT) * 26, rank < 2 ? 183 : 140);
+          }
         }
       });
 
@@ -787,26 +990,47 @@ export function RugbyGame() {
         match.ball.y = match.ball.owner.y - 8;
         match.ball.vx = 0;
         match.ball.vy = 0;
-      } else if (match.ball.target && match.ball.air > 0) {
+        match.ball.air = 0;
+        match.ball.flightDuration = 0;
+        match.ball.kind = "held";
+      } else if (match.ball.air > 0) {
         match.ball.air -= dt;
         match.ball.x += match.ball.vx * dt;
         match.ball.y += match.ball.vy * dt;
         if (match.ball.air <= 0) {
-          match.ball.owner = match.ball.target;
+          if (match.ball.kind === "pass" && match.ball.target) {
+            match.ball.owner = match.ball.target;
+            match.ball.x = match.ball.target.x;
+            match.ball.y = match.ball.target.y;
+            match.ball.kind = "held";
+          } else {
+            match.ball.kind = "loose";
+            match.ball.vx *= 0.28;
+            match.ball.vy *= 0.28;
+          }
           match.ball.target = null;
-          match.ball.vx = 0;
-          match.ball.vy = 0;
         }
       } else {
         match.ball.x += match.ball.vx * dt;
         match.ball.y += match.ball.vy * dt;
         match.ball.vx *= Math.pow(0.08, dt);
         match.ball.vy *= Math.pow(0.08, dt);
+        if (match.ball.x < 38 || match.ball.x > FIELD_W - 38) {
+          match.ball.x = clamp(match.ball.x, 38, FIELD_W - 38);
+          match.ball.vx *= -0.25;
+        }
+        if (match.ball.y < 46 || match.ball.y > FIELD_H - 46) {
+          match.ball.y = clamp(match.ball.y, 46, FIELD_H - 46);
+          match.ball.vy *= -0.35;
+        }
         const collector = [...match.players]
           .filter((player) => player.stun <= 0)
           .sort((a, b) => distance(a, match.ball) - distance(b, match.ball))[0];
         if (collector && distance(collector, match.ball) < 25) {
           match.ball.owner = collector;
+          match.ball.kind = "held";
+          match.ball.vx = 0;
+          match.ball.vy = 0;
           setMessage(match, collector.side === 0 ? "Bola recuperada!" : "Adversário recuperou", 0.9);
         }
       }
@@ -833,17 +1057,17 @@ export function RugbyGame() {
 
       if (newCarrier?.side === 0 && newCarrier.x >= FIELD_W - TRY_LINE) {
         match.score[0] += 5;
-        setMessage(match, "TRY! · +5", 1.6);
+        prepareRestart(match, 0);
+        setMessage(match, "TRY! · +5 · seu time cobra o reinício", 1.8);
         beep(880, 0.22);
-        resetFormation(match, 1);
       } else if (newCarrier?.side === 1 && newCarrier.x <= TRY_LINE) {
         match.score[1] += 5;
-        setMessage(match, "Try adversário", 1.5);
+        prepareRestart(match, 1);
+        setMessage(match, "Try adversário · eles cobram o reinício", 1.8);
         beep(120, 0.2);
-        resetFormation(match, 0);
       }
     },
-    [beep, bestWins, passBall, resetFormation, setMessage, tackle],
+    [beep, bestWins, passBall, prepareRestart, setMessage, tackle],
   );
 
   const frame = useCallback(
@@ -860,12 +1084,18 @@ export function RugbyGame() {
 
       if (now - lastHudRef.current > 80) {
         lastHudRef.current = now;
+        const homeLineup = match.players
+          .filter((player) => player.side === 0)
+          .sort((a, b) => a.slot - b.slot);
         setHud({
           score: [...match.score] as [number, number],
           seconds: match.seconds,
           paused: match.paused,
           over: match.over,
           message: match.messageUntil > 0 ? match.message : "",
+          stamina: homeLineup.map((player) => player.stamina),
+          jerseys: homeLineup.map((player) => player.jersey),
+          substitutesLeft: match.substitutesLeft[0],
         });
       }
       animationRef.current = requestAnimationFrame(frame);
@@ -886,7 +1116,10 @@ export function RugbyGame() {
       seconds: MATCH_SECONDS,
       paused: false,
       over: false,
-      message: "Bola em jogo!",
+      message: "Drop-kick inicial: seu time chuta",
+      stamina: Array(PLAYERS_PER_SIDE).fill(100),
+      jerseys: Array.from({ length: PLAYERS_PER_SIDE }, (_, slot) => slot + 1),
+      substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
     setScreen("match");
     beep(520, 0.12);
@@ -901,7 +1134,10 @@ export function RugbyGame() {
       seconds: MATCH_SECONDS,
       paused: false,
       over: false,
-      message: "Revanche!",
+      message: "Revanche: novo drop-kick inicial",
+      stamina: Array(PLAYERS_PER_SIDE).fill(100),
+      jerseys: Array.from({ length: PLAYERS_PER_SIDE }, (_, slot) => slot + 1),
+      substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
     beep(520, 0.12);
   }, [beep]);
@@ -928,6 +1164,40 @@ export function RugbyGame() {
     setScreen("setup");
   }, []);
 
+  const substitutePlayer = useCallback(
+    (slot: number) => {
+      const match = matchRef.current;
+      if (!match?.paused || match.substitutesLeft[0] <= 0) return;
+      const player = match.players.find(
+        (candidate) => candidate.side === 0 && candidate.slot === slot,
+      );
+      if (!player) return;
+      const used = REPLACEMENTS_PER_SIDE - match.substitutesLeft[0];
+      player.stamina = 100;
+      player.jersey = 8 + used;
+      player.stun = 0;
+      player.tackleLock = 0;
+      player.routeTime = 0;
+      match.substitutesLeft[0] -= 1;
+      setMessage(match, `Camisa ${player.jersey} entrou renovado`, 1.3);
+      setHud((previous) => {
+        const stamina = [...previous.stamina];
+        const jerseys = [...previous.jerseys];
+        stamina[slot] = 100;
+        jerseys[slot] = player.jersey;
+        return {
+          ...previous,
+          message: match.message,
+          stamina,
+          jerseys,
+          substitutesLeft: match.substitutesLeft[0],
+        };
+      });
+      beep(680, 0.08);
+    },
+    [beep, setMessage],
+  );
+
   useEffect(() => {
     const savedWins = Number(localStorage.getItem("rugby-br-26-wins") ?? "0");
     setBestWins(Number.isFinite(savedWins) ? savedWins : 0);
@@ -948,12 +1218,11 @@ export function RugbyGame() {
         event.preventDefault();
       }
       keyState.add(event.code);
-      if (event.code === "KeyR") actionRef.current.block = true;
       if (event.repeat) return;
       if (event.code === "Space" || event.code === "KeyJ") passBall(0);
       if (event.code === "KeyK") kickBall();
       if (event.code === "KeyQ") beginDropAim();
-      if (event.code === "KeyE") performSwerve();
+      if (event.code === "KeyR") performBlock();
       if (/^Digit[1-7]$/.test(event.code)) {
         passBall(0, Number(event.code.slice(-1)) - 1);
       }
@@ -966,7 +1235,6 @@ export function RugbyGame() {
     };
     const onKeyUp = (event: KeyboardEvent) => {
       keyState.delete(event.code);
-      if (event.code === "KeyR") actionRef.current.block = false;
     };
     window.addEventListener("keydown", onKeyDown, { passive: false });
     window.addEventListener("keyup", onKeyUp);
@@ -975,7 +1243,7 @@ export function RugbyGame() {
       window.removeEventListener("keyup", onKeyUp);
       keyState.clear();
     };
-  }, [beginDropAim, kickBall, passBall, performSwerve, togglePause]);
+  }, [beginDropAim, kickBall, passBall, performBlock, togglePause]);
 
   useEffect(() => {
     if (screen !== "match") {
@@ -1031,7 +1299,6 @@ export function RugbyGame() {
     const swipeX = event.clientX - start.x;
     const swipeY = event.clientY - start.y;
     if (Math.hypot(swipeX, swipeY) > 44) {
-      performSwerve(Math.abs(swipeY) > 18 ? Math.sign(swipeY) : undefined);
       return;
     }
 
@@ -1206,7 +1473,7 @@ export function RugbyGame() {
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>SPACE</kbd></span>
-                <span>Passe automático para um apoio atrás</span>
+                <span>Passe lateral ou para trás; nunca para a frente</span>
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>1</kbd><kbd>—</kbd><kbd>7</kbd></span>
@@ -1214,19 +1481,23 @@ export function RugbyGame() {
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>SHIFT</kbd></span>
-                <span>Correr e pressionar no tackle</span>
+                <span>Correr — acelera, mas gasta mais energia</span>
               </div>
               <div className="control-row">
-                <span className="key-group"><kbd>E</kbd></span>
-                <span>Swerve/finta; no toque, deslize sobre o campo</span>
+                <span className="key-group"><kbd>K</kbd></span>
+                <span>Chutar à frente e disputar a bola no campo</span>
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>R</kbd></span>
-                <span>Segurar o bloqueio para proteger a bola</span>
+                <span>Block: os dois apoios cruzam atrás do portador</span>
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>Q</kbd><kbd>CLICK</kbd></span>
                 <span>Drop: mire e clique exatamente entre os postes</span>
+              </div>
+              <div className="control-row">
+                <span className="key-group"><kbd>CPU</kbd></span>
+                <span>O camisa 7 adversário atua como sweeper/fullback</span>
               </div>
               <p className="touch-note">No celular, os controles aparecem sobre o campo.</p>
             </aside>
@@ -1295,7 +1566,7 @@ export function RugbyGame() {
               height={FIELD_H}
               className={aimingDrop ? "is-aiming" : ""}
               role="img"
-              aria-label={`Partida de rugby sevens, sete contra sete, entre ${home.name} e ${away.name}. Use WASD para mover, números de 1 a 7 para escolher o passe, E para swerve, R para bloqueio e Q para mirar o drop.`}
+              aria-label={`Partida de rugby sevens, sete contra sete, entre ${home.name} e ${away.name}. Use WASD para mover, números de 1 a 7 para escolher o passe, K para chutar à frente, R para o block e Q para mirar o drop.`}
               onPointerDown={handleCanvasPointerDown}
               onPointerMove={handleCanvasPointerMove}
               onPointerUp={handleCanvasPointerUp}
@@ -1321,13 +1592,11 @@ export function RugbyGame() {
                 <button
                   type="button"
                   className="action action--block"
-                  onPointerDown={() => { actionRef.current.block = true; }}
-                  onPointerUp={() => { actionRef.current.block = false; }}
-                  onPointerCancel={() => { actionRef.current.block = false; }}
+                  onPointerDown={performBlock}
                 >
                   <strong>R</strong><small>BLOCK</small>
                 </button>
-                <button type="button" className="action action--swerve" onPointerDown={() => performSwerve()}><strong>E</strong><small>SWERVE</small></button>
+                <button type="button" className="action action--kick" onPointerDown={kickBall}><strong>K</strong><small>CHUTE</small></button>
                 <button
                   type="button"
                   className="action action--sprint"
@@ -1349,7 +1618,7 @@ export function RugbyGame() {
                 Encerrar partida
               </button>
             )}
-            <span><kbd>1–7</kbd> passe · <kbd>E</kbd> swerve · <kbd>R</kbd> block · <kbd>Q</kbd> drop</span>
+            <span><kbd>1–7</kbd> passe · <kbd>K</kbd> chute à frente · <kbd>R</kbd> block · <kbd>Q</kbd> drop</span>
             <button
               type="button"
               onClick={() => document.documentElement.requestFullscreen?.()}
@@ -1357,6 +1626,32 @@ export function RugbyGame() {
               Tela cheia
             </button>
           </div>
+
+          {hud.paused && (
+            <section className="substitution-panel" aria-label="Banco de reservas">
+              <div>
+                <p className="eyebrow">BANCO DE RESERVAS</p>
+                <h3>{hud.substitutesLeft} substituições disponíveis</h3>
+              </div>
+              <div className="substitution-list">
+                {hud.stamina.map((stamina, slot) => (
+                  <button
+                    type="button"
+                    key={slot}
+                    onClick={() => substitutePlayer(slot)}
+                    disabled={hud.substitutesLeft <= 0}
+                    aria-label={`Substituir camisa ${hud.jerseys[slot]}, energia ${Math.round(stamina)} por cento`}
+                  >
+                    <span>#{hud.jerseys[slot]}</span>
+                    <i><b style={{ width: `${stamina}%` }} /></i>
+                    <small>{Math.round(stamina)}%</small>
+                    <strong>Trocar</strong>
+                  </button>
+                ))}
+              </div>
+              <p>Pause a partida para trocar qualquer atleta cansado. O sevens permite até cinco reservas.</p>
+            </section>
+          )}
 
           {hud.over && (
             <div className="result-actions">
@@ -1377,7 +1672,8 @@ export function RugbyGame() {
           >
             Confederação Brasileira de Rugby
           </a>{" "}
-          publicada em 29/01/2026. Cores estilizadas; escudos oficiais não reproduzidos.
+          publicada em 29/01/2026. Escudos e paletas visuais referenciados na página oficial
+          da competição; uso demonstrativo neste protótipo independente.
         </p>
         <span>HTML5 Canvas · PWA · sem downloads pesados</span>
       </footer>
