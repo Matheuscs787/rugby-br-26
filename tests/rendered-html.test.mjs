@@ -49,10 +49,17 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v2-sevens/);
+  assert.match(serviceWorker, /rugby-br-26-v3-sevens-fix/);
+  assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const MATCH_SECONDS = 120/);
   assert.match(gameSource, /const PLAYERS_PER_SIDE = 7/);
   assert.match(gameSource, /RUGBY SEVENS · 7 CONTRA 7/);
+  assert.match(gameSource, /Sound is optional and must never prevent a match from starting/);
+  assert.match(gameSource, /const beginDropAim/);
+  assert.match(gameSource, /const finishDropAim/);
+  assert.match(gameSource, /const performSwerve/);
+  assert.match(gameSource, /const endPausedMatch/);
+  assert.match(gameSource, /targetSlot\?: number/);
   assert.match(gameSource, /Tornados Indaiatuba/);
   assert.match(gameSource, /Leões de Paraisópolis/);
 

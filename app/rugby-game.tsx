@@ -58,6 +58,12 @@ type Hud = {
   message: string;
 };
 
+type AimPoint = {
+  active: boolean;
+  x: number;
+  y: number;
+};
+
 const FIELD_W = 1100;
 const FIELD_H = 620;
 const TRY_LINE = 70;
@@ -162,7 +168,11 @@ function drawRoundedRect(
   radius: number,
 ) {
   ctx.beginPath();
-  ctx.roundRect(x, y, width, height, radius);
+  if (typeof ctx.roundRect === "function") {
+    ctx.roundRect(x, y, width, height, radius);
+    return;
+  }
+  ctx.rect(x, y, width, height);
 }
 
 function drawField(
@@ -171,6 +181,7 @@ function drawField(
   home: Team,
   away: Team,
   now: number,
+  aim: AimPoint,
 ) {
   ctx.clearRect(0, 0, FIELD_W, FIELD_H);
 
@@ -248,7 +259,23 @@ function drawField(
   match.players.forEach((player) => {
     const team = player.side === 0 ? home : away;
     const isControlled = player === controlled;
+    const isPassOption =
+      match.ball.owner?.side === 0 &&
+      player.side === 0 &&
+      player !== match.ball.owner &&
+      player.stun <= 0 &&
+      player.x < match.ball.owner.x - 18;
     const pulse = 1 + Math.sin(now / 120) * 0.08;
+
+    if (isPassOption && !match.over) {
+      ctx.strokeStyle = "rgba(126, 231, 255, .88)";
+      ctx.lineWidth = 2;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath();
+      ctx.arc(player.x, player.y, PLAYER_RADIUS + 6, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
 
     if (isControlled && !match.over) {
       ctx.strokeStyle = "#efff4a";
@@ -299,6 +326,29 @@ function drawField(
   ctx.stroke();
   ctx.restore();
 
+  if (aim.active && match.ball.owner?.side === 0 && !match.paused && !match.over) {
+    const owner = match.ball.owner;
+    ctx.strokeStyle = "rgba(223,255,73,.88)";
+    ctx.lineWidth = 2;
+    ctx.setLineDash([8, 7]);
+    ctx.beginPath();
+    ctx.moveTo(owner.x, owner.y);
+    ctx.lineTo(aim.x, aim.y);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.arc(aim.x, aim.y, 24, 0, Math.PI * 2);
+    ctx.moveTo(aim.x - 34, aim.y);
+    ctx.lineTo(aim.x + 34, aim.y);
+    ctx.moveTo(aim.x, aim.y - 34);
+    ctx.lineTo(aim.x, aim.y + 34);
+    ctx.stroke();
+    ctx.fillStyle = "#dfff49";
+    ctx.font = "900 13px ui-sans-serif, system-ui";
+    ctx.textAlign = "center";
+    ctx.fillText("DROP", aim.x, aim.y - 42);
+  }
+
   if (match.kickoff > 0) {
     ctx.fillStyle = "rgba(3,15,11,.5)";
     ctx.fillRect(0, 0, FIELD_W, FIELD_H);
@@ -348,6 +398,7 @@ export function RugbyGame() {
   const [soundOn, setSoundOn] = useState(true);
   const [bestWins, setBestWins] = useState(0);
   const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
+  const [aimingDrop, setAimingDrop] = useState(false);
   const [hud, setHud] = useState<Hud>({
     score: [0, 0],
     seconds: MATCH_SECONDS,
@@ -361,7 +412,9 @@ export function RugbyGame() {
   const animationRef = useRef<number | null>(null);
   const lastHudRef = useRef(0);
   const joystickRef = useRef({ x: 0, y: 0, active: false });
-  const actionRef = useRef({ sprint: false });
+  const actionRef = useRef({ sprint: false, block: false });
+  const aimRef = useRef<AimPoint>({ active: false, x: FIELD_W - TRY_LINE, y: CENTRE_Y });
+  const gestureRef = useRef({ active: false, x: 0, y: 0 });
   const audioRef = useRef<AudioContext | null>(null);
 
   const home = useMemo(() => TEAMS.find((team) => team.id === homeId) ?? TEAMS[0], [homeId]);
@@ -374,20 +427,27 @@ export function RugbyGame() {
   const beep = useCallback(
     (frequency: number, duration = 0.08) => {
       if (!soundOn || typeof window === "undefined") return;
-      const AudioCtx = window.AudioContext ?? (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-      if (!AudioCtx) return;
-      const audio = audioRef.current ?? new AudioCtx();
-      audioRef.current = audio;
-      const oscillator = audio.createOscillator();
-      const gain = audio.createGain();
-      oscillator.type = "square";
-      oscillator.frequency.value = frequency;
-      gain.gain.setValueAtTime(0.035, audio.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audio.currentTime + duration);
-      oscillator.connect(gain);
-      gain.connect(audio.destination);
-      oscillator.start();
-      oscillator.stop(audio.currentTime + duration);
+      try {
+        const AudioCtx = window.AudioContext ?? (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+        if (!AudioCtx) return;
+        const audio = audioRef.current ?? new AudioCtx();
+        audioRef.current = audio;
+        if (audio.state === "suspended") {
+          void audio.resume().catch(() => undefined);
+        }
+        const oscillator = audio.createOscillator();
+        const gain = audio.createGain();
+        oscillator.type = "square";
+        oscillator.frequency.value = frequency;
+        gain.gain.setValueAtTime(0.035, audio.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audio.currentTime + duration);
+        oscillator.connect(gain);
+        gain.connect(audio.destination);
+        oscillator.start();
+        oscillator.stop(audio.currentTime + duration);
+      } catch {
+        // Sound is optional and must never prevent a match from starting.
+      }
     },
     [soundOn],
   );
@@ -414,7 +474,7 @@ export function RugbyGame() {
   );
 
   const passBall = useCallback(
-    (side: 0 | 1) => {
+    (side: 0 | 1, targetSlot?: number) => {
       const match = matchRef.current;
       if (!match || !match.running || match.paused || match.over || match.actionLock > 0) return;
       const owner = match.ball.owner;
@@ -425,9 +485,20 @@ export function RugbyGame() {
           return side === 0 ? player.x < owner.x - 18 : player.x > owner.x + 18;
         })
         .sort((a, b) => Math.abs(a.y - owner.y) + distance(a, owner) * 0.25 - (Math.abs(b.y - owner.y) + distance(b, owner) * 0.25));
-      const target = candidates[0];
+      const target =
+        targetSlot === undefined
+          ? candidates[0]
+          : candidates.find((player) => player.slot === targetSlot);
       if (!target) {
-        if (side === 0) setMessage(match, "Sem apoio atrás!");
+        if (side === 0) {
+          setMessage(
+            match,
+            targetSlot === undefined
+              ? "Sem apoio atrás!"
+              : `O jogador ${targetSlot + 1} precisa estar atrás da bola`,
+            1.25,
+          );
+        }
         return;
       }
       match.ball.owner = null;
@@ -437,9 +508,79 @@ export function RugbyGame() {
       match.ball.vy = (target.y - owner.y) / match.ball.air;
       match.actionLock = 0.28;
       if (side === 0) {
-        setMessage(match, "Passe limpo");
+        setMessage(match, `Passe para o ${target.slot + 1}`);
         beep(480, 0.06);
       }
+    },
+    [beep, setMessage],
+  );
+
+  const beginDropAim = useCallback(() => {
+    const match = matchRef.current;
+    if (!match || match.paused || match.over || match.actionLock > 0) return;
+    const owner = match.ball.owner;
+    if (!owner || owner.side !== 0) return;
+    if (owner.x < FIELD_W * 0.48) {
+      setMessage(match, "Avance mais para tentar o drop", 1.25);
+      return;
+    }
+    aimRef.current = {
+      active: true,
+      x: FIELD_W - TRY_LINE,
+      y: CENTRE_Y,
+    };
+    setAimingDrop(true);
+    setMessage(match, "Mire entre os postes e clique", 2);
+  }, [setMessage]);
+
+  const finishDropAim = useCallback(
+    (x: number, y: number) => {
+      const match = matchRef.current;
+      if (!match || !aimRef.current.active || match.paused || match.over) return;
+      const owner = match.ball.owner;
+      aimRef.current.active = false;
+      setAimingDrop(false);
+      if (!owner || owner.side !== 0) return;
+
+      const targetX = FIELD_W - TRY_LINE;
+      const precision = Math.hypot((x - targetX) * 0.4, y - CENTRE_Y);
+      const inRange = owner.x >= FIELD_W * 0.48;
+      match.actionLock = 1;
+      if (inRange && precision <= 58) {
+        match.score[0] += 3;
+        setMessage(match, "DROP GOAL! · +3", 1.6);
+        beep(760, 0.22);
+        resetFormation(match, 1);
+      } else {
+        setMessage(match, "Drop para fora — posse adversária", 1.5);
+        beep(160, 0.14);
+        resetFormation(match, 1);
+      }
+    },
+    [beep, resetFormation, setMessage],
+  );
+
+  const performSwerve = useCallback(
+    (direction?: number) => {
+      const match = matchRef.current;
+      if (!match || match.paused || match.over || match.actionLock > 0) return;
+      const owner = match.ball.owner;
+      if (!owner || owner.side !== 0 || owner.stun > 0) return;
+      const inputDirection =
+        direction ??
+        (keyState.has("ArrowDown") || keyState.has("KeyS")
+          ? 1
+          : keyState.has("ArrowUp") || keyState.has("KeyW")
+            ? -1
+            : owner.y < CENTRE_Y
+              ? 1
+              : -1);
+      owner.x = clamp(owner.x + 28, 34, FIELD_W - 34);
+      owner.y = clamp(owner.y + Math.sign(inputDirection || 1) * 76, 54, FIELD_H - 54);
+      owner.tackleLock = 0.46;
+      match.actionLock = 0.46;
+      setMessage(match, "Swerve! Defesa quebrada", 0.9);
+      beep(560, 0.07);
     },
     [beep, setMessage],
   );
@@ -467,6 +608,17 @@ export function RugbyGame() {
   const tackle = useCallback(
     (match: Match, carrier: Player, tackler: Player) => {
       if (carrier.tackleLock > 0 || tackler.tackleLock > 0) return;
+
+      if (carrier.side === 0 && actionRef.current.block) {
+        carrier.stun = 0.12;
+        carrier.tackleLock = 0.58;
+        tackler.stun = 0.92;
+        tackler.tackleLock = 1;
+        setMessage(match, "Bloqueio no contato!", 0.9);
+        beep(410, 0.08);
+        return;
+      }
+
       carrier.stun = 0.56;
       tackler.stun = 0.72;
       carrier.tackleLock = 1;
@@ -478,7 +630,11 @@ export function RugbyGame() {
       const pressure = match.players
         .filter((player) => player.side !== carrier.side)
         .sort((a, b) => distance(a, carrier) - distance(b, carrier))[0];
-      const retained = Boolean(support) && distance(support, carrier) < distance(pressure, carrier) + 55;
+      const blockingTackler = tackler.side === 0 && actionRef.current.block;
+      const retained =
+        !blockingTackler &&
+        Boolean(support) &&
+        distance(support, carrier) < distance(pressure, carrier) + 55;
       const nextSide = retained ? carrier.side : ((1 - carrier.side) as 0 | 1);
       const nextOwner = match.players
         .filter((player) => player.side === nextSide && player.stun <= 0)
@@ -551,9 +707,10 @@ export function RugbyGame() {
       const inputY = joystickRef.current.active ? joystickRef.current.y : keyboardY;
       const inputLength = Math.hypot(inputX, inputY) || 1;
       const sprinting = actionRef.current.sprint || keyState.has("ShiftLeft") || keyState.has("ShiftRight");
+      const blocking = actionRef.current.block || keyState.has("KeyR");
 
       if (controlled && controlled.stun <= 0) {
-        const speed = sprinting ? 244 : 190;
+        const speed = blocking ? 132 : sprinting ? 244 : 190;
         controlled.x += (inputX / inputLength) * speed * dt;
         controlled.y += (inputY / inputLength) * speed * dt;
       }
@@ -598,6 +755,27 @@ export function RugbyGame() {
           moveToward(player, target.x - rank * 26, target.y + (player.slot - MID_SLOT) * 26, rank < 2 ? 183 : 140);
         }
       });
+
+      for (let first = 0; first < match.players.length; first += 1) {
+        for (let second = first + 1; second < match.players.length; second += 1) {
+          const playerA = match.players[first];
+          const playerB = match.players[second];
+          if (playerA.side !== playerB.side) continue;
+          const dx = playerB.x - playerA.x;
+          const dy = playerB.y - playerA.y;
+          const currentDistance = Math.hypot(dx, dy);
+          const minimumDistance = PLAYER_RADIUS * 2.15;
+          if (currentDistance >= minimumDistance) continue;
+          const safeDistance = currentDistance || 1;
+          const push = (minimumDistance - currentDistance) / 2;
+          const directionX = currentDistance === 0 ? (playerA.id % 2 ? 1 : -1) : dx / safeDistance;
+          const directionY = currentDistance === 0 ? (playerB.id % 2 ? 1 : -1) : dy / safeDistance;
+          playerA.x -= directionX * push;
+          playerA.y -= directionY * push;
+          playerB.x += directionX * push;
+          playerB.y += directionY * push;
+        }
+      }
 
       match.players.forEach((player) => {
         player.x = clamp(player.x, 34, FIELD_W - 34);
@@ -678,7 +856,7 @@ export function RugbyGame() {
       const dt = Math.min((now - match.lastFrame) / 1000, 0.035);
       match.lastFrame = now;
       updateMatch(match, dt);
-      drawField(ctx, match, home, away, now);
+      drawField(ctx, match, home, away, now, aimRef.current);
 
       if (now - lastHudRef.current > 80) {
         lastHudRef.current = now;
@@ -701,6 +879,8 @@ export function RugbyGame() {
       if (alternative) setAwayId(alternative.id);
     }
     matchRef.current = freshMatch();
+    aimRef.current.active = false;
+    setAimingDrop(false);
     setHud({
       score: [0, 0],
       seconds: MATCH_SECONDS,
@@ -714,6 +894,8 @@ export function RugbyGame() {
 
   const restartMatch = useCallback(() => {
     matchRef.current = freshMatch();
+    aimRef.current.active = false;
+    setAimingDrop(false);
     setHud({
       score: [0, 0],
       seconds: MATCH_SECONDS,
@@ -728,8 +910,22 @@ export function RugbyGame() {
     const match = matchRef.current;
     if (!match || match.over) return;
     match.paused = !match.paused;
+    if (match.paused) {
+      aimRef.current.active = false;
+      setAimingDrop(false);
+    }
     match.lastFrame = performance.now();
     setHud((previous) => ({ ...previous, paused: match.paused }));
+  }, []);
+
+  const endPausedMatch = useCallback(() => {
+    const match = matchRef.current;
+    if (!match?.paused) return;
+    match.running = false;
+    aimRef.current.active = false;
+    setAimingDrop(false);
+    matchRef.current = null;
+    setScreen("setup");
   }, []);
 
   useEffect(() => {
@@ -752,12 +948,26 @@ export function RugbyGame() {
         event.preventDefault();
       }
       keyState.add(event.code);
+      if (event.code === "KeyR") actionRef.current.block = true;
       if (event.repeat) return;
       if (event.code === "Space" || event.code === "KeyJ") passBall(0);
       if (event.code === "KeyK") kickBall();
-      if (event.code === "Escape" || event.code === "KeyP") togglePause();
+      if (event.code === "KeyQ") beginDropAim();
+      if (event.code === "KeyE") performSwerve();
+      if (/^Digit[1-7]$/.test(event.code)) {
+        passBall(0, Number(event.code.slice(-1)) - 1);
+      }
+      if (event.code === "Escape" && aimRef.current.active) {
+        aimRef.current.active = false;
+        setAimingDrop(false);
+      } else if (event.code === "Escape" || event.code === "KeyP") {
+        togglePause();
+      }
     };
-    const onKeyUp = (event: KeyboardEvent) => keyState.delete(event.code);
+    const onKeyUp = (event: KeyboardEvent) => {
+      keyState.delete(event.code);
+      if (event.code === "KeyR") actionRef.current.block = false;
+    };
     window.addEventListener("keydown", onKeyDown, { passive: false });
     window.addEventListener("keyup", onKeyUp);
     return () => {
@@ -765,7 +975,7 @@ export function RugbyGame() {
       window.removeEventListener("keyup", onKeyUp);
       keyState.clear();
     };
-  }, [kickBall, passBall, togglePause]);
+  }, [beginDropAim, kickBall, passBall, performSwerve, togglePause]);
 
   useEffect(() => {
     if (screen !== "match") {
@@ -781,6 +991,60 @@ export function RugbyGame() {
       animationRef.current = null;
     };
   }, [frame, screen]);
+
+  const canvasPoint = (event: React.PointerEvent<HTMLCanvasElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    return {
+      x: clamp(((event.clientX - rect.left) / rect.width) * FIELD_W, 0, FIELD_W),
+      y: clamp(((event.clientY - rect.top) / rect.height) * FIELD_H, 0, FIELD_H),
+    };
+  };
+
+  const handleCanvasPointerDown = (event: React.PointerEvent<HTMLCanvasElement>) => {
+    const point = canvasPoint(event);
+    gestureRef.current = { active: true, x: event.clientX, y: event.clientY };
+    if (aimRef.current.active) {
+      aimRef.current.x = point.x;
+      aimRef.current.y = point.y;
+    }
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const handleCanvasPointerMove = (event: React.PointerEvent<HTMLCanvasElement>) => {
+    if (!aimRef.current.active) return;
+    const point = canvasPoint(event);
+    aimRef.current.x = point.x;
+    aimRef.current.y = point.y;
+  };
+
+  const handleCanvasPointerUp = (event: React.PointerEvent<HTMLCanvasElement>) => {
+    if (!gestureRef.current.active) return;
+    const start = gestureRef.current;
+    gestureRef.current.active = false;
+    const point = canvasPoint(event);
+
+    if (aimRef.current.active) {
+      finishDropAim(point.x, point.y);
+      return;
+    }
+
+    const swipeX = event.clientX - start.x;
+    const swipeY = event.clientY - start.y;
+    if (Math.hypot(swipeX, swipeY) > 44) {
+      performSwerve(Math.abs(swipeY) > 18 ? Math.sign(swipeY) : undefined);
+      return;
+    }
+
+    const match = matchRef.current;
+    const owner = match?.ball.owner;
+    if (!match || !owner || owner.side !== 0) return;
+    const selected = match.players
+      .filter((player) => player.side === 0 && player !== owner)
+      .sort((a, b) => distance(a, point) - distance(b, point))[0];
+    if (selected && distance(selected, point) <= PLAYER_RADIUS * 2.3) {
+      passBall(0, selected.slot);
+    }
+  };
 
   const handleJoystick = (event: React.PointerEvent<HTMLDivElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -850,6 +1114,7 @@ export function RugbyGame() {
               <div className="hero-stats" aria-label="Resumo do jogo">
                 <span><strong>24</strong> clubes</span>
                 <span><strong>02</strong> divisões</span>
+                <span><strong>14</strong> atletas</span>
                 <span><strong>120</strong> segundos</span>
               </div>
             </div>
@@ -864,6 +1129,7 @@ export function RugbyGame() {
                 <span>FÍSICO</span>
                 <strong>BRASILEIRO</strong>
               </div>
+              <strong className="tactical-format">SEVENS · 7×7</strong>
               {[0, 1, 2, 3, 4, 5, 6].map((slot) => (
                 <i key={`home-${slot}`} className={`tactical-dot tactical-dot--home tactical-dot--${slot}`} />
               ))}
@@ -940,15 +1206,27 @@ export function RugbyGame() {
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>SPACE</kbd></span>
-                <span>Passar a bola para trás</span>
+                <span>Passe automático para um apoio atrás</span>
+              </div>
+              <div className="control-row">
+                <span className="key-group"><kbd>1</kbd><kbd>—</kbd><kbd>7</kbd></span>
+                <span>Escolher o recebedor; também pode clicar nele</span>
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>SHIFT</kbd></span>
                 <span>Correr e pressionar no tackle</span>
               </div>
               <div className="control-row">
-                <span className="key-group"><kbd>K</kbd></span>
-                <span>Chutar aos postes quando estiver perto</span>
+                <span className="key-group"><kbd>E</kbd></span>
+                <span>Swerve/finta; no toque, deslize sobre o campo</span>
+              </div>
+              <div className="control-row">
+                <span className="key-group"><kbd>R</kbd></span>
+                <span>Segurar o bloqueio para proteger a bola</span>
+              </div>
+              <div className="control-row">
+                <span className="key-group"><kbd>Q</kbd><kbd>CLICK</kbd></span>
+                <span>Drop: mire e clique exatamente entre os postes</span>
               </div>
               <p className="touch-note">No celular, os controles aparecem sobre o campo.</p>
             </aside>
@@ -1001,7 +1279,7 @@ export function RugbyGame() {
             <strong className="score">{hud.score[0]}</strong>
             <div className="match-clock">
               <span>{formatClock(hud.seconds)}</span>
-              <small>{hud.paused ? "PAUSADO" : "PARTIDA RÁPIDA"}</small>
+              <small>{hud.paused ? "PAUSADO" : "SEVENS · 7×7"}</small>
             </div>
             <strong className="score">{hud.score[1]}</strong>
             <div className="hud-team hud-team--away">
@@ -1015,8 +1293,13 @@ export function RugbyGame() {
               ref={canvasRef}
               width={FIELD_W}
               height={FIELD_H}
+              className={aimingDrop ? "is-aiming" : ""}
               role="img"
-              aria-label={`Partida entre ${home.name} e ${away.name}. Use WASD para mover, Espaço para passar, Shift para correr e K para chutar.`}
+              aria-label={`Partida de rugby sevens, sete contra sete, entre ${home.name} e ${away.name}. Use WASD para mover, números de 1 a 7 para escolher o passe, E para swerve, R para bloqueio e Q para mirar o drop.`}
+              onPointerDown={handleCanvasPointerDown}
+              onPointerMove={handleCanvasPointerMove}
+              onPointerUp={handleCanvasPointerUp}
+              onPointerCancel={() => { gestureRef.current.active = false; }}
             />
             {hud.message && <div className="game-message">{hud.message}</div>}
             <div className="mobile-controls" aria-label="Controles por toque">
@@ -1034,7 +1317,17 @@ export function RugbyGame() {
                 />
               </div>
               <div className="action-buttons">
-                <button type="button" className="action action--kick" onPointerDown={kickBall}><strong>K</strong><small>CHUTE</small></button>
+                <button type="button" className="action action--drop" onPointerDown={beginDropAim}><strong>Q</strong><small>DROP</small></button>
+                <button
+                  type="button"
+                  className="action action--block"
+                  onPointerDown={() => { actionRef.current.block = true; }}
+                  onPointerUp={() => { actionRef.current.block = false; }}
+                  onPointerCancel={() => { actionRef.current.block = false; }}
+                >
+                  <strong>R</strong><small>BLOCK</small>
+                </button>
+                <button type="button" className="action action--swerve" onPointerDown={() => performSwerve()}><strong>E</strong><small>SWERVE</small></button>
                 <button
                   type="button"
                   className="action action--sprint"
@@ -1051,7 +1344,12 @@ export function RugbyGame() {
 
           <div className="game-toolbar">
             <button type="button" onClick={togglePause}>{hud.paused ? "Continuar" : "Pausar"}</button>
-            <span><kbd>WASD</kbd> mover · <kbd>SPACE</kbd> passe · <kbd>SHIFT</kbd> correr · <kbd>K</kbd> chute</span>
+            {hud.paused && (
+              <button className="end-match-button" type="button" onClick={endPausedMatch}>
+                Encerrar partida
+              </button>
+            )}
+            <span><kbd>1–7</kbd> passe · <kbd>E</kbd> swerve · <kbd>R</kbd> block · <kbd>Q</kbd> drop</span>
             <button
               type="button"
               onClick={() => document.documentElement.requestFullscreen?.()}
