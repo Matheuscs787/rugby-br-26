@@ -309,13 +309,16 @@ select:focus-visible {
   border-color: var(--acid);
   left: 67%;
 }
-.tactical-dot--0 { top: 18%; }
-.tactical-dot--1 { top: 33%; transform: translateX(-35px); }
-.tactical-dot--2 { top: 48%; transform: translateX(8px); }
-.tactical-dot--3 { top: 65%; transform: translateX(-30px); }
-.tactical-dot--4 { top: 79%; }
+.tactical-dot--0 { top: 11%; }
+.tactical-dot--1 { top: 24%; transform: translateX(-35px); }
+.tactical-dot--2 { top: 37%; transform: translateX(8px); }
+.tactical-dot--3 { top: 49%; transform: translateX(-30px); }
+.tactical-dot--4 { top: 62%; }
+.tactical-dot--5 { top: 75%; transform: translateX(-35px); }
+.tactical-dot--6 { top: 87%; transform: translateX(8px); }
 .tactical-dot--away.tactical-dot--1,
-.tactical-dot--away.tactical-dot--3 { transform: translateX(30px); }
+.tactical-dot--away.tactical-dot--3,
+.tactical-dot--away.tactical-dot--5 { transform: translateX(30px); }
 
 .tactical-ball {
   background: #e7d1aa;

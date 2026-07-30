@@ -29,7 +29,7 @@ test("server-renders the Rugby BR 26 game shell", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Rugby BR 26 — protótipo 2D<\/title>/i);
+  assert.match(html, /<title>Rugby BR 26 — rugby sevens 2D<\/title>/i);
   assert.match(html, /Rugby BR 26/);
   assert.match(html, /Do clube local/);
   assert.match(html, /Monte o confronto/);
@@ -49,8 +49,10 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v1/);
+  assert.match(serviceWorker, /rugby-br-26-v2-sevens/);
   assert.match(gameSource, /const MATCH_SECONDS = 120/);
+  assert.match(gameSource, /const PLAYERS_PER_SIDE = 7/);
+  assert.match(gameSource, /RUGBY SEVENS · 7 CONTRA 7/);
   assert.match(gameSource, /Tornados Indaiatuba/);
   assert.match(gameSource, /Leões de Paraisópolis/);
 

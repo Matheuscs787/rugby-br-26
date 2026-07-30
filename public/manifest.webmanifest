@@ -1,7 +1,7 @@
 {
   "name": "Rugby BR 26",
   "short_name": "Rugby BR",
-  "description": "Rugby arcade 2D com os clubes brasileiros de 2026.",
+  "description": "Rugby sevens arcade 2D, 7 contra 7, com os clubes brasileiros de 2026.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#071611",

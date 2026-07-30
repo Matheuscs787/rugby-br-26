@@ -64,6 +64,8 @@ const TRY_LINE = 70;
 const CENTRE_Y = FIELD_H / 2;
 const PLAYER_RADIUS = 17;
 const MATCH_SECONDS = 120;
+const PLAYERS_PER_SIDE = 7;
+const MID_SLOT = Math.floor(PLAYERS_PER_SIDE / 2);
 
 const TEAMS: Team[] = [
   { id: "farrapos", name: "Farrapos", state: "RS", division: 1, group: "Grupo A", primary: "#7d1731", secondary: "#f2c84b", short: "FAR" },
@@ -108,22 +110,22 @@ function formatClock(seconds: number) {
 }
 
 function makePlayers(): Player[] {
-  const lanes = [140, 225, 310, 395, 480];
+  const lanes = [100, 170, 240, 310, 380, 450, 520];
   return [
     ...lanes.map((y, slot) => ({
       id: slot,
       side: 0 as const,
       slot,
-      x: 265 - Math.abs(2 - slot) * 18,
+      x: 255 - Math.abs(MID_SLOT - slot) * 14,
       y,
       stun: 0,
       tackleLock: 0,
     })),
     ...lanes.map((y, slot) => ({
-      id: slot + 5,
+      id: slot + PLAYERS_PER_SIDE,
       side: 1 as const,
       slot,
-      x: 835 + Math.abs(2 - slot) * 18,
+      x: 845 + Math.abs(MID_SLOT - slot) * 14,
       y,
       stun: 0,
       tackleLock: 0,
@@ -133,9 +135,10 @@ function makePlayers(): Player[] {
 
 function freshMatch(): Match {
   const players = makePlayers();
+  const firstCarrier = players[MID_SLOT];
   return {
     players,
-    ball: { x: players[2].x, y: players[2].y, vx: 0, vy: 0, owner: players[2], target: null, air: 0 },
+    ball: { x: firstCarrier.x, y: firstCarrier.y, vx: 0, vy: 0, owner: firstCarrier, target: null, air: 0 },
     score: [0, 0],
     seconds: MATCH_SECONDS,
     running: true,
@@ -398,7 +401,10 @@ export function RugbyGame() {
     (match: Match, possession: 0 | 1) => {
       const reset = makePlayers();
       match.players.splice(0, match.players.length, ...reset);
-      const owner = possession === 0 ? match.players[2] : match.players[7];
+      const owner =
+        possession === 0
+          ? match.players[MID_SLOT]
+          : match.players[PLAYERS_PER_SIDE + MID_SLOT];
       match.ball = { x: owner.x, y: owner.y, vx: 0, vy: 0, owner, target: null, air: 0 };
       match.kickoff = 1.15;
       match.actionLock = 0.4;
@@ -564,12 +570,12 @@ export function RugbyGame() {
       homePlayers.forEach((player) => {
         if (player === controlled) return;
         if (ballOwner?.side === 0) {
-          const laneOffset = (player.slot - 2) * 72;
+          const laneOffset = (player.slot - MID_SLOT) * 57;
           moveToward(player, ballOwner.x - 82 - Math.abs(player.slot - ballOwner.slot) * 22, ballOwner.y + laneOffset, 142);
         } else {
           const target = ballOwner ?? match.ball;
           const chaseRank = [...homePlayers].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
-          moveToward(player, target.x + chaseRank * 28, target.y + (player.slot - 2) * 34, chaseRank < 2 ? 168 : 132);
+          moveToward(player, target.x + chaseRank * 25, target.y + (player.slot - MID_SLOT) * 27, chaseRank < 2 ? 168 : 132);
         }
       });
 
@@ -584,12 +590,12 @@ export function RugbyGame() {
               player.y += clamp(dy, -110 * dt, 110 * dt);
             }
           } else {
-            moveToward(player, ballOwner.x + 90 + Math.abs(player.slot - ballOwner.slot) * 24, ballOwner.y + (player.slot - 2) * 65, 140);
+            moveToward(player, ballOwner.x + 90 + Math.abs(player.slot - ballOwner.slot) * 22, ballOwner.y + (player.slot - MID_SLOT) * 52, 140);
           }
         } else {
           const target = ballOwner ?? match.ball;
           const rank = [...awayPlayers].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
-          moveToward(player, target.x - rank * 30, target.y + (player.slot - 2) * 31, rank < 2 ? 183 : 140);
+          moveToward(player, target.x - rank * 26, target.y + (player.slot - MID_SLOT) * 26, rank < 2 ? 183 : 140);
         }
       });
 
@@ -835,7 +841,7 @@ export function RugbyGame() {
         <>
           <section className="hero">
             <div className="hero-copy">
-              <p className="eyebrow">PROTÓTIPO JOGÁVEL · 5 CONTRA 5</p>
+              <p className="eyebrow">RUGBY SEVENS · 7 CONTRA 7</p>
               <h1>Do clube local<br />até o <em>try.</em></h1>
               <p className="hero-intro">
                 Escolha um dos 24 clubes nacionais de 2026 e entre em campo numa partida
@@ -858,10 +864,10 @@ export function RugbyGame() {
                 <span>FÍSICO</span>
                 <strong>BRASILEIRO</strong>
               </div>
-              {[0, 1, 2, 3, 4].map((slot) => (
+              {[0, 1, 2, 3, 4, 5, 6].map((slot) => (
                 <i key={`home-${slot}`} className={`tactical-dot tactical-dot--home tactical-dot--${slot}`} />
               ))}
-              {[0, 1, 2, 3, 4].map((slot) => (
+              {[0, 1, 2, 3, 4, 5, 6].map((slot) => (
                 <i key={`away-${slot}`} className={`tactical-dot tactical-dot--away tactical-dot--${slot}`} />
               ))}
               <span className="tactical-ball" />

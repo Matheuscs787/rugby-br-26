@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
     (host.startsWith("localhost") ? "http" : "https");
   const baseUrl = `${protocol}://${host}`;
   const description =
-    "Rugby arcade 2D leve com os 24 clubes das duas divisões nacionais de 2026.";
+    "Rugby sevens arcade 2D, 7 contra 7, com os 24 clubes das duas divisões nacionais de 2026.";
 
   return {
     metadataBase: new URL(baseUrl),
