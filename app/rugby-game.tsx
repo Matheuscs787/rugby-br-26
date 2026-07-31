@@ -186,10 +186,37 @@ function teamById(teamId: string) {
   return TEAMS.find((team) => team.id === teamId) ?? TEAMS[0];
 }
 
+function bestSquadIndexes(players: RosterPlayer[]) {
+  return players
+    .map((player, index) => ({ player, index }))
+    .sort(
+      (a, b) =>
+        b.player.skills.overall - a.player.skills.overall ||
+        b.player.stats.appearances - a.player.stats.appearances ||
+        a.player.name.localeCompare(b.player.name, "pt-BR"),
+    )
+    .slice(0, SQUAD_SIZE)
+    .map(({ index }) => index);
+}
+
+function squadOverall(players: RosterPlayer[]) {
+  if (!players.length) return 0;
+  return Math.round(players.reduce((total, player) => total + player.skills.overall, 0) / players.length);
+}
+
 function teamStrength(teamId: string) {
-  const players = ROSTERS_2026[teamId]?.players.slice(0, SQUAD_SIZE) ?? [];
+  const roster = ROSTERS_2026[teamId]?.players ?? [];
+  const players = bestSquadIndexes(roster).map((index) => roster[index]).filter(Boolean);
   if (!players.length) return 65;
   return players.reduce((total, player) => total + player.skills.overall, 0) / players.length;
+}
+
+function hasClearTryLane(match: Match, carrier: Player) {
+  return !match.players.some((defender) => {
+    if (defender.side === carrier.side || defender.stun > 0) return false;
+    const forwardDistance = carrier.side === 0 ? defender.x - carrier.x : carrier.x - defender.x;
+    return forwardDistance > 4 && forwardDistance < 320 && Math.abs(defender.y - carrier.y) < 105;
+  });
 }
 
 function simulateFixture(fixture: ChampionshipFixture): ChampionshipResult {
@@ -967,8 +994,9 @@ export function RugbyGame() {
   const [homeId, setHomeId] = useState("jacarei");
   const [awayId, setAwayId] = useState("farrapos");
   const [selectedRosterIndexes, setSelectedRosterIndexes] = useState<number[]>(
-    Array.from({ length: SQUAD_SIZE }, (_, index) => index),
+    () => bestSquadIndexes(ROSTERS_2026.jacarei.players),
   );
+  const [simulationSpeed, setSimulationSpeed] = useState<1 | 2>(1);
   const [rosterQuery, setRosterQuery] = useState("");
   const [soundOn, setSoundOn] = useState(true);
   const [bestWins, setBestWins] = useState(0);
@@ -1001,6 +1029,7 @@ export function RugbyGame() {
   const gestureRef = useRef({ active: false, x: 0, y: 0 });
   const audioRef = useRef<AudioContext | null>(null);
   const controlModeRef = useRef<ControlMode>("control");
+  const simulationSpeedRef = useRef<1 | 2>(1);
 
   const home = useMemo(() => TEAMS.find((team) => team.id === homeId) ?? TEAMS[0], [homeId]);
   const away = useMemo(() => TEAMS.find((team) => team.id === awayId) ?? TEAMS[1], [awayId]);
@@ -1010,6 +1039,8 @@ export function RugbyGame() {
     () => selectedRosterIndexes.map((index) => homeRoster.players[index]).filter(Boolean),
     [homeRoster, selectedRosterIndexes],
   );
+  const selectedTeamOverall = useMemo(() => squadOverall(selectedSquad), [selectedSquad]);
+  const strongestHomeIndexes = useMemo(() => bestSquadIndexes(homeRoster.players), [homeRoster]);
   const filteredRoster = useMemo(() => {
     const query = rosterQuery.trim().toLocaleLowerCase("pt-BR");
     return homeRoster.players
@@ -1070,6 +1101,10 @@ export function RugbyGame() {
     controlModeRef.current = controlMode;
   }, [controlMode]);
 
+  useEffect(() => {
+    simulationSpeedRef.current = simulationSpeed;
+  }, [simulationSpeed]);
+
   const beep = useCallback(
     (frequency: number, duration = 0.08) => {
       if (!soundOn || typeof window === "undefined") return;
@@ -1106,7 +1141,9 @@ export function RugbyGame() {
   const prepareRestart = useCallback((match: Match, kickingSide: 0 | 1) => {
     arrangeRestart(match.players, kickingSide);
 
-    const automaticSides: (0 | 1)[] = controlModeRef.current === "simulate" ? [0, 1] : [1];
+    // The selected side always keeps its substitutions under the player's control,
+    // including spectator mode. The opposing AI still manages its own bench.
+    const automaticSides: (0 | 1)[] = [1];
     automaticSides.forEach((side) => {
       if (match.substitutesLeft[side] <= 0) return;
       const tiredPlayer = match.players
@@ -1508,11 +1545,13 @@ export function RugbyGame() {
         if (ballOwner?.side === 0) {
           if (player === ballOwner && simulated) {
             if (player.stun <= 0) {
+              const clearLane = hasClearTryLane(match, player);
               const wave = Math.sin(match.seconds * 1.55 + player.slot) * 62;
-              const targetY = clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
+              const targetY = clearLane ? player.y : clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
               const dy = targetY - player.y;
-              player.x += 174 * attributeFactor(player.skills.speed) * dt;
+              player.x += (clearLane ? 226 : 174) * attributeFactor(player.skills.speed) * dt;
               player.y += clamp(dy, -110 * dt, 110 * dt);
+              player.stamina = Math.max(0, player.stamina - dt * (clearLane ? 1.08 : 0.72) * staminaDrainFactor(player));
             }
           } else {
             const laneOffset = (player.slot - MID_SLOT) * 57;
@@ -1530,11 +1569,13 @@ export function RugbyGame() {
         if (ballOwner?.side === 1) {
           if (player === ballOwner) {
             if (player.stun <= 0) {
+              const clearLane = hasClearTryLane(match, player);
               const wave = Math.sin(match.seconds * 1.7 + player.slot) * 62;
-              const targetY = clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
+              const targetY = clearLane ? player.y : clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
               const dy = targetY - player.y;
-              player.x -= 174 * attributeFactor(player.skills.speed) * dt;
+              player.x -= (clearLane ? 226 : 174) * attributeFactor(player.skills.speed) * dt;
               player.y += clamp(dy, -110 * dt, 110 * dt);
+              player.stamina = Math.max(0, player.stamina - dt * (clearLane ? 1.08 : 0.72) * staminaDrainFactor(player));
             }
           } else {
             moveToward(player, ballOwner.x + 40 + Math.abs(player.slot - ballOwner.slot) * 9, ballOwner.y + (player.slot - MID_SLOT) * 52, 143);
@@ -1644,10 +1685,11 @@ export function RugbyGame() {
 
       const newCarrier = match.ball.owner;
       if (newCarrier && (newCarrier.side === 1 || simulated) && match.cpuActionLock <= 0) {
+        const clearLane = hasClearTryLane(match, newCarrier);
         const pressure = match.players.some(
           (player) => player.side !== newCarrier.side && distance(player, newCarrier) < 68,
         );
-        if (pressure) {
+        if (pressure && !clearLane) {
           passBall(newCarrier.side);
           match.cpuActionLock = 1 + Math.random() * 0.8;
         }
@@ -1679,7 +1721,10 @@ export function RugbyGame() {
       if (!ctx) return;
       const dt = Math.min((now - match.lastFrame) / 1000, 0.035);
       match.lastFrame = now;
-      updateMatch(match, dt);
+      const simulationSteps = controlModeRef.current === "simulate" ? simulationSpeedRef.current : 1;
+      for (let step = 0; step < simulationSteps; step += 1) {
+        updateMatch(match, dt);
+      }
       drawField(ctx, match, home, away, now, aimRef.current, controlModeRef.current === "simulate");
 
       const fieldViewport = canvas.parentElement;
@@ -1764,7 +1809,7 @@ export function RugbyGame() {
     setHomeId(campaign.teamId);
     setAwayId(opponentId);
     setControlMode(mode);
-    setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
+    setSelectedRosterIndexes(bestSquadIndexes(ROSTERS_2026[campaign.teamId].players));
     setRosterQuery("");
     setScreen("squad");
   }, [campaign, currentCampaignFixture]);
@@ -1802,10 +1847,10 @@ export function RugbyGame() {
       const alternative = TEAMS.find((team) => team.id !== homeId);
       if (alternative) setAwayId(alternative.id);
     }
-    setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
+    setSelectedRosterIndexes(strongestHomeIndexes);
     setRosterQuery("");
     setScreen("squad");
-  }, [awayId, homeId]);
+  }, [awayId, homeId, strongestHomeIndexes]);
 
   const toggleRosterPlayer = useCallback((index: number) => {
     setSelectedRosterIndexes((current) => {
@@ -1817,7 +1862,7 @@ export function RugbyGame() {
 
   const startMatch = useCallback(() => {
     if (selectedSquad.length !== SQUAD_SIZE) return;
-    const cpuSquad = awayRoster.players.slice(0, SQUAD_SIZE);
+    const cpuSquad = bestSquadIndexes(awayRoster.players).map((index) => awayRoster.players[index]);
     matchRef.current = freshMatch(selectedSquad, cpuSquad);
     aimRef.current.active = false;
     joystickRef.current = { x: 0, y: 0, active: false };
@@ -1843,7 +1888,7 @@ export function RugbyGame() {
   }, [awayRoster, beep, controlMode, selectedSquad]);
 
   const restartMatch = useCallback(() => {
-    const cpuSquad = awayRoster.players.slice(0, SQUAD_SIZE);
+    const cpuSquad = bestSquadIndexes(awayRoster.players).map((index) => awayRoster.players[index]);
     matchRef.current = freshMatch(selectedSquad, cpuSquad);
     aimRef.current.active = false;
     joystickRef.current = { x: 0, y: 0, active: false };
@@ -2662,6 +2707,10 @@ export function RugbyGame() {
             <aside className="squad-summary">
               <p className="eyebrow">ORDEM DA CONVOCAÇÃO</p>
               <h2>7 titulares + 5 reservas</h2>
+              <div className="team-overall-card" aria-label={`Overall do time ${selectedTeamOverall}`}>
+                <span><small>OVR DO TIME</small><strong>{selectedTeamOverall || "—"}</strong></span>
+                <p>Média dos {selectedSquad.length} jogadores selecionados para a partida.</p>
+              </div>
               <div className="selected-squad">
                 {selectedSquad.map((athlete, slot) => (
                   <div key={`${slot}-${athlete.profile ?? athlete.name}`}>
@@ -2690,9 +2739,9 @@ export function RugbyGame() {
               <button
                 className="secondary-button reset-squad"
                 type="button"
-                onClick={() => setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index))}
+                onClick={() => setSelectedRosterIndexes(strongestHomeIndexes)}
               >
-                Restaurar convocação inicial
+                Selecionar os 12 maiores OVRs
               </button>
             </aside>
           </div>
@@ -2702,7 +2751,7 @@ export function RugbyGame() {
           <div className="match-hud">
             <div className="hud-team">
               <TeamBadge team={home} />
-              <span><small>{controlMode === "simulate" ? "IA" : "VOCÊ"}</small><strong>{home.short}</strong></span>
+              <span><small>{controlMode === "simulate" ? "IA" : "VOCÊ"} · OVR {selectedTeamOverall}</small><strong>{home.short}</strong></span>
             </div>
             <strong className="score">{hud.score[0]}</strong>
             <div className="match-clock">
@@ -2739,7 +2788,13 @@ export function RugbyGame() {
               {hud.message && <div className="game-message">{hud.message}</div>}
             </div>
             {controlMode === "simulate" ? (
-              <div className="simulation-banner"><i /> SIMULAÇÃO AO VIVO · DUAS IAS EM CAMPO</div>
+              <div className="simulation-banner">
+                <span><i /> SIMULAÇÃO AO VIVO · DUAS IAS EM CAMPO</span>
+                <div className="simulation-speed" aria-label="Velocidade da simulação">
+                  <button type="button" className={simulationSpeed === 1 ? "active" : ""} onClick={() => setSimulationSpeed(1)} aria-pressed={simulationSpeed === 1}>1×</button>
+                  <button type="button" className={simulationSpeed === 2 ? "active" : ""} onClick={() => setSimulationSpeed(2)} aria-pressed={simulationSpeed === 2}>2×</button>
+                </div>
+              </div>
             ) : (
             <div className="mobile-controls" aria-label="Controles por toque">
               <div
@@ -2801,7 +2856,7 @@ export function RugbyGame() {
                 Encerrar partida
               </button>
             )}
-            <span>{controlMode === "simulate" ? "Modo espectador · pause quando quiser" : <><kbd>1–7</kbd> passe · <kbd>K</kbd> chute à frente · <kbd>R</kbd> block · <kbd>Q</kbd> drop</>}</span>
+            <span>{controlMode === "simulate" ? "Modo espectador · pause para fazer substituições" : <><kbd>1–7</kbd> passe · <kbd>K</kbd> chute à frente · <kbd>R</kbd> block · <kbd>Q</kbd> drop</>}</span>
             <button
               type="button"
               onPointerDown={(event) => {
@@ -2816,10 +2871,10 @@ export function RugbyGame() {
             </button>
           </div>
 
-          {hud.paused && controlMode === "control" && (
+          {hud.paused && (
             <section className="substitution-panel" aria-label="Banco de reservas">
               <div>
-                <p className="eyebrow">BANCO DE RESERVAS</p>
+                <p className="eyebrow">{controlMode === "simulate" ? "GESTÃO NA SIMULAÇÃO" : "BANCO DE RESERVAS"}</p>
                 <h3>{hud.substitutesLeft} substituições disponíveis</h3>
               </div>
               <div className="substitution-list">

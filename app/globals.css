@@ -1560,6 +1560,44 @@ kbd {
   top: 82px;
 }
 
+.team-overall-card {
+  align-items: center;
+  background: linear-gradient(120deg, rgba(223, 255, 73, 0.12), rgba(223, 255, 73, 0.025));
+  border: 1px solid rgba(223, 255, 73, 0.28);
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 82px 1fr;
+  margin-top: 17px;
+  padding: 13px 15px;
+}
+
+.team-overall-card > span {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-overall-card small {
+  color: var(--acid);
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.team-overall-card strong {
+  color: var(--ink);
+  font-size: 35px;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.team-overall-card p {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.45;
+  margin: 0;
+}
+
 .selected-squad {
   display: grid;
   gap: 5px;
@@ -1860,11 +1898,18 @@ kbd {
   display: flex;
   font-size: 9px;
   font-weight: 900;
-  gap: 9px;
-  justify-content: center;
+  gap: 16px;
+  justify-content: space-between;
   letter-spacing: 0.13em;
   min-height: 42px;
+  padding: 6px 12px 6px 16px;
   text-transform: uppercase;
+}
+
+.simulation-banner > span {
+  align-items: center;
+  display: flex;
+  gap: 9px;
 }
 
 .simulation-banner i {
@@ -1873,6 +1918,27 @@ kbd {
   box-shadow: 0 0 10px rgba(255, 106, 61, 0.75);
   height: 7px;
   width: 7px;
+}
+
+.simulation-speed {
+  display: flex;
+  gap: 5px;
+}
+
+.simulation-speed button {
+  background: transparent;
+  border: 1px solid rgba(223, 255, 73, 0.28);
+  color: #a9b9b0;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 950;
+  min-height: 30px;
+  min-width: 42px;
+}
+
+.simulation-speed button.active {
+  background: var(--acid);
+  color: #071611;
 }
 
 footer {
@@ -2230,6 +2296,17 @@ footer > span {
     font-size: 9px;
     padding: 10px 12px;
     top: 12px;
+  }
+
+  .simulation-banner {
+    font-size: 7px;
+    letter-spacing: 0.08em;
+    padding-left: 10px;
+    padding-right: 8px;
+  }
+
+  .simulation-speed button {
+    min-width: 38px;
   }
 
   .mobile-controls {

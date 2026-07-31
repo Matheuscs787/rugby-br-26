@@ -55,7 +55,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v13-championship/);
+  assert.match(serviceWorker, /rugby-br-26-v14-simulation-ai/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -111,6 +111,14 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /recordCampaignMatch/);
   assert.match(gameSource, /Assistir duas IAs/);
   assert.match(gameSource, /CAMPAIGN_STORAGE_KEY/);
+  assert.match(gameSource, /bestSquadIndexes/);
+  assert.match(gameSource, /squadOverall/);
+  assert.match(gameSource, /OVR DO TIME/);
+  assert.match(gameSource, /simulationSpeedRef/);
+  assert.match(gameSource, /Velocidade da simulação/);
+  assert.match(gameSource, /hasClearTryLane/);
+  assert.match(gameSource, /pressure && !clearLane/);
+  assert.match(gameSource, /GESTÃO NA SIMULAÇÃO/);
   assert.match(championshipSource, /OFFICIAL_GROUP_FIXTURES/);
   assert.match(championshipSource, /createRoundRobinFixtures/);
   assert.match(championshipSource, /hexagonal/);
