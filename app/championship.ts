@@ -45,6 +45,46 @@ export type ChampionshipCampaign = {
   createdAt: number;
 };
 
+export type OfficialPlayedResult = {
+  homeId: string;
+  awayId: string;
+  homeScore: number;
+  awayScore: number;
+};
+
+// Resultados já publicados no Sporti em 31/07/2026. Eles alimentam somente a
+// forma recente das equipes; a campanha jogável continua criando seus próprios placares.
+export const OFFICIAL_RESULTS_2026: OfficialPlayedResult[] = [
+  { homeId: "desterro", awayId: "farrapos", homeScore: 0, awayScore: 43 },
+  { homeId: "charrua", awayId: "joaca", homeScore: 30, awayScore: 8 },
+  { homeId: "rio-branco", awayId: "poli", homeScore: 12, awayScore: 58 },
+  { homeId: "sao-jose", awayId: "tornados", homeScore: 74, awayScore: 0 },
+  { homeId: "jacarei", awayId: "nova-lima", homeScore: 90, awayScore: 3 },
+  { homeId: "spac", awayId: "pasteur", homeScore: 36, awayScore: 33 },
+  { homeId: "farrapos", awayId: "charrua", homeScore: 55, awayScore: 22 },
+  { homeId: "joaca", awayId: "desterro", homeScore: 10, awayScore: 24 },
+  { homeId: "poli", awayId: "sao-jose", homeScore: 29, awayScore: 19 },
+  { homeId: "tornados", awayId: "rio-branco", homeScore: 20, awayScore: 13 },
+  { homeId: "jacarei", awayId: "spac", homeScore: 22, awayScore: 10 },
+  { homeId: "pasteur", awayId: "nova-lima", homeScore: 60, awayScore: 17 },
+  { homeId: "joaca", awayId: "farrapos", homeScore: 0, awayScore: 60 },
+  { homeId: "charrua", awayId: "desterro", homeScore: 59, awayScore: 26 },
+  { homeId: "sao-jose", awayId: "rio-branco", homeScore: 52, awayScore: 5 },
+  { homeId: "pasteur", awayId: "jacarei", homeScore: 14, awayScore: 20 },
+  { homeId: "spac", awayId: "nova-lima", homeScore: 104, awayScore: 10 },
+  { homeId: "serra-gaucha", awayId: "colonos", homeScore: 24, awayScore: 24 },
+  { homeId: "leoes", awayId: "pe-vermelho", homeScore: 48, awayScore: 50 },
+  { homeId: "iguanas", awayId: "urutu", homeScore: 28, awayScore: 24 },
+  { homeId: "rio", awayId: "carioca", homeScore: 50, awayScore: 19 },
+  { homeId: "niteroi", awayId: "vitoria", homeScore: 71, awayScore: 10 },
+  { homeId: "serra-gaucha", awayId: "brummers", homeScore: 31, awayScore: 54 },
+  { homeId: "colonos", awayId: "joinville", homeScore: 83, awayScore: 7 },
+  { homeId: "iguanas", awayId: "leoes", homeScore: 40, awayScore: 50 },
+  { homeId: "urutu", awayId: "pe-vermelho", homeScore: 19, awayScore: 49 },
+  { homeId: "rio", awayId: "vitoria", homeScore: 28, awayScore: 21 },
+  { homeId: "carioca", awayId: "niteroi", homeScore: 7, awayScore: 127 },
+];
+
 type FixtureRow = readonly [
   division: 1 | 2,
   groupCode: "A" | "B" | "C",

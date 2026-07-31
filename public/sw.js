@@ -1,4 +1,4 @@
-const CACHE = "rugby-br-26-v14-simulation-ai";
+const CACHE = "rugby-br-26-v15-team-form";
 const SCOPE_URL = new URL("./", self.registration.scope).toString();
 const CORE = ["./", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"].map(
   (path) => new URL(path, self.registration.scope).toString(),

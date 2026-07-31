@@ -622,6 +622,15 @@ select:focus-visible {
   text-transform: uppercase;
 }
 
+.team-preview em {
+  color: var(--acid);
+  display: inline-block;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 950;
+  margin-top: 7px;
+}
+
 .team-select select {
   appearance: none;
   background:
@@ -1000,6 +1009,28 @@ kbd {
 .campaign-versus > div strong {
   font-size: 15px;
   margin-top: 10px;
+}
+
+.match-team-overall {
+  align-items: baseline;
+  background: rgba(223, 255, 73, 0.08);
+  border: 1px solid rgba(223, 255, 73, 0.25);
+  display: inline-flex;
+  gap: 5px;
+  margin-top: 9px;
+  padding: 5px 9px;
+}
+
+.match-team-overall b {
+  color: var(--acid);
+  font-size: 20px;
+  letter-spacing: -0.05em;
+}
+
+.campaign-versus .match-team-overall small {
+  color: var(--acid);
+  font-size: 7px;
+  margin: 0;
 }
 
 .campaign-versus small {

@@ -55,7 +55,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v14-simulation-ai/);
+  assert.match(serviceWorker, /rugby-br-26-v15-team-form/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -119,10 +119,17 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /hasClearTryLane/);
   assert.match(gameSource, /pressure && !clearLane/);
   assert.match(gameSource, /GESTÃO NA SIMULAÇÃO/);
+  assert.match(gameSource, /teamRosterOverall/);
+  assert.match(gameSource, /match-team-overall/);
+  assert.match(gameSource, /officialFormBonus/);
+  assert.match(gameSource, /forma oficial de 2026/);
   assert.match(championshipSource, /OFFICIAL_GROUP_FIXTURES/);
   assert.match(championshipSource, /createRoundRobinFixtures/);
   assert.match(championshipSource, /hexagonal/);
   assert.match(championshipSource, /repechage/);
+  assert.match(championshipSource, /OFFICIAL_RESULTS_2026/);
+  assert.match(championshipSource, /homeId: "leoes", awayId: "pe-vermelho", homeScore: 48, awayScore: 50/);
+  assert.match(championshipSource, /homeId: "urutu", awayId: "pe-vermelho", homeScore: 19, awayScore: 49/);
   assert.equal((championshipSource.match(/^  \[[12], "[ABC]",/gm) ?? []).length, 54);
   assert.match(styles, /@media \(hover: none\) and \(pointer: coarse\)/);
   assert.match(styles, /grid-template-columns: repeat\(3, 60px\)/);

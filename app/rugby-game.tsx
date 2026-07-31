@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ROSTERS_2026, type PlayerSkills, type RosterPlayer } from "./rosters";
 import {
   OFFICIAL_GROUP_FIXTURES,
+  OFFICIAL_RESULTS_2026,
   createFinalFixture,
   createRoundRobinFixtures,
   type ChampionshipCampaign,
@@ -63,6 +64,7 @@ type Match = {
   ball: Ball;
   score: [number, number];
   tries: [number, number];
+  formBoost: [number, number];
   seconds: number;
   half: 1 | 2;
   halftime: boolean;
@@ -204,11 +206,42 @@ function squadOverall(players: RosterPlayer[]) {
   return Math.round(players.reduce((total, player) => total + player.skills.overall, 0) / players.length);
 }
 
-function teamStrength(teamId: string) {
+function teamRosterOverall(teamId: string) {
   const roster = ROSTERS_2026[teamId]?.players ?? [];
-  const players = bestSquadIndexes(roster).map((index) => roster[index]).filter(Boolean);
-  if (!players.length) return 65;
-  return players.reduce((total, player) => total + player.skills.overall, 0) / players.length;
+  return squadOverall(bestSquadIndexes(roster).map((index) => roster[index]).filter(Boolean));
+}
+
+function officialTeamForm(teamId: string) {
+  return OFFICIAL_RESULTS_2026.reduce(
+    (form, result) => {
+      const isHome = result.homeId === teamId;
+      const isAway = result.awayId === teamId;
+      if (!isHome && !isAway) return form;
+      const scored = isHome ? result.homeScore : result.awayScore;
+      const conceded = isHome ? result.awayScore : result.homeScore;
+      form.played += 1;
+      form.pointsFor += scored;
+      form.pointsAgainst += conceded;
+      if (scored > conceded) form.wins += 1;
+      else if (scored === conceded) form.draws += 1;
+      else form.losses += 1;
+      return form;
+    },
+    { played: 0, wins: 0, draws: 0, losses: 0, pointsFor: 0, pointsAgainst: 0 },
+  );
+}
+
+function officialFormBonus(teamId: string) {
+  const form = officialTeamForm(teamId);
+  if (!form.played) return 0;
+  const winRate = (form.wins + form.draws * 0.5) / form.played;
+  const scoreBalance = (form.pointsFor - form.pointsAgainst) / form.played;
+  return clamp((winRate - 0.5) * 8 + clamp(scoreBalance / 18, -2.5, 2.5), -5, 5);
+}
+
+function teamStrength(teamId: string) {
+  const rosterOverall = teamRosterOverall(teamId);
+  return (rosterOverall || 65) + officialFormBonus(teamId);
 }
 
 function hasClearTryLane(match: Match, carrier: Player) {
@@ -534,7 +567,7 @@ function arrangeRestart(players: Player[], kickingSide: 0 | 1) {
   });
 }
 
-function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Match {
+function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[], homeTeamId: string, awayTeamId: string): Match {
   const players = makePlayers(homeSquad, awaySquad);
   arrangeRestart(players, 0);
   const firstKicker = players[MID_SLOT];
@@ -554,6 +587,7 @@ function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Match
     },
     score: [0, 0],
     tries: [0, 0],
+    formBoost: [officialFormBonus(homeTeamId), officialFormBonus(awayTeamId)],
     seconds: HALF_SECONDS,
     half: 1,
     halftime: false,
@@ -1220,7 +1254,7 @@ export function RugbyGame() {
           ? Math.min(target.x, owner.x - 3)
           : Math.max(target.x, owner.x + 3);
       const completionChance = clamp(
-        0.55 + owner.skills.pass * 0.0038 + target.skills.pass * 0.0006,
+        0.55 + owner.skills.pass * 0.0038 + target.skills.pass * 0.0006 + match.formBoost[side] * 0.009,
         0.76,
         0.97,
       );
@@ -1367,8 +1401,8 @@ export function RugbyGame() {
         return;
       }
 
-      const tackleRoll = tackler.skills.tackle + Math.random() * 24;
-      const breakRoll = carrier.skills.attack + Math.random() * 24;
+      const tackleRoll = tackler.skills.tackle + match.formBoost[tackler.side] * 1.2 + Math.random() * 24;
+      const breakRoll = carrier.skills.attack + match.formBoost[carrier.side] * 1.2 + Math.random() * 24;
       if (breakRoll > tackleRoll + 7) {
         carrier.tackleLock = 0.64;
         tackler.stun = 0.58;
@@ -1501,9 +1535,10 @@ export function RugbyGame() {
       const sprinting = actionRef.current.sprint || keyState.has("ShiftLeft") || keyState.has("ShiftRight");
       const hasMovementInput = Math.hypot(inputX, inputY) > 0.08;
       const staminaFactor = (player: Player) => 0.58 + player.stamina * 0.0042;
+      const formFactor = (player: Player) => 1 + match.formBoost[player.side] * 0.018;
 
       if (controlled && controlled.stun <= 0) {
-        const speed = (sprinting ? 244 : 190) * staminaFactor(controlled) * attributeFactor(controlled.skills.speed);
+        const speed = (sprinting ? 244 : 190) * staminaFactor(controlled) * attributeFactor(controlled.skills.speed) * formFactor(controlled);
         controlled.x += (inputX / inputLength) * speed * dt;
         controlled.y += (inputY / inputLength) * speed * dt;
         if (hasMovementInput) {
@@ -1519,7 +1554,7 @@ export function RugbyGame() {
         const dx = tx - player.x;
         const dy = ty - player.y;
         const length = Math.hypot(dx, dy) || 1;
-        const actualSpeed = speed * staminaFactor(player) * attributeFactor(player.skills.speed);
+        const actualSpeed = speed * staminaFactor(player) * attributeFactor(player.skills.speed) * formFactor(player);
         player.x += (dx / length) * actualSpeed * dt;
         player.y += (dy / length) * actualSpeed * dt;
         if (length > 10) {
@@ -1533,7 +1568,7 @@ export function RugbyGame() {
         const dx = player.routeX - player.x;
         const dy = player.routeY - player.y;
         const length = Math.hypot(dx, dy) || 1;
-        const speed = 252 * staminaFactor(player) * attributeFactor(player.skills.speed);
+        const speed = 252 * staminaFactor(player) * attributeFactor(player.skills.speed) * formFactor(player);
         player.x += (dx / length) * speed * dt;
         player.y += (dy / length) * speed * dt;
         return true;
@@ -1549,7 +1584,7 @@ export function RugbyGame() {
               const wave = Math.sin(match.seconds * 1.55 + player.slot) * 62;
               const targetY = clearLane ? player.y : clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
               const dy = targetY - player.y;
-              player.x += (clearLane ? 226 : 174) * attributeFactor(player.skills.speed) * dt;
+              player.x += (clearLane ? 226 : 174) * attributeFactor(player.skills.speed) * formFactor(player) * dt;
               player.y += clamp(dy, -110 * dt, 110 * dt);
               player.stamina = Math.max(0, player.stamina - dt * (clearLane ? 1.08 : 0.72) * staminaDrainFactor(player));
             }
@@ -1573,7 +1608,7 @@ export function RugbyGame() {
               const wave = Math.sin(match.seconds * 1.7 + player.slot) * 62;
               const targetY = clearLane ? player.y : clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
               const dy = targetY - player.y;
-              player.x -= (clearLane ? 226 : 174) * attributeFactor(player.skills.speed) * dt;
+              player.x -= (clearLane ? 226 : 174) * attributeFactor(player.skills.speed) * formFactor(player) * dt;
               player.y += clamp(dy, -110 * dt, 110 * dt);
               player.stamina = Math.max(0, player.stamina - dt * (clearLane ? 1.08 : 0.72) * staminaDrainFactor(player));
             }
@@ -1863,7 +1898,7 @@ export function RugbyGame() {
   const startMatch = useCallback(() => {
     if (selectedSquad.length !== SQUAD_SIZE) return;
     const cpuSquad = bestSquadIndexes(awayRoster.players).map((index) => awayRoster.players[index]);
-    matchRef.current = freshMatch(selectedSquad, cpuSquad);
+    matchRef.current = freshMatch(selectedSquad, cpuSquad, home.id, away.id);
     aimRef.current.active = false;
     joystickRef.current = { x: 0, y: 0, active: false };
     actionRef.current.sprint = false;
@@ -1885,11 +1920,11 @@ export function RugbyGame() {
     });
     setScreen("match");
     beep(520, 0.12);
-  }, [awayRoster, beep, controlMode, selectedSquad]);
+  }, [away.id, awayRoster, beep, controlMode, home.id, selectedSquad]);
 
   const restartMatch = useCallback(() => {
     const cpuSquad = bestSquadIndexes(awayRoster.players).map((index) => awayRoster.players[index]);
-    matchRef.current = freshMatch(selectedSquad, cpuSquad);
+    matchRef.current = freshMatch(selectedSquad, cpuSquad, home.id, away.id);
     aimRef.current.active = false;
     joystickRef.current = { x: 0, y: 0, active: false };
     actionRef.current.sprint = false;
@@ -1910,7 +1945,7 @@ export function RugbyGame() {
       substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
     beep(520, 0.12);
-  }, [awayRoster, beep, selectedSquad]);
+  }, [away.id, awayRoster, beep, home.id, selectedSquad]);
 
   const togglePause = useCallback(() => {
     const match = matchRef.current;
@@ -2337,7 +2372,7 @@ export function RugbyGame() {
                   <div className="versus-grid">
                     <label className="team-select">
                       <span>Time selecionado</span>
-                      <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.state} · {home.division}ª divisão</small></div></div>
+                      <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.state} · {home.division}ª divisão</small><em>OVR {teamRosterOverall(home.id)}</em></div></div>
                       <select value={homeId} onChange={(event) => setHomeId(event.target.value)}>
                         {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} ({team.state}) — {team.division}ª divisão</option>)}
                       </select>
@@ -2345,7 +2380,7 @@ export function RugbyGame() {
                     <span className="versus-mark">VS</span>
                     <label className="team-select">
                       <span>Adversário</span>
-                      <div className="team-preview"><TeamBadge team={away} large /><div><strong>{away.name}</strong><small>{away.state} · {away.division}ª divisão</small></div></div>
+                      <div className="team-preview"><TeamBadge team={away} large /><div><strong>{away.name}</strong><small>{away.state} · {away.division}ª divisão</small><em>OVR {teamRosterOverall(away.id)}</em></div></div>
                       <select value={awayId} onChange={(event) => setAwayId(event.target.value)}>
                         {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} ({team.state}) — {team.division}ª divisão</option>)}
                       </select>
@@ -2372,7 +2407,7 @@ export function RugbyGame() {
                   </div>
                   <label className="team-select championship-team-select">
                     <span>Seu clube no campeonato</span>
-                    <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.group} · {home.division}ª divisão</small></div></div>
+                    <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.group} · {home.division}ª divisão</small><em>OVR {teamRosterOverall(home.id)}</em></div></div>
                     <select value={homeId} onChange={(event) => setHomeId(event.target.value)}>
                       {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} — {team.group}</option>)}
                     </select>
@@ -2503,15 +2538,15 @@ export function RugbyGame() {
                     <>
                       <div className="next-fixture-kicker"><span>PRÓXIMA PARTIDA</span><strong>{phaseLabel(currentCampaignFixture.phase)} · Rodada {currentCampaignFixture.round}</strong></div>
                       <div className="campaign-versus">
-                        <div><TeamBadge team={teamById(currentCampaignFixture.homeId)} large /><strong>{teamById(currentCampaignFixture.homeId).name}</strong><small>Mandante</small></div>
+                        <div><TeamBadge team={teamById(currentCampaignFixture.homeId)} large /><strong>{teamById(currentCampaignFixture.homeId).name}</strong><span className="match-team-overall"><b>{teamRosterOverall(currentCampaignFixture.homeId)}</b><small>OVR</small></span><small>Mandante · {officialTeamForm(currentCampaignFixture.homeId).wins}V {officialTeamForm(currentCampaignFixture.homeId).draws}E {officialTeamForm(currentCampaignFixture.homeId).losses}D</small></div>
                         <span><b>VS</b><small>{currentCampaignFixture.date ?? "Data a definir"}{currentCampaignFixture.time ? ` · ${currentCampaignFixture.time}` : ""}</small></span>
-                        <div><TeamBadge team={teamById(currentCampaignFixture.awayId)} large /><strong>{teamById(currentCampaignFixture.awayId).name}</strong><small>Visitante</small></div>
+                        <div><TeamBadge team={teamById(currentCampaignFixture.awayId)} large /><strong>{teamById(currentCampaignFixture.awayId).name}</strong><span className="match-team-overall"><b>{teamRosterOverall(currentCampaignFixture.awayId)}</b><small>OVR</small></span><small>Visitante · {officialTeamForm(currentCampaignFixture.awayId).wins}V {officialTeamForm(currentCampaignFixture.awayId).draws}E {officialTeamForm(currentCampaignFixture.awayId).losses}D</small></div>
                       </div>
                       <div className="campaign-play-options">
                         <button className="play-button" type="button" onClick={() => openCampaignMatch("control")}><span>Controlar {teamById(campaign.teamId).short}</span><span>→</span></button>
                         <button className="secondary-button simulate-button" type="button" onClick={() => openCampaignMatch("simulate")}><span>Assistir duas IAs</span><span>◎</span></button>
                       </div>
-                      <p className="campaign-note">Antes da partida você escolhe os 7 titulares e 5 reservas. Na simulação, as duas equipes são comandadas pela IA em tempo real.</p>
+                      <p className="campaign-note">Antes da partida você escolhe os 7 titulares e 5 reservas. A simulação combina o OVR dos convocados com a forma oficial de 2026; ainda existe variação em cada partida.</p>
                     </>
                   ) : (
                     <div className="campaign-outcome">
