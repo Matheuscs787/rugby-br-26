@@ -885,6 +885,145 @@ export function buildAllTeamsComparison(teamComparisons) {
   };
 }
 
+export function calculateOfficialForm(matches, teamSlug) {
+  const playedMatches = [...new Map(matches
+    .filter((match) => {
+      const date = parseSportiDate(match.DataPartida);
+      const competition = words(match.NomeCampeonato ?? "").join(" ");
+      const homeScore = Number(match.PlacarCasa ?? match.GolsCasa ?? 0);
+      const awayScore = Number(match.PlacarVisitante ?? match.GolsVisitante ?? 0);
+      return date &&
+        date.getTime() <= Date.now() &&
+        date.getUTCFullYear() === REFERENCE_YEAR &&
+        /super\s*12/.test(competition) &&
+        (homeScore > 0 || awayScore > 0);
+    })
+    .map((match) => [String(match.ID), match])).values()];
+  const form = playedMatches.reduce((result, match) => {
+    const home = normalize(match.NomeSiteEquipeCasa) === normalize(teamSlug);
+    const scored = Number(home ? match.PlacarCasa ?? match.GolsCasa : match.PlacarVisitante ?? match.GolsVisitante);
+    const conceded = Number(home ? match.PlacarVisitante ?? match.GolsVisitante : match.PlacarCasa ?? match.GolsCasa);
+    result.played += 1;
+    result.pointsFor += scored;
+    result.pointsAgainst += conceded;
+    if (scored > conceded) result.wins += 1;
+    else if (scored === conceded) result.draws += 1;
+    else result.losses += 1;
+    return result;
+  }, { played: 0, wins: 0, draws: 0, losses: 0, pointsFor: 0, pointsAgainst: 0 });
+  if (!form.played) return { ...form, adjustment: 0, sample: 0 };
+  const winRate = (form.wins + form.draws * 0.5) / form.played;
+  const scoreBalance = (form.pointsFor - form.pointsAgainst) / form.played;
+  const rawAdjustment = clamp(
+    (winRate - 0.5) * 8 + clamp(scoreBalance / 18, -2.5, 2.5),
+    -5,
+    5,
+  );
+  const sample = Math.min(1, form.played / 3);
+  return {
+    ...form,
+    sample: Number(sample.toFixed(2)),
+    adjustment: Number((rawAdjustment * sample).toFixed(1)),
+  };
+}
+
+export function buildRecommendedTeamsComparison(teamComparisons) {
+  const teams = teamComparisons.map(({ teamId, division, comparison, officialForm }) => ({
+    teamId,
+    team: TEAM_NAMES[teamId] ?? teamId,
+    division,
+    currentOverall: comparison.summary.currentSquadOverall,
+    rosterOverall: comparison.summary.candidateSquadOverall,
+    form: officialForm,
+    strength: Math.round(comparison.summary.candidateSquadOverall + officialForm.adjustment),
+    coverage: Math.round(
+      comparison.summary.playersWithOfficialEvidence / comparison.summary.rosterPlayers * 100,
+    ),
+  }));
+  const assignRanks = (divisionTeams, overallKey, rankKey) => {
+    let previousOverall = null;
+    let rank = 0;
+    [...divisionTeams]
+      .sort((a, b) => b[overallKey] - a[overallKey] || a.team.localeCompare(b.team, "pt-BR"))
+      .forEach((team, index) => {
+        if (team[overallKey] !== previousOverall) rank = index + 1;
+        team[rankKey] = rank;
+        previousOverall = team[overallKey];
+      });
+  };
+  [1, 2].forEach((division) => {
+    const divisionTeams = teams.filter((team) => team.division === division);
+    assignRanks(divisionTeams, "currentOverall", "currentRank");
+    assignRanks(divisionTeams, "strength", "strengthRank");
+  });
+  teams.forEach((team) => { team.rankChange = team.currentRank - team.strengthRank; });
+  const total = (key) => teams.reduce((sum, team) => sum + team[key], 0);
+  return {
+    generatedAt: new Date().toISOString(),
+    productionRatingsChanged: false,
+    model: {
+      roster: "candidate-v2-official-history",
+      form: "2026 Super 12 results with three-match sample shrinkage",
+      strength: "round(rosterOverall + formAdjustment)",
+    },
+    summary: {
+      teams: teams.length,
+      currentAverageOverall: Number((total("currentOverall") / teams.length).toFixed(1)),
+      recommendedAverageRosterOverall: Number((total("rosterOverall") / teams.length).toFixed(1)),
+      recommendedAverageStrength: Number((total("strength") / teams.length).toFixed(1)),
+    },
+    teams: teams.sort((a, b) =>
+      a.division - b.division || a.strengthRank - b.strengthRank || a.team.localeCompare(b.team, "pt-BR"),
+    ),
+  };
+}
+
+export function recommendedTeamsCsv(recommendation) {
+  const header = [
+    "divisao", "time", "ovr_atual", "ovr_elenco_recomendado", "forma_2026",
+    "forca_atual", "ranking_atual", "ranking_forca", "mudanca_ranking",
+    "jogos_2026", "vitorias", "empates", "derrotas", "pontos_pro", "pontos_contra",
+    "cobertura_pct",
+  ];
+  const rows = recommendation.teams.map((team) => [
+    team.division,
+    team.team,
+    team.currentOverall,
+    team.rosterOverall,
+    team.form.adjustment,
+    team.strength,
+    team.currentRank,
+    team.strengthRank,
+    team.rankChange,
+    team.form.played,
+    team.form.wins,
+    team.form.draws,
+    team.form.losses,
+    team.form.pointsFor,
+    team.form.pointsAgainst,
+    team.coverage,
+  ]);
+  return [header, ...rows].map((row) => row.map(escapeCsv).join(",")).join("\n") + "\n";
+}
+
+export function recommendedTeamsMarkdown(recommendation) {
+  const divisions = [1, 2].map((division) => {
+    const rows = recommendation.teams.filter((team) => team.division === division);
+    return `## ${division}ª divisão\n\n` +
+      `| Rank | Time | Atual | OVR elenco | Forma | Força atual | 2026 | Cobertura |\n` +
+      `| ---: | --- | ---: | ---: | ---: | ---: | --- | ---: |\n` +
+      rows.map((team) =>
+        `| ${team.strengthRank} | ${team.team} | ${team.currentOverall} | ${team.rosterOverall} | ${signed(team.form.adjustment)} | ${team.strength} | ${team.form.wins}V ${team.form.draws}E ${team.form.losses}D | ${team.coverage}% |`,
+      ).join("\n");
+  }).join("\n\n");
+  return `# Cenário recomendado de força dos clubes\n\n` +
+    `Gerado em ${recommendation.generatedAt}. **Nenhum rating do jogo foi alterado.**\n\n` +
+    `O OVR do elenco usa a avaliação individual baseada nas súmulas. A forma usa somente resultados publicados do Super 12 de 2026 e permanece separada dos atletas. ` +
+    `Para reduzir o efeito de amostras pequenas, uma partida libera 1/3 do ajuste, duas liberam 2/3 e três ou mais liberam o ajuste completo.\n\n` +
+    `Força atual = arredondar(OVR do elenco + ajuste de forma). Esse é o valor recomendado para favoritismo e simulação; o OVR continua descrevendo apenas o elenco.\n\n` +
+    `${divisions}\n`;
+}
+
 export function allTeamsCsv(aggregate) {
   const header = [
     "divisao", "time", "ovr_atual", "ovr_candidato", "diferenca",
@@ -1010,18 +1149,31 @@ export async function runAllComparisons(options) {
       teamId,
       division,
       matchIds: history.matches.map((match) => String(match.ID)),
+      officialForm: calculateOfficialForm(history.matches, teamSlug),
       comparison: buildComparison({ teamId, roster, division, history }),
     };
   });
   const aggregate = buildAllTeamsComparison(teamComparisons);
+  const recommendation = buildRecommendedTeamsComparison(teamComparisons);
   await mkdir(options.outputDir, { recursive: true });
   const base = resolve(options.outputDir, "ratings-all-teams");
+  const recommendedBase = resolve(options.outputDir, "ratings-all-teams-recommended");
   await Promise.all([
     writeFile(`${base}.json`, JSON.stringify(aggregate, null, 2) + "\n"),
     writeFile(`${base}.csv`, allTeamsCsv(aggregate)),
     writeFile(`${base}.md`, allTeamsMarkdown(aggregate)),
+    writeFile(`${recommendedBase}.json`, JSON.stringify(recommendation, null, 2) + "\n"),
+    writeFile(`${recommendedBase}.csv`, recommendedTeamsCsv(recommendation)),
+    writeFile(`${recommendedBase}.md`, recommendedTeamsMarkdown(recommendation)),
   ]);
-  return { aggregate, files: [`${base}.md`, `${base}.csv`, `${base}.json`] };
+  return {
+    aggregate,
+    recommendation,
+    files: [
+      `${base}.md`, `${base}.csv`, `${base}.json`,
+      `${recommendedBase}.md`, `${recommendedBase}.csv`, `${recommendedBase}.json`,
+    ],
+  };
 }
 
 const isMain = process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url;

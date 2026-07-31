@@ -174,6 +174,11 @@ npm run ratings:compare -- --all --years 2024,2025,2026 --refresh
 
 Esse modo gera `ratings-all-teams.md`, `.csv` e `.json`, com OVR e ranking atual
 e candidato, cobertura oficial por elenco e quantidade de súmulas processadas.
+Ele também gera `ratings-all-teams-recommended.*`, que mantém o OVR do elenco
+separado da forma oficial do clube. Nesse cenário, a força usada pela simulação
+é o OVR candidato mais um ajuste de resultados do Super 12 de 2026. O ajuste é
+limitado a ±5 e liberado gradualmente: 1/3 com uma partida, 2/3 com duas e por
+inteiro somente a partir da terceira partida.
 
 O modelo candidato usa critérios mais conservadores para reservas e separa a
 posição do nível geral do atleta:

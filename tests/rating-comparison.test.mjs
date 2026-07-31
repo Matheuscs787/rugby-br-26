@@ -5,6 +5,8 @@ import {
   analyzeOfficialMatch,
   allTeamsMarkdown,
   buildAllTeamsComparison,
+  buildRecommendedTeamsComparison,
+  calculateOfficialForm,
   calculateCandidateRating,
   createEmptyEvidence,
   createPlayerMatcher,
@@ -127,4 +129,41 @@ test("consolida e reordena os OVRs dos clubes dentro de cada divisão", () => {
   assert.equal(aggregate.teams.find((team) => team.teamId === "spac")?.candidateRank, 1);
   assert.match(allTeamsMarkdown(aggregate), /Pé Vermelho/);
   assert.equal(aggregate.productionRatingsChanged, false);
+});
+
+test("mantém a forma do clube separada e reduz o peso de amostra pequena", () => {
+  const match = (id, homeScore, awayScore) => ({
+    ID: id,
+    DataPartida: `/Date(${Date.UTC(2026, 5, id)})/`,
+    NomeCampeonato: "SUPER 12 - SEGUNDA DIVISÃO - MASCULINO RUGBY XV",
+    NomeSiteEquipeCasa: "pe-vermelho-rugby-clube",
+    NomeSiteEquipeVisitante: "adversario",
+    PlacarCasa: homeScore,
+    PlacarVisitante: awayScore,
+  });
+  const form = calculateOfficialForm(
+    [match(1, 50, 10), match(2, 30, 20)],
+    "pe-vermelho-rugby-clube",
+  );
+  assert.deepEqual(
+    { played: form.played, wins: form.wins, adjustment: form.adjustment, sample: form.sample },
+    { played: 2, wins: 2, adjustment: 3.3, sample: 0.67 },
+  );
+
+  const recommendation = buildRecommendedTeamsComparison([{
+    teamId: "pe-vermelho",
+    division: 2,
+    officialForm: form,
+    comparison: {
+      summary: {
+        currentSquadOverall: 78,
+        candidateSquadOverall: 72,
+        rosterPlayers: 43,
+        playersWithOfficialEvidence: 30,
+      },
+    },
+  }]);
+  assert.equal(recommendation.teams[0].rosterOverall, 72);
+  assert.equal(recommendation.teams[0].strength, 75);
+  assert.equal(recommendation.productionRatingsChanged, false);
 });
