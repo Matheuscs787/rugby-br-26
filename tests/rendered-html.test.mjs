@@ -56,13 +56,15 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v24-scoring-whistles/);
+  assert.match(serviceWorker, /rugby-br-26-v25-whistle-crowd-only/);
   assert.match(serviceWorker, /audio\/referee-whistle\.mp3/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
   assert.match(gameSource, /const SQUAD_SIZE = 12/);
   assert.match(gameSource, /const PLAYERS_PER_SIDE = 7/);
+  assert.match(gameSource, /useState\("pe-vermelho"\)/);
+  assert.match(gameSource, /ROSTERS_2026\["pe-vermelho"\]\.players/);
   assert.match(gameSource, /const FIELD_OF_PLAY_METRES = 100/);
   assert.match(gameSource, /const PITCH_WIDTH_METRES = 70/);
   assert.match(gameSource, /const IN_GOAL_METRES = 10/);
@@ -87,7 +89,6 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /match\.halftime = true/);
   assert.match(gameSource, /5 m da linha de try/);
   assert.match(gameSource, /RUGBY SEVENS · 7 CONTRA 7/);
-  assert.match(gameSource, /Sound is optional and must never prevent a match from starting/);
   assert.match(gameSource, /ensureAudioContext/);
   assert.match(gameSource, /audioPrimedRef/);
   assert.match(gameSource, /whistleBufferRef/);
@@ -95,17 +96,14 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /\/audio\/referee-whistle\.mp3/);
   assert.match(gameSource, /playWhistle/);
   assert.match(gameSource, /playCrowdCelebration/);
-  assert.match(gameSource, /const SCORE_CROWD_DELAY_MS = 1150/);
+  assert.match(gameSource, /const SCORE_CROWD_DELAY_MS = 250/);
   assert.match(gameSource, /window\.setTimeout\(playCrowdCelebration, SCORE_CROWD_DELAY_MS\)/);
   assert.match(gameSource, /whistleOnKickoff/);
   assert.match(gameSource, /prepareRestart\(match, 1, true\)/);
   assert.match(gameSource, /match\.kickoff = SCORE_RESTART_SECONDS/);
   assert.equal((gameSource.match(/\bplayWhistle\(\);/g) ?? []).length, 2);
   assert.equal((gameSource.match(/\bcelebrateScore\(\);/g) ?? []).length, 2);
-  assert.doesNotMatch(gameSource, /beep\(760, 0\.22\)/);
-  assert.doesNotMatch(gameSource, /beep\(520, 0\.12\)/);
-  assert.doesNotMatch(gameSource, /beep\(480, 0\.06\)/);
-  assert.doesNotMatch(gameSource, /beep\(680, 0\.08\)/);
+  assert.doesNotMatch(gameSource, /\bbeep\s*[=(]/);
   assert.match(gameSource, /onClick=\{toggleSound\}/);
   assert.match(gameSource, /const beginDropAim/);
   assert.match(gameSource, /const finishDropAim/);

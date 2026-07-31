@@ -41,8 +41,8 @@ controláveis ou simuladas e modo campeonato.
 - nomes, apelidos, fotos e estatísticas quando disponíveis nas fontes públicas;
 - escalação automática dos 12 maiores overalls, que pode ser alterada pelo usuário;
 - PWA instalável, funcionamento offline básico e layout adaptado para celular;
-- áudio leve, com uma amostra real de apito na abertura de cada tempo e na
-  confirmação dos pontos, além de efeitos das ações importantes;
+- áudio leve e limpo, limitado ao apito na abertura de cada tempo e na
+  confirmação dos pontos, acompanhado pela torcida;
 - publicação estática compatível com GitHub Pages.
 
 ## Como jogar
@@ -88,19 +88,16 @@ campo.
 
 O áudio começa ligado. No primeiro toque, clique ou tecla, o jogo desbloqueia o
 `AudioContext`, requisito dos navegadores móveis e do Safari. O botão `Som on`
-ou `Som off` alterna o áudio; ao reativar, um sinal curto confirma imediatamente
-que o navegador liberou a saída.
+ou `Som off` alterna o apito e a torcida sem emitir som de confirmação.
 
 - o 1º e o 2º tempo começam com um sopro curto de apito real de árbitro; os
   reinícios depois de pontuação não recebem outro apito;
-- tries e drop goals são confirmados pelo apito e, cerca de um segundo depois,
+- tries e drop goals são confirmados pelo apito e, cerca de 0,25 segundo depois,
   recebem uma comemoração de torcida com aproximadamente 2,35 segundos;
-- tackles, chutes, drops e rucks mantêm efeitos curtos de resposta;
-- passes e substituições são silenciosos para não poluir a partida com sons a
-  cada ação ou clique;
-- o apito ocupa aproximadamente 10 KB; torcida e demais efeitos continuam sendo
-  sintetizados no navegador. Todos os sons funcionam offline depois que o jogo
-  é instalado ou carregado uma vez.
+- não há efeitos sonoros para passes, substituições, tackles, chutes, drops
+  errados, rucks, interface, intervalo ou fim da partida;
+- o apito ocupa aproximadamente 10 KB e a torcida é sintetizada no navegador.
+  Ambos funcionam offline depois que o jogo é instalado ou carregado uma vez.
 
 A amostra `public/audio/referee-whistle.mp3` foi adaptada de
 [“Referee whistle blow, gymnasium.wav”, de SpliceSound](https://freesound.org/people/SpliceSound/sounds/218318/),
