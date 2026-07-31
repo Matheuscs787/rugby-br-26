@@ -1364,7 +1364,7 @@ function PlayerStatisticsTable({ players }: { players: PlayerMatchStatistics[] }
   return (
     <div className="player-stat-table" role="table" aria-label="Estatísticas por jogador">
       <div className="player-stat-row player-stat-head" role="row">
-        <span>Jogador</span><span>TAC</span><span>TRY</span><span>METROS</span>
+        <span>Jogador</span><span>TACKLE</span><span>TRY</span><span>METROS</span>
       </div>
       {ordered.map((player) => (
         <div className="player-stat-row" role="row" key={player.playerId}>
@@ -1469,7 +1469,7 @@ function CampaignStatisticsPage({ campaign, onBack }: { campaign: ChampionshipCa
         </div>
         {summary.players.length ? (
           <div className="campaign-player-table" role="table" aria-label="Estatísticas dos jogadores na campanha">
-            <div className="campaign-player-row campaign-player-head" role="row"><span>Jogador</span><span>J</span><span>TIT</span><span>TAC</span><span>TRY</span><span>METROS</span></div>
+            <div className="campaign-player-row campaign-player-head" role="row"><span>Jogador</span><span>J</span><span>TIT</span><span>TACKLE</span><span>TRY</span><span>METROS</span></div>
             {summary.players.map((player) => (
               <div className="campaign-player-row" role="row" key={player.playerId}>
                 <span className="player-stat-identity"><span className="match-stat-avatar" data-initials={playerInitials(player.name)}>{player.photo && <img src={player.photo} alt="" loading="lazy" referrerPolicy="no-referrer" onError={(event) => { event.currentTarget.style.display = "none"; }} />}</span><strong>#{player.jersey} {player.name}</strong></span>

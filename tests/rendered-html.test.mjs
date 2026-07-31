@@ -56,7 +56,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v27-match-statistics/);
+  assert.match(serviceWorker, /rugby-br-26-v28-stat-table-alignment/);
   assert.match(serviceWorker, /audio\/referee-whistle\.mp3/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
@@ -118,6 +118,10 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /recordCarriedMetres/);
   assert.match(gameSource, /function MatchStatisticsPanel/);
   assert.match(gameSource, /function CampaignStatisticsPage/);
+  assert.equal((gameSource.match(/<span>TACKLE<\/span>/g) ?? []).length, 2);
+  assert.doesNotMatch(gameSource, /<span>TAC<\/span>/);
+  assert.match(styles, /\.match-statistics-heading\s*\{[^}]*margin-bottom:\s*24px/s);
+  assert.match(styles, /\.player-stat-head\s*>\s*span:not\(:first-child\)/);
   assert.match(gameSource, /screen === "campaign-stats"/);
   assert.match(gameSource, /statistics: snapshotMatchStatistics\(match\)/);
   assert.match(gameSource, /Momento das trocas/);

@@ -2058,6 +2058,10 @@ kbd {
   text-transform: uppercase;
 }
 
+.match-statistics-heading {
+  margin-bottom: 24px;
+}
+
 .match-stat-team-cards,
 .match-player-stat-grid {
   display: grid;
@@ -2118,12 +2122,13 @@ kbd {
   border-bottom: 1px solid var(--line);
   display: grid;
   font-size: 9px;
-  grid-template-columns: minmax(210px, 1fr) 46px 46px 64px;
+  grid-template-columns: minmax(210px, 1fr) 68px 46px 64px;
   min-height: 52px;
-  min-width: 410px;
+  min-width: 432px;
 }
 
-.player-stat-row > b {
+.player-stat-row > b,
+.player-stat-head > span:not(:first-child) {
   text-align: center;
 }
 
