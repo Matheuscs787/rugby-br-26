@@ -89,9 +89,16 @@ type FullscreenElement = HTMLElement & {
   webkitRequestFullscreen?: () => Promise<void> | void;
 };
 
-const FIELD_W = 1100;
-const FIELD_H = 620;
-const TRY_LINE = 70;
+const METRE_SCALE = 10;
+const FIELD_OF_PLAY_METRES = 100;
+const PITCH_WIDTH_METRES = 70;
+const IN_GOAL_METRES = 10;
+const FIELD_W = (FIELD_OF_PLAY_METRES + IN_GOAL_METRES * 2) * METRE_SCALE;
+const FIELD_H = PITCH_WIDTH_METRES * METRE_SCALE;
+const TRY_LINE = IN_GOAL_METRES * METRE_SCALE;
+const RIGHT_TRY_LINE = FIELD_W - TRY_LINE;
+const LEFT_22 = TRY_LINE + 22 * METRE_SCALE;
+const RIGHT_22 = RIGHT_TRY_LINE - 22 * METRE_SCALE;
 const CENTRE_Y = FIELD_H / 2;
 const PLAYER_RADIUS = 17;
 const MATCH_SECONDS = 120;
@@ -149,13 +156,16 @@ function formatClock(seconds: number) {
 }
 
 function makePlayers(): Player[] {
-  const lanes = [100, 170, 240, 310, 380, 450, 520];
+  const lanes = Array.from(
+    { length: PLAYERS_PER_SIDE },
+    (_, slot) => 80 + slot * ((FIELD_H - 160) / (PLAYERS_PER_SIDE - 1)),
+  );
   return [
     ...lanes.map((y, slot) => ({
       id: slot,
       side: 0 as const,
       slot,
-      x: 255 - Math.abs(MID_SLOT - slot) * 14,
+      x: TRY_LINE + 210 - Math.abs(MID_SLOT - slot) * 14,
       y,
       stun: 0,
       tackleLock: 0,
@@ -169,7 +179,7 @@ function makePlayers(): Player[] {
       id: slot + PLAYERS_PER_SIDE,
       side: 1 as const,
       slot,
-      x: 845 + Math.abs(MID_SLOT - slot) * 14,
+      x: RIGHT_TRY_LINE - 210 + Math.abs(MID_SLOT - slot) * 14,
       y,
       stun: 0,
       tackleLock: 0,
@@ -184,12 +194,12 @@ function makePlayers(): Player[] {
 
 function arrangeRestart(players: Player[], kickingSide: 0 | 1) {
   players.forEach((player) => {
-    const lane = 100 + player.slot * 70;
+    const lane = 80 + player.slot * ((FIELD_H - 160) / (PLAYERS_PER_SIDE - 1));
     const isKicker = player.side === kickingSide && player.slot === MID_SLOT;
     if (kickingSide === 0) {
-      player.x = player.side === 0 ? (isKicker ? FIELD_W / 2 - 8 : FIELD_W / 2 - 56 - Math.abs(player.slot - MID_SLOT) * 12) : 760 + Math.abs(player.slot - MID_SLOT) * 10;
+      player.x = player.side === 0 ? (isKicker ? FIELD_W / 2 - 8 : FIELD_W / 2 - 56 - Math.abs(player.slot - MID_SLOT) * 12) : FIELD_W / 2 + 230 + Math.abs(player.slot - MID_SLOT) * 10;
     } else {
-      player.x = player.side === 1 ? (isKicker ? FIELD_W / 2 + 8 : FIELD_W / 2 + 56 + Math.abs(player.slot - MID_SLOT) * 12) : 340 - Math.abs(player.slot - MID_SLOT) * 10;
+      player.x = player.side === 1 ? (isKicker ? FIELD_W / 2 + 8 : FIELD_W / 2 + 56 + Math.abs(player.slot - MID_SLOT) * 12) : FIELD_W / 2 - 230 - Math.abs(player.slot - MID_SLOT) * 10;
     }
     player.y = lane;
     player.stun = 0;
@@ -265,61 +275,125 @@ function drawField(
   ctx.fillStyle = turf;
   ctx.fillRect(0, 0, FIELD_W, FIELD_H);
 
-  for (let x = 0; x < FIELD_W; x += 110) {
-    ctx.fillStyle = x % 220 === 0 ? "rgba(255,255,255,.022)" : "rgba(0,0,0,.025)";
-    ctx.fillRect(x, 0, 110, FIELD_H);
+  for (let x = 0; x < FIELD_W; x += METRE_SCALE * 10) {
+    ctx.fillStyle = (x / (METRE_SCALE * 10)) % 2 === 0 ? "rgba(255,255,255,.022)" : "rgba(0,0,0,.025)";
+    ctx.fillRect(x, 0, METRE_SCALE * 10, FIELD_H);
   }
 
-  ctx.strokeStyle = "rgba(239,255,241,.78)";
-  ctx.lineWidth = 3;
-  ctx.strokeRect(TRY_LINE, 34, FIELD_W - TRY_LINE * 2, FIELD_H - 68);
-  ctx.beginPath();
-  ctx.moveTo(FIELD_W / 2, 34);
-  ctx.lineTo(FIELD_W / 2, FIELD_H - 34);
-  ctx.moveTo(TRY_LINE, 34);
-  ctx.lineTo(TRY_LINE, FIELD_H - 34);
-  ctx.moveTo(FIELD_W - TRY_LINE, 34);
-  ctx.lineTo(FIELD_W - TRY_LINE, FIELD_H - 34);
-  ctx.stroke();
+  ctx.fillStyle = "rgba(3, 25, 18, .1)";
+  ctx.fillRect(0, 0, TRY_LINE, FIELD_H);
+  ctx.fillRect(RIGHT_TRY_LINE, 0, TRY_LINE, FIELD_H);
 
-  ctx.lineWidth = 1.4;
-  ctx.setLineDash([8, 9]);
-  [TRY_LINE + 145, FIELD_W / 2 - 110, FIELD_W / 2 + 110, FIELD_W - TRY_LINE - 145].forEach((x) => {
+  const solidVertical = (x: number) => {
     ctx.beginPath();
-    ctx.moveTo(x, 34);
-    ctx.lineTo(x, FIELD_H - 34);
+    ctx.moveTo(x, 2);
+    ctx.lineTo(x, FIELD_H - 2);
+    ctx.stroke();
+  };
+
+  ctx.strokeStyle = "rgba(239,255,241,.82)";
+  ctx.lineWidth = 3;
+  ctx.strokeRect(2, 2, FIELD_W - 4, FIELD_H - 4);
+  [TRY_LINE, LEFT_22, FIELD_W / 2, RIGHT_22, RIGHT_TRY_LINE].forEach(solidVertical);
+
+  ctx.lineWidth = 2;
+  ctx.setLineDash([METRE_SCALE * 5, METRE_SCALE * 5]);
+  [
+    TRY_LINE + 5 * METRE_SCALE,
+    FIELD_W / 2 - 10 * METRE_SCALE,
+    FIELD_W / 2 + 10 * METRE_SCALE,
+    RIGHT_TRY_LINE - 5 * METRE_SCALE,
+  ].forEach((x) => {
+    ctx.beginPath();
+    ctx.moveTo(x, 2);
+    ctx.lineTo(x, FIELD_H - 2);
+    ctx.stroke();
+  });
+  [
+    5 * METRE_SCALE,
+    15 * METRE_SCALE,
+    FIELD_H - 15 * METRE_SCALE,
+    FIELD_H - 5 * METRE_SCALE,
+  ].forEach((y) => {
+    ctx.beginPath();
+    ctx.moveTo(2, y);
+    ctx.lineTo(FIELD_W - 2, y);
     ctx.stroke();
   });
   ctx.setLineDash([]);
 
+  // World Rugby requires a 0.5 m mark through the centre of halfway.
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(FIELD_W / 2 - METRE_SCALE * 0.25, CENTRE_Y);
+  ctx.lineTo(FIELD_W / 2 + METRE_SCALE * 0.25, CENTRE_Y);
+  ctx.stroke();
+
   ctx.fillStyle = "rgba(235,255,242,.58)";
-  ctx.font = "800 30px ui-sans-serif, system-ui";
+  ctx.font = "800 24px ui-sans-serif, system-ui";
   ctx.textAlign = "center";
   ctx.save();
-  ctx.translate(36, CENTRE_Y);
+  ctx.translate(38, CENTRE_Y);
   ctx.rotate(-Math.PI / 2);
-  ctx.fillText("IN-GOAL", 0, 0);
+  ctx.fillText("IN-GOAL · 10 m", 0, 0);
   ctx.restore();
   ctx.save();
-  ctx.translate(FIELD_W - 36, CENTRE_Y);
+  ctx.translate(FIELD_W - 38, CENTRE_Y);
   ctx.rotate(Math.PI / 2);
-  ctx.fillText("IN-GOAL", 0, 0);
+  ctx.fillText("IN-GOAL · 10 m", 0, 0);
   ctx.restore();
 
+  ctx.fillStyle = "rgba(235,255,242,.42)";
+  ctx.font = "900 14px ui-sans-serif, system-ui";
+  ctx.fillText("22", LEFT_22, 25);
+  ctx.fillText("22", RIGHT_22, 25);
+  ctx.fillText("10", FIELD_W / 2 - 10 * METRE_SCALE, 25);
+  ctx.fillText("10", FIELD_W / 2 + 10 * METRE_SCALE, 25);
+  ctx.fillText("100 × 70 m", FIELD_W / 2, FIELD_H - 18);
+
   const post = (x: number) => {
-    ctx.strokeStyle = "#f6f1c9";
-    ctx.lineWidth = 5;
-    ctx.beginPath();
-    ctx.moveTo(x, CENTRE_Y - 55);
-    ctx.lineTo(x, CENTRE_Y + 55);
-    ctx.moveTo(x - 18, CENTRE_Y - 55);
-    ctx.lineTo(x + 18, CENTRE_Y - 55);
-    ctx.moveTo(x - 18, CENTRE_Y + 55);
-    ctx.lineTo(x + 18, CENTRE_Y + 55);
-    ctx.stroke();
+    const halfGap = 2.8 * METRE_SCALE;
+    [CENTRE_Y - halfGap, CENTRE_Y + halfGap].forEach((y) => {
+      ctx.fillStyle = "rgba(0,0,0,.22)";
+      ctx.beginPath();
+      ctx.arc(x + 3, y + 3, 8, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#f6f1c9";
+      ctx.beginPath();
+      ctx.arc(x, y, 6, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "#dfff49";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    });
   };
-  post(TRY_LINE - 6);
-  post(FIELD_W - TRY_LINE + 6);
+  post(TRY_LINE);
+  post(RIGHT_TRY_LINE);
+
+  const flag = (x: number, y: number, downward: boolean) => {
+    const flagY = downward ? y + 13 : y - 13;
+    ctx.strokeStyle = "#f0f3dc";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x, flagY);
+    ctx.stroke();
+    ctx.fillStyle = "#ff6a3d";
+    ctx.beginPath();
+    ctx.moveTo(x, flagY);
+    ctx.lineTo(x + 9, flagY + (downward ? 4 : -4));
+    ctx.lineTo(x, flagY + (downward ? 8 : -8));
+    ctx.closePath();
+    ctx.fill();
+  };
+  [0, TRY_LINE, RIGHT_TRY_LINE, FIELD_W].forEach((x) => {
+    flag(clamp(x, 3, FIELD_W - 3), 3, true);
+    flag(clamp(x, 3, FIELD_W - 3), FIELD_H - 3, false);
+  });
+  [LEFT_22, FIELD_W / 2, RIGHT_22].forEach((x) => {
+    flag(x, 3, true);
+    flag(x, FIELD_H - 3, false);
+  });
 
   const owner = match.ball.owner;
   const controlled =
@@ -1515,14 +1589,24 @@ export function RugbyGame() {
                 <span><strong>24</strong> clubes</span>
                 <span><strong>02</strong> divisões</span>
                 <span><strong>14</strong> atletas</span>
-                <span><strong>120</strong> segundos</span>
+                <span><strong>100×70</strong> campo</span>
               </div>
             </div>
-            <div className="hero-board" aria-label="Ilustração tática do campo">
+            <div className="hero-board" aria-label="Ilustração tática de um campo oficial de 100 por 70 metros">
               <div className="field-lines">
                 <i className="try-left" />
+                <i className="five-left" />
+                <i className="twenty-two-left" />
+                <i className="ten-left" />
                 <i className="middle-line" />
+                <i className="ten-right" />
+                <i className="twenty-two-right" />
+                <i className="five-right" />
                 <i className="try-right" />
+                <i className="touch-five-top" />
+                <i className="touch-fifteen-top" />
+                <i className="touch-fifteen-bottom" />
+                <i className="touch-five-bottom" />
               </div>
               <div className="tactical-title">
                 <span>RÁPIDO</span>
@@ -1686,7 +1770,7 @@ export function RugbyGame() {
             <strong className="score">{hud.score[0]}</strong>
             <div className="match-clock">
               <span>{formatClock(hud.seconds)}</span>
-              <small>{hud.paused ? "PAUSADO" : "SEVENS · 7×7"}</small>
+              <small>{hud.paused ? "PAUSADO" : "100×70 M · 7×7"}</small>
             </div>
             <strong className="score">{hud.score[1]}</strong>
             <div className="hud-team hud-team--away">
@@ -1703,7 +1787,7 @@ export function RugbyGame() {
                 height={FIELD_H}
                 className={aimingDrop ? "is-aiming" : ""}
                 role="img"
-                aria-label={`Partida de rugby sevens, sete contra sete, entre ${home.name} e ${away.name}. Use WASD para mover, números de 1 a 7 para escolher o passe, K para chutar à frente, R para o block e Q para mirar o drop.`}
+                aria-label={`Partida de rugby sevens, sete contra sete, entre ${home.name} e ${away.name}, em campo de 100 por 70 metros com in-goal de 10 metros. Use WASD para mover, números de 1 a 7 para escolher o passe, K para chutar à frente, R para o block e Q para mirar o drop.`}
                 onPointerDown={handleCanvasPointerDown}
                 onPointerMove={handleCanvasPointerMove}
                 onPointerUp={handleCanvasPointerUp}

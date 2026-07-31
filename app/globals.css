@@ -258,7 +258,7 @@ select:focus-visible {
 
 .hero-board {
   align-self: center;
-  aspect-ratio: 1.6 / 1;
+  aspect-ratio: 12 / 7;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.025), transparent 55%),
     #0c5c46;
@@ -278,21 +278,56 @@ select:focus-visible {
 
 .field-lines {
   border: 2px solid rgba(235, 255, 238, 0.45);
-  inset: 8%;
+  inset: 6%;
   position: absolute;
   z-index: 1;
 }
 
 .field-lines i {
+  position: absolute;
+}
+
+.field-lines .try-left,
+.field-lines .twenty-two-left,
+.field-lines .middle-line,
+.field-lines .twenty-two-right,
+.field-lines .try-right {
   border-left: 2px solid rgba(235, 255, 238, 0.4);
   height: 100%;
-  position: absolute;
   top: 0;
 }
 
-.try-left { left: 10%; }
+.field-lines .five-left,
+.field-lines .ten-left,
+.field-lines .ten-right,
+.field-lines .five-right {
+  border-left: 1px dashed rgba(235, 255, 238, 0.34);
+  height: 100%;
+  top: 0;
+}
+
+.field-lines .touch-five-top,
+.field-lines .touch-fifteen-top,
+.field-lines .touch-fifteen-bottom,
+.field-lines .touch-five-bottom {
+  border-top: 1px dashed rgba(235, 255, 238, 0.34);
+  left: 0;
+  width: 100%;
+}
+
+.try-left { left: 8.333%; }
+.five-left { left: 12.5%; }
+.twenty-two-left { left: 26.667%; }
+.ten-left { left: 41.667%; }
 .middle-line { left: 50%; }
-.try-right { left: 90%; }
+.ten-right { left: 58.333%; }
+.twenty-two-right { left: 73.333%; }
+.five-right { left: 87.5%; }
+.try-right { left: 91.667%; }
+.touch-five-top { top: 7.143%; }
+.touch-fifteen-top { top: 21.429%; }
+.touch-fifteen-bottom { top: 78.571%; }
+.touch-five-bottom { top: 92.857%; }
 
 .tactical-title {
   display: flex;

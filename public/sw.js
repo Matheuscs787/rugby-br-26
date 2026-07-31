@@ -1,4 +1,4 @@
-const CACHE = "rugby-br-26-v6-mobile-toolbar";
+const CACHE = "rugby-br-26-v7-official-pitch";
 const CORE = ["/", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png"];
 
 self.addEventListener("install", (event) => {

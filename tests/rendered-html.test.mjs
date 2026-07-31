@@ -50,10 +50,16 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v6-mobile-toolbar/);
+  assert.match(serviceWorker, /rugby-br-26-v7-official-pitch/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const MATCH_SECONDS = 120/);
   assert.match(gameSource, /const PLAYERS_PER_SIDE = 7/);
+  assert.match(gameSource, /const FIELD_OF_PLAY_METRES = 100/);
+  assert.match(gameSource, /const PITCH_WIDTH_METRES = 70/);
+  assert.match(gameSource, /const IN_GOAL_METRES = 10/);
+  assert.match(gameSource, /const LEFT_22 = TRY_LINE \+ 22 \* METRE_SCALE/);
+  assert.match(gameSource, /METRE_SCALE \* 0\.25/);
+  assert.match(gameSource, /100 × 70 m/);
   assert.match(gameSource, /RUGBY SEVENS · 7 CONTRA 7/);
   assert.match(gameSource, /Sound is optional and must never prevent a match from starting/);
   assert.match(gameSource, /const beginDropAim/);
@@ -81,6 +87,8 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(styles, /grid-template-columns: repeat\(3, 60px\)/);
   assert.match(styles, /env\(safe-area-inset-bottom\)/);
   assert.match(styles, /\.app-shell--immersive/);
+  assert.match(styles, /\.twenty-two-left/);
+  assert.match(styles, /\.touch-fifteen-bottom/);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));
