@@ -2,6 +2,15 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ROSTERS_2026, type PlayerSkills, type RosterPlayer } from "./rosters";
+import {
+  OFFICIAL_GROUP_FIXTURES,
+  createFinalFixture,
+  createRoundRobinFixtures,
+  type ChampionshipCampaign,
+  type ChampionshipFixture,
+  type ChampionshipPhase,
+  type ChampionshipResult,
+} from "./championship";
 
 type Division = 1 | 2;
 type UniformPattern = "solid" | "hoops" | "sash" | "quarters";
@@ -53,6 +62,7 @@ type Match = {
   bench: [RosterPlayer[], RosterPlayer[]];
   ball: Ball;
   score: [number, number];
+  tries: [number, number];
   seconds: number;
   half: 1 | 2;
   halftime: boolean;
@@ -68,6 +78,21 @@ type Match = {
   substitutesLeft: [number, number];
   message: string;
   messageUntil: number;
+};
+
+type GameMode = "friendly" | "championship";
+type ControlMode = "control" | "simulate";
+
+type Standing = {
+  teamId: string;
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  pointsFor: number;
+  pointsAgainst: number;
+  tries: number;
+  tablePoints: number;
 };
 
 type Hud = {
@@ -118,6 +143,7 @@ const SQUAD_SIZE = 12;
 const MID_SLOT = Math.floor(PLAYERS_PER_SIDE / 2);
 const SWEEPER_SLOT = 6;
 const REPLACEMENTS_PER_SIDE = 5;
+const CAMPAIGN_STORAGE_KEY = "rugby-br-26-championship-v1";
 const NEUTRAL_SKILLS: PlayerSkills = {
   overall: 65,
   speed: 68,
@@ -155,6 +181,187 @@ const TEAMS: Team[] = [
   { id: "carioca", name: "Carioca", state: "RJ", division: 2, group: "Taça RJ–MG–ES", primary: "#123c73", secondary: "#71b8d6", short: "CAR", logo: "/clubs/carioca.png", pattern: "hoops" },
   { id: "vitoria", name: "Vitória", state: "ES", division: 2, group: "Taça RJ–MG–ES", primary: "#b32937", secondary: "#f1e8d5", short: "VIT", logo: "/clubs/vitoria.jpg", pattern: "quarters" },
 ];
+
+function teamById(teamId: string) {
+  return TEAMS.find((team) => team.id === teamId) ?? TEAMS[0];
+}
+
+function teamStrength(teamId: string) {
+  const players = ROSTERS_2026[teamId]?.players.slice(0, SQUAD_SIZE) ?? [];
+  if (!players.length) return 65;
+  return players.reduce((total, player) => total + player.skills.overall, 0) / players.length;
+}
+
+function simulateFixture(fixture: ChampionshipFixture): ChampionshipResult {
+  const homeStrength = teamStrength(fixture.homeId) + 1.4;
+  const awayStrength = teamStrength(fixture.awayId);
+  const homeTries = clamp(Math.round(1.3 + (homeStrength - awayStrength) * 0.14 + Math.random() * 3.2), 0, 7);
+  const awayTries = clamp(Math.round(1.1 + (awayStrength - homeStrength) * 0.14 + Math.random() * 3.2), 0, 7);
+  const score = (tries: number, kickSkill: number) => {
+    const conversions = Array.from({ length: tries }).filter(() => Math.random() < 0.28 + kickSkill * 0.004).length;
+    const penalty = Math.random() < 0.16 ? 3 : 0;
+    return tries * 5 + conversions * 2 + penalty;
+  };
+  return {
+    fixtureId: fixture.id,
+    phase: fixture.phase,
+    homeId: fixture.homeId,
+    awayId: fixture.awayId,
+    homeScore: score(homeTries, homeStrength),
+    awayScore: score(awayTries, awayStrength),
+    homeTries,
+    awayTries,
+  };
+}
+
+function calculateStandings(
+  teamIds: string[],
+  phase: ChampionshipPhase,
+  results: ChampionshipResult[],
+) {
+  const table = new Map<string, Standing>(
+    teamIds.map((teamId) => [teamId, {
+      teamId,
+      played: 0,
+      won: 0,
+      drawn: 0,
+      lost: 0,
+      pointsFor: 0,
+      pointsAgainst: 0,
+      tries: 0,
+      tablePoints: 0,
+    }]),
+  );
+
+  results.filter((result) => result.phase === phase).forEach((result) => {
+    const home = table.get(result.homeId);
+    const away = table.get(result.awayId);
+    if (!home || !away) return;
+    home.played += 1;
+    away.played += 1;
+    home.pointsFor += result.homeScore;
+    home.pointsAgainst += result.awayScore;
+    away.pointsFor += result.awayScore;
+    away.pointsAgainst += result.homeScore;
+    home.tries += result.homeTries;
+    away.tries += result.awayTries;
+    if (result.homeScore > result.awayScore) {
+      home.won += 1;
+      away.lost += 1;
+      home.tablePoints += 4;
+      if (result.homeScore - result.awayScore <= 7) away.tablePoints += 1;
+    } else if (result.homeScore < result.awayScore) {
+      away.won += 1;
+      home.lost += 1;
+      away.tablePoints += 4;
+      if (result.awayScore - result.homeScore <= 7) home.tablePoints += 1;
+    } else {
+      home.drawn += 1;
+      away.drawn += 1;
+      home.tablePoints += 2;
+      away.tablePoints += 2;
+    }
+    if (result.homeTries >= 4) home.tablePoints += 1;
+    if (result.awayTries >= 4) away.tablePoints += 1;
+  });
+
+  return [...table.values()].sort(
+    (a, b) =>
+      b.tablePoints - a.tablePoints ||
+      (b.pointsFor - b.pointsAgainst) - (a.pointsFor - a.pointsAgainst) ||
+      b.tries - a.tries ||
+      b.pointsFor - a.pointsFor ||
+      a.teamId.localeCompare(b.teamId),
+  );
+}
+
+function phaseLabel(phase: ChampionshipPhase) {
+  if (phase === "groups") return "Fase de grupos";
+  if (phase === "hexagonal") return "Hexagonal final";
+  if (phase === "repechage") return "Repescagem";
+  return "Final";
+}
+
+function divisionQualification(
+  division: Division,
+  results?: ChampionshipResult[],
+) {
+  const fixtures = OFFICIAL_GROUP_FIXTURES.filter((fixture) => fixture.division === division);
+  const groupResults = results ?? fixtures.map(simulateFixture);
+  const groupNames = Array.from(new Set(fixtures.map((fixture) => fixture.group)));
+  const topTwo: string[] = [];
+  const bottomTwo: string[] = [];
+  groupNames.forEach((group) => {
+    const ids = TEAMS.filter((team) => team.division === division && team.group === group).map((team) => team.id);
+    const standings = calculateStandings(ids, "groups", groupResults);
+    topTwo.push(...standings.slice(0, 2).map((standing) => standing.teamId));
+    bottomTwo.push(...standings.slice(2).map((standing) => standing.teamId));
+  });
+  return { topTwo, bottomTwo };
+}
+
+function advanceCampaign(
+  campaign: ChampionshipCampaign,
+  playedResult: ChampionshipResult,
+): ChampionshipCampaign {
+  const existingIds = new Set(campaign.results.map((result) => result.fixtureId));
+  existingIds.add(playedResult.fixtureId);
+  const playedFixture = campaign.fixtures.find((fixture) => fixture.id === playedResult.fixtureId);
+  if (!playedFixture) return campaign;
+  const roundCompanions = campaign.fixtures
+    .filter(
+      (fixture) =>
+        fixture.phase === playedFixture.phase &&
+        fixture.round === playedFixture.round &&
+        !existingIds.has(fixture.id),
+    )
+    .map(simulateFixture);
+  const results = [...campaign.results, playedResult, ...roundCompanions];
+  const phaseFixtures = campaign.fixtures.filter((fixture) => fixture.phase === playedFixture.phase);
+  const phaseComplete = phaseFixtures.every((fixture) => results.some((result) => result.fixtureId === fixture.id));
+  if (!phaseComplete) return { ...campaign, results };
+
+  if (playedFixture.phase === "groups") {
+    const ownDivisionResults = results.filter((result) => result.phase === "groups");
+    const firstDivision = campaign.division === 1
+      ? divisionQualification(1, ownDivisionResults)
+      : divisionQualification(1);
+    const secondDivision = campaign.division === 2
+      ? divisionQualification(2, ownDivisionResults)
+      : divisionQualification(2);
+
+    if (campaign.division === 1 && firstDivision.topTwo.includes(campaign.teamId)) {
+      const nextFixtures = createRoundRobinFixtures(firstDivision.topTwo, "hexagonal", 1);
+      return { ...campaign, status: "hexagonal", fixtures: [...campaign.fixtures, ...nextFixtures], results };
+    }
+    if (
+      (campaign.division === 1 && firstDivision.bottomTwo.includes(campaign.teamId)) ||
+      (campaign.division === 2 && secondDivision.topTwo.includes(campaign.teamId))
+    ) {
+      const repechageTeams = [...firstDivision.bottomTwo, ...secondDivision.topTwo];
+      const nextFixtures = createRoundRobinFixtures(repechageTeams, "repechage", campaign.division);
+      return { ...campaign, status: "repechage", fixtures: [...campaign.fixtures, ...nextFixtures], results };
+    }
+    return { ...campaign, status: "eliminated", results };
+  }
+
+  const phaseTeamIds = Array.from(new Set(phaseFixtures.flatMap((fixture) => [fixture.homeId, fixture.awayId])));
+  const standings = calculateStandings(phaseTeamIds, playedFixture.phase, results);
+  if (playedFixture.phase === "hexagonal") {
+    const finalists = standings.slice(0, 2).map((standing) => standing.teamId);
+    if (!finalists.includes(campaign.teamId)) return { ...campaign, status: "eliminated", results };
+    const final = createFinalFixture(finalists[0], finalists[1], 1);
+    return { ...campaign, status: "final", fixtures: [...campaign.fixtures, final], results };
+  }
+  if (playedFixture.phase === "repechage") {
+    const promoted = standings.slice(0, 2).some((standing) => standing.teamId === campaign.teamId);
+    return { ...campaign, status: promoted ? "promoted" : "repechage-complete", results };
+  }
+
+  const finalResult = results.find((result) => result.fixtureId === playedFixture.id)!;
+  const winnerId = finalResult.homeScore > finalResult.awayScore ? finalResult.homeId : finalResult.awayId;
+  return { ...campaign, status: winnerId === campaign.teamId ? "champion" : "runner-up", results };
+}
 
 const keyState = new Set<string>();
 type CachedPlayerPhoto = {
@@ -319,6 +526,7 @@ function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Match
       kind: "held",
     },
     score: [0, 0],
+    tries: [0, 0],
     seconds: HALF_SECONDS,
     half: 1,
     halftime: false,
@@ -363,6 +571,7 @@ function drawField(
   away: Team,
   now: number,
   aim: AimPoint,
+  simulated: boolean,
 ) {
   ctx.clearRect(0, 0, FIELD_W, FIELD_H);
 
@@ -513,8 +722,9 @@ function drawField(
   });
 
   const owner = match.ball.owner;
-  const controlled =
-    owner?.side === 0
+  const controlled = simulated
+    ? null
+    : owner?.side === 0
       ? owner
       : match.players
           .filter((player) => player.side === 0)
@@ -524,6 +734,7 @@ function drawField(
     const team = player.side === 0 ? home : away;
     const isControlled = player === controlled;
     const isPassOption =
+      !simulated &&
       match.ball.owner?.side === 0 &&
       player.side === 0 &&
       player !== match.ball.owner &&
@@ -748,7 +959,10 @@ function TeamBadge({ team, large = false }: { team: Team; large?: boolean }) {
 }
 
 export function RugbyGame() {
-  const [screen, setScreen] = useState<"setup" | "squad" | "match">("setup");
+  const [screen, setScreen] = useState<"setup" | "campaign" | "squad" | "match">("setup");
+  const [gameMode, setGameMode] = useState<GameMode>("friendly");
+  const [controlMode, setControlMode] = useState<ControlMode>("control");
+  const [campaign, setCampaign] = useState<ChampionshipCampaign | null>(null);
   const [divisionFilter, setDivisionFilter] = useState<"all" | Division>(1);
   const [homeId, setHomeId] = useState("jacarei");
   const [awayId, setAwayId] = useState("farrapos");
@@ -786,6 +1000,7 @@ export function RugbyGame() {
   const aimRef = useRef<AimPoint>({ active: false, x: FIELD_W - TRY_LINE, y: CENTRE_Y });
   const gestureRef = useRef({ active: false, x: 0, y: 0 });
   const audioRef = useRef<AudioContext | null>(null);
+  const controlModeRef = useRef<ControlMode>("control");
 
   const home = useMemo(() => TEAMS.find((team) => team.id === homeId) ?? TEAMS[0], [homeId]);
   const away = useMemo(() => TEAMS.find((team) => team.id === awayId) ?? TEAMS[1], [awayId]);
@@ -814,11 +1029,46 @@ export function RugbyGame() {
     () => TEAMS.filter((team) => divisionFilter === "all" || team.division === divisionFilter),
     [divisionFilter],
   );
+  const campaignPhase = campaign?.status === "hexagonal"
+    ? "hexagonal"
+    : campaign?.status === "repechage"
+      ? "repechage"
+      : campaign?.status === "final"
+        ? "final"
+        : campaign?.results.at(-1)?.phase ?? "groups";
+  const activeCampaignFixtures = useMemo(
+    () => campaign?.fixtures.filter((fixture) => fixture.phase === campaignPhase) ?? [],
+    [campaign, campaignPhase],
+  );
+  const currentCampaignFixture = useMemo(
+    () => activeCampaignFixtures.find(
+      (fixture) =>
+        (fixture.homeId === campaign?.teamId || fixture.awayId === campaign?.teamId) &&
+        !campaign?.results.some((result) => result.fixtureId === fixture.id),
+    ) ?? null,
+    [activeCampaignFixtures, campaign],
+  );
+  const campaignTeamIds = useMemo(() => {
+    if (!campaign) return [];
+    if (campaignPhase === "groups") {
+      return TEAMS.filter((team) => team.division === campaign.division && team.group === campaign.group).map((team) => team.id);
+    }
+    return Array.from(new Set(activeCampaignFixtures.flatMap((fixture) => [fixture.homeId, fixture.awayId])));
+  }, [activeCampaignFixtures, campaign, campaignPhase]);
+  const campaignStandings = useMemo(
+    () => campaign ? calculateStandings(campaignTeamIds, campaignPhase, campaign.results) : [],
+    [campaign, campaignPhase, campaignTeamIds],
+  );
+  const campaignCalendar = useMemo(
+    () => activeCampaignFixtures.filter(
+      (fixture) => fixture.homeId === campaign?.teamId || fixture.awayId === campaign?.teamId,
+    ),
+    [activeCampaignFixtures, campaign],
+  );
 
   useEffect(() => {
-    setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
-    setRosterQuery("");
-  }, [homeId]);
+    controlModeRef.current = controlMode;
+  }, [controlMode]);
 
   const beep = useCallback(
     (frequency: number, duration = 0.08) => {
@@ -856,22 +1106,22 @@ export function RugbyGame() {
   const prepareRestart = useCallback((match: Match, kickingSide: 0 | 1) => {
     arrangeRestart(match.players, kickingSide);
 
-    if (match.substitutesLeft[1] > 0) {
-      const tiredDefender = match.players
-        .filter((player) => player.side === 1)
+    const automaticSides: (0 | 1)[] = controlModeRef.current === "simulate" ? [0, 1] : [1];
+    automaticSides.forEach((side) => {
+      if (match.substitutesLeft[side] <= 0) return;
+      const tiredPlayer = match.players
+        .filter((player) => player.side === side)
         .sort((a, b) => a.stamina - b.stamina)[0];
-      if (tiredDefender && tiredDefender.stamina < 26) {
-        const replacement = match.bench[1].shift();
-        if (replacement) {
-          tiredDefender.name = playerDisplayName(replacement);
-          tiredDefender.photo = replacement.photo;
-          tiredDefender.skills = replacement.skills;
-          tiredDefender.stamina = 100;
-          tiredDefender.jersey = replacement.number ?? tiredDefender.jersey;
-          match.substitutesLeft[1] = match.bench[1].length;
-        }
-      }
-    }
+      if (!tiredPlayer || tiredPlayer.stamina >= 26) return;
+      const replacement = match.bench[side].shift();
+      if (!replacement) return;
+      tiredPlayer.name = playerDisplayName(replacement);
+      tiredPlayer.photo = replacement.photo;
+      tiredPlayer.skills = replacement.skills;
+      tiredPlayer.stamina = 100;
+      tiredPlayer.jersey = replacement.number ?? tiredPlayer.jersey;
+      match.substitutesLeft[side] = match.bench[side].length;
+    });
 
     const kicker = match.players.find(
       (player) => player.side === kickingSide && player.slot === MID_SLOT,
@@ -958,6 +1208,7 @@ export function RugbyGame() {
   );
 
   const beginDropAim = useCallback(() => {
+    if (controlModeRef.current === "simulate") return;
     const match = matchRef.current;
     if (!match || match.paused || match.over || match.actionLock > 0) return;
     const owner = match.ball.owner;
@@ -1006,6 +1257,7 @@ export function RugbyGame() {
   );
 
   const performBlock = useCallback(() => {
+    if (controlModeRef.current === "simulate") return;
     const match = matchRef.current;
     if (!match || match.paused || match.over || match.actionLock > 0) return;
     const owner = match.ball.owner;
@@ -1038,6 +1290,7 @@ export function RugbyGame() {
   }, [beep, setMessage]);
 
   const kickBall = useCallback(() => {
+    if (controlModeRef.current === "simulate") return;
     const match = matchRef.current;
     if (!match || match.paused || match.over || match.actionLock > 0) return;
     const owner = match.ball.owner;
@@ -1178,7 +1431,7 @@ export function RugbyGame() {
         }
         match.over = true;
         match.running = false;
-        if (match.score[0] > match.score[1]) {
+        if (gameMode === "friendly" && controlModeRef.current === "control" && match.score[0] > match.score[1]) {
           const next = bestWins + 1;
           setBestWins(next);
           localStorage.setItem("rugby-br-26-wins", String(next));
@@ -1192,8 +1445,10 @@ export function RugbyGame() {
       const ballOwner = match.ball.owner;
       const homePlayers = match.players.filter((player) => player.side === 0);
       const awayPlayers = match.players.filter((player) => player.side === 1);
-      const controlled =
-        ballOwner?.side === 0
+      const simulated = controlModeRef.current === "simulate";
+      const controlled = simulated
+        ? null
+        : ballOwner?.side === 0
           ? ballOwner
           : [...homePlayers].sort((a, b) => distance(a, match.ball) - distance(b, match.ball))[0];
 
@@ -1251,8 +1506,18 @@ export function RugbyGame() {
         if (player === controlled) return;
         if (runBlockRoute(player)) return;
         if (ballOwner?.side === 0) {
-          const laneOffset = (player.slot - MID_SLOT) * 57;
-          moveToward(player, ballOwner.x - 40 - Math.abs(player.slot - ballOwner.slot) * 9, ballOwner.y + laneOffset, 146);
+          if (player === ballOwner && simulated) {
+            if (player.stun <= 0) {
+              const wave = Math.sin(match.seconds * 1.55 + player.slot) * 62;
+              const targetY = clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
+              const dy = targetY - player.y;
+              player.x += 174 * attributeFactor(player.skills.speed) * dt;
+              player.y += clamp(dy, -110 * dt, 110 * dt);
+            }
+          } else {
+            const laneOffset = (player.slot - MID_SLOT) * 57;
+            moveToward(player, ballOwner.x - 40 - Math.abs(player.slot - ballOwner.slot) * 9, ballOwner.y + laneOffset, 146);
+          }
         } else {
           const target = ballOwner ?? match.ball;
           const chaseRank = [...homePlayers].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
@@ -1378,31 +1643,35 @@ export function RugbyGame() {
       }
 
       const newCarrier = match.ball.owner;
-      if (newCarrier?.side === 1 && match.cpuActionLock <= 0) {
-        const pressure = homePlayers.some((player) => distance(player, newCarrier) < 68);
+      if (newCarrier && (newCarrier.side === 1 || simulated) && match.cpuActionLock <= 0) {
+        const pressure = match.players.some(
+          (player) => player.side !== newCarrier.side && distance(player, newCarrier) < 68,
+        );
         if (pressure) {
-          passBall(1);
+          passBall(newCarrier.side);
           match.cpuActionLock = 1 + Math.random() * 0.8;
         }
       }
 
       if (newCarrier?.side === 0 && newCarrier.x >= FIELD_W - TRY_LINE) {
         match.score[0] += 5;
+        match.tries[0] += 1;
         prepareRestart(match, 0);
         setMessage(match, "TRY! · +5 · seu time cobra o reinício", 1.8);
         beep(880, 0.22);
       } else if (newCarrier?.side === 1 && newCarrier.x <= TRY_LINE) {
         match.score[1] += 5;
+        match.tries[1] += 1;
         prepareRestart(match, 1);
         setMessage(match, "Try adversário · eles cobram o reinício", 1.8);
         beep(120, 0.2);
       }
     },
-    [beep, bestWins, passBall, prepareRestart, setMessage, tackle],
+    [beep, bestWins, gameMode, passBall, prepareRestart, setMessage, tackle],
   );
 
   const frame = useCallback(
-    (now: number) => {
+    function animateFrame(now: number) {
       const canvas = canvasRef.current;
       const match = matchRef.current;
       if (!canvas || !match) return;
@@ -1411,7 +1680,7 @@ export function RugbyGame() {
       const dt = Math.min((now - match.lastFrame) / 1000, 0.035);
       match.lastFrame = now;
       updateMatch(match, dt);
-      drawField(ctx, match, home, away, now, aimRef.current);
+      drawField(ctx, match, home, away, now, aimRef.current, controlModeRef.current === "simulate");
 
       const fieldViewport = canvas.parentElement;
       const touchCamera =
@@ -1459,10 +1728,74 @@ export function RugbyGame() {
           substitutesLeft: match.substitutesLeft[0],
         });
       }
-      animationRef.current = requestAnimationFrame(frame);
+      animationRef.current = requestAnimationFrame(animateFrame);
     },
     [away, home, updateMatch],
   );
+
+  const startNewCampaign = useCallback(() => {
+    const next: ChampionshipCampaign = {
+      version: 1,
+      teamId: home.id,
+      division: home.division,
+      group: home.group,
+      status: "groups",
+      fixtures: OFFICIAL_GROUP_FIXTURES.filter((fixture) => fixture.division === home.division),
+      results: [],
+      createdAt: Date.now(),
+    };
+    setCampaign(next);
+    setGameMode("championship");
+    setScreen("campaign");
+  }, [home]);
+
+  const resumeCampaign = useCallback(() => {
+    if (!campaign) return;
+    setHomeId(campaign.teamId);
+    setGameMode("championship");
+    setScreen("campaign");
+  }, [campaign]);
+
+  const openCampaignMatch = useCallback((mode: ControlMode) => {
+    if (!campaign || !currentCampaignFixture) return;
+    const opponentId = currentCampaignFixture.homeId === campaign.teamId
+      ? currentCampaignFixture.awayId
+      : currentCampaignFixture.homeId;
+    setHomeId(campaign.teamId);
+    setAwayId(opponentId);
+    setControlMode(mode);
+    setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
+    setRosterQuery("");
+    setScreen("squad");
+  }, [campaign, currentCampaignFixture]);
+
+  const recordCampaignMatch = useCallback(() => {
+    const match = matchRef.current;
+    if (!campaign || !currentCampaignFixture || !match?.over) return;
+    const selectedIsOfficialHome = currentCampaignFixture.homeId === campaign.teamId;
+    let homeScore = selectedIsOfficialHome ? match.score[0] : match.score[1];
+    let awayScore = selectedIsOfficialHome ? match.score[1] : match.score[0];
+    const homeTries = selectedIsOfficialHome ? match.tries[0] : match.tries[1];
+    const awayTries = selectedIsOfficialHome ? match.tries[1] : match.tries[0];
+    if (currentCampaignFixture.phase === "final" && homeScore === awayScore) {
+      if (teamStrength(currentCampaignFixture.homeId) >= teamStrength(currentCampaignFixture.awayId)) homeScore += 3;
+      else awayScore += 3;
+    }
+    const result: ChampionshipResult = {
+      fixtureId: currentCampaignFixture.id,
+      phase: currentCampaignFixture.phase,
+      homeId: currentCampaignFixture.homeId,
+      awayId: currentCampaignFixture.awayId,
+      homeScore,
+      awayScore,
+      homeTries,
+      awayTries,
+    };
+    setCampaign((current) => current ? advanceCampaign(current, result) : current);
+    matchRef.current = null;
+    setImmersiveMode(false);
+    setScreen("campaign");
+  }, [campaign, currentCampaignFixture]);
 
   const openSquadSelection = useCallback(() => {
     if (homeId === awayId) {
@@ -1498,7 +1831,7 @@ export function RugbyGame() {
       halftime: false,
       paused: false,
       over: false,
-      message: "Drop-kick inicial: seu time chuta",
+      message: controlMode === "simulate" ? "Simulação: duas IAs em campo" : "Drop-kick inicial: seu time chuta",
       stamina: Array(PLAYERS_PER_SIDE).fill(100),
       jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player, slot) => player.number ?? slot + 1),
       names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map(playerDisplayName),
@@ -1507,7 +1840,7 @@ export function RugbyGame() {
     });
     setScreen("match");
     beep(520, 0.12);
-  }, [awayRoster, beep, selectedSquad]);
+  }, [awayRoster, beep, controlMode, selectedSquad]);
 
   const restartMatch = useCallback(() => {
     const cpuSquad = awayRoster.players.slice(0, SQUAD_SIZE);
@@ -1557,7 +1890,7 @@ export function RugbyGame() {
     match.lastFrame = performance.now();
     setHud((previous) => ({ ...previous, paused: match.paused }));
     haptic(12);
-  }, []);
+  }, [setMessage]);
 
   const toggleFullscreen = useCallback(async () => {
     const fullscreenDocument = document as FullscreenDocument;
@@ -1602,8 +1935,8 @@ export function RugbyGame() {
     setAimingDrop(false);
     matchRef.current = null;
     setImmersiveMode(false);
-    setScreen("setup");
-  }, []);
+    setScreen(gameMode === "championship" ? "campaign" : "setup");
+  }, [gameMode]);
 
   const substitutePlayer = useCallback(
     (slot: number) => {
@@ -1666,8 +1999,18 @@ export function RugbyGame() {
   }, []);
 
   useEffect(() => {
-    const savedWins = Number(localStorage.getItem("rugby-br-26-wins") ?? "0");
-    setBestWins(Number.isFinite(savedWins) ? savedWins : 0);
+    const hydrationTimer = window.setTimeout(() => {
+      const savedWins = Number(localStorage.getItem("rugby-br-26-wins") ?? "0");
+      setBestWins(Number.isFinite(savedWins) ? savedWins : 0);
+      try {
+        const savedCampaign = JSON.parse(localStorage.getItem(CAMPAIGN_STORAGE_KEY) ?? "null") as ChampionshipCampaign | null;
+        if (savedCampaign?.version === 1 && TEAMS.some((team) => team.id === savedCampaign.teamId)) {
+          setCampaign(savedCampaign);
+        }
+      } catch {
+        localStorage.removeItem(CAMPAIGN_STORAGE_KEY);
+      }
+    }, 0);
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register(publicAsset("/sw.js")).catch(() => undefined);
     }
@@ -1676,13 +2019,24 @@ export function RugbyGame() {
       setInstallPrompt(event);
     };
     window.addEventListener("beforeinstallprompt", onInstall);
-    return () => window.removeEventListener("beforeinstallprompt", onInstall);
+    return () => {
+      window.clearTimeout(hydrationTimer);
+      window.removeEventListener("beforeinstallprompt", onInstall);
+    };
   }, []);
+
+  useEffect(() => {
+    if (campaign) localStorage.setItem(CAMPAIGN_STORAGE_KEY, JSON.stringify(campaign));
+  }, [campaign]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Space"].includes(event.code)) {
         event.preventDefault();
+      }
+      if (controlModeRef.current === "simulate") {
+        if (event.code === "Escape" || event.code === "KeyP") togglePause();
+        return;
       }
       keyState.add(event.code);
       if (event.repeat) return;
@@ -1736,6 +2090,7 @@ export function RugbyGame() {
   };
 
   const handleCanvasPointerDown = (event: React.PointerEvent<HTMLCanvasElement>) => {
+    if (controlModeRef.current === "simulate") return;
     const point = canvasPoint(event);
     gestureRef.current = { active: true, x: event.clientX, y: event.clientY };
     if (aimRef.current.active) {
@@ -1746,6 +2101,7 @@ export function RugbyGame() {
   };
 
   const handleCanvasPointerMove = (event: React.PointerEvent<HTMLCanvasElement>) => {
+    if (controlModeRef.current === "simulate") return;
     if (!aimRef.current.active) return;
     const point = canvasPoint(event);
     aimRef.current.x = point.x;
@@ -1753,6 +2109,7 @@ export function RugbyGame() {
   };
 
   const handleCanvasPointerUp = (event: React.PointerEvent<HTMLCanvasElement>) => {
+    if (controlModeRef.current === "simulate") return;
     if (!gestureRef.current.active) return;
     const start = gestureRef.current;
     gestureRef.current.active = false;
@@ -1781,6 +2138,7 @@ export function RugbyGame() {
   };
 
   const handleJoystick = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (controlModeRef.current === "simulate") return;
     const rect = event.currentTarget.getBoundingClientRect();
     const x = (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
     const y = (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
@@ -1908,59 +2266,93 @@ export function RugbyGame() {
 
           <section className="selection-layout">
             <div className="match-card">
-              <div className="section-heading">
-                <div>
-                  <p className="eyebrow">PARTIDA RÁPIDA</p>
-                  <h2>Monte o confronto</h2>
-                </div>
-                <span className="record-chip">{bestWins} vitórias neste aparelho</span>
+              <div className="mode-selector" aria-label="Modo de jogo">
+                <button
+                  type="button"
+                  className={gameMode === "friendly" ? "active" : ""}
+                  onClick={() => setGameMode("friendly")}
+                >
+                  <small>MODO 01</small><strong>Amistoso</strong><span>Escolha qualquer confronto</span>
+                </button>
+                <button
+                  type="button"
+                  className={gameMode === "championship" ? "active" : ""}
+                  onClick={() => setGameMode("championship")}
+                >
+                  <small>MODO 02</small><strong>Campeonato</strong><span>Calendário e classificação</span>
+                </button>
               </div>
 
-              <div className="versus-grid">
-                <label className="team-select">
-                  <span>Você joga com</span>
-                  <div className="team-preview">
-                    <TeamBadge team={home} large />
-                    <div>
-                      <strong>{home.name}</strong>
-                      <small>{home.state} · {home.division}ª divisão</small>
-                    </div>
+              {gameMode === "friendly" ? (
+                <>
+                  <div className="section-heading">
+                    <div><p className="eyebrow">PARTIDA RÁPIDA</p><h2>Monte o confronto</h2></div>
+                    <span className="record-chip">{bestWins} vitórias neste aparelho</span>
                   </div>
-                  <select value={homeId} onChange={(event) => setHomeId(event.target.value)}>
-                    {TEAMS.map((team) => (
-                      <option value={team.id} key={team.id}>
-                        {team.name} ({team.state}) — {team.division}ª divisão
-                      </option>
-                    ))}
-                  </select>
-                </label>
-
-                <span className="versus-mark">VS</span>
-
-                <label className="team-select">
-                  <span>Adversário (IA)</span>
-                  <div className="team-preview">
-                    <TeamBadge team={away} large />
-                    <div>
-                      <strong>{away.name}</strong>
-                      <small>{away.state} · {away.division}ª divisão</small>
-                    </div>
+                  <div className="versus-grid">
+                    <label className="team-select">
+                      <span>Time selecionado</span>
+                      <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.state} · {home.division}ª divisão</small></div></div>
+                      <select value={homeId} onChange={(event) => setHomeId(event.target.value)}>
+                        {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} ({team.state}) — {team.division}ª divisão</option>)}
+                      </select>
+                    </label>
+                    <span className="versus-mark">VS</span>
+                    <label className="team-select">
+                      <span>Adversário</span>
+                      <div className="team-preview"><TeamBadge team={away} large /><div><strong>{away.name}</strong><small>{away.state} · {away.division}ª divisão</small></div></div>
+                      <select value={awayId} onChange={(event) => setAwayId(event.target.value)}>
+                        {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} ({team.state}) — {team.division}ª divisão</option>)}
+                      </select>
+                    </label>
                   </div>
-                  <select value={awayId} onChange={(event) => setAwayId(event.target.value)}>
-                    {TEAMS.map((team) => (
-                      <option value={team.id} key={team.id}>
-                        {team.name} ({team.state}) — {team.division}ª divisão
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              </div>
-
-              <button className="play-button" type="button" onClick={openSquadSelection}>
-                <span>Escolher os 12 jogadores</span>
-                <span aria-hidden="true">→</span>
-              </button>
-              {homeId === awayId && <p className="selection-note">O adversário será trocado automaticamente ao iniciar.</p>}
+                  <div className="control-mode-picker" aria-label="Controle da partida">
+                    <button type="button" className={controlMode === "control" ? "active" : ""} onClick={() => setControlMode("control")}>
+                      <strong>Controlar o time</strong><span>Você joga; a outra equipe é a IA.</span>
+                    </button>
+                    <button type="button" className={controlMode === "simulate" ? "active" : ""} onClick={() => setControlMode("simulate")}>
+                      <strong>Assistir simulação</strong><span>Duas IAs jogam e você acompanha.</span>
+                    </button>
+                  </div>
+                  <button className="play-button" type="button" onClick={openSquadSelection}>
+                    <span>Escolher os 12 jogadores</span><span aria-hidden="true">→</span>
+                  </button>
+                  {homeId === awayId && <p className="selection-note">O adversário será trocado automaticamente ao iniciar.</p>}
+                </>
+              ) : (
+                <>
+                  <div className="section-heading championship-heading">
+                    <div><p className="eyebrow">SUPER 12 · TEMPORADA 2026</p><h2>Comece uma campanha</h2></div>
+                    <span className="record-chip">progresso salvo no aparelho</span>
+                  </div>
+                  <label className="team-select championship-team-select">
+                    <span>Seu clube no campeonato</span>
+                    <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.group} · {home.division}ª divisão</small></div></div>
+                    <select value={homeId} onChange={(event) => setHomeId(event.target.value)}>
+                      {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} — {team.group}</option>)}
+                    </select>
+                  </label>
+                  <div className="championship-format">
+                    <strong>{home.division === 1 ? "6 jogos de grupo · ida e volta" : "3 jogos de grupo · turno único"}</strong>
+                    <span>
+                      {home.division === 1
+                        ? "Os dois melhores de cada grupo avançam ao hexagonal; os demais vão à repescagem."
+                        : "Os dois melhores de cada taça avançam à repescagem pelo acesso."}
+                    </span>
+                  </div>
+                  {campaign && (
+                    <button className="saved-campaign" type="button" onClick={resumeCampaign}>
+                      <TeamBadge team={teamById(campaign.teamId)} />
+                      <span><small>CAMPANHA SALVA</small><strong>Continuar com {teamById(campaign.teamId).name}</strong></span>
+                      <i>→</i>
+                    </button>
+                  )}
+                  <button className="play-button" type="button" onClick={startNewCampaign}>
+                    <span>{campaign ? "Iniciar nova campanha" : "Iniciar campeonato"}</span><span aria-hidden="true">→</span>
+                  </button>
+                  {campaign && <p className="selection-note">Uma nova campanha substitui o progresso salvo atual.</p>}
+                </>
+              )}
             </div>
 
             <aside className="controls-card">
@@ -2042,11 +2434,100 @@ export function RugbyGame() {
             </div>
           </section>
         </>
+      ) : screen === "campaign" ? (
+        <section className="campaign-stage">
+          {!campaign ? (
+            <div className="campaign-empty">
+              <h1>Nenhuma campanha salva</h1>
+              <button className="play-button" type="button" onClick={() => setScreen("setup")}>Escolher um clube <span>→</span></button>
+            </div>
+          ) : (
+            <>
+              <div className="campaign-hero">
+                <button className="back-button" type="button" onClick={() => setScreen("setup")}>← Modos de jogo</button>
+                <div className="campaign-club"><TeamBadge team={teamById(campaign.teamId)} large /><span><p className="eyebrow">CAMPANHA 2026 · {campaign.division}ª DIVISÃO</p><h1>{teamById(campaign.teamId).name}</h1><small>{campaign.group} · {phaseLabel(campaignPhase)}</small></span></div>
+                <div className="campaign-progress">
+                  <span>{campaignCalendar.filter((fixture) => campaign.results.some((result) => result.fixtureId === fixture.id)).length}/{campaignCalendar.length}</span>
+                  <small>partidas desta fase</small>
+                </div>
+              </div>
+
+              <div className="campaign-grid">
+                <section className="campaign-main-card">
+                  {currentCampaignFixture ? (
+                    <>
+                      <div className="next-fixture-kicker"><span>PRÓXIMA PARTIDA</span><strong>{phaseLabel(currentCampaignFixture.phase)} · Rodada {currentCampaignFixture.round}</strong></div>
+                      <div className="campaign-versus">
+                        <div><TeamBadge team={teamById(currentCampaignFixture.homeId)} large /><strong>{teamById(currentCampaignFixture.homeId).name}</strong><small>Mandante</small></div>
+                        <span><b>VS</b><small>{currentCampaignFixture.date ?? "Data a definir"}{currentCampaignFixture.time ? ` · ${currentCampaignFixture.time}` : ""}</small></span>
+                        <div><TeamBadge team={teamById(currentCampaignFixture.awayId)} large /><strong>{teamById(currentCampaignFixture.awayId).name}</strong><small>Visitante</small></div>
+                      </div>
+                      <div className="campaign-play-options">
+                        <button className="play-button" type="button" onClick={() => openCampaignMatch("control")}><span>Controlar {teamById(campaign.teamId).short}</span><span>→</span></button>
+                        <button className="secondary-button simulate-button" type="button" onClick={() => openCampaignMatch("simulate")}><span>Assistir duas IAs</span><span>◎</span></button>
+                      </div>
+                      <p className="campaign-note">Antes da partida você escolhe os 7 titulares e 5 reservas. Na simulação, as duas equipes são comandadas pela IA em tempo real.</p>
+                    </>
+                  ) : (
+                    <div className="campaign-outcome">
+                      <p className="eyebrow">CAMPANHA CONCLUÍDA</p>
+                      <h2>
+                        {campaign.status === "champion" && "Campeão brasileiro!"}
+                        {campaign.status === "runner-up" && "Vice-campeão brasileiro"}
+                        {campaign.status === "promoted" && "Acesso conquistado!"}
+                        {campaign.status === "repechage-complete" && "Repescagem concluída"}
+                        {campaign.status === "eliminated" && "Fim da campanha"}
+                      </h2>
+                      <p>
+                        {campaign.status === "champion" && "Seu clube terminou o hexagonal entre os dois primeiros e venceu a final."}
+                        {campaign.status === "runner-up" && "Seu clube chegou até a decisão do Super 12."}
+                        {campaign.status === "promoted" && "Seu clube ficou entre os dois melhores da repescagem e garantiu vaga na 1ª divisão de 2027."}
+                        {campaign.status === "repechage-complete" && "A equipe disputou toda a repescagem, mas terminou fora das duas vagas de acesso."}
+                        {campaign.status === "eliminated" && "A posição na fase concluída não deu vaga à etapa seguinte."}
+                      </p>
+                      <button className="play-button" type="button" onClick={() => setScreen("setup")}>Voltar aos modos <span>→</span></button>
+                    </div>
+                  )}
+                </section>
+
+                <aside className="standings-card">
+                  <div><p className="eyebrow">CLASSIFICAÇÃO</p><h2>{campaignPhase === "groups" ? campaign.group : phaseLabel(campaignPhase)}</h2></div>
+                  <div className="standings-table" role="table" aria-label="Classificação da campanha">
+                    <div className="standings-row standings-head" role="row"><span>#</span><span>Clube</span><span>J</span><span>SG</span><strong>PTS</strong></div>
+                    {campaignStandings.map((standing, index) => (
+                      <div className={`standings-row ${standing.teamId === campaign.teamId ? "is-user" : ""}`} role="row" key={standing.teamId}>
+                        <span>{index + 1}</span><span><TeamBadge team={teamById(standing.teamId)} /><b>{teamById(standing.teamId).short}</b></span><span>{standing.played}</span><span>{standing.pointsFor - standing.pointsAgainst}</span><strong>{standing.tablePoints}</strong>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="standings-rule">4 pts vitória · 2 empate · bônus por 4 tries e derrota por até 7. Desempate por saldo, tries e pontos marcados.</p>
+                </aside>
+              </div>
+
+              <section className="campaign-calendar-card">
+                <div className="section-heading"><div><p className="eyebrow">CALENDÁRIO</p><h2>Todos os jogos do seu clube</h2></div><span className="record-chip">datas oficiais na fase de grupos</span></div>
+                <div className="campaign-calendar">
+                  {campaignCalendar.map((fixture) => {
+                    const result = campaign.results.find((item) => item.fixtureId === fixture.id);
+                    const opponentId = fixture.homeId === campaign.teamId ? fixture.awayId : fixture.homeId;
+                    return (
+                      <div className={`calendar-fixture ${fixture.id === currentCampaignFixture?.id ? "is-next" : ""}`} key={fixture.id}>
+                        <span><small>RODADA {fixture.round}</small><strong>{fixture.date ?? phaseLabel(fixture.phase)}</strong></span>
+                        <span><TeamBadge team={teamById(opponentId)} /><b>{fixture.homeId === campaign.teamId ? "vs" : "@"} {teamById(opponentId).name}</b></span>
+                        <strong>{result ? `${result.homeScore} × ${result.awayScore}` : fixture.id === currentCampaignFixture?.id ? "PRÓXIMO" : "—"}</strong>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            </>
+          )}
+        </section>
       ) : screen === "squad" ? (
         <section className="squad-stage">
           <div className="squad-heading">
-            <button className="back-button" type="button" onClick={() => setScreen("setup")}>
-              ← Alterar confronto
+            <button className="back-button" type="button" onClick={() => setScreen(gameMode === "championship" ? "campaign" : "setup")}>
+              ← {gameMode === "championship" ? "Voltar à campanha" : "Alterar confronto"}
             </button>
             <div>
               <p className="eyebrow">CONVOCAÇÃO · {home.name.toUpperCase()}</p>
@@ -2204,7 +2685,7 @@ export function RugbyGame() {
                 onClick={startMatch}
                 disabled={selectedSquad.length !== SQUAD_SIZE}
               >
-                <span>Começar o 1º tempo</span><span aria-hidden="true">→</span>
+                <span>{controlMode === "simulate" ? "Assistir à simulação" : "Começar o 1º tempo"}</span><span aria-hidden="true">→</span>
               </button>
               <button
                 className="secondary-button reset-squad"
@@ -2221,7 +2702,7 @@ export function RugbyGame() {
           <div className="match-hud">
             <div className="hud-team">
               <TeamBadge team={home} />
-              <span><small>VOCÊ</small><strong>{home.short}</strong></span>
+              <span><small>{controlMode === "simulate" ? "IA" : "VOCÊ"}</small><strong>{home.short}</strong></span>
             </div>
             <strong className="score">{hud.score[0]}</strong>
             <div className="match-clock">
@@ -2236,7 +2717,7 @@ export function RugbyGame() {
             </div>
             <strong className="score">{hud.score[1]}</strong>
             <div className="hud-team hud-team--away">
-              <span><small>CPU</small><strong>{away.short}</strong></span>
+              <span><small>IA</small><strong>{away.short}</strong></span>
               <TeamBadge team={away} />
             </div>
           </div>
@@ -2257,6 +2738,9 @@ export function RugbyGame() {
               />
               {hud.message && <div className="game-message">{hud.message}</div>}
             </div>
+            {controlMode === "simulate" ? (
+              <div className="simulation-banner"><i /> SIMULAÇÃO AO VIVO · DUAS IAS EM CAMPO</div>
+            ) : (
             <div className="mobile-controls" aria-label="Controles por toque">
               <div
                 className="joystick"
@@ -2296,6 +2780,7 @@ export function RugbyGame() {
                 <button type="button" className="action action--pass" onPointerDown={() => passBall(0)}><strong>A</strong><small>PASSE</small></button>
               </div>
             </div>
+            )}
           </div>
 
           <div className="game-toolbar">
@@ -2316,7 +2801,7 @@ export function RugbyGame() {
                 Encerrar partida
               </button>
             )}
-            <span><kbd>1–7</kbd> passe · <kbd>K</kbd> chute à frente · <kbd>R</kbd> block · <kbd>Q</kbd> drop</span>
+            <span>{controlMode === "simulate" ? "Modo espectador · pause quando quiser" : <><kbd>1–7</kbd> passe · <kbd>K</kbd> chute à frente · <kbd>R</kbd> block · <kbd>Q</kbd> drop</>}</span>
             <button
               type="button"
               onPointerDown={(event) => {
@@ -2331,7 +2816,7 @@ export function RugbyGame() {
             </button>
           </div>
 
-          {hud.paused && (
+          {hud.paused && controlMode === "control" && (
             <section className="substitution-panel" aria-label="Banco de reservas">
               <div>
                 <p className="eyebrow">BANCO DE RESERVAS</p>
@@ -2363,17 +2848,14 @@ export function RugbyGame() {
 
           {hud.over && (
             <div className="result-actions">
-              <button className="play-button" type="button" onClick={restartMatch}>Jogar revanche <span>↻</span></button>
-              <button
-                className="secondary-button"
-                type="button"
-                onClick={() => {
-                  setImmersiveMode(false);
-                  setScreen("setup");
-                }}
-              >
-                Trocar clubes
-              </button>
+              {gameMode === "championship" ? (
+                <button className="play-button" type="button" onClick={recordCampaignMatch}>Salvar resultado e continuar <span>→</span></button>
+              ) : (
+                <>
+                  <button className="play-button" type="button" onClick={restartMatch}>Jogar revanche <span>↻</span></button>
+                  <button className="secondary-button" type="button" onClick={() => { setImmersiveMode(false); setScreen("setup"); }}>Trocar clubes</button>
+                </>
+              )}
             </div>
           )}
         </section>

@@ -33,6 +33,9 @@ test("server-renders the Rugby BR 26 game shell", async () => {
   assert.match(html, /Rugby BR 26/);
   assert.match(html, /Do clube local/);
   assert.match(html, /Monte o confronto/);
+  assert.match(html, /Modo 02/i);
+  assert.match(html, /Campeonato/);
+  assert.match(html, /Assistir simulação/);
   assert.match(html, /Farrapos/);
   assert.match(html, /Jacareí/);
   assert.match(html, /manifest\.webmanifest/);
@@ -41,17 +44,18 @@ test("server-renders the Rugby BR 26 game shell", async () => {
 });
 
 test("ships lightweight PWA and game assets", async () => {
-  const [manifest, serviceWorker, gameSource, rosterSource, styles] = await Promise.all([
+  const [manifest, serviceWorker, gameSource, championshipSource, rosterSource, styles] = await Promise.all([
     readFile(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"),
     readFile(new URL("../public/sw.js", import.meta.url), "utf8"),
     readFile(new URL("../app/rugby-game.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/championship.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/rosters.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v12-player-ratings/);
+  assert.match(serviceWorker, /rugby-br-26-v13-championship/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -103,6 +107,15 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /targetSlot\?: number/);
   assert.match(gameSource, /Tornados Indaiatuba/);
   assert.match(gameSource, /Leões de Paraisópolis/);
+  assert.match(gameSource, /startNewCampaign/);
+  assert.match(gameSource, /recordCampaignMatch/);
+  assert.match(gameSource, /Assistir duas IAs/);
+  assert.match(gameSource, /CAMPAIGN_STORAGE_KEY/);
+  assert.match(championshipSource, /OFFICIAL_GROUP_FIXTURES/);
+  assert.match(championshipSource, /createRoundRobinFixtures/);
+  assert.match(championshipSource, /hexagonal/);
+  assert.match(championshipSource, /repechage/);
+  assert.equal((championshipSource.match(/^  \[[12], "[ABC]",/gm) ?? []).length, 54);
   assert.match(styles, /@media \(hover: none\) and \(pointer: coarse\)/);
   assert.match(styles, /grid-template-columns: repeat\(3, 60px\)/);
   assert.match(styles, /env\(safe-area-inset-bottom\)/);

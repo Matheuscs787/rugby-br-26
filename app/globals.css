@@ -423,6 +423,133 @@ select:focus-visible {
   padding: 34px;
 }
 
+.mode-selector {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  margin: -18px -18px 32px;
+}
+
+.mode-selector button,
+.control-mode-picker button {
+  background: rgba(255, 255, 255, 0.018);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 17px 18px;
+  text-align: left;
+}
+
+.mode-selector button.active,
+.control-mode-picker button.active {
+  background: rgba(223, 255, 73, 0.08);
+  border-color: rgba(223, 255, 73, 0.5);
+  color: var(--ink);
+}
+
+.mode-selector small {
+  color: var(--acid);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.mode-selector strong {
+  font-size: 18px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.mode-selector span,
+.control-mode-picker span {
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+.control-mode-picker {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 18px;
+}
+
+.control-mode-picker strong {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.championship-heading {
+  margin-bottom: 28px;
+}
+
+.championship-team-select {
+  display: block;
+  max-width: 560px;
+}
+
+.championship-format {
+  background: rgba(255, 255, 255, 0.025);
+  border-left: 3px solid var(--orange);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 18px;
+  padding: 14px 16px;
+}
+
+.championship-format strong {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.championship-format span {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.saved-campaign {
+  align-items: center;
+  background: rgba(255, 106, 61, 0.06);
+  border: 1px solid rgba(255, 106, 61, 0.28);
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 12px;
+  text-align: left;
+  width: 100%;
+}
+
+.saved-campaign > span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.saved-campaign small {
+  color: var(--orange);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.saved-campaign strong {
+  font-size: 11px;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+.saved-campaign i {
+  color: var(--orange);
+  font-size: 20px;
+  font-style: normal;
+}
+
 .section-heading {
   align-items: flex-start;
   display: flex;
@@ -746,6 +873,304 @@ kbd {
   color: #5d7467;
   font-style: normal;
   margin-left: auto;
+}
+
+.campaign-stage {
+  margin: 0 auto;
+  max-width: 1400px;
+  min-height: calc(100vh - 94px);
+  padding: 48px 42px 90px;
+}
+
+.campaign-empty {
+  margin: 80px auto;
+  max-width: 520px;
+  text-align: center;
+}
+
+.campaign-hero {
+  align-items: center;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: auto 1fr auto;
+  margin-bottom: 30px;
+}
+
+.campaign-club {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+}
+
+.campaign-club h1 {
+  font-size: clamp(38px, 5vw, 70px);
+  letter-spacing: -0.065em;
+  line-height: 0.88;
+  margin: 0 0 9px;
+  text-transform: uppercase;
+}
+
+.campaign-club .eyebrow {
+  margin-bottom: 8px;
+}
+
+.campaign-club small {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.campaign-progress {
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  min-width: 112px;
+  padding-left: 24px;
+  text-align: center;
+}
+
+.campaign-progress span {
+  color: var(--acid);
+  font-size: 30px;
+  font-weight: 950;
+}
+
+.campaign-progress small {
+  color: var(--muted);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.campaign-grid {
+  align-items: stretch;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
+}
+
+.campaign-main-card,
+.standings-card,
+.campaign-calendar-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+
+.campaign-main-card {
+  background: linear-gradient(145deg, rgba(223, 255, 73, 0.05), transparent 52%), var(--panel);
+}
+
+.next-fixture-kicker {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-fixture-kicker span {
+  color: var(--acid);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.next-fixture-kicker strong {
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.campaign-versus {
+  align-items: center;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 110px 1fr;
+  margin: 42px auto 34px;
+  max-width: 680px;
+}
+
+.campaign-versus > div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.campaign-versus > div strong {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.campaign-versus small {
+  color: var(--muted);
+  display: block;
+  font-size: 8px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.campaign-versus > span {
+  text-align: center;
+}
+
+.campaign-versus > span b {
+  color: var(--orange);
+  display: block;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.campaign-play-options {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.campaign-play-options .play-button {
+  margin: 0;
+}
+
+.simulate-button {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.campaign-note,
+.standings-rule {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.5;
+  margin: 14px 0 0;
+}
+
+.standings-card h2 {
+  font-size: 22px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.standings-table {
+  border-top: 1px solid var(--line);
+}
+
+.standings-row {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  font-size: 10px;
+  grid-template-columns: 22px minmax(90px, 1fr) 24px 34px 30px;
+  min-height: 42px;
+}
+
+.standings-row > span:nth-child(2) {
+  align-items: center;
+  display: flex;
+  gap: 7px;
+}
+
+.standings-row .team-badge {
+  height: 24px;
+  width: 24px;
+}
+
+.standings-row.is-user {
+  background: rgba(223, 255, 73, 0.08);
+  color: var(--acid);
+}
+
+.standings-head {
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 800;
+  min-height: 30px;
+  text-transform: uppercase;
+}
+
+.campaign-calendar-card {
+  margin-top: 20px;
+}
+
+.campaign-calendar-card .section-heading {
+  margin-bottom: 20px;
+}
+
+.campaign-calendar-card h2 {
+  font-size: 25px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.campaign-calendar {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.calendar-fixture {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 72px 1fr auto;
+  min-height: 64px;
+  padding: 10px;
+}
+
+.calendar-fixture.is-next {
+  border-color: rgba(223, 255, 73, 0.55);
+}
+
+.calendar-fixture > span:first-child small,
+.calendar-fixture > span:first-child strong {
+  display: block;
+}
+
+.calendar-fixture small {
+  color: var(--muted);
+  font-size: 7px;
+}
+
+.calendar-fixture > span:first-child strong {
+  font-size: 9px;
+  margin-top: 4px;
+}
+
+.calendar-fixture > span:nth-child(2) {
+  align-items: center;
+  display: flex;
+  gap: 7px;
+}
+
+.calendar-fixture > span:nth-child(2) b,
+.calendar-fixture > strong {
+  font-size: 9px;
+}
+
+.calendar-fixture .team-badge {
+  height: 26px;
+  width: 26px;
+}
+
+.campaign-outcome {
+  margin: 40px auto;
+  max-width: 560px;
+  text-align: center;
+}
+
+.campaign-outcome h2 {
+  font-size: clamp(34px, 5vw, 64px);
+  letter-spacing: -0.06em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.campaign-outcome p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .squad-stage {
@@ -1428,6 +1853,28 @@ kbd {
   display: none;
 }
 
+.simulation-banner {
+  align-items: center;
+  background: rgba(3, 16, 11, 0.94);
+  color: var(--acid);
+  display: flex;
+  font-size: 9px;
+  font-weight: 900;
+  gap: 9px;
+  justify-content: center;
+  letter-spacing: 0.13em;
+  min-height: 42px;
+  text-transform: uppercase;
+}
+
+.simulation-banner i {
+  background: var(--orange);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 106, 61, 0.75);
+  height: 7px;
+  width: 7px;
+}
+
 footer {
   align-items: center;
   border-top: 1px solid var(--line);
@@ -1492,6 +1939,18 @@ footer > span {
   .selection-layout {
     grid-template-columns: 1fr;
     padding: 0 22px 74px;
+  }
+
+  .campaign-stage {
+    padding: 44px 22px 74px;
+  }
+
+  .campaign-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-calendar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .squad-stage {
@@ -1561,6 +2020,66 @@ footer > span {
 
   .selection-layout {
     padding: 0 14px 64px;
+  }
+
+  .mode-selector,
+  .control-mode-picker {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-selector {
+    margin: -8px -4px 26px;
+  }
+
+  .campaign-stage {
+    padding: 32px 14px 60px;
+  }
+
+  .campaign-hero {
+    align-items: start;
+    grid-template-columns: 1fr auto;
+  }
+
+  .campaign-hero .back-button {
+    grid-column: 1 / -1;
+  }
+
+  .campaign-club {
+    gap: 11px;
+  }
+
+  .campaign-club h1 {
+    font-size: 36px;
+  }
+
+  .campaign-progress {
+    min-width: 74px;
+    padding-left: 12px;
+  }
+
+  .campaign-main-card,
+  .standings-card,
+  .campaign-calendar-card {
+    padding: 18px 14px;
+  }
+
+  .campaign-versus {
+    gap: 9px;
+    grid-template-columns: 1fr 82px 1fr;
+    margin: 30px auto 26px;
+  }
+
+  .campaign-versus > div strong {
+    font-size: 11px;
+  }
+
+  .campaign-play-options,
+  .campaign-calendar {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-fixture {
+    grid-template-columns: 68px 1fr auto;
   }
 
   .squad-stage {
