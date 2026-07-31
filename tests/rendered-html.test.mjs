@@ -56,7 +56,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v17-official-ratings/);
+  assert.match(serviceWorker, /rugby-br-26-v19-halftime-sides/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -96,6 +96,13 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /SWEEPER_SLOT/);
   assert.match(gameSource, /arrangeRestart/);
   assert.match(gameSource, /fullbackSide/);
+  assert.match(gameSource, /hasBrokenDefensiveLine/);
+  assert.match(gameSource, /passedDefenders >= Math\.ceil\(firstLine\.length \* 0\.6\)/);
+  assert.match(gameSource, /lineBreak \? 205 : 154/);
+  assert.match(gameSource, /function attackDirection/);
+  assert.match(gameSource, /match\.looseBallSeconds >= 3/);
+  assert.match(gameSource, /drawTerritoryName\(leftTeam, leftTerritoryX\)/);
+  assert.match(gameSource, /drawTerritoryName\(rightTeam, rightTerritoryX\)/);
   assert.match(gameSource, /isRestartFullback/);
   assert.match(gameSource, /player\.side === match\.fullbackSide/);
   assert.match(gameSource, /FULLBACK/);

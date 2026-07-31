@@ -20,11 +20,20 @@ controláveis ou simuladas e modo campeonato.
 - passe lateral/para trás, passe direcionado, chute à frente, drop e block;
 - fadiga, banco de reservas e substituições durante pausas;
 - reinícios por drop-kick, com o time que marcou cobrando o reinício;
+- troca real de campo no intervalo: direção de corrida, passes, chutes, drops,
+  linha de try e posicionamento acompanham os lados do segundo tempo;
+- recuperação progressiva da bola solta: a disputa começa por proximidade e,
+  se uma aglomeração impedir a coleta, o atleta mais próximo assegura a posse
+  em até três segundos para a partida não ficar travada;
 - fullback dinâmico: no reinício, o time que chuta deixa seu sétimo atleta mais
   profundo para defender; depois da posse se estabilizar, o fullback passa a ser
-  o sétimo atleta do time que estiver defendendo;
+  o sétimo atleta do time que estiver defendendo; ele mantém profundidade
+  enquanto a primeira linha cobre o portador e avança para fechar o tackle
+  quando o atacante rompe essa linha;
 - campo de jogo de 100 × 70 m, mais in-goals de 10 m, com linhas de try, 5 m,
-  22 m, 10 m, meio de campo e marcações de 5 m e 15 m a partir das laterais;
+  22 m, 10 m, meio de campo e marcações de 5 m e 15 m a partir das laterais; os
+  nomes dos clubes aparecem entre as linhas de 22 m e 10 m e trocam de lado no
+  segundo tempo;
 - nomes, apelidos, fotos e estatísticas quando disponíveis nas fontes públicas;
 - escalação automática dos 12 maiores overalls, que pode ser alterada pelo usuário;
 - PWA instalável, funcionamento offline básico e layout adaptado para celular;
