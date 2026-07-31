@@ -80,6 +80,15 @@ type AimPoint = {
   y: number;
 };
 
+type FullscreenDocument = Document & {
+  webkitExitFullscreen?: () => Promise<void> | void;
+  webkitFullscreenElement?: Element | null;
+};
+
+type FullscreenElement = HTMLElement & {
+  webkitRequestFullscreen?: () => Promise<void> | void;
+};
+
 const FIELD_W = 1100;
 const FIELD_H = 620;
 const TRY_LINE = 70;
@@ -508,6 +517,7 @@ export function RugbyGame() {
   const [bestWins, setBestWins] = useState(0);
   const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
   const [aimingDrop, setAimingDrop] = useState(false);
+  const [immersiveMode, setImmersiveMode] = useState(false);
   const [hud, setHud] = useState<Hud>({
     score: [0, 0],
     seconds: MATCH_SECONDS,
@@ -1198,6 +1208,39 @@ export function RugbyGame() {
     }
     match.lastFrame = performance.now();
     setHud((previous) => ({ ...previous, paused: match.paused }));
+    haptic(12);
+  }, []);
+
+  const toggleFullscreen = useCallback(async () => {
+    const fullscreenDocument = document as FullscreenDocument;
+    const root = document.documentElement as FullscreenElement;
+    const fullscreenElement =
+      fullscreenDocument.fullscreenElement ??
+      fullscreenDocument.webkitFullscreenElement;
+
+    try {
+      if (fullscreenElement) {
+        if (fullscreenDocument.exitFullscreen) {
+          await fullscreenDocument.exitFullscreen();
+        } else {
+          await fullscreenDocument.webkitExitFullscreen?.();
+        }
+        setImmersiveMode(false);
+      } else if (root.requestFullscreen) {
+        await root.requestFullscreen();
+        setImmersiveMode(true);
+      } else if (root.webkitRequestFullscreen) {
+        await root.webkitRequestFullscreen();
+        setImmersiveMode(true);
+      } else {
+        setImmersiveMode((current) => !current);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } catch {
+      setImmersiveMode((current) => !current);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    haptic(14);
   }, []);
 
   const endPausedMatch = useCallback(() => {
@@ -1210,6 +1253,7 @@ export function RugbyGame() {
     if (joystickKnobRef.current) joystickKnobRef.current.style.transform = "translate(0px, 0px)";
     setAimingDrop(false);
     matchRef.current = null;
+    setImmersiveMode(false);
     setScreen("setup");
   }, []);
 
@@ -1246,6 +1290,24 @@ export function RugbyGame() {
     },
     [beep, setMessage],
   );
+
+  useEffect(() => {
+    const fullscreenDocument = document as FullscreenDocument;
+    const syncFullscreenState = () => {
+      setImmersiveMode(
+        Boolean(
+          fullscreenDocument.fullscreenElement ??
+          fullscreenDocument.webkitFullscreenElement,
+        ),
+      );
+    };
+    document.addEventListener("fullscreenchange", syncFullscreenState);
+    document.addEventListener("webkitfullscreenchange", syncFullscreenState);
+    return () => {
+      document.removeEventListener("fullscreenchange", syncFullscreenState);
+      document.removeEventListener("webkitfullscreenchange", syncFullscreenState);
+    };
+  }, []);
 
   useEffect(() => {
     const savedWins = Number(localStorage.getItem("rugby-br-26-wins") ?? "0");
@@ -1402,9 +1464,19 @@ export function RugbyGame() {
   const filteredGroups = Array.from(new Set(visibleTeams.map((team) => `${team.division}-${team.group}`)));
 
   return (
-    <main className={`app-shell ${screen === "match" ? "app-shell--match" : ""}`}>
+    <main
+      className={`app-shell ${screen === "match" ? "app-shell--match" : ""} ${immersiveMode ? "app-shell--immersive" : ""}`}
+    >
       <header className="topbar">
-        <button className="brand" type="button" onClick={() => setScreen("setup")} aria-label="Voltar à seleção">
+        <button
+          className="brand"
+          type="button"
+          onClick={() => {
+            setImmersiveMode(false);
+            setScreen("setup");
+          }}
+          aria-label="Voltar à seleção"
+        >
           <span className="brand-mark" aria-hidden="true">BR</span>
           <span>
             <strong>Rugby BR 26</strong>
@@ -1681,7 +1753,18 @@ export function RugbyGame() {
           </div>
 
           <div className="game-toolbar">
-            <button type="button" onClick={togglePause}>{hud.paused ? "Continuar" : "Pausar"}</button>
+            <button
+              type="button"
+              onPointerDown={(event) => {
+                event.preventDefault();
+                togglePause();
+              }}
+              onClick={(event) => {
+                if (event.detail === 0) togglePause();
+              }}
+            >
+              {hud.paused ? "Continuar" : "Pausar"}
+            </button>
             {hud.paused && (
               <button className="end-match-button" type="button" onClick={endPausedMatch}>
                 Encerrar partida
@@ -1690,9 +1773,15 @@ export function RugbyGame() {
             <span><kbd>1–7</kbd> passe · <kbd>K</kbd> chute à frente · <kbd>R</kbd> block · <kbd>Q</kbd> drop</span>
             <button
               type="button"
-              onClick={() => document.documentElement.requestFullscreen?.()}
+              onPointerDown={(event) => {
+                event.preventDefault();
+                void toggleFullscreen();
+              }}
+              onClick={(event) => {
+                if (event.detail === 0) void toggleFullscreen();
+              }}
             >
-              Tela cheia
+              {immersiveMode ? "Sair da tela cheia" : "Tela cheia"}
             </button>
           </div>
 
@@ -1725,7 +1814,16 @@ export function RugbyGame() {
           {hud.over && (
             <div className="result-actions">
               <button className="play-button" type="button" onClick={restartMatch}>Jogar revanche <span>↻</span></button>
-              <button className="secondary-button" type="button" onClick={() => setScreen("setup")}>Trocar clubes</button>
+              <button
+                className="secondary-button"
+                type="button"
+                onClick={() => {
+                  setImmersiveMode(false);
+                  setScreen("setup");
+                }}
+              >
+                Trocar clubes
+              </button>
             </div>
           )}
         </section>

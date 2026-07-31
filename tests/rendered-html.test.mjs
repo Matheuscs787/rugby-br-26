@@ -50,7 +50,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v5-mobile-controls/);
+  assert.match(serviceWorker, /rugby-br-26-v6-mobile-toolbar/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const MATCH_SECONDS = 120/);
   assert.match(gameSource, /const PLAYERS_PER_SIDE = 7/);
@@ -68,6 +68,10 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /const deadZone = 0\.14/);
   assert.match(gameSource, /--camera-x/);
   assert.match(gameSource, /className="field-viewport"/);
+  assert.match(gameSource, /const toggleFullscreen/);
+  assert.match(gameSource, /webkitRequestFullscreen/);
+  assert.match(gameSource, /event\.detail === 0/);
+  assert.match(gameSource, /app-shell--immersive/);
   assert.match(gameSource, /logo: "\/clubs\/farrapos\.png"/);
   assert.match(gameSource, /const endPausedMatch/);
   assert.match(gameSource, /targetSlot\?: number/);
@@ -76,6 +80,7 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(styles, /@media \(hover: none\) and \(pointer: coarse\)/);
   assert.match(styles, /grid-template-columns: repeat\(3, 60px\)/);
   assert.match(styles, /env\(safe-area-inset-bottom\)/);
+  assert.match(styles, /\.app-shell--immersive/);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));

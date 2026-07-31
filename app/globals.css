@@ -59,6 +59,32 @@ select:focus-visible {
   overflow: hidden;
 }
 
+.app-shell--immersive {
+  background: var(--background);
+  height: 100dvh;
+  inset: 0;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.app-shell--immersive .topbar,
+.app-shell--immersive footer {
+  display: none;
+}
+
+.app-shell--immersive .game-stage {
+  max-width: none;
+  min-height: 100dvh;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.app-shell--immersive .canvas-frame canvas {
+  max-height: calc(100dvh - 150px);
+}
+
 .topbar {
   align-items: center;
   border-bottom: 1px solid var(--line);
@@ -800,7 +826,10 @@ kbd {
   justify-content: space-between;
   letter-spacing: 0.04em;
   min-height: 54px;
+  pointer-events: auto;
+  position: relative;
   text-transform: uppercase;
+  z-index: 12;
 }
 
 .game-toolbar button,
@@ -812,6 +841,7 @@ kbd {
   font-size: 9px;
   font-weight: 800;
   padding: 9px 12px;
+  touch-action: manipulation;
   text-transform: uppercase;
 }
 
@@ -1312,6 +1342,18 @@ footer > span {
     display: none;
   }
 
+  .app-shell--immersive .game-stage {
+    height: 100dvh;
+    min-height: 0;
+    overflow: auto;
+    padding-bottom: max(6px, env(safe-area-inset-bottom));
+    padding-top: max(6px, env(safe-area-inset-top));
+  }
+
+  .app-shell--immersive .field-viewport {
+    height: max(290px, calc(100dvh - 276px));
+  }
+
   .canvas-frame {
     background: #06140f;
     display: grid;
@@ -1482,6 +1524,7 @@ footer > span {
   .game-toolbar button {
     min-height: 44px;
     padding: 10px 14px;
+    pointer-events: auto;
   }
 }
 
@@ -1533,6 +1576,11 @@ footer > span {
   .field-viewport {
     height: calc(100svh - 146px);
     min-height: 220px;
+  }
+
+  .app-shell--immersive .field-viewport {
+    height: calc(100dvh - 104px);
+    min-height: 230px;
   }
 
   .mobile-controls {
