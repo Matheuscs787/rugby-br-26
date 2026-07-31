@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { ROSTERS_2026, type RosterPlayer } from "./rosters";
 
 type Division = 1 | 2;
 type UniformPattern = "solid" | "hoops" | "sash" | "quarters";
@@ -19,6 +20,7 @@ type Team = {
 
 type Player = {
   id: number;
+  name: string;
   side: 0 | 1;
   slot: number;
   x: number;
@@ -46,9 +48,12 @@ type Ball = {
 
 type Match = {
   players: Player[];
+  bench: [RosterPlayer[], RosterPlayer[]];
   ball: Ball;
   score: [number, number];
   seconds: number;
+  half: 1 | 2;
+  halftime: boolean;
   running: boolean;
   over: boolean;
   paused: boolean;
@@ -66,11 +71,15 @@ type Match = {
 type Hud = {
   score: [number, number];
   seconds: number;
+  half: 1 | 2;
+  halftime: boolean;
   paused: boolean;
   over: boolean;
   message: string;
   stamina: number[];
   jerseys: number[];
+  names: string[];
+  bench: RosterPlayer[];
   substitutesLeft: number;
 };
 
@@ -101,8 +110,9 @@ const LEFT_22 = TRY_LINE + 22 * METRE_SCALE;
 const RIGHT_22 = RIGHT_TRY_LINE - 22 * METRE_SCALE;
 const CENTRE_Y = FIELD_H / 2;
 const PLAYER_RADIUS = 17;
-const MATCH_SECONDS = 120;
+const HALF_SECONDS = 60;
 const PLAYERS_PER_SIDE = 7;
+const SQUAD_SIZE = 12;
 const MID_SLOT = Math.floor(PLAYERS_PER_SIDE / 2);
 const SWEEPER_SLOT = 6;
 const REPLACEMENTS_PER_SIDE = 5;
@@ -155,40 +165,60 @@ function formatClock(seconds: number) {
   return `${Math.floor(safe / 60)}:${String(safe % 60).padStart(2, "0")}`;
 }
 
-function makePlayers(): Player[] {
+function rosterRole(number: number) {
+  if (number <= 3) return "Primeira linha";
+  if (number <= 5) return "Segunda linha";
+  if (number <= 8) return "Terceira linha";
+  if (number === 9) return "Scrum-half";
+  if (number === 10) return "Abertura";
+  if (number === 11 || number === 14) return "Ponta";
+  if (number === 12 || number === 13) return "Centro";
+  if (number === 15) return "Fullback";
+  return "Reserva no XV";
+}
+
+function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Player[] {
   const lanes = Array.from(
     { length: PLAYERS_PER_SIDE },
     (_, slot) => 80 + slot * ((FIELD_H - 160) / (PLAYERS_PER_SIDE - 1)),
   );
   return [
-    ...lanes.map((y, slot) => ({
-      id: slot,
-      side: 0 as const,
-      slot,
-      x: TRY_LINE + 210 - Math.abs(MID_SLOT - slot) * 14,
-      y,
-      stun: 0,
-      tackleLock: 0,
-      stamina: 100,
-      jersey: slot + 1,
-      routeX: 0,
-      routeY: 0,
-      routeTime: 0,
-    })),
-    ...lanes.map((y, slot) => ({
-      id: slot + PLAYERS_PER_SIDE,
-      side: 1 as const,
-      slot,
-      x: RIGHT_TRY_LINE - 210 + Math.abs(MID_SLOT - slot) * 14,
-      y,
-      stun: 0,
-      tackleLock: 0,
-      stamina: 100,
-      jersey: slot + 1,
-      routeX: 0,
-      routeY: 0,
-      routeTime: 0,
-    })),
+    ...lanes.map((y, slot) => {
+      const athlete = homeSquad[slot] ?? { name: `Atleta ${slot + 1}`, number: slot + 1 };
+      return {
+        id: slot,
+        name: athlete.name,
+        side: 0 as const,
+        slot,
+        x: TRY_LINE + 210 - Math.abs(MID_SLOT - slot) * 14,
+        y,
+        stun: 0,
+        tackleLock: 0,
+        stamina: 100,
+        jersey: athlete.number,
+        routeX: 0,
+        routeY: 0,
+        routeTime: 0,
+      };
+    }),
+    ...lanes.map((y, slot) => {
+      const athlete = awaySquad[slot] ?? { name: `Atleta ${slot + 1}`, number: slot + 1 };
+      return {
+        id: slot + PLAYERS_PER_SIDE,
+        name: athlete.name,
+        side: 1 as const,
+        slot,
+        x: RIGHT_TRY_LINE - 210 + Math.abs(MID_SLOT - slot) * 14,
+        y,
+        stun: 0,
+        tackleLock: 0,
+        stamina: 100,
+        jersey: athlete.number,
+        routeX: 0,
+        routeY: 0,
+        routeTime: 0,
+      };
+    }),
   ];
 }
 
@@ -208,12 +238,13 @@ function arrangeRestart(players: Player[], kickingSide: 0 | 1) {
   });
 }
 
-function freshMatch(): Match {
-  const players = makePlayers();
+function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Match {
+  const players = makePlayers(homeSquad, awaySquad);
   arrangeRestart(players, 0);
   const firstKicker = players[MID_SLOT];
   return {
     players,
+    bench: [homeSquad.slice(PLAYERS_PER_SIDE), awaySquad.slice(PLAYERS_PER_SIDE)],
     ball: {
       x: firstKicker.x,
       y: firstKicker.y,
@@ -226,7 +257,9 @@ function freshMatch(): Match {
       kind: "held",
     },
     score: [0, 0],
-    seconds: MATCH_SECONDS,
+    seconds: HALF_SECONDS,
+    half: 1,
+    halftime: false,
     running: true,
     over: false,
     paused: false,
@@ -236,7 +269,10 @@ function freshMatch(): Match {
     kickoff: 1.15,
     restartSide: 0,
     blockWindow: 0,
-    substitutesLeft: [REPLACEMENTS_PER_SIDE, REPLACEMENTS_PER_SIDE],
+    substitutesLeft: [
+      Math.min(REPLACEMENTS_PER_SIDE, Math.max(0, homeSquad.length - PLAYERS_PER_SIDE)),
+      Math.min(REPLACEMENTS_PER_SIDE, Math.max(0, awaySquad.length - PLAYERS_PER_SIDE)),
+    ],
     message: "Drop-kick inicial: seu time chuta",
     messageUntil: 2,
   };
@@ -291,12 +327,13 @@ function drawField(
     ctx.stroke();
   };
 
-  ctx.strokeStyle = "rgba(239,255,241,.82)";
+  ctx.strokeStyle = "rgba(239,255,241,.9)";
   ctx.lineWidth = 3;
   ctx.strokeRect(2, 2, FIELD_W - 4, FIELD_H - 4);
   [TRY_LINE, LEFT_22, FIELD_W / 2, RIGHT_22, RIGHT_TRY_LINE].forEach(solidVertical);
 
-  ctx.lineWidth = 2;
+  ctx.strokeStyle = "rgba(239,255,241,.82)";
+  ctx.lineWidth = 3;
   ctx.setLineDash([METRE_SCALE * 5, METRE_SCALE * 5]);
   [
     TRY_LINE + 5 * METRE_SCALE,
@@ -321,6 +358,24 @@ function drawField(
     ctx.stroke();
   });
   ctx.setLineDash([]);
+
+  ctx.fillStyle = "rgba(242,255,244,.72)";
+  ctx.font = "900 12px ui-sans-serif, system-ui";
+  ctx.textAlign = "left";
+  ctx.fillText("5 m", FIELD_W / 2 + 12, 5 * METRE_SCALE - 8);
+  ctx.fillText("15 m", FIELD_W / 2 + 12, 15 * METRE_SCALE - 8);
+  ctx.fillText("15 m", FIELD_W / 2 + 12, FIELD_H - 15 * METRE_SCALE - 8);
+  ctx.fillText("5 m", FIELD_W / 2 + 12, FIELD_H - 5 * METRE_SCALE - 8);
+  ctx.save();
+  ctx.translate(TRY_LINE + 5 * METRE_SCALE - 8, CENTRE_Y - 10);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText("5 m da linha de try", 0, 0);
+  ctx.restore();
+  ctx.save();
+  ctx.translate(RIGHT_TRY_LINE - 5 * METRE_SCALE + 8, CENTRE_Y + 10);
+  ctx.rotate(Math.PI / 2);
+  ctx.fillText("5 m da linha de try", 0, 0);
+  ctx.restore();
 
   // World Rugby requires a 0.5 m mark through the centre of halfway.
   ctx.lineWidth = 3;
@@ -554,7 +609,16 @@ function drawField(
     ctx.fillStyle = "#f2f6e9";
     ctx.font = "900 36px ui-sans-serif, system-ui";
     ctx.textAlign = "center";
-    ctx.fillText(match.over ? "FIM DE JOGO" : "PAUSADO", FIELD_W / 2, FIELD_H / 2 - 5);
+    ctx.fillText(
+      match.over ? "FIM DE JOGO" : match.halftime ? "INTERVALO" : "PAUSADO",
+      FIELD_W / 2,
+      FIELD_H / 2 - 5,
+    );
+    if (match.halftime) {
+      ctx.font = "700 18px ui-sans-serif, system-ui";
+      ctx.fillStyle = "#b9c9c0";
+      ctx.fillText("2º tempo · reinício do adversário", FIELD_W / 2, FIELD_H / 2 + 30);
+    }
     if (match.over) {
       ctx.font = "700 18px ui-sans-serif, system-ui";
       ctx.fillStyle = "#b9c9c0";
@@ -583,10 +647,13 @@ function TeamBadge({ team, large = false }: { team: Team; large?: boolean }) {
 }
 
 export function RugbyGame() {
-  const [screen, setScreen] = useState<"setup" | "match">("setup");
+  const [screen, setScreen] = useState<"setup" | "squad" | "match">("setup");
   const [divisionFilter, setDivisionFilter] = useState<"all" | Division>(1);
   const [homeId, setHomeId] = useState("jacarei");
   const [awayId, setAwayId] = useState("farrapos");
+  const [selectedRosterIndexes, setSelectedRosterIndexes] = useState<number[]>(
+    Array.from({ length: SQUAD_SIZE }, (_, index) => index),
+  );
   const [soundOn, setSoundOn] = useState(true);
   const [bestWins, setBestWins] = useState(0);
   const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
@@ -594,12 +661,16 @@ export function RugbyGame() {
   const [immersiveMode, setImmersiveMode] = useState(false);
   const [hud, setHud] = useState<Hud>({
     score: [0, 0],
-    seconds: MATCH_SECONDS,
+    seconds: HALF_SECONDS,
+    half: 1,
+    halftime: false,
     paused: false,
     over: false,
     message: "",
     stamina: Array(PLAYERS_PER_SIDE).fill(100),
     jerseys: Array.from({ length: PLAYERS_PER_SIDE }, (_, slot) => slot + 1),
+    names: Array.from({ length: PLAYERS_PER_SIDE }, (_, slot) => `Atleta ${slot + 1}`),
+    bench: [],
     substitutesLeft: REPLACEMENTS_PER_SIDE,
   });
 
@@ -616,10 +687,20 @@ export function RugbyGame() {
 
   const home = useMemo(() => TEAMS.find((team) => team.id === homeId) ?? TEAMS[0], [homeId]);
   const away = useMemo(() => TEAMS.find((team) => team.id === awayId) ?? TEAMS[1], [awayId]);
+  const homeRoster = ROSTERS_2026[home.id];
+  const awayRoster = ROSTERS_2026[away.id];
+  const selectedSquad = useMemo(
+    () => selectedRosterIndexes.map((index) => homeRoster.players[index]).filter(Boolean),
+    [homeRoster, selectedRosterIndexes],
+  );
   const visibleTeams = useMemo(
     () => TEAMS.filter((team) => divisionFilter === "all" || team.division === divisionFilter),
     [divisionFilter],
   );
+
+  useEffect(() => {
+    setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
+  }, [homeId]);
 
   const beep = useCallback(
     (frequency: number, duration = 0.08) => {
@@ -662,10 +743,13 @@ export function RugbyGame() {
         .filter((player) => player.side === 1)
         .sort((a, b) => a.stamina - b.stamina)[0];
       if (tiredDefender && tiredDefender.stamina < 26) {
-        const used = REPLACEMENTS_PER_SIDE - match.substitutesLeft[1];
-        tiredDefender.stamina = 100;
-        tiredDefender.jersey = 8 + used;
-        match.substitutesLeft[1] -= 1;
+        const replacement = match.bench[1].shift();
+        if (replacement) {
+          tiredDefender.name = replacement.name;
+          tiredDefender.stamina = 100;
+          tiredDefender.jersey = replacement.number;
+          match.substitutesLeft[1] = match.bench[1].length;
+        }
       }
     }
 
@@ -940,6 +1024,16 @@ export function RugbyGame() {
 
       if (match.seconds <= 0) {
         match.seconds = 0;
+        if (match.half === 1) {
+          match.half = 2;
+          match.seconds = HALF_SECONDS;
+          match.paused = true;
+          match.halftime = true;
+          prepareRestart(match, 1);
+          setMessage(match, "Intervalo · prepare o time para o 2º tempo", 60);
+          beep(420, 0.18);
+          return;
+        }
         match.over = true;
         match.running = false;
         if (match.score[0] > match.score[1]) {
@@ -1211,11 +1305,15 @@ export function RugbyGame() {
         setHud({
           score: [...match.score] as [number, number],
           seconds: match.seconds,
+          half: match.half,
+          halftime: match.halftime,
           paused: match.paused,
           over: match.over,
           message: match.messageUntil > 0 ? match.message : "",
           stamina: homeLineup.map((player) => player.stamina),
           jerseys: homeLineup.map((player) => player.jersey),
+          names: homeLineup.map((player) => player.name),
+          bench: [...match.bench[0]],
           substitutesLeft: match.substitutesLeft[0],
         });
       }
@@ -1224,12 +1322,27 @@ export function RugbyGame() {
     [away, home, updateMatch],
   );
 
-  const startMatch = useCallback(() => {
+  const openSquadSelection = useCallback(() => {
     if (homeId === awayId) {
       const alternative = TEAMS.find((team) => team.id !== homeId);
       if (alternative) setAwayId(alternative.id);
     }
-    matchRef.current = freshMatch();
+    setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
+    setScreen("squad");
+  }, [awayId, homeId]);
+
+  const toggleRosterPlayer = useCallback((index: number) => {
+    setSelectedRosterIndexes((current) => {
+      if (current.includes(index)) return current.filter((selected) => selected !== index);
+      if (current.length >= SQUAD_SIZE) return current;
+      return [...current, index];
+    });
+  }, []);
+
+  const startMatch = useCallback(() => {
+    if (selectedSquad.length !== SQUAD_SIZE) return;
+    const cpuSquad = awayRoster.players.slice(0, SQUAD_SIZE);
+    matchRef.current = freshMatch(selectedSquad, cpuSquad);
     aimRef.current.active = false;
     joystickRef.current = { x: 0, y: 0, active: false };
     actionRef.current.sprint = false;
@@ -1237,20 +1350,25 @@ export function RugbyGame() {
     setAimingDrop(false);
     setHud({
       score: [0, 0],
-      seconds: MATCH_SECONDS,
+      seconds: HALF_SECONDS,
+      half: 1,
+      halftime: false,
       paused: false,
       over: false,
       message: "Drop-kick inicial: seu time chuta",
       stamina: Array(PLAYERS_PER_SIDE).fill(100),
-      jerseys: Array.from({ length: PLAYERS_PER_SIDE }, (_, slot) => slot + 1),
+      jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.number),
+      names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.name),
+      bench: selectedSquad.slice(PLAYERS_PER_SIDE),
       substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
     setScreen("match");
     beep(520, 0.12);
-  }, [awayId, beep, homeId]);
+  }, [awayRoster, beep, selectedSquad]);
 
   const restartMatch = useCallback(() => {
-    matchRef.current = freshMatch();
+    const cpuSquad = awayRoster.players.slice(0, SQUAD_SIZE);
+    matchRef.current = freshMatch(selectedSquad, cpuSquad);
     aimRef.current.active = false;
     joystickRef.current = { x: 0, y: 0, active: false };
     actionRef.current.sprint = false;
@@ -1258,20 +1376,33 @@ export function RugbyGame() {
     setAimingDrop(false);
     setHud({
       score: [0, 0],
-      seconds: MATCH_SECONDS,
+      seconds: HALF_SECONDS,
+      half: 1,
+      halftime: false,
       paused: false,
       over: false,
       message: "Revanche: novo drop-kick inicial",
       stamina: Array(PLAYERS_PER_SIDE).fill(100),
-      jerseys: Array.from({ length: PLAYERS_PER_SIDE }, (_, slot) => slot + 1),
+      jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.number),
+      names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.name),
+      bench: selectedSquad.slice(PLAYERS_PER_SIDE),
       substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
     beep(520, 0.12);
-  }, [beep]);
+  }, [awayRoster, beep, selectedSquad]);
 
   const togglePause = useCallback(() => {
     const match = matchRef.current;
     if (!match || match.over) return;
+    if (match.halftime && match.paused) {
+      match.halftime = false;
+      match.paused = false;
+      match.lastFrame = performance.now();
+      setMessage(match, "2º tempo · adversário cobra o reinício", 1.8);
+      setHud((previous) => ({ ...previous, half: 2, halftime: false, paused: false }));
+      haptic(12);
+      return;
+    }
     match.paused = !match.paused;
     if (match.paused) {
       aimRef.current.active = false;
@@ -1339,24 +1470,30 @@ export function RugbyGame() {
         (candidate) => candidate.side === 0 && candidate.slot === slot,
       );
       if (!player) return;
-      const used = REPLACEMENTS_PER_SIDE - match.substitutesLeft[0];
+      const replacement = match.bench[0].shift();
+      if (!replacement) return;
+      player.name = replacement.name;
       player.stamina = 100;
-      player.jersey = 8 + used;
+      player.jersey = replacement.number;
       player.stun = 0;
       player.tackleLock = 0;
       player.routeTime = 0;
-      match.substitutesLeft[0] -= 1;
-      setMessage(match, `Camisa ${player.jersey} entrou renovado`, 1.3);
+      match.substitutesLeft[0] = match.bench[0].length;
+      setMessage(match, `${player.name} entrou com energia total`, 1.3);
       setHud((previous) => {
         const stamina = [...previous.stamina];
         const jerseys = [...previous.jerseys];
+        const names = [...previous.names];
         stamina[slot] = 100;
         jerseys[slot] = player.jersey;
+        names[slot] = player.name;
         return {
           ...previous,
           message: match.message,
           stamina,
           jerseys,
+          names,
+          bench: [...match.bench[0]],
           substitutesLeft: match.substitutesLeft[0],
         };
       });
@@ -1588,8 +1725,8 @@ export function RugbyGame() {
               <div className="hero-stats" aria-label="Resumo do jogo">
                 <span><strong>24</strong> clubes</span>
                 <span><strong>02</strong> divisões</span>
-                <span><strong>14</strong> atletas</span>
-                <span><strong>100×70</strong> campo</span>
+                <span><strong>12</strong> convocados</span>
+                <span><strong>2×1</strong> minuto</span>
               </div>
             </div>
             <div className="hero-board" aria-label="Ilustração tática de um campo oficial de 100 por 70 metros">
@@ -1674,8 +1811,8 @@ export function RugbyGame() {
                 </label>
               </div>
 
-              <button className="play-button" type="button" onClick={startMatch}>
-                <span>Entrar em campo</span>
+              <button className="play-button" type="button" onClick={openSquadSelection}>
+                <span>Escolher os 12 jogadores</span>
                 <span aria-hidden="true">→</span>
               </button>
               {homeId === awayId && <p className="selection-note">O adversário será trocado automaticamente ao iniciar.</p>}
@@ -1760,6 +1897,103 @@ export function RugbyGame() {
             </div>
           </section>
         </>
+      ) : screen === "squad" ? (
+        <section className="squad-stage">
+          <div className="squad-heading">
+            <button className="back-button" type="button" onClick={() => setScreen("setup")}>
+              ← Alterar confronto
+            </button>
+            <div>
+              <p className="eyebrow">CONVOCAÇÃO · {home.name.toUpperCase()}</p>
+              <h1>Escolha seus 12</h1>
+              <p>
+                Os 7 primeiros selecionados começam em campo. Os outros 5 ficam no banco
+                para entrar durante as pausas ou no intervalo.
+              </p>
+            </div>
+            <TeamBadge team={home} large />
+          </div>
+
+          <div className="squad-layout">
+            <section className="roster-picker" aria-label={`Elenco masculino de ${home.name}`}>
+              <div className="roster-toolbar">
+                <div>
+                  <p className="eyebrow">SÚMULA OFICIAL 2026</p>
+                  <h2>{homeRoster.players.length} atletas disponíveis</h2>
+                </div>
+                <strong className={selectedSquad.length === SQUAD_SIZE ? "is-complete" : ""}>
+                  {selectedSquad.length}/{SQUAD_SIZE}
+                </strong>
+              </div>
+              <div className="roster-grid">
+                {homeRoster.players.map((athlete, index) => {
+                  const selectedPosition = selectedRosterIndexes.indexOf(index);
+                  const isSelected = selectedPosition >= 0;
+                  return (
+                    <button
+                      type="button"
+                      className={`roster-player ${isSelected ? "is-selected" : ""}`}
+                      key={`${athlete.number}-${athlete.name}`}
+                      onClick={() => toggleRosterPlayer(index)}
+                      disabled={!isSelected && selectedSquad.length >= SQUAD_SIZE}
+                      aria-pressed={isSelected}
+                    >
+                      <span>#{athlete.number}</span>
+                      <span>
+                        <strong>{athlete.name}</strong>
+                        <small>{rosterRole(athlete.number)}</small>
+                      </span>
+                      <i>
+                        {selectedPosition < 0
+                          ? "+"
+                          : selectedPosition < PLAYERS_PER_SIDE
+                            ? `T${selectedPosition + 1}`
+                            : `R${selectedPosition - PLAYERS_PER_SIDE + 1}`}
+                      </i>
+                    </button>
+                  );
+                })}
+              </div>
+              <p className="roster-source">
+                Nomes e números consultados na súmula masculina do Super 12 de 2026 no{" "}
+                <a href={homeRoster.source} target="_blank" rel="noreferrer">Sporti / Brasil Rugby</a>.
+              </p>
+            </section>
+
+            <aside className="squad-summary">
+              <p className="eyebrow">ORDEM DA CONVOCAÇÃO</p>
+              <h2>7 titulares + 5 reservas</h2>
+              <div className="selected-squad">
+                {selectedSquad.map((athlete, slot) => (
+                  <div key={`${slot}-${athlete.number}-${athlete.name}`}>
+                    <span>{slot < PLAYERS_PER_SIDE ? `T${slot + 1}` : `R${slot - PLAYERS_PER_SIDE + 1}`}</span>
+                    <strong>#{athlete.number} {athlete.name}</strong>
+                  </div>
+                ))}
+                {Array.from({ length: Math.max(0, SQUAD_SIZE - selectedSquad.length) }, (_, index) => (
+                  <div className="is-empty" key={`empty-${index}`}>
+                    <span>—</span><strong>Escolha mais um atleta</strong>
+                  </div>
+                ))}
+              </div>
+              <button
+                className="play-button"
+                type="button"
+                onClick={startMatch}
+                disabled={selectedSquad.length !== SQUAD_SIZE}
+              >
+                <span>Começar o 1º tempo</span><span aria-hidden="true">→</span>
+              </button>
+              <button
+                className="secondary-button reset-squad"
+                type="button"
+                onClick={() => setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index))}
+              >
+                Restaurar convocação inicial
+              </button>
+            </aside>
+          </div>
+        </section>
       ) : (
         <section className="game-stage">
           <div className="match-hud">
@@ -1770,7 +2004,13 @@ export function RugbyGame() {
             <strong className="score">{hud.score[0]}</strong>
             <div className="match-clock">
               <span>{formatClock(hud.seconds)}</span>
-              <small>{hud.paused ? "PAUSADO" : "100×70 M · 7×7"}</small>
+              <small>
+                {hud.halftime
+                  ? "INTERVALO"
+                  : hud.paused
+                    ? `${hud.half}º TEMPO · PAUSADO`
+                    : `${hud.half}º TEMPO · 7×7`}
+              </small>
             </div>
             <strong className="score">{hud.score[1]}</strong>
             <div className="hud-team hud-team--away">
@@ -1847,7 +2087,7 @@ export function RugbyGame() {
                 if (event.detail === 0) togglePause();
               }}
             >
-              {hud.paused ? "Continuar" : "Pausar"}
+              {hud.halftime ? "Iniciar 2º tempo" : hud.paused ? "Continuar" : "Pausar"}
             </button>
             {hud.paused && (
               <button className="end-match-button" type="button" onClick={endPausedMatch}>
@@ -1882,16 +2122,20 @@ export function RugbyGame() {
                     key={slot}
                     onClick={() => substitutePlayer(slot)}
                     disabled={hud.substitutesLeft <= 0}
-                    aria-label={`Substituir camisa ${hud.jerseys[slot]}, energia ${Math.round(stamina)} por cento`}
+                    aria-label={`Substituir ${hud.names[slot]}, camisa ${hud.jerseys[slot]}, energia ${Math.round(stamina)} por cento, por ${hud.bench[0]?.name ?? "um reserva"}`}
                   >
                     <span>#{hud.jerseys[slot]}</span>
+                    <em>{hud.names[slot]}</em>
                     <i><b style={{ width: `${stamina}%` }} /></i>
                     <small>{Math.round(stamina)}%</small>
-                    <strong>Trocar</strong>
+                    <strong>{hud.bench[0] ? `Entra #${hud.bench[0].number}` : "Sem reserva"}</strong>
                   </button>
                 ))}
               </div>
-              <p>Pause a partida para trocar qualquer atleta cansado. O sevens permite até cinco reservas.</p>
+              <p>
+                Próximo do banco: {hud.bench[0] ? `${hud.bench[0].name} (#${hud.bench[0].number})` : "banco utilizado"}.
+                Pause a partida para trocar qualquer atleta cansado.
+              </p>
             </section>
           )}
 
@@ -1923,8 +2167,8 @@ export function RugbyGame() {
           >
             Confederação Brasileira de Rugby
           </a>{" "}
-          publicada em 29/01/2026. Escudos e paletas visuais referenciados na página oficial
-          da competição; uso demonstrativo neste protótipo independente.
+          publicada em 29/01/2026. Os nomes dos atletas vêm das súmulas masculinas oficiais
+          de 2026 no Sporti; uso demonstrativo neste protótipo independente.
         </p>
         <span>HTML5 Canvas · PWA · sem downloads pesados</span>
       </footer>
