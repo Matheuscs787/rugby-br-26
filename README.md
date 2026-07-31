@@ -151,6 +151,41 @@ Velocidade, tackles realizados, força física e qualidade de passe não são
 publicados de forma completa nessas súmulas. Por isso, os atributos correspondentes
 são estimativas posicionais ajustadas pelos eventos que realmente existem.
 
+### Gerador separado de comparação histórica
+
+O projeto também tem um modelo candidato em
+`scripts/compare-player-ratings.mjs`. Ele serve para estudar uma possível revisão
+dos ratings sem alterar `app/rosters.ts` nem as notas usadas pelo jogo. O comando:
+
+```bash
+npm run ratings:compare -- --team pe-vermelho --years 2024,2025,2026 --refresh
+```
+
+consulta o histórico oficial adulto do clube no Sporti, abre as súmulas e produz
+três arquivos em `outputs/`: um relatório legível em Markdown, uma planilha CSV
+e os dados completos em JSON. Depois da primeira coleta, `--offline` permite
+repetir a análise usando somente o cache local; `--refresh` renova esse cache.
+
+O modelo candidato usa critérios mais conservadores para reservas e separa a
+posição do nível geral do atleta:
+
+- partida como titular no XV vale 1,00 de participação efetiva;
+- entrada confirmada por evento de substituição vale 0,50;
+- presença na relação de uma partida de sevens vale 0,35;
+- reserva do XV sem entrada confirmada vale 0;
+- dados de 2026 têm peso 1,00, os de 2025 peso 0,65 e os de 2024 peso 0,4225;
+- experiência cresce de forma logarítmica até +4 no OVR;
+- tries, conversões, penalidades e drops dão bônus limitado; cartões dão
+  penalidade limitada;
+- vitórias do clube não entram no OVR individual;
+- a posição define o perfil de `VEL`, `TAC`, `PAS`, `CHU`, `FIS` e `ATA`, mas
+  esses atributos são recentrados para que uma camisa não aumente o OVR sozinha.
+
+A base provisória é 70 para a 1ª divisão e 68 para a 2ª. Quanto menor a
+participação oficial efetiva, menor a confiança do resultado. Associações de
+nomes ambíguas são descartadas e aparecem no relatório para revisão humana.
+Assim, uma ausência de dados nunca é tratada como prova de desempenho ruim.
+
 ## Cálculo dos atributos e do overall
 
 Cada atributo é um inteiro entre **40 e 95**. O cálculo tem duas etapas:
