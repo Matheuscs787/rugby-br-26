@@ -757,6 +757,12 @@ kbd {
   position: relative;
 }
 
+.field-viewport {
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
 .canvas-frame canvas {
   display: block;
   height: auto;
@@ -1119,18 +1125,18 @@ footer > span {
   }
 
   .canvas-frame {
-    aspect-ratio: 0.68 / 1;
-    overflow: hidden;
+    aspect-ratio: auto;
+    overflow: visible;
   }
 
   .canvas-frame canvas {
-    height: 100%;
-    left: 50%;
-    max-width: none;
-    object-fit: cover;
-    position: absolute;
-    transform: translateX(-50%);
-    width: auto;
+    height: auto;
+    left: auto;
+    max-width: 100%;
+    object-fit: contain;
+    position: static;
+    transform: none;
+    width: 100%;
   }
 
   .game-message {
@@ -1284,6 +1290,292 @@ footer > span {
 
   footer > span {
     text-align: left;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
+  .game-stage {
+    padding-left: max(7px, env(safe-area-inset-left));
+    padding-right: max(7px, env(safe-area-inset-right));
+  }
+
+  .app-shell--match .topbar {
+    height: 56px;
+  }
+
+  .app-shell--match footer {
+    display: none;
+  }
+
+  .canvas-frame {
+    background: #06140f;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    overflow: hidden;
+  }
+
+  .field-viewport {
+    height: clamp(300px, 46svh, 430px);
+    min-height: 0;
+  }
+
+  .canvas-frame canvas {
+    height: 100%;
+    left: 0;
+    max-height: none;
+    max-width: none;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    transform: translate3d(var(--camera-x, 0px), 0, 0);
+    transition: transform 80ms linear;
+    width: auto;
+    will-change: transform;
+  }
+
+  .mobile-controls {
+    align-items: center;
+    background:
+      linear-gradient(180deg, rgba(3, 14, 10, 0.88), rgba(3, 14, 10, 0.98));
+    bottom: auto;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    left: auto;
+    min-height: 152px;
+    padding:
+      10px max(12px, env(safe-area-inset-right))
+      max(12px, env(safe-area-inset-bottom))
+      max(12px, env(safe-area-inset-left));
+    pointer-events: none;
+    position: relative;
+    right: auto;
+    z-index: 8;
+  }
+
+  .joystick {
+    align-items: center;
+    background: rgba(9, 34, 25, 0.92);
+    border: 2px solid rgba(223, 255, 73, 0.36);
+    border-radius: 50%;
+    display: flex;
+    flex: 0 0 auto;
+    height: 132px;
+    justify-content: center;
+    pointer-events: auto;
+    position: relative;
+    touch-action: none;
+    user-select: none;
+    width: 132px;
+  }
+
+  .joystick::before,
+  .joystick::after {
+    background: rgba(255, 255, 255, 0.13);
+    content: "";
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .joystick::before {
+    height: 1px;
+    width: 92px;
+  }
+
+  .joystick::after {
+    height: 92px;
+    width: 1px;
+  }
+
+  .joystick span {
+    background: var(--acid);
+    border: 3px solid rgba(7, 22, 16, 0.75);
+    border-radius: 50%;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
+    height: 44px;
+    pointer-events: none;
+    position: relative;
+    transition: transform 35ms linear;
+    width: 44px;
+    z-index: 2;
+  }
+
+  .action-buttons {
+    display: grid;
+    flex: 0 0 auto;
+    gap: 8px;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 58px);
+    height: auto;
+    pointer-events: auto;
+    position: relative;
+    width: auto;
+  }
+
+  .action {
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    box-shadow: 0 4px 13px rgba(0, 0, 0, 0.28);
+    display: flex;
+    flex-direction: column;
+    height: 58px;
+    justify-content: center;
+    line-height: 1;
+    min-width: 60px;
+    position: static;
+    touch-action: manipulation;
+    user-select: none;
+    width: 60px;
+  }
+
+  .action strong {
+    font-size: 18px;
+  }
+
+  .action small {
+    font-size: 8px;
+    font-weight: 950;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  .action--drop {
+    background: #133426;
+  }
+
+  .action--block {
+    background: #174252;
+  }
+
+  .action--kick {
+    background: #edf0e2;
+    color: #0a1a12;
+  }
+
+  .action--sprint {
+    background: var(--orange);
+    grid-column: 1 / 3;
+    width: 128px;
+  }
+
+  .action--pass {
+    background: var(--acid);
+    color: #0a1a12;
+  }
+
+  .game-message {
+    max-width: calc(100% - 24px);
+    text-align: center;
+    white-space: normal;
+  }
+
+  .game-toolbar {
+    gap: 8px;
+  }
+
+  .game-toolbar button {
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (max-width: 380px) {
+  .mobile-controls {
+    gap: 7px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .joystick {
+    height: 116px;
+    width: 116px;
+  }
+
+  .action-buttons {
+    gap: 6px;
+    grid-template-columns: repeat(3, 54px);
+  }
+
+  .action {
+    min-width: 54px;
+    width: 54px;
+  }
+
+  .action--sprint {
+    width: 114px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  .topbar {
+    height: 50px;
+  }
+
+  .game-stage {
+    padding-bottom: 8px;
+    padding-top: 7px;
+  }
+
+  .match-hud {
+    margin-bottom: 6px;
+  }
+
+  .canvas-frame {
+    display: block;
+  }
+
+  .field-viewport {
+    height: calc(100svh - 146px);
+    min-height: 220px;
+  }
+
+  .mobile-controls {
+    background: linear-gradient(90deg, rgba(3, 14, 10, 0.76), transparent 35% 65%, rgba(3, 14, 10, 0.76));
+    bottom: 8px;
+    left: 8px;
+    min-height: 0;
+    padding: 0;
+    position: absolute;
+    right: 8px;
+  }
+
+  .joystick {
+    height: 112px;
+    width: 112px;
+  }
+
+  .action-buttons {
+    grid-template-columns: repeat(3, 56px);
+    grid-template-rows: repeat(2, 52px);
+  }
+
+  .action {
+    height: 52px;
+    min-width: 56px;
+    width: 56px;
+  }
+
+  .action--sprint {
+    width: 120px;
+  }
+
+  .game-toolbar {
+    min-height: 40px;
+  }
+
+  .game-toolbar button {
+    min-height: 36px;
+    padding: 7px 11px;
+  }
+
+  footer {
+    display: none;
   }
 }
 

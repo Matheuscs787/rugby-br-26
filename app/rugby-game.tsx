@@ -128,6 +128,12 @@ function distance(a: { x: number; y: number }, b: { x: number; y: number }) {
   return Math.hypot(a.x - b.x, a.y - b.y);
 }
 
+function haptic(duration = 10) {
+  if (typeof navigator !== "undefined") {
+    navigator.vibrate?.(duration);
+  }
+}
+
 function formatClock(seconds: number) {
   const safe = Math.max(0, Math.ceil(seconds));
   return `${Math.floor(safe / 60)}:${String(safe % 60).padStart(2, "0")}`;
@@ -517,6 +523,7 @@ export function RugbyGame() {
   const matchRef = useRef<Match | null>(null);
   const animationRef = useRef<number | null>(null);
   const lastHudRef = useRef(0);
+  const joystickKnobRef = useRef<HTMLSpanElement>(null);
   const joystickRef = useRef({ x: 0, y: 0, active: false });
   const actionRef = useRef({ sprint: false });
   const aimRef = useRef<AimPoint>({ active: false, x: FIELD_W - TRY_LINE, y: CENTRE_Y });
@@ -648,6 +655,7 @@ export function RugbyGame() {
       owner.stamina = Math.max(0, owner.stamina - 0.8);
       if (side === 0) {
         setMessage(match, `Passe para o ${target.slot + 1}`);
+        haptic();
         beep(480, 0.06);
       }
     },
@@ -670,6 +678,7 @@ export function RugbyGame() {
     };
     setAimingDrop(true);
     setMessage(match, "Mire entre os postes e clique", 2);
+    haptic(14);
   }, [setMessage]);
 
   const finishDropAim = useCallback(
@@ -728,6 +737,7 @@ export function RugbyGame() {
     match.blockWindow = 0.82;
     match.actionLock = 0.62;
     setMessage(match, `Block: camisas ${upper.jersey} e ${lower.jersey} cruzando`, 1.2);
+    haptic(16);
     beep(410, 0.08);
   }, [beep, setMessage]);
 
@@ -753,6 +763,7 @@ export function RugbyGame() {
     match.actionLock = 0.52;
     owner.stamina = Math.max(0, owner.stamina - 7);
     setMessage(match, "Chute à frente — corra para recuperar!", 1.25);
+    haptic(18);
     beep(620, 0.09);
   }, [beep, setMessage]);
 
@@ -1082,6 +1093,32 @@ export function RugbyGame() {
       updateMatch(match, dt);
       drawField(ctx, match, home, away, now, aimRef.current);
 
+      const fieldViewport = canvas.parentElement;
+      const touchCamera =
+        typeof window !== "undefined" &&
+        window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+      if (fieldViewport && touchCamera) {
+        const focus =
+          match.ball.owner?.side === 0
+            ? match.ball.owner
+            : match.players
+                .filter((player) => player.side === 0)
+                .sort((a, b) => distance(a, match.ball) - distance(b, match.ball))[0];
+        const renderedWidth = canvas.clientWidth;
+        const viewportWidth = fieldViewport.clientWidth;
+        const scale = canvas.clientHeight / FIELD_H;
+        const desiredLeft = focus
+          ? viewportWidth * 0.44 - focus.x * scale
+          : (viewportWidth - renderedWidth) / 2;
+        const cameraX =
+          renderedWidth <= viewportWidth
+            ? (viewportWidth - renderedWidth) / 2
+            : clamp(desiredLeft, viewportWidth - renderedWidth, 0);
+        canvas.style.setProperty("--camera-x", `${cameraX}px`);
+      } else {
+        canvas.style.setProperty("--camera-x", "0px");
+      }
+
       if (now - lastHudRef.current > 80) {
         lastHudRef.current = now;
         const homeLineup = match.players
@@ -1110,6 +1147,9 @@ export function RugbyGame() {
     }
     matchRef.current = freshMatch();
     aimRef.current.active = false;
+    joystickRef.current = { x: 0, y: 0, active: false };
+    actionRef.current.sprint = false;
+    if (joystickKnobRef.current) joystickKnobRef.current.style.transform = "translate(0px, 0px)";
     setAimingDrop(false);
     setHud({
       score: [0, 0],
@@ -1128,6 +1168,9 @@ export function RugbyGame() {
   const restartMatch = useCallback(() => {
     matchRef.current = freshMatch();
     aimRef.current.active = false;
+    joystickRef.current = { x: 0, y: 0, active: false };
+    actionRef.current.sprint = false;
+    if (joystickKnobRef.current) joystickKnobRef.current.style.transform = "translate(0px, 0px)";
     setAimingDrop(false);
     setHud({
       score: [0, 0],
@@ -1148,6 +1191,9 @@ export function RugbyGame() {
     match.paused = !match.paused;
     if (match.paused) {
       aimRef.current.active = false;
+      joystickRef.current = { x: 0, y: 0, active: false };
+      actionRef.current.sprint = false;
+      if (joystickKnobRef.current) joystickKnobRef.current.style.transform = "translate(0px, 0px)";
       setAimingDrop(false);
     }
     match.lastFrame = performance.now();
@@ -1159,6 +1205,9 @@ export function RugbyGame() {
     if (!match?.paused) return;
     match.running = false;
     aimRef.current.active = false;
+    joystickRef.current = { x: 0, y: 0, active: false };
+    actionRef.current.sprint = false;
+    if (joystickKnobRef.current) joystickKnobRef.current.style.transform = "translate(0px, 0px)";
     setAimingDrop(false);
     matchRef.current = null;
     setScreen("setup");
@@ -1318,16 +1367,28 @@ export function RugbyGame() {
     const x = (event.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
     const y = (event.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
     const length = Math.hypot(x, y);
+    const deadZone = 0.14;
+    const normalizedLength = clamp((Math.min(length, 1) - deadZone) / (1 - deadZone), 0, 1);
+    const directionX = length > 0 ? x / length : 0;
+    const directionY = length > 0 ? y / length : 0;
+    const nextX = directionX * normalizedLength;
+    const nextY = directionY * normalizedLength;
     joystickRef.current = {
-      x: length > 1 ? x / length : x,
-      y: length > 1 ? y / length : y,
+      x: nextX,
+      y: nextY,
       active: true,
     };
+    if (joystickKnobRef.current) {
+      joystickKnobRef.current.style.transform = `translate(${nextX * 38}px, ${nextY * 38}px)`;
+    }
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
   const releaseJoystick = () => {
     joystickRef.current = { x: 0, y: 0, active: false };
+    if (joystickKnobRef.current) {
+      joystickKnobRef.current.style.transform = "translate(0px, 0px)";
+    }
   };
 
   const installGame = async () => {
@@ -1341,7 +1402,7 @@ export function RugbyGame() {
   const filteredGroups = Array.from(new Set(visibleTeams.map((team) => `${team.division}-${team.group}`)));
 
   return (
-    <main className="app-shell">
+    <main className={`app-shell ${screen === "match" ? "app-shell--match" : ""}`}>
       <header className="topbar">
         <button className="brand" type="button" onClick={() => setScreen("setup")} aria-label="Voltar à seleção">
           <span className="brand-mark" aria-hidden="true">BR</span>
@@ -1499,7 +1560,10 @@ export function RugbyGame() {
                 <span className="key-group"><kbd>CPU</kbd></span>
                 <span>O camisa 7 adversário atua como sweeper/fullback</span>
               </div>
-              <p className="touch-note">No celular, os controles aparecem sobre o campo.</p>
+              <p className="touch-note">
+                No celular, a câmera acompanha o portador e os controles ficam separados do campo.
+                Na horizontal, o jogo ocupa melhor a tela.
+              </p>
             </aside>
           </section>
 
@@ -1560,19 +1624,21 @@ export function RugbyGame() {
           </div>
 
           <div className="canvas-frame">
-            <canvas
-              ref={canvasRef}
-              width={FIELD_W}
-              height={FIELD_H}
-              className={aimingDrop ? "is-aiming" : ""}
-              role="img"
-              aria-label={`Partida de rugby sevens, sete contra sete, entre ${home.name} e ${away.name}. Use WASD para mover, números de 1 a 7 para escolher o passe, K para chutar à frente, R para o block e Q para mirar o drop.`}
-              onPointerDown={handleCanvasPointerDown}
-              onPointerMove={handleCanvasPointerMove}
-              onPointerUp={handleCanvasPointerUp}
-              onPointerCancel={() => { gestureRef.current.active = false; }}
-            />
-            {hud.message && <div className="game-message">{hud.message}</div>}
+            <div className="field-viewport">
+              <canvas
+                ref={canvasRef}
+                width={FIELD_W}
+                height={FIELD_H}
+                className={aimingDrop ? "is-aiming" : ""}
+                role="img"
+                aria-label={`Partida de rugby sevens, sete contra sete, entre ${home.name} e ${away.name}. Use WASD para mover, números de 1 a 7 para escolher o passe, K para chutar à frente, R para o block e Q para mirar o drop.`}
+                onPointerDown={handleCanvasPointerDown}
+                onPointerMove={handleCanvasPointerMove}
+                onPointerUp={handleCanvasPointerUp}
+                onPointerCancel={() => { gestureRef.current.active = false; }}
+              />
+              {hud.message && <div className="game-message">{hud.message}</div>}
+            </div>
             <div className="mobile-controls" aria-label="Controles por toque">
               <div
                 className="joystick"
@@ -1580,11 +1646,10 @@ export function RugbyGame() {
                 onPointerMove={(event) => joystickRef.current.active && handleJoystick(event)}
                 onPointerUp={releaseJoystick}
                 onPointerCancel={releaseJoystick}
+                onLostPointerCapture={releaseJoystick}
               >
                 <span
-                  style={{
-                    transform: `translate(${joystickRef.current.x * 30}px, ${joystickRef.current.y * 30}px)`,
-                  }}
+                  ref={joystickKnobRef}
                 />
               </div>
               <div className="action-buttons">
@@ -1600,9 +1665,13 @@ export function RugbyGame() {
                 <button
                   type="button"
                   className="action action--sprint"
-                  onPointerDown={() => { actionRef.current.sprint = true; }}
+                  onPointerDown={(event) => {
+                    event.currentTarget.setPointerCapture(event.pointerId);
+                    actionRef.current.sprint = true;
+                  }}
                   onPointerUp={() => { actionRef.current.sprint = false; }}
                   onPointerCancel={() => { actionRef.current.sprint = false; }}
+                  onLostPointerCapture={() => { actionRef.current.sprint = false; }}
                 >
                   <strong>B</strong><small>CORRER</small>
                 </button>

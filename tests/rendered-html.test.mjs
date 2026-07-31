@@ -41,15 +41,16 @@ test("server-renders the Rugby BR 26 game shell", async () => {
 });
 
 test("ships lightweight PWA and game assets", async () => {
-  const [manifest, serviceWorker, gameSource] = await Promise.all([
+  const [manifest, serviceWorker, gameSource, styles] = await Promise.all([
     readFile(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"),
     readFile(new URL("../public/sw.js", import.meta.url), "utf8"),
     readFile(new URL("../app/rugby-game.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v4-sevens-tactics/);
+  assert.match(serviceWorker, /rugby-br-26-v5-mobile-controls/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const MATCH_SECONDS = 120/);
   assert.match(gameSource, /const PLAYERS_PER_SIDE = 7/);
@@ -63,11 +64,18 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /const substitutePlayer/);
   assert.match(gameSource, /SWEEPER_SLOT/);
   assert.match(gameSource, /arrangeRestart/);
+  assert.match(gameSource, /joystickKnobRef/);
+  assert.match(gameSource, /const deadZone = 0\.14/);
+  assert.match(gameSource, /--camera-x/);
+  assert.match(gameSource, /className="field-viewport"/);
   assert.match(gameSource, /logo: "\/clubs\/farrapos\.png"/);
   assert.match(gameSource, /const endPausedMatch/);
   assert.match(gameSource, /targetSlot\?: number/);
   assert.match(gameSource, /Tornados Indaiatuba/);
   assert.match(gameSource, /Leões de Paraisópolis/);
+  assert.match(styles, /@media \(hover: none\) and \(pointer: coarse\)/);
+  assert.match(styles, /grid-template-columns: repeat\(3, 60px\)/);
+  assert.match(styles, /env\(safe-area-inset-bottom\)/);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));
