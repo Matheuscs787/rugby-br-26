@@ -25,8 +25,10 @@ controláveis ou simuladas e modo campeonato.
 - troca real de campo no intervalo: direção de corrida, passes, chutes, drops,
   linha de try e posicionamento acompanham os lados do segundo tempo;
 - recuperação progressiva da bola solta: a disputa começa por proximidade e,
-  se uma aglomeração impedir a coleta, o atleta mais próximo assegura a posse
-  em até três segundos para a partida não ficar travada;
+  em qualquer bola no chão, os dois jogadores mais próximos de cada equipe
+  abandonam suas formações e correm diretamente para recuperá-la; se uma
+  aglomeração impedir a coleta, o atleta mais próximo assegura a posse em até
+  três segundos para a partida não ficar travada;
 - fullback dinâmico: no reinício, o time que chuta deixa seu sétimo atleta mais
   profundo para defender; depois da posse se estabilizar, o fullback passa a ser
   o sétimo atleta do time que estiver defendendo; ele mantém profundidade
@@ -118,12 +120,18 @@ posse e movimenta portador e apoios para executá-la.
   menos pressão. O portador corre para fixar esse defensor; quando chega a até
   84 unidades, ainda antes da distância de tackle, passa para o apoio lateral.
 - **Linha de drift:** em campo aberto, os seis defensores da primeira linha
-  preservam espaçamento lateral e avançam quase na mesma profundidade. Isso
-  evita o antigo formato em V. O fullback continua profundo enquanto a linha
-  está íntegra e fecha o portador depois de uma quebra.
+  preservam espaçamento lateral e avançam quase na mesma profundidade. O mais
+  próximo sobe diretamente até o canal do portador para tentar o tackle e a
+  disputa da posse; a linha não acompanha o atacante recuando. Isso evita o
+  antigo formato em V. O fullback continua profundo enquanto a linha está
+  íntegra e fecha o portador depois de uma quebra.
 - **Parede nos 22 defensivos:** quando o adversário entra a até 22 m da linha de
   try, os sete defensores se alinham 24 unidades à frente dela, deslizam juntos
   para o canal da bola e não podem recuar para dentro do próprio in-goal.
+- **Recepção de reinício:** o time que recebe projeta o ponto de queda do
+  drop-kick. Os três atletas mais próximos atacam esse ponto e os demais ficam
+  atrás como apoio. Na disputa aérea/bola solta, o recebedor ganha uma pequena
+  vantagem de posicionamento, mas o time que chutou ainda pode recuperar.
 
 Esses comportamentos foram adaptados para a escala arcade a partir da análise
 do [World Rugby Sevens Series masculino de 2020](https://resources.world.rugby/worldrugby/document/2022/11/29/6b90ee2a-c276-4a92-9a52-b6dc04277bdd/2020-World-Rugby-HSBC-Sevens-Series-Men-s-Analysis-Report.pdf),

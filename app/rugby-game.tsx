@@ -86,6 +86,7 @@ type Match = {
   cpuActionLock: number;
   kickoff: number;
   restartSide: 0 | 1 | null;
+  restartReceivingSide: 0 | 1 | null;
   fullbackSide: 0 | 1;
   looseBallSeconds: number;
   attackPlay: AttackPlay | null;
@@ -677,6 +678,7 @@ function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[], homeTe
     cpuActionLock: 0.7,
     kickoff: 1.15,
     restartSide: 0,
+    restartReceivingSide: 1,
     fullbackSide: 0,
     looseBallSeconds: 0,
     attackPlay: null,
@@ -1332,6 +1334,7 @@ export function RugbyGame() {
     };
     match.kickoff = 1.15;
     match.restartSide = kickingSide;
+    match.restartReceivingSide = (1 - kickingSide) as 0 | 1;
     match.blockWindow = 0;
     match.actionLock = 0.45;
     match.cpuActionLock = 0.8;
@@ -1568,6 +1571,10 @@ export function RugbyGame() {
       } else {
         match.ball.owner = null;
         match.ball.target = null;
+        match.ball.kind = "loose";
+        match.ball.vx = 0;
+        match.ball.vy = 0;
+        match.looseBallSeconds = 0;
       }
       setMessage(match, retained ? "Ruck seguro!" : "Virada no ruck!", 1);
       beep(retained && carrier.side === 0 ? 320 : 150, 0.08);
@@ -1616,7 +1623,7 @@ export function RugbyGame() {
         match.attackPlay.time -= dt;
         const playLostPossession =
           (match.ball.owner && match.ball.owner.side !== match.attackPlay.side) ||
-          (!match.ball.owner && match.ball.kind === "loose");
+          (!match.ball.owner && match.ball.air <= 0);
         if (match.attackPlay.time <= 0 || playLostPossession) {
           match.attackPlay = null;
         }
@@ -1649,6 +1656,10 @@ export function RugbyGame() {
 
       const ballOwner = match.ball.owner;
       const defensiveThreat = ballOwner ?? (match.ball.kind === "pass" ? match.ball.target : null);
+      const restartLanding = {
+        x: clamp(match.ball.x + match.ball.vx * Math.max(0, match.ball.air), 38, FIELD_W - 38),
+        y: clamp(match.ball.y + match.ball.vy * Math.max(0, match.ball.air), 46, FIELD_H - 46),
+      };
       if (ballOwner) {
         match.fullbackSide = (1 - ballOwner.side) as 0 | 1;
       }
@@ -1662,6 +1673,9 @@ export function RugbyGame() {
         : ballOwner?.side === 0
           ? ballOwner
           : [...homePlayers].sort((a, b) => distance(a, match.ball) - distance(b, match.ball))[0];
+      const homeAiPlayers = controlled
+        ? homePlayers.filter((player) => player !== controlled)
+        : homePlayers;
 
       const keyboardX =
         (keyState.has("ArrowRight") || keyState.has("KeyD") ? 1 : 0) -
@@ -1795,8 +1809,70 @@ export function RugbyGame() {
         return true;
       };
 
+      const moveToRestartReception = (
+        player: Player,
+        side: 0 | 1,
+        teammates: Player[],
+        direction: -1 | 1,
+      ) => {
+        if (
+          match.ball.kind !== "restart" ||
+          match.ball.air <= 0 ||
+          match.restartReceivingSide !== side
+        ) return false;
+        const rank = [...teammates]
+          .sort((a, b) => distance(a, restartLanding) - distance(b, restartLanding))
+          .indexOf(player);
+        if (rank < 3) {
+          const catchOffsetY = rank === 0 ? 0 : rank === 1 ? -30 : 30;
+          moveToward(
+            player,
+            restartLanding.x - direction * rank * 9,
+            clamp(restartLanding.y + catchOffsetY, 54, FIELD_H - 54),
+            rank === 0 ? 222 : 207,
+          );
+        } else {
+          const supportLane = 72 + player.slot * ((FIELD_H - 144) / (PLAYERS_PER_SIDE - 1));
+          moveToward(
+            player,
+            restartLanding.x - direction * (44 + rank * 11),
+            supportLane,
+            170,
+          );
+        }
+        return true;
+      };
+
+      const moveToLooseBall = (
+        player: Player,
+        teammates: Player[],
+        direction: -1 | 1,
+      ) => {
+        if (match.ball.owner || match.ball.air > 0) return false;
+        const rank = [...teammates]
+          .sort((a, b) => distance(a, match.ball) - distance(b, match.ball))
+          .indexOf(player);
+        if (rank < 2) {
+          moveToward(
+            player,
+            match.ball.x,
+            match.ball.y + (rank === 0 ? 0 : player.y < match.ball.y ? -24 : 24),
+            rank === 0 ? 218 : 204,
+          );
+        } else {
+          moveToward(
+            player,
+            match.ball.x - direction * (38 + rank * 10),
+            clamp(match.ball.y + (player.slot - MID_SLOT) * 38, 54, FIELD_H - 54),
+            162,
+          );
+        }
+        return true;
+      };
+
       homePlayers.forEach((player) => {
         if (player === controlled) return;
+        if (moveToLooseBall(player, homeAiPlayers, homeDirection)) return;
         if (runBlockRoute(player)) return;
         if (ballOwner?.side === 0) {
           if (player === ballOwner && simulated) {
@@ -1806,7 +1882,9 @@ export function RugbyGame() {
           }
         } else {
           const target = ballOwner ?? match.ball;
-          if (moveGoalLineWall(player, 0, defensiveThreat)) {
+          if (moveToRestartReception(player, 0, homeAiPlayers, homeDirection)) {
+            // The receiving team attacks the projected landing point with support behind it.
+          } else if (moveGoalLineWall(player, 0, defensiveThreat)) {
             // Close to the try line all seven defenders hold one connected wall.
           } else if (player.slot === SWEEPER_SLOT && match.fullbackSide === 0) {
             const kickIsComing = !ballOwner && (match.ball.kind === "kick" || match.ball.kind === "restart");
@@ -1824,17 +1902,21 @@ export function RugbyGame() {
             const chaseRank = [...defenders].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
             const lineLane = 66 + player.slot * ((FIELD_H - 132) / (PLAYERS_PER_SIDE - 1));
             const drift = clamp((target.y - CENTRE_Y) * 0.22, -46, 46);
+            const defensiveY = chaseRank === 0
+              ? target.y
+              : clamp(lineLane + drift, 54, FIELD_H - 54);
             moveToward(
               player,
-              target.x + awayDirection * (48 + Math.min(chaseRank, 2) * 7),
-              clamp(lineLane + drift, 54, FIELD_H - 54),
-              chaseRank < 2 ? 174 : 148,
+              target.x + awayDirection * (12 + Math.min(chaseRank, 2) * 4),
+              defensiveY,
+              chaseRank < 2 ? 190 : 166,
             );
           }
         }
       });
 
       awayPlayers.forEach((player) => {
+        if (moveToLooseBall(player, awayPlayers, awayDirection)) return;
         if (runBlockRoute(player)) return;
         if (ballOwner?.side === 1) {
           if (player === ballOwner) {
@@ -1844,7 +1926,9 @@ export function RugbyGame() {
           }
         } else {
           const target = ballOwner ?? match.ball;
-          if (moveGoalLineWall(player, 1, defensiveThreat)) {
+          if (moveToRestartReception(player, 1, awayPlayers, awayDirection)) {
+            // The receiving team attacks the projected landing point with support behind it.
+          } else if (moveGoalLineWall(player, 1, defensiveThreat)) {
             // Close to the try line all seven defenders hold one connected wall.
           } else if (player.slot === SWEEPER_SLOT && match.fullbackSide === 1) {
             const kickIsComing = !ballOwner && (match.ball.kind === "kick" || match.ball.kind === "restart");
@@ -1862,11 +1946,14 @@ export function RugbyGame() {
             const rank = [...defenders].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
             const lineLane = 66 + player.slot * ((FIELD_H - 132) / (PLAYERS_PER_SIDE - 1));
             const drift = clamp((target.y - CENTRE_Y) * 0.22, -46, 46);
+            const defensiveY = rank === 0
+              ? target.y
+              : clamp(lineLane + drift, 54, FIELD_H - 54);
             moveToward(
               player,
-              target.x + homeDirection * (48 + Math.min(rank, 2) * 7),
-              clamp(lineLane + drift, 54, FIELD_H - 54),
-              rank < 2 ? 183 : 150,
+              target.x + homeDirection * (12 + Math.min(rank, 2) * 4),
+              defensiveY,
+              rank < 2 ? 194 : 168,
             );
           }
         }
@@ -2028,19 +2115,36 @@ export function RugbyGame() {
         }
         const collector = [...match.players]
           .filter((player) => player.stun <= 0)
-          .sort((a, b) => distance(a, match.ball) - distance(b, match.ball))[0];
+          .sort((a, b) => {
+            const aReceptionBonus = a.side === match.restartReceivingSide ? 16 : 0;
+            const bReceptionBonus = b.side === match.restartReceivingSide ? 16 : 0;
+            return distance(a, match.ball) - aReceptionBonus - (distance(b, match.ball) - bReceptionBonus);
+          })[0];
         const pickupRadius = match.looseBallSeconds >= 3
           ? Number.POSITIVE_INFINITY
           : match.looseBallSeconds >= 1.25
             ? 95
             : 32;
-        if (collector && distance(collector, match.ball) < pickupRadius) {
+        const receiverPickupBonus = collector?.side === match.restartReceivingSide ? 10 : 0;
+        if (collector && distance(collector, match.ball) < pickupRadius + receiverPickupBonus) {
+          const wasRestartContest = match.restartReceivingSide !== null;
           match.ball.owner = collector;
           match.ball.kind = "held";
           match.ball.vx = 0;
           match.ball.vy = 0;
           match.looseBallSeconds = 0;
-          setMessage(match, collector.side === 0 ? "Bola recuperada!" : "Adversário recuperou", 0.9);
+          match.restartReceivingSide = null;
+          setMessage(
+            match,
+            wasRestartContest
+              ? collector.side === 0
+                ? "Seu time assegurou o reinício!"
+                : "Adversário assegurou o reinício"
+              : collector.side === 0
+                ? "Bola recuperada!"
+                : "Adversário recuperou",
+            0.9,
+          );
         }
       }
 
