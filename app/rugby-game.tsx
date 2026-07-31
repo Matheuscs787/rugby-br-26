@@ -76,6 +76,7 @@ type Match = {
   cpuActionLock: number;
   kickoff: number;
   restartSide: 0 | 1 | null;
+  fullbackSide: 0 | 1;
   blockWindow: number;
   substitutesLeft: [number, number];
   message: string;
@@ -555,10 +556,23 @@ function arrangeRestart(players: Player[], kickingSide: 0 | 1) {
   players.forEach((player) => {
     const lane = 80 + player.slot * ((FIELD_H - 160) / (PLAYERS_PER_SIDE - 1));
     const isKicker = player.side === kickingSide && player.slot === MID_SLOT;
+    const isRestartFullback = player.side === kickingSide && player.slot === SWEEPER_SLOT;
     if (kickingSide === 0) {
-      player.x = player.side === 0 ? (isKicker ? FIELD_W / 2 - 8 : FIELD_W / 2 - 56 - Math.abs(player.slot - MID_SLOT) * 12) : FIELD_W / 2 + 230 + Math.abs(player.slot - MID_SLOT) * 10;
+      player.x = player.side === 0
+        ? isKicker
+          ? FIELD_W / 2 - 8
+          : isRestartFullback
+            ? FIELD_W / 2 - 190
+            : FIELD_W / 2 - 56 - Math.abs(player.slot - MID_SLOT) * 12
+        : FIELD_W / 2 + 230 + Math.abs(player.slot - MID_SLOT) * 10;
     } else {
-      player.x = player.side === 1 ? (isKicker ? FIELD_W / 2 + 8 : FIELD_W / 2 + 56 + Math.abs(player.slot - MID_SLOT) * 12) : FIELD_W / 2 - 230 - Math.abs(player.slot - MID_SLOT) * 10;
+      player.x = player.side === 1
+        ? isKicker
+          ? FIELD_W / 2 + 8
+          : isRestartFullback
+            ? FIELD_W / 2 + 190
+            : FIELD_W / 2 + 56 + Math.abs(player.slot - MID_SLOT) * 12
+        : FIELD_W / 2 - 230 - Math.abs(player.slot - MID_SLOT) * 10;
     }
     player.y = lane;
     player.stun = 0;
@@ -599,6 +613,7 @@ function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[], homeTe
     cpuActionLock: 0.7,
     kickoff: 1.15,
     restartSide: 0,
+    fullbackSide: 0,
     blockWindow: 0,
     substitutesLeft: [
       Math.min(REPLACEMENTS_PER_SIDE, Math.max(0, homeSquad.length - PLAYERS_PER_SIDE)),
@@ -893,11 +908,11 @@ function drawField(
     ctx.fillStyle = player.stamina < 28 ? "#ff6a3d" : player.stamina < 52 ? "#f2c84b" : "#dfff49";
     ctx.fillRect(player.x - staminaWidth / 2, player.y - 27, staminaWidth * (player.stamina / 100), 4);
 
-    if (player.side === 1 && player.slot === SWEEPER_SLOT) {
+    if (player.side === match.fullbackSide && player.slot === SWEEPER_SLOT) {
       ctx.fillStyle = "rgba(6,22,17,.82)";
       ctx.font = "900 9px ui-sans-serif, system-ui";
       ctx.textAlign = "center";
-      ctx.fillText("SWEEPER", player.x, player.y - 34);
+      ctx.fillText("FULLBACK", player.x, player.y - 34);
     }
 
     ctx.beginPath();
@@ -1174,6 +1189,7 @@ export function RugbyGame() {
 
   const prepareRestart = useCallback((match: Match, kickingSide: 0 | 1) => {
     arrangeRestart(match.players, kickingSide);
+    match.fullbackSide = kickingSide;
 
     // The selected side always keeps its substitutions under the player's control,
     // including spectator mode. The opposing AI still manages its own bench.
@@ -1514,6 +1530,9 @@ export function RugbyGame() {
       }
 
       const ballOwner = match.ball.owner;
+      if (ballOwner) {
+        match.fullbackSide = (1 - ballOwner.side) as 0 | 1;
+      }
       const homePlayers = match.players.filter((player) => player.side === 0);
       const awayPlayers = match.players.filter((player) => player.side === 1);
       const simulated = controlModeRef.current === "simulate";
@@ -1594,8 +1613,19 @@ export function RugbyGame() {
           }
         } else {
           const target = ballOwner ?? match.ball;
-          const chaseRank = [...homePlayers].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
-          moveToward(player, target.x + chaseRank * 25, target.y + (player.slot - MID_SLOT) * 27, chaseRank < 2 ? 168 : 132);
+          if (player.slot === SWEEPER_SLOT && match.fullbackSide === 0) {
+            const kickIsComing = !ballOwner && (match.ball.kind === "kick" || match.ball.kind === "restart");
+            const fullbackX = kickIsComing
+              ? clamp(match.ball.x - 42, TRY_LINE + 28, FIELD_W * 0.42)
+              : clamp(target.x - 210, TRY_LINE + 34, FIELD_W * 0.38);
+            moveToward(player, fullbackX, target.y, kickIsComing ? 205 : 154);
+          } else {
+            const defenders = homePlayers.filter(
+              (candidate) => !(candidate.slot === SWEEPER_SLOT && match.fullbackSide === 0),
+            );
+            const chaseRank = [...defenders].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
+            moveToward(player, target.x + chaseRank * 25, target.y + (player.slot - MID_SLOT) * 27, chaseRank < 2 ? 168 : 132);
+          }
         }
       });
 
@@ -1617,14 +1647,16 @@ export function RugbyGame() {
           }
         } else {
           const target = ballOwner ?? match.ball;
-          if (player.slot === SWEEPER_SLOT) {
+          if (player.slot === SWEEPER_SLOT && match.fullbackSide === 1) {
             const kickIsComing = !ballOwner && (match.ball.kind === "kick" || match.ball.kind === "restart");
-            const sweeperX = kickIsComing
+            const fullbackX = kickIsComing
               ? clamp(match.ball.x + 42, FIELD_W * 0.58, FIELD_W - TRY_LINE - 28)
               : clamp(target.x + 210, FIELD_W * 0.62, FIELD_W - TRY_LINE - 34);
-            moveToward(player, sweeperX, target.y, kickIsComing ? 205 : 154);
+            moveToward(player, fullbackX, target.y, kickIsComing ? 205 : 154);
           } else {
-            const defenders = awayPlayers.filter((candidate) => candidate.slot !== SWEEPER_SLOT);
+            const defenders = awayPlayers.filter(
+              (candidate) => !(candidate.slot === SWEEPER_SLOT && match.fullbackSide === 1),
+            );
             const rank = [...defenders].sort((a, b) => distance(a, target) - distance(b, target)).indexOf(player);
             moveToward(player, target.x + 34 + rank * 22, target.y + (player.slot - MID_SLOT) * 26, rank < 2 ? 183 : 140);
           }
@@ -2468,7 +2500,7 @@ export function RugbyGame() {
               </div>
               <div className="control-row">
                 <span className="key-group"><kbd>CPU</kbd></span>
-                <span>O camisa 7 adversário atua como sweeper/fullback</span>
+                <span>O sétimo atleta do time defensor recua como fullback</span>
               </div>
               <p className="touch-note">
                 No celular, a câmera acompanha o portador e os controles ficam separados do campo.

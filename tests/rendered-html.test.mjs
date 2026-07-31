@@ -44,18 +44,19 @@ test("server-renders the Rugby BR 26 game shell", async () => {
 });
 
 test("ships lightweight PWA and game assets", async () => {
-  const [manifest, serviceWorker, gameSource, championshipSource, rosterSource, styles] = await Promise.all([
+  const [manifest, serviceWorker, gameSource, championshipSource, rosterSource, styles, readme] = await Promise.all([
     readFile(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"),
     readFile(new URL("../public/sw.js", import.meta.url), "utf8"),
     readFile(new URL("../app/rugby-game.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/championship.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/rosters.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../README.md", import.meta.url), "utf8"),
   ]);
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v15-team-form/);
+  assert.match(serviceWorker, /rugby-br-26-v16-fullback-restarts/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -94,6 +95,10 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /const substitutePlayer/);
   assert.match(gameSource, /SWEEPER_SLOT/);
   assert.match(gameSource, /arrangeRestart/);
+  assert.match(gameSource, /fullbackSide/);
+  assert.match(gameSource, /isRestartFullback/);
+  assert.match(gameSource, /player\.side === match\.fullbackSide/);
+  assert.match(gameSource, /FULLBACK/);
   assert.match(gameSource, /joystickKnobRef/);
   assert.match(gameSource, /const deadZone = 0\.14/);
   assert.match(gameSource, /--camera-x/);
@@ -161,6 +166,10 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(rosterSource, /export type PlayerStats/);
   assert.ok((rosterSource.match(/"overall":/g) ?? []).length > 1200);
   assert.ok((rosterSource.match(/"appearances":/g) ?? []).length > 1200);
+  assert.match(readme, /## Cálculo dos atributos e do overall/);
+  assert.match(readme, /0,18 × VEL/);
+  assert.match(readme, /## Como os atributos afetam a partida/);
+  assert.match(readme, /## Regras e simplificações do protótipo/);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));
