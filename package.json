@@ -13,7 +13,8 @@
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "ratings:compare": "node scripts/compare-player-ratings.mjs"
+    "ratings:compare": "node scripts/compare-player-ratings.mjs",
+    "ratings:apply": "node scripts/compare-player-ratings.mjs --all --apply"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

@@ -64,12 +64,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Vicente",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 63,
-          "tackle": 86,
-          "pass": 62,
-          "kick": 47,
-          "stamina": 82,
+          "overall": 76,
+          "speed": 70,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 84,
           "attack": 81,
           "confidence": "high"
         },
@@ -96,13 +96,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Endy",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 61,
-          "tackle": 85,
-          "pass": 61,
-          "kick": 46,
-          "stamina": 81,
-          "attack": 76,
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -128,12 +128,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lafa",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 67,
-          "tackle": 85,
-          "pass": 64,
-          "kick": 47,
-          "stamina": 85,
+          "overall": 76,
+          "speed": 73,
+          "tackle": 84,
+          "pass": 69,
+          "kick": 57,
+          "stamina": 84,
           "attack": 82,
           "confidence": "high"
         },
@@ -160,14 +160,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marangoni",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 61,
-          "tackle": 82,
-          "pass": 60,
-          "kick": 45,
+          "overall": 77,
+          "speed": 87,
+          "tackle": 67,
+          "pass": 73,
+          "kick": 67,
           "stamina": 78,
-          "attack": 71,
-          "confidence": "medium"
+          "attack": 89,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -192,14 +192,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mauri",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 61,
-          "tackle": 82,
-          "pass": 60,
-          "kick": 45,
-          "stamina": 84,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 73,
+          "tackle": 80,
+          "pass": 71,
+          "kick": 61,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -224,12 +224,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Leonardo De Paula",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
+          "overall": 77,
           "speed": 76,
-          "tackle": 87,
+          "tackle": 84,
           "pass": 71,
-          "kick": 50,
-          "stamina": 91,
+          "kick": 57,
+          "stamina": 85,
           "attack": 83,
           "confidence": "high"
         },
@@ -253,13 +253,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
+          "overall": 78,
           "speed": 78,
-          "tackle": 88,
-          "pass": 71,
-          "kick": 50,
-          "stamina": 91,
-          "attack": 88,
+          "tackle": 84,
+          "pass": 72,
+          "kick": 58,
+          "stamina": 86,
+          "attack": 83,
           "confidence": "high"
         },
         "stats": {
@@ -285,13 +285,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rodolfo",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 73,
-          "tackle": 85,
-          "pass": 68,
-          "kick": 49,
-          "stamina": 87,
-          "attack": 78,
+          "overall": 71,
+          "speed": 70,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 52,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -316,14 +316,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Menezes",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 82,
-          "tackle": 72,
-          "pass": 91,
-          "kick": 72,
-          "stamina": 89,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 78,
+          "tackle": 68,
+          "pass": 83,
+          "kick": 70,
+          "stamina": 80,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -348,13 +348,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Facundo",
         "appeared2026": true,
         "skills": {
-          "overall": 85,
-          "speed": 83,
-          "tackle": 71,
-          "pass": 91,
-          "kick": 95,
-          "stamina": 87,
-          "attack": 91,
+          "overall": 77,
+          "speed": 77,
+          "tackle": 68,
+          "pass": 79,
+          "kick": 82,
+          "stamina": 78,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -377,13 +377,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 81,
-          "speed": 95,
-          "tackle": 68,
-          "pass": 77,
-          "kick": 66,
-          "stamina": 86,
-          "attack": 95,
+          "overall": 77,
+          "speed": 85,
+          "tackle": 70,
+          "pass": 74,
+          "kick": 65,
+          "stamina": 79,
+          "attack": 86,
           "confidence": "high"
         },
         "stats": {
@@ -406,14 +406,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 80,
-          "speed": 85,
-          "tackle": 78,
-          "pass": 81,
-          "kick": 63,
-          "stamina": 84,
-          "attack": 86,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 83,
+          "tackle": 70,
+          "pass": 75,
+          "kick": 64,
+          "stamina": 79,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -438,14 +438,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Diogo",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 85,
-          "tackle": 72,
-          "pass": 92,
-          "kick": 72,
-          "stamina": 89,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 81,
+          "tackle": 68,
+          "pass": 81,
+          "kick": 70,
+          "stamina": 80,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -470,14 +470,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "DUDA",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
+          "overall": 76,
+          "speed": 80,
+          "tackle": 73,
+          "pass": 76,
+          "kick": 65,
           "stamina": 79,
-          "attack": 91,
-          "confidence": "medium"
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -502,14 +502,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Murillo",
         "appeared2026": true,
         "skills": {
-          "overall": 84,
-          "speed": 89,
-          "tackle": 74,
-          "pass": 83,
-          "kick": 83,
-          "stamina": 87,
-          "attack": 88,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 82,
+          "tackle": 67,
+          "pass": 76,
+          "kick": 77,
+          "stamina": 77,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -531,13 +531,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -563,14 +563,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Daian",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 75,
-          "tackle": 72,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 77,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 70,
+          "tackle": 88,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 84,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -596,12 +596,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -627,13 +627,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rizzi",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 73,
-          "tackle": 75,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 74,
-          "attack": 75,
+          "overall": 77,
+          "speed": 71,
+          "tackle": 89,
+          "pass": 71,
+          "kick": 61,
+          "stamina": 85,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -659,14 +659,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "ZULLU",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
+          "overall": 70,
+          "speed": 67,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 78,
           "attack": 72,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -691,13 +691,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pidi",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 61,
-          "tackle": 86,
-          "pass": 61,
-          "kick": 46,
-          "stamina": 78,
-          "attack": 76,
+          "overall": 77,
+          "speed": 71,
+          "tackle": 88,
+          "pass": 71,
+          "kick": 60,
+          "stamina": 85,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -723,14 +723,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bolívar",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 77,
-          "tackle": 72,
+          "overall": 77,
+          "speed": 80,
+          "tackle": 76,
           "pass": 73,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 80,
-          "confidence": "medium"
+          "kick": 64,
+          "stamina": 82,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -754,13 +754,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rangel",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 75,
+          "speed": 77,
+          "tackle": 68,
+          "pass": 78,
+          "kick": 72,
+          "stamina": 77,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -786,13 +786,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "civardi",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 82,
-          "tackle": 75,
-          "pass": 77,
-          "kick": 72,
-          "stamina": 74,
-          "attack": 91,
+          "overall": 76,
+          "speed": 81,
+          "tackle": 71,
+          "pass": 75,
+          "kick": 67,
+          "stamina": 77,
+          "attack": 83,
           "confidence": "high"
         },
         "stats": {
@@ -818,14 +818,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pequeno",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 85,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -847,14 +847,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 75,
-          "speed": 77,
-          "tackle": 75,
-          "pass": 75,
+          "overall": 73,
+          "speed": 78,
+          "tackle": 68,
+          "pass": 72,
           "kick": 64,
-          "stamina": 74,
-          "attack": 82,
-          "confidence": "high"
+          "stamina": 76,
+          "attack": 78,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -879,13 +879,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Alisson",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
+          "overall": 74,
+          "speed": 69,
+          "tackle": 85,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -911,13 +911,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "finatto",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 65,
+          "overall": 75,
+          "speed": 71,
           "tackle": 85,
-          "pass": 63,
-          "kick": 46,
-          "stamina": 81,
-          "attack": 77,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 84,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -940,14 +940,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 75,
-          "speed": 78,
-          "tackle": 73,
-          "pass": 74,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 83,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -972,13 +972,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bruno Marques",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 86,
-          "tackle": 80,
-          "pass": 83,
+          "overall": 78,
+          "speed": 84,
+          "tackle": 74,
+          "pass": 75,
           "kick": 64,
-          "stamina": 86,
-          "attack": 88,
+          "stamina": 81,
+          "attack": 87,
           "confidence": "high"
         },
         "stats": {
@@ -1003,14 +1003,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Maikão",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 58,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 46,
-          "stamina": 74,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -1035,13 +1035,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "José",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 72,
+          "speed": 69,
+          "tackle": 81,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -1065,11 +1065,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-bonesso/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -1095,14 +1095,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caetano-gasparetto-costa-arantes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 79,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -1125,13 +1125,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcio-nunes-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 71,
+          "pass": 71,
+          "kick": 65,
+          "stamina": 73,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -1155,14 +1155,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-coghetto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 82,
+          "tackle": 69,
+          "pass": 75,
+          "kick": 68,
+          "stamina": 78,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -1185,11 +1185,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-marcelo-machado-crippa2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -1215,14 +1215,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-eugenio-lovato/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 69,
+          "tackle": 80,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -1245,11 +1245,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-vinicius-klaus-guedes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -1275,14 +1275,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-temer-massari/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 72,
+          "tackle": 72,
+          "pass": 72,
+          "kick": 66,
+          "stamina": 74,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -1305,11 +1305,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristiano-primel/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -1335,11 +1335,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-redante/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -1365,11 +1365,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wilian-de-moraes-rizzi/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -1395,14 +1395,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rudinei-styburski/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -1425,14 +1425,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonatan-gobatto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 85,
+          "tackle": 69,
+          "pass": 74,
+          "kick": 66,
+          "stamina": 79,
+          "attack": 88,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -1455,11 +1455,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wagner-farezin-da-costa2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -1499,13 +1499,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Julio Cole",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
-          "tackle": 85,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 82,
-          "attack": 71,
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 77,
           "confidence": "high"
         },
         "stats": {
@@ -1531,13 +1531,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "gabiranda",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 60,
-          "tackle": 84,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 80,
-          "attack": 75,
+          "overall": 76,
+          "speed": 70,
+          "tackle": 88,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 84,
+          "attack": 80,
           "confidence": "high"
         },
         "stats": {
@@ -1563,14 +1563,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Krutz",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 58,
-          "tackle": 84,
-          "pass": 59,
-          "kick": 46,
-          "stamina": 75,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -1594,13 +1594,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Banana",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 64,
-          "tackle": 84,
-          "pass": 62,
-          "kick": 46,
+          "overall": 76,
+          "speed": 71,
+          "tackle": 86,
+          "pass": 70,
+          "kick": 59,
           "stamina": 85,
-          "attack": 76,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -1625,13 +1625,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Minas",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 64,
-          "tackle": 84,
-          "pass": 62,
-          "kick": 46,
+          "overall": 76,
+          "speed": 71,
+          "tackle": 86,
+          "pass": 70,
+          "kick": 59,
           "stamina": 85,
-          "attack": 76,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -1657,14 +1657,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "braga",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
+          "overall": 74,
           "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 77,
-          "confidence": "medium"
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 84,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -1689,14 +1689,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Super Choque",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 76,
-          "tackle": 86,
-          "pass": 69,
-          "kick": 49,
-          "stamina": 87,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 82,
+          "tackle": 74,
+          "pass": 74,
+          "kick": 65,
+          "stamina": 81,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -1720,13 +1720,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gustavo Bordignon",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 73,
-          "tackle": 87,
+          "overall": 74,
+          "speed": 72,
+          "tackle": 82,
           "pass": 69,
-          "kick": 49,
-          "stamina": 91,
-          "attack": 78,
+          "kick": 55,
+          "stamina": 84,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -1751,14 +1751,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mini Mim",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -1782,13 +1782,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Felipe",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 76,
-          "tackle": 86,
-          "pass": 69,
-          "kick": 49,
-          "stamina": 87,
-          "attack": 83,
+          "overall": 73,
+          "speed": 71,
+          "tackle": 82,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -1813,13 +1813,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 8,
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 60,
+          "overall": 73,
+          "speed": 70,
           "tackle": 82,
-          "pass": 59,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 74,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -1845,13 +1845,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pouca",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 82,
-          "tackle": 72,
-          "pass": 91,
-          "kick": 72,
-          "stamina": 90,
-          "attack": 80,
+          "overall": 76,
+          "speed": 78,
+          "tackle": 68,
+          "pass": 83,
+          "kick": 70,
+          "stamina": 80,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -1877,13 +1877,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Leozinho",
         "appeared2026": true,
         "skills": {
-          "overall": 86,
-          "speed": 86,
-          "tackle": 70,
-          "pass": 91,
-          "kick": 95,
-          "stamina": 87,
-          "attack": 95,
+          "overall": 77,
+          "speed": 77,
+          "tackle": 66,
+          "pass": 80,
+          "kick": 86,
+          "stamina": 77,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -1909,13 +1909,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cesinha",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 91,
+          "overall": 71,
+          "speed": 82,
+          "tackle": 62,
+          "pass": 68,
+          "kick": 61,
+          "stamina": 73,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -1941,14 +1941,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Crisangel",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 95,
-          "tackle": 66,
-          "pass": 75,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 81,
+          "tackle": 69,
+          "pass": 76,
+          "kick": 67,
+          "stamina": 78,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -1973,13 +1973,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gabriel Bolzan",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 87,
-          "tackle": 79,
-          "pass": 82,
-          "kick": 63,
-          "stamina": 88,
-          "attack": 90,
+          "overall": 77,
+          "speed": 81,
+          "tackle": 73,
+          "pass": 77,
+          "kick": 66,
+          "stamina": 80,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -2005,14 +2005,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rafael Vargas",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 84,
-          "tackle": 77,
-          "pass": 80,
-          "kick": 64,
-          "stamina": 87,
-          "attack": 84,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 79,
+          "tackle": 70,
+          "pass": 74,
+          "kick": 63,
+          "stamina": 77,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -2036,13 +2036,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bigago",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 95,
-          "tackle": 66,
-          "pass": 77,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 95,
+          "overall": 73,
+          "speed": 80,
+          "tackle": 67,
+          "pass": 72,
+          "kick": 61,
+          "stamina": 75,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -2068,14 +2068,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "side show bob",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 91,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 78,
+          "tackle": 67,
+          "pass": 72,
+          "kick": 69,
+          "stamina": 75,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -2100,14 +2100,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "sauron",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 90,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 79,
+          "tackle": 67,
+          "pass": 74,
+          "kick": 67,
+          "stamina": 77,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -2129,13 +2129,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 84,
-          "speed": 88,
-          "tackle": 72,
-          "pass": 81,
-          "kick": 95,
-          "stamina": 87,
-          "attack": 87,
+          "overall": 71,
+          "speed": 76,
+          "tackle": 63,
+          "pass": 71,
+          "kick": 72,
+          "stamina": 71,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -2161,14 +2161,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thomas Rosa",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 88,
-          "tackle": 72,
-          "pass": 81,
-          "kick": 82,
-          "stamina": 84,
-          "attack": 86,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 82,
+          "tackle": 67,
+          "pass": 73,
+          "kick": 68,
+          "stamina": 76,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -2193,13 +2193,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "fisio",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -2225,14 +2225,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nego",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 77,
-          "tackle": 72,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -2257,14 +2257,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Badalado",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -2288,13 +2288,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "larika",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
+          "overall": 74,
+          "speed": 70,
           "tackle": 84,
-          "pass": 59,
-          "kick": 46,
-          "stamina": 80,
-          "attack": 71,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 83,
+          "attack": 77,
           "confidence": "high"
         },
         "stats": {
@@ -2320,13 +2320,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "guisão",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 74,
-          "attack": 73,
+          "overall": 73,
+          "speed": 68,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 81,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -2352,13 +2352,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Aqua",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 71,
+          "overall": 71,
+          "speed": 68,
+          "tackle": 80,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -2384,13 +2384,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "jesus",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 72,
+          "speed": 68,
+          "tackle": 82,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -2415,13 +2415,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 20,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 72,
-          "tackle": 69,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 72,
-          "attack": 72,
+          "overall": 71,
+          "speed": 68,
+          "tackle": 80,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -2447,14 +2447,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Guri",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 89,
-          "tackle": 73,
-          "pass": 82,
-          "kick": 83,
-          "stamina": 84,
-          "attack": 88,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 79,
+          "tackle": 69,
+          "pass": 72,
+          "kick": 69,
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -2479,13 +2479,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dominico",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
+          "overall": 73,
+          "speed": 73,
           "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "pass": 76,
+          "kick": 65,
+          "stamina": 78,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -2512,13 +2512,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "speed": 73,
+          "tackle": 64,
+          "pass": 74,
+          "kick": 69,
+          "stamina": 72,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -2543,14 +2543,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Freitas",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
+          "overall": 75,
+          "speed": 82,
+          "tackle": 69,
+          "pass": 73,
           "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "stamina": 78,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -2575,13 +2575,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "uary",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 63,
+          "overall": 71,
+          "speed": 76,
+          "tackle": 64,
+          "pass": 73,
+          "kick": 65,
           "stamina": 73,
-          "attack": 71,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -2604,11 +2604,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -2634,11 +2634,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-henrique-de-machado/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -2664,14 +2664,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-amarilho-silveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
+          "overall": 76,
+          "speed": 79,
           "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "pass": 80,
+          "kick": 67,
+          "stamina": 80,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -2694,11 +2694,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leandro-jose-wagner/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -2724,11 +2724,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-vinicius-sessel/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -2754,14 +2754,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/valandro-santos-manzoni-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 73,
+          "tackle": 79,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -2798,13 +2798,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nativo",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -2830,13 +2830,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jonas",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -2862,13 +2862,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mariano",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
+          "overall": 71,
+          "speed": 65,
           "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 70,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -2894,13 +2894,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Guto",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -2926,14 +2926,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thiago",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -2955,13 +2955,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 62,
-          "tackle": 81,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 76,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -2986,13 +2986,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rojão",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
           "stamina": 81,
-          "attack": 68,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -3018,14 +3018,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cox",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -3047,14 +3047,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 61,
-          "tackle": 82,
-          "pass": 60,
-          "kick": 45,
-          "stamina": 85,
-          "attack": 70,
-          "confidence": "high"
+          "overall": 73,
+          "speed": 68,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -3078,13 +3078,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 64,
+          "overall": 72,
+          "speed": 69,
           "tackle": 81,
-          "pass": 61,
-          "kick": 45,
-          "stamina": 84,
-          "attack": 75,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -3109,13 +3109,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 84,
-          "attack": 69,
+          "overall": 71,
+          "speed": 66,
+          "tackle": 81,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -3141,13 +3141,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Daniel",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
+          "overall": 71,
+          "speed": 70,
+          "tackle": 79,
           "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
+          "kick": 52,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -3173,13 +3173,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 75,
-          "speed": 75,
-          "tackle": 85,
-          "pass": 68,
-          "kick": 48,
-          "stamina": 87,
-          "attack": 81,
-          "confidence": "medium"
+          "speed": 73,
+          "tackle": 83,
+          "pass": 70,
+          "kick": 57,
+          "stamina": 84,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -3201,14 +3201,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 81,
+          "tackle": 69,
+          "pass": 71,
+          "kick": 61,
+          "stamina": 78,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -3232,14 +3232,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "kaique",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 79,
+          "tackle": 75,
+          "pass": 76,
+          "kick": 62,
+          "stamina": 80,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -3263,14 +3263,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "matheus",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 78,
+          "tackle": 73,
+          "pass": 75,
+          "kick": 64,
+          "stamina": 79,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -3295,13 +3295,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ruds",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 86,
+          "overall": 75,
+          "speed": 77,
           "tackle": 77,
-          "pass": 81,
-          "kick": 62,
-          "stamina": 88,
-          "attack": 88,
+          "pass": 72,
+          "kick": 59,
+          "stamina": 81,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -3327,13 +3327,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Fran",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 72,
-          "tackle": 85,
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
           "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 77,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -3359,13 +3359,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Guilherme",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
+          "overall": 71,
+          "speed": 70,
+          "tackle": 79,
           "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
+          "kick": 52,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -3391,14 +3391,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Garcia",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 81,
-          "tackle": 69,
-          "pass": 89,
-          "kick": 71,
-          "stamina": 86,
-          "attack": 78,
-          "confidence": "high"
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 79,
+          "kick": 65,
+          "stamina": 75,
+          "attack": 70,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -3423,13 +3423,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gui",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 91,
-          "stamina": 85,
-          "attack": 83,
+          "overall": 75,
+          "speed": 75,
+          "tackle": 65,
+          "pass": 80,
+          "kick": 79,
+          "stamina": 77,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -3454,13 +3454,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lipe",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 81,
-          "tackle": 70,
-          "pass": 89,
-          "kick": 71,
-          "stamina": 90,
-          "attack": 78,
+          "overall": 74,
+          "speed": 76,
+          "tackle": 67,
+          "pass": 80,
+          "kick": 68,
+          "stamina": 78,
+          "attack": 74,
           "confidence": "high"
         },
         "stats": {
@@ -3486,14 +3486,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ibere",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 77,
-          "pass": 81,
-          "kick": 62,
-          "stamina": 87,
-          "attack": 89,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 80,
+          "tackle": 68,
+          "pass": 74,
+          "kick": 71,
+          "stamina": 77,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -3518,13 +3518,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "nicolas",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
-          "kick": 81,
-          "stamina": 87,
-          "attack": 83,
+          "overall": 72,
+          "speed": 76,
+          "tackle": 70,
+          "pass": 73,
+          "kick": 60,
+          "stamina": 74,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -3550,13 +3550,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Caio",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 79,
-          "attack": 89,
+          "overall": 72,
+          "speed": 76,
+          "tackle": 70,
+          "pass": 69,
+          "kick": 61,
+          "stamina": 77,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -3581,14 +3581,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 14,
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 92,
+          "overall": 72,
+          "speed": 81,
           "tackle": 65,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 82,
-          "attack": 90,
-          "confidence": "high"
+          "pass": 69,
+          "kick": 61,
+          "stamina": 75,
+          "attack": 80,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -3612,13 +3612,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 14,
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 95,
-          "tackle": 66,
-          "pass": 75,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 95,
+          "overall": 71,
+          "speed": 82,
+          "tackle": 62,
+          "pass": 68,
+          "kick": 61,
+          "stamina": 73,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -3644,13 +3644,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lorenzo",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 88,
-          "tackle": 72,
-          "pass": 81,
-          "kick": 82,
-          "stamina": 87,
-          "attack": 86,
+          "overall": 72,
+          "speed": 77,
+          "tackle": 64,
+          "pass": 72,
+          "kick": 72,
+          "stamina": 73,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -3676,13 +3676,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gui",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "overall": 73,
+          "speed": 67,
+          "tackle": 84,
+          "pass": 67,
+          "kick": 58,
+          "stamina": 81,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -3708,13 +3708,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ige",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 72,
+          "speed": 70,
+          "tackle": 81,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -3741,13 +3741,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 71,
-          "tackle": 70,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 71,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -3772,14 +3772,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gusta",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -3804,14 +3804,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ribas",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -3836,13 +3836,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tuan",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
+          "overall": 72,
           "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "tackle": 79,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -3869,13 +3869,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
+          "speed": 69,
+          "tackle": 69,
+          "pass": 72,
+          "kick": 61,
+          "stamina": 75,
           "attack": 71,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -3900,14 +3900,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "WILLIAM ROHRIG",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 78,
+          "kick": 68,
+          "stamina": 74,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -3929,14 +3929,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 62,
-          "stamina": 74,
-          "attack": 71,
-          "confidence": "high"
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 76,
+          "kick": 69,
+          "stamina": 73,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 3,
@@ -3959,14 +3959,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/agustin-alvez-paz/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 69,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -3989,14 +3989,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-alejandro-leal-bracho2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 73,
+          "speed": 83,
+          "tackle": 64,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 63,
+          "stamina": 75,
+          "attack": 82,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -4019,11 +4019,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-ribeiro-do-couto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4049,14 +4049,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-mariotti-thiesen/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 83,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -4079,13 +4079,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-dos-santos-castro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 67,
+          "tackle": 81,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -4109,11 +4109,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-santos-silva4/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4139,11 +4139,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-arruda/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4169,14 +4169,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 75,
+          "speed": 84,
+          "tackle": 67,
+          "pass": 73,
+          "kick": 64,
+          "stamina": 78,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -4199,11 +4199,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-inacio-mallmann/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4229,11 +4229,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-antonio-goncalves/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4259,11 +4259,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-de-souza/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4289,11 +4289,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-alfredo-mallmann/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4319,11 +4319,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/enrico-rigotti-bastos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4349,11 +4349,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/viniciusfidelesdeoliveira-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4378,13 +4378,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 71,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "tackle": 76,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -4408,14 +4408,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -4438,13 +4438,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hubert-gibory/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 71,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 52,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -4468,11 +4468,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hudson-alpheu-da-silva-emiliano/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4498,11 +4498,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/inizinn/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4528,11 +4528,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gert-cronje/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4558,14 +4558,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 77,
+          "tackle": 82,
+          "pass": 73,
+          "kick": 59,
+          "stamina": 85,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -4587,14 +4587,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 77,
+          "tackle": 65,
+          "pass": 74,
+          "kick": 74,
+          "stamina": 74,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -4616,11 +4616,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4646,11 +4646,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-lessa-domingues-pinho-de-oliveira2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4676,14 +4676,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/manuel-andre-madeira-carvalho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
+          "overall": 72,
+          "speed": 76,
           "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "pass": 73,
+          "kick": 59,
+          "stamina": 75,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -4706,14 +4706,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/martin-joufflineau/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 80,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -4736,13 +4736,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michel-simbol-prieto-de-mattos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 66,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -4766,13 +4766,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -4796,11 +4796,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-machado-ferreira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4826,11 +4826,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-santos-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4856,13 +4856,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-figueiredo-peixoto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 81,
+          "tackle": 62,
+          "pass": 68,
+          "kick": 61,
+          "stamina": 73,
+          "attack": 80,
           "confidence": "base"
         },
         "stats": {
@@ -4886,11 +4886,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-horacio-vignolles/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -4915,13 +4915,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -4945,14 +4945,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sami-uehbe-dubena/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 73,
+          "tackle": 65,
+          "pass": 75,
+          "kick": 71,
+          "stamina": 74,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -4975,11 +4975,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-cassiano-vicente/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -5005,14 +5005,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 68,
+          "tackle": 82,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -5049,13 +5049,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rud",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 67,
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -5081,14 +5081,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "IGÃO",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -5110,13 +5110,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 67,
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -5142,14 +5142,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Babão",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 56,
-          "tackle": 80,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 78,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -5174,14 +5174,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Fernando",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 60,
-          "tackle": 76,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 66,
-          "confidence": "high"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -5206,14 +5206,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Penna",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
+          "overall": 75,
+          "speed": 72,
+          "tackle": 84,
+          "pass": 69,
+          "kick": 57,
           "stamina": 84,
-          "attack": 68,
-          "confidence": "medium"
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -5238,13 +5238,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Baiano",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 91,
-          "attack": 74,
+          "overall": 74,
+          "speed": 76,
+          "tackle": 76,
+          "pass": 70,
+          "kick": 58,
+          "stamina": 81,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -5270,13 +5270,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Botcha",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 82,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 91,
-          "attack": 74,
+          "overall": 72,
+          "speed": 75,
+          "tackle": 72,
+          "pass": 71,
+          "kick": 58,
+          "stamina": 77,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -5302,13 +5302,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Feio",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 91,
-          "attack": 74,
+          "overall": 75,
+          "speed": 74,
+          "tackle": 82,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -5334,14 +5334,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gabriel Gattino",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 80,
+          "overall": 76,
+          "speed": 79,
           "tackle": 68,
-          "pass": 88,
+          "pass": 80,
           "kick": 70,
-          "stamina": 89,
-          "attack": 76,
-          "confidence": "medium"
+          "stamina": 79,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -5365,13 +5365,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 71,
-          "tackle": 82,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 74,
-          "confidence": "medium"
+          "speed": 72,
+          "tackle": 79,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -5396,13 +5396,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Camilo",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 87,
-          "stamina": 86,
-          "attack": 81,
+          "overall": 72,
+          "speed": 71,
+          "tackle": 62,
+          "pass": 77,
+          "kick": 78,
+          "stamina": 73,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -5428,14 +5428,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Indio",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 85,
-          "tackle": 73,
-          "pass": 80,
-          "kick": 63,
-          "stamina": 88,
-          "attack": 85,
-          "confidence": "high"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 68,
+          "pass": 75,
+          "kick": 67,
+          "stamina": 75,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -5460,13 +5460,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Felino",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 64,
+          "overall": 73,
+          "speed": 80,
+          "tackle": 65,
           "pass": 72,
-          "kick": 63,
-          "stamina": 85,
-          "attack": 89,
+          "kick": 67,
+          "stamina": 75,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -5491,14 +5491,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 11,
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 94,
-          "tackle": 64,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 85,
-          "attack": 93,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 86,
+          "tackle": 65,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -5523,14 +5523,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Augusto",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
-          "kick": 61,
-          "stamina": 86,
-          "attack": 82,
-          "confidence": "high"
+          "overall": 72,
+          "speed": 75,
+          "tackle": 71,
+          "pass": 72,
+          "kick": 59,
+          "stamina": 75,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -5555,14 +5555,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Renatinho",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
+          "overall": 71,
+          "speed": 74,
+          "tackle": 67,
+          "pass": 74,
           "kick": 61,
-          "stamina": 84,
-          "attack": 82,
-          "confidence": "high"
+          "stamina": 73,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -5587,13 +5587,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Airton",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
+          "overall": 72,
+          "speed": 81,
+          "tackle": 63,
+          "pass": 70,
           "kick": 63,
-          "stamina": 85,
-          "attack": 89,
+          "stamina": 74,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -5616,14 +5616,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 77,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
+          "overall": 72,
+          "speed": 82,
+          "tackle": 63,
+          "pass": 69,
           "kick": 63,
-          "stamina": 84,
-          "attack": 88,
-          "confidence": "high"
+          "stamina": 74,
+          "attack": 81,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -5648,13 +5648,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Maringá",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 70,
-          "pass": 80,
-          "kick": 81,
-          "stamina": 88,
-          "attack": 84,
+          "overall": 74,
+          "speed": 82,
+          "tackle": 65,
+          "pass": 72,
+          "kick": 69,
+          "stamina": 76,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -5680,13 +5680,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Iago",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 69,
+          "overall": 72,
+          "speed": 66,
+          "tackle": 83,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 79,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -5712,13 +5712,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Anta",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 58,
-          "tackle": 81,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 80,
-          "attack": 71,
+          "overall": 75,
+          "speed": 68,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -5743,14 +5743,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 17,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -5775,14 +5775,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thomi",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -5807,13 +5807,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mamute",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 71,
+          "speed": 67,
+          "tackle": 81,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -5839,14 +5839,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nico",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
+          "overall": 75,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 69,
-          "confidence": "medium"
+          "tackle": 85,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 84,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -5871,14 +5871,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Don",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 69,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 74,
-          "attack": 69,
-          "confidence": "high"
+          "overall": 73,
+          "speed": 71,
+          "tackle": 81,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -5900,14 +5900,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 69,
-          "pass": 70,
-          "kick": 62,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 70,
+          "pass": 71,
+          "kick": 65,
           "stamina": 74,
-          "attack": 69,
-          "confidence": "high"
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -5930,13 +5930,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "speed": 77,
+          "tackle": 63,
+          "pass": 69,
           "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "stamina": 71,
+          "attack": 76,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -5959,13 +5959,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-alves-raquel/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 71,
+          "pass": 71,
+          "kick": 65,
+          "stamina": 73,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -5989,11 +5989,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/artur-bosa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -6019,14 +6019,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-de-souza-nascimento/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -6049,11 +6049,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-reginato-graff/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -6079,14 +6079,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-souza-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 71,
+          "tackle": 81,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -6109,11 +6109,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicola-duarte-martins2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -6139,14 +6139,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-silveira-pedroso/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 69,
+          "tackle": 80,
+          "pass": 69,
+          "kick": 61,
+          "stamina": 80,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -6169,11 +6169,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigovelicevmendonca-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -6199,14 +6199,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-walper-ruas/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 75,
+          "speed": 79,
+          "tackle": 68,
+          "pass": 75,
+          "kick": 73,
+          "stamina": 77,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -6229,11 +6229,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/boutros-youssef-abboud/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -6272,14 +6272,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 0,
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 77,
-          "tackle": 72,
-          "pass": 73,
-          "kick": 63,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 71,
+          "pass": 71,
+          "kick": 65,
           "stamina": 73,
-          "attack": 80,
-          "confidence": "medium"
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -6304,14 +6304,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "hideo",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 59,
-          "tackle": 86,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 78,
-          "attack": 73,
-          "confidence": "high"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -6336,13 +6336,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Riven",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
+          "overall": 73,
+          "speed": 66,
           "tackle": 85,
-          "pass": 60,
-          "kick": 46,
+          "pass": 67,
+          "kick": 57,
           "stamina": 81,
-          "attack": 71,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -6368,14 +6368,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Brubs",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
-          "tackle": 85,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 81,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 69,
+          "tackle": 86,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -6400,13 +6400,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ed",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 70,
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -6432,14 +6432,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Índio",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 63,
-          "tackle": 85,
-          "pass": 62,
-          "kick": 46,
-          "stamina": 81,
-          "attack": 74,
-          "confidence": "high"
+          "overall": 73,
+          "speed": 68,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -6464,13 +6464,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Paga",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 65,
+          "overall": 75,
+          "speed": 70,
           "tackle": 85,
-          "pass": 64,
-          "kick": 47,
+          "pass": 69,
+          "kick": 58,
           "stamina": 85,
-          "attack": 78,
+          "attack": 77,
           "confidence": "high"
         },
         "stats": {
@@ -6495,14 +6495,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "SEBA",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 76,
-          "tackle": 88,
-          "pass": 70,
-          "kick": 49,
-          "stamina": 87,
-          "attack": 83,
-          "confidence": "high"
+          "overall": 72,
+          "speed": 69,
+          "tackle": 81,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -6527,14 +6527,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Xteta",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 74,
-          "tackle": 88,
+          "overall": 73,
+          "speed": 72,
+          "tackle": 79,
           "pass": 69,
-          "kick": 49,
-          "stamina": 87,
-          "attack": 80,
-          "confidence": "high"
+          "kick": 56,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -6558,13 +6558,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pedrão",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 78,
-          "tackle": 88,
-          "pass": 71,
-          "kick": 51,
-          "stamina": 91,
-          "attack": 88,
+          "overall": 76,
+          "speed": 75,
+          "tackle": 83,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -6590,13 +6590,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "J.P",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 81,
-          "tackle": 70,
-          "pass": 89,
-          "kick": 71,
-          "stamina": 89,
-          "attack": 79,
+          "overall": 73,
+          "speed": 74,
+          "tackle": 67,
+          "pass": 79,
+          "kick": 67,
+          "stamina": 77,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -6622,14 +6622,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lopes da Silva",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 95,
-          "stamina": 86,
-          "attack": 84,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 78,
+          "tackle": 66,
+          "pass": 76,
+          "kick": 77,
+          "stamina": 76,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -6654,13 +6654,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Carneiro",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 95,
-          "stamina": 86,
-          "attack": 84,
+          "overall": 73,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 78,
+          "kick": 79,
+          "stamina": 74,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -6685,14 +6685,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 10,
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 80,
-          "tackle": 70,
-          "pass": 89,
-          "kick": 89,
-          "stamina": 86,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 77,
+          "tackle": 66,
+          "pass": 77,
+          "kick": 78,
+          "stamina": 76,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -6717,13 +6717,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ivan",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 95,
-          "tackle": 69,
-          "pass": 78,
+          "overall": 75,
+          "speed": 84,
+          "tackle": 65,
+          "pass": 73,
           "kick": 66,
-          "stamina": 86,
-          "attack": 95,
+          "stamina": 77,
+          "attack": 85,
           "confidence": "high"
         },
         "stats": {
@@ -6749,14 +6749,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Memé",
         "appeared2026": true,
         "skills": {
-          "overall": 84,
-          "speed": 91,
-          "tackle": 79,
-          "pass": 84,
-          "kick": 63,
-          "stamina": 87,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 81,
+          "tackle": 71,
+          "pass": 75,
+          "kick": 64,
+          "stamina": 78,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -6781,14 +6781,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jota Pe",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 84,
-          "tackle": 77,
-          "pass": 80,
-          "kick": 62,
-          "stamina": 87,
+          "overall": 77,
+          "speed": 83,
+          "tackle": 72,
+          "pass": 76,
+          "kick": 65,
+          "stamina": 79,
           "attack": 85,
-          "confidence": "medium"
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -6813,13 +6813,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Robert Tenorio",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 88,
-          "tackle": 78,
-          "pass": 82,
+          "overall": 74,
+          "speed": 78,
+          "tackle": 71,
+          "pass": 74,
           "kick": 63,
-          "stamina": 84,
-          "attack": 91,
+          "stamina": 76,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -6845,14 +6845,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Luizinho",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
+          "overall": 76,
           "speed": 76,
-          "tackle": 85,
-          "pass": 70,
-          "kick": 49,
-          "stamina": 90,
-          "attack": 83,
-          "confidence": "medium"
+          "tackle": 82,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 84,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -6877,13 +6877,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nassin",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 83,
-          "tackle": 72,
-          "pass": 92,
-          "kick": 73,
-          "stamina": 90,
-          "attack": 82,
+          "overall": 76,
+          "speed": 78,
+          "tackle": 71,
+          "pass": 79,
+          "kick": 67,
+          "stamina": 81,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -6909,14 +6909,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Carlos Torres",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 93,
-          "tackle": 68,
-          "pass": 75,
-          "kick": 65,
-          "stamina": 85,
-          "attack": 92,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 87,
+          "tackle": 67,
+          "pass": 73,
+          "kick": 68,
+          "stamina": 78,
+          "attack": 88,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -6940,13 +6940,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Caramelo",
         "appeared2026": true,
         "skills": {
-          "overall": 86,
-          "speed": 92,
-          "tackle": 75,
-          "pass": 85,
-          "kick": 84,
-          "stamina": 88,
-          "attack": 94,
+          "overall": 77,
+          "speed": 83,
+          "tackle": 69,
+          "pass": 75,
+          "kick": 72,
+          "stamina": 78,
+          "attack": 85,
           "confidence": "high"
         },
         "stats": {
@@ -6972,14 +6972,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gudeshi",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 70,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 68,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -7003,13 +7003,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mamão",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -7035,14 +7035,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "DICKINHO",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 68,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -7067,13 +7067,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Barba",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 61,
-          "tackle": 86,
-          "pass": 61,
-          "kick": 47,
-          "stamina": 80,
-          "attack": 77,
+          "overall": 76,
+          "speed": 70,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 84,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -7099,13 +7099,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Heron/Pança",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 63,
+          "overall": 75,
+          "speed": 70,
           "tackle": 85,
-          "pass": 62,
-          "kick": 46,
-          "stamina": 81,
-          "attack": 74,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 85,
+          "attack": 77,
           "confidence": "high"
         },
         "stats": {
@@ -7131,13 +7131,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Arthur",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 73,
-          "tackle": 86,
+          "overall": 71,
+          "speed": 70,
+          "tackle": 77,
           "pass": 68,
-          "kick": 49,
-          "stamina": 87,
-          "attack": 78,
+          "kick": 54,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -7162,13 +7162,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Patrick",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
+          "overall": 73,
+          "speed": 81,
+          "tackle": 66,
+          "pass": 71,
+          "kick": 63,
+          "stamina": 76,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -7194,14 +7194,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pompeo",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 77,
+          "tackle": 67,
+          "pass": 80,
+          "kick": 82,
+          "stamina": 78,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -7226,13 +7226,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Big mike",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 75,
-          "tackle": 73,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 78,
+          "overall": 74,
+          "speed": 70,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -7258,13 +7258,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Abud",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -7288,14 +7288,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-lima-ferreira2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 76,
+          "tackle": 64,
+          "pass": 73,
+          "kick": 72,
+          "stamina": 73,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -7318,14 +7318,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-bomfim-bergo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 76,
+          "tackle": 84,
+          "pass": 72,
+          "kick": 58,
+          "stamina": 86,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -7348,13 +7348,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-filkauskas-de-melo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 67,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -7378,14 +7378,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-bodra-guimaraes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 72,
+          "speed": 80,
+          "tackle": 63,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 67,
+          "stamina": 73,
+          "attack": 78,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -7408,14 +7408,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 83,
+          "pass": 71,
+          "kick": 56,
+          "stamina": 85,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -7438,14 +7438,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-cardelli-de-amorim/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 68,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -7468,14 +7468,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 78,
+          "tackle": 68,
+          "pass": 80,
+          "kick": 79,
+          "stamina": 78,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -7498,11 +7498,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-orsi-de-souza/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -7528,13 +7528,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 63,
+          "pass": 69,
           "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "stamina": 71,
+          "attack": 76,
           "confidence": "base"
         },
         "stats": {
@@ -7558,14 +7558,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/laurent-bourda-couhet/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 74,
+          "tackle": 74,
+          "pass": 74,
+          "kick": 69,
+          "stamina": 76,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -7588,14 +7588,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-de-souza-junior/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -7618,11 +7618,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matias-santana-torres-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -7648,14 +7648,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-rainho-tranquez/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 73,
+          "tackle": 73,
+          "pass": 73,
+          "kick": 67,
+          "stamina": 76,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -7693,14 +7693,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cherno",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 58,
-          "tackle": 84,
-          "pass": 59,
-          "kick": 46,
-          "stamina": 78,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 85,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -7725,14 +7725,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nelsinho",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 70,
+          "tackle": 87,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 84,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -7757,13 +7757,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Benê",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
-          "tackle": 85,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 82,
-          "attack": 71,
+          "overall": 76,
+          "speed": 70,
+          "tackle": 88,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 84,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -7789,14 +7789,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Davizão",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -7821,14 +7821,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Neymar",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 57,
-          "tackle": 81,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 78,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 72,
+          "tackle": 84,
+          "pass": 69,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -7853,13 +7853,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Zézão",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 62,
-          "tackle": 84,
-          "pass": 62,
-          "kick": 46,
-          "stamina": 85,
-          "attack": 72,
+          "overall": 73,
+          "speed": 69,
+          "tackle": 82,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 83,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -7885,13 +7885,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Carlão",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 62,
-          "tackle": 84,
-          "pass": 62,
-          "kick": 46,
-          "stamina": 85,
-          "attack": 72,
+          "overall": 72,
+          "speed": 66,
+          "tackle": 83,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "high"
         },
         "stats": {
@@ -7917,13 +7917,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "DIMITRI",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 77,
-          "tackle": 87,
-          "pass": 70,
-          "kick": 49,
-          "stamina": 91,
-          "attack": 86,
+          "overall": 77,
+          "speed": 75,
+          "tackle": 85,
+          "pass": 71,
+          "kick": 58,
+          "stamina": 86,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -7949,13 +7949,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pirulito",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 77,
-          "tackle": 85,
+          "overall": 75,
+          "speed": 73,
+          "tackle": 82,
           "pass": 70,
-          "kick": 49,
-          "stamina": 89,
-          "attack": 85,
+          "kick": 58,
+          "stamina": 84,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -7981,14 +7981,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Latrell",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 72,
-          "tackle": 84,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 74,
+          "tackle": 82,
+          "pass": 70,
+          "kick": 55,
+          "stamina": 84,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8013,13 +8013,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ilha",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 81,
-          "tackle": 85,
-          "pass": 71,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 93,
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -8045,13 +8045,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Moura",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 79,
-          "tackle": 86,
-          "pass": 70,
-          "kick": 49,
-          "stamina": 87,
-          "attack": 88,
+          "overall": 73,
+          "speed": 70,
+          "tackle": 82,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -8077,13 +8077,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Panta",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 84,
-          "tackle": 72,
-          "pass": 91,
-          "kick": 75,
-          "stamina": 90,
-          "attack": 84,
+          "overall": 74,
+          "speed": 75,
+          "tackle": 66,
+          "pass": 81,
+          "kick": 72,
+          "stamina": 77,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -8109,14 +8109,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Joãozinho",
         "appeared2026": true,
         "skills": {
-          "overall": 84,
-          "speed": 85,
-          "tackle": 68,
-          "pass": 89,
-          "kick": 95,
-          "stamina": 83,
-          "attack": 93,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 78,
+          "tackle": 66,
+          "pass": 80,
+          "kick": 82,
+          "stamina": 77,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8141,14 +8141,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Diguinho",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 80,
-          "tackle": 68,
-          "pass": 89,
-          "kick": 91,
-          "stamina": 86,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 75,
+          "tackle": 65,
+          "pass": 80,
+          "kick": 77,
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8173,13 +8173,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bomber",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 95,
-          "tackle": 67,
-          "pass": 75,
-          "kick": 65,
-          "stamina": 84,
-          "attack": 95,
+          "overall": 76,
+          "speed": 86,
+          "tackle": 66,
+          "pass": 72,
+          "kick": 66,
+          "stamina": 78,
+          "attack": 86,
           "confidence": "high"
         },
         "stats": {
@@ -8204,13 +8204,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 12,
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 85,
-          "tackle": 79,
-          "pass": 82,
-          "kick": 63,
-          "stamina": 88,
-          "attack": 86,
+          "overall": 76,
+          "speed": 79,
+          "tackle": 71,
+          "pass": 79,
+          "kick": 67,
+          "stamina": 79,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -8236,14 +8236,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thiago",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 84,
-          "tackle": 77,
-          "pass": 80,
+          "overall": 77,
+          "speed": 81,
+          "tackle": 76,
+          "pass": 74,
           "kick": 62,
-          "stamina": 87,
-          "attack": 84,
-          "confidence": "medium"
+          "stamina": 81,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8268,13 +8268,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pato",
         "appeared2026": true,
         "skills": {
-          "overall": 85,
-          "speed": 93,
-          "tackle": 79,
-          "pass": 84,
-          "kick": 63,
-          "stamina": 88,
-          "attack": 95,
+          "overall": 77,
+          "speed": 83,
+          "tackle": 71,
+          "pass": 76,
+          "kick": 65,
+          "stamina": 79,
+          "attack": 85,
           "confidence": "high"
         },
         "stats": {
@@ -8300,14 +8300,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Corvo",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 82,
-          "attack": 90,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 78,
+          "tackle": 67,
+          "pass": 80,
+          "kick": 68,
+          "stamina": 79,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8332,13 +8332,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rambo",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 95,
-          "tackle": 67,
-          "pass": 76,
-          "kick": 65,
-          "stamina": 84,
-          "attack": 95,
+          "overall": 76,
+          "speed": 83,
+          "tackle": 68,
+          "pass": 75,
+          "kick": 69,
+          "stamina": 78,
+          "attack": 83,
           "confidence": "high"
         },
         "stats": {
@@ -8364,14 +8364,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Moreira",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 88,
-          "tackle": 72,
-          "pass": 81,
-          "kick": 91,
-          "stamina": 87,
-          "attack": 86,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 82,
+          "tackle": 68,
+          "pass": 75,
+          "kick": 78,
+          "stamina": 77,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8395,14 +8395,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 16,
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -8427,14 +8427,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pão",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 77,
-          "tackle": 72,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -8456,14 +8456,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8488,14 +8488,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Orlandi",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 70,
+          "tackle": 85,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 84,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8519,13 +8519,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-andrade-da-rocha/1-Thumbnail.jpeg",
         "registered2026": false,
         "skills": {
-          "overall": 66,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 78,
-          "attack": 69,
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -8551,14 +8551,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mate",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 76,
+          "speed": 71,
+          "tackle": 86,
           "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "kick": 59,
+          "stamina": 85,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -8583,14 +8583,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pex",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 75,
-          "tackle": 73,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 78,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 76,
+          "tackle": 84,
+          "pass": 71,
+          "kick": 58,
+          "stamina": 86,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -8615,13 +8615,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nick",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
+          "overall": 73,
           "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "tackle": 80,
+          "pass": 69,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -8647,13 +8647,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tulio",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 77,
-          "tackle": 72,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 80,
+          "overall": 72,
+          "speed": 75,
+          "tackle": 64,
+          "pass": 77,
+          "kick": 68,
+          "stamina": 74,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -8679,14 +8679,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pablo(Fiji)",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 84,
+          "tackle": 67,
+          "pass": 72,
+          "kick": 65,
+          "stamina": 78,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -8711,14 +8711,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Skate",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 77,
+          "tackle": 67,
+          "pass": 82,
+          "kick": 69,
+          "stamina": 79,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -8743,14 +8743,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Chocolate",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 79,
+          "tackle": 69,
+          "pass": 76,
+          "kick": 67,
+          "stamina": 78,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -8772,14 +8772,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
+          "overall": 74,
+          "speed": 75,
+          "tackle": 76,
           "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "kick": 61,
+          "stamina": 81,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -8802,13 +8802,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/atilio-mascarenhas-lui/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 73,
+          "kick": 69,
+          "stamina": 71,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -8832,14 +8832,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-da-costa-lopes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 77,
+          "tackle": 71,
+          "pass": 74,
+          "kick": 60,
+          "stamina": 76,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -8862,14 +8862,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 81,
+          "tackle": 68,
+          "pass": 72,
+          "kick": 63,
+          "stamina": 77,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -8892,14 +8892,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-cezar-oliveira-borgonovi-da-costa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 67,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -8922,14 +8922,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-henrique-da-silva-martins/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 83,
+          "tackle": 68,
+          "pass": 76,
+          "kick": 76,
+          "stamina": 78,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -8952,14 +8952,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-pereira-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 73,
+          "speed": 83,
+          "tackle": 64,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 63,
+          "stamina": 75,
+          "attack": 82,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -8982,11 +8982,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/rafael-de-jesus-pinto-de-faria-santos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -9012,14 +9012,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/francisco-de-assis-rodrigues-da-silva-neto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 74,
+          "tackle": 64,
+          "pass": 78,
+          "kick": 77,
+          "stamina": 76,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -9042,14 +9042,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-fernando-da-silva3/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -9072,14 +9072,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonathan-d-arc-lima-de-figueredo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -9102,14 +9102,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/josue-bennati-brito-fonseca/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 81,
+          "tackle": 72,
+          "pass": 76,
+          "kick": 71,
+          "stamina": 79,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -9132,13 +9132,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-cavalcante-lichane/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 63,
+          "pass": 69,
           "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "stamina": 71,
+          "attack": 76,
           "confidence": "base"
         },
         "stats": {
@@ -9162,11 +9162,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-filipe-dos-santos-nunes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -9192,14 +9192,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-henrique-da-silva-martins-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 80,
+          "tackle": 64,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 74,
+          "attack": 79,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -9222,14 +9222,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/gabriel-mohallem-do-prado/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 74,
+          "speed": 73,
+          "tackle": 81,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 56,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -9252,11 +9252,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-miguel-pereira-campos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -9282,14 +9282,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-campos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 77,
+          "speed": 78,
+          "tackle": 79,
+          "pass": 74,
           "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "stamina": 83,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -9312,13 +9312,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-paulo-fernandes-morais-e-vianna/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -9342,14 +9342,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-brasil-dos-santos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 72,
+          "speed": 71,
+          "tackle": 76,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 59,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -9371,11 +9371,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -9401,13 +9401,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-cursino/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 78,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -9431,13 +9431,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-moreira-raposo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 67,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -9460,11 +9460,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -9490,11 +9490,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juan-henrique-de-barros-nascimento2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -9520,14 +9520,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-de-souza-de-oliveira-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 85,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -9565,13 +9565,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bombom",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -9594,13 +9594,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 70,
-          "speed": 63,
-          "tackle": 83,
-          "pass": 60,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 78,
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -9626,14 +9626,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Zord",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -9657,13 +9657,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 2,
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
+          "overall": 73,
+          "speed": 67,
+          "tackle": 84,
+          "pass": 67,
+          "kick": 57,
           "stamina": 81,
-          "attack": 70,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -9689,14 +9689,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Sumô",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 57,
-          "tackle": 79,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 80,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -9721,13 +9721,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Fester",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -9753,13 +9753,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Muay",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 61,
+          "overall": 72,
+          "speed": 67,
           "tackle": 82,
-          "pass": 60,
-          "kick": 45,
-          "stamina": 84,
-          "attack": 70,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -9784,13 +9784,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 84,
-          "attack": 69,
+          "overall": 73,
+          "speed": 70,
+          "tackle": 82,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -9813,14 +9813,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 61,
+          "overall": 75,
+          "speed": 73,
           "tackle": 82,
-          "pass": 60,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 70,
-          "confidence": "medium"
+          "pass": 71,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -9845,13 +9845,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Zeca",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 77,
+          "overall": 71,
+          "speed": 70,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 52,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -9877,14 +9877,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nego",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 77,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 84,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -9910,11 +9910,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 71,
+          "speed": 70,
           "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
           "attack": 75,
           "confidence": "medium"
         },
@@ -9941,14 +9941,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Alemão",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 77,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 83,
+          "pass": 71,
+          "kick": 56,
+          "stamina": 85,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -9972,13 +9972,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 9,
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 81,
-          "tackle": 69,
-          "pass": 89,
-          "kick": 71,
-          "stamina": 89,
-          "attack": 78,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 79,
+          "kick": 65,
+          "stamina": 75,
+          "attack": 70,
           "confidence": "medium"
         },
         "stats": {
@@ -10004,14 +10004,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tesouro / Cininho",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
+          "overall": 77,
           "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 88,
-          "stamina": 86,
-          "attack": 84,
-          "confidence": "medium"
+          "tackle": 67,
+          "pass": 79,
+          "kick": 79,
+          "stamina": 78,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -10033,13 +10033,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 80,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 87,
-          "stamina": 86,
-          "attack": 82,
+          "overall": 73,
+          "speed": 80,
+          "tackle": 63,
+          "pass": 73,
+          "kick": 69,
+          "stamina": 75,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -10065,13 +10065,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Vinicius",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 82,
-          "attack": 90,
+          "overall": 71,
+          "speed": 82,
+          "tackle": 62,
+          "pass": 68,
+          "kick": 61,
+          "stamina": 73,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -10097,13 +10097,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thiagao",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 77,
-          "pass": 81,
+          "overall": 72,
+          "speed": 77,
+          "tackle": 68,
+          "pass": 72,
           "kick": 62,
-          "stamina": 84,
-          "attack": 89,
+          "stamina": 74,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -10129,13 +10129,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Saborosa",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
-          "kick": 61,
-          "stamina": 87,
-          "attack": 83,
+          "overall": 72,
+          "speed": 76,
+          "tackle": 70,
+          "pass": 73,
+          "kick": 59,
+          "stamina": 75,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -10158,14 +10158,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 76,
+          "overall": 75,
           "speed": 75,
-          "tackle": 85,
-          "pass": 68,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 81,
-          "confidence": "medium"
+          "tackle": 78,
+          "pass": 72,
+          "kick": 60,
+          "stamina": 81,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -10190,13 +10190,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pedro Delay",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 85,
-          "attack": 89,
+          "overall": 71,
+          "speed": 81,
+          "tackle": 62,
+          "pass": 68,
+          "kick": 61,
+          "stamina": 73,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -10222,14 +10222,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Vini",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 92,
+          "overall": 75,
+          "speed": 85,
           "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 91,
-          "confidence": "medium"
+          "pass": 72,
+          "kick": 66,
+          "stamina": 77,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -10254,14 +10254,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dodo",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 70,
-          "pass": 80,
-          "kick": 81,
-          "stamina": 87,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 81,
+          "tackle": 73,
+          "pass": 77,
+          "kick": 66,
+          "stamina": 80,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -10286,14 +10286,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Goyco",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 84,
-          "tackle": 70,
-          "pass": 90,
-          "kick": 71,
-          "stamina": 89,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 80,
+          "tackle": 71,
+          "pass": 77,
+          "kick": 70,
+          "stamina": 80,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -10318,14 +10318,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bolívia",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -10347,14 +10347,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 74,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 87,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 70,
+          "tackle": 82,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -10379,13 +10379,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Frodo",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 73,
+          "speed": 73,
+          "tackle": 66,
+          "pass": 76,
+          "kick": 73,
+          "stamina": 75,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -10410,13 +10410,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 21,
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 82,
-          "attack": 90,
+          "overall": 72,
+          "speed": 81,
+          "tackle": 63,
+          "pass": 71,
+          "kick": 63,
+          "stamina": 74,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -10440,13 +10440,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
+          "speed": 71,
+          "tackle": 62,
+          "pass": 77,
+          "kick": 67,
+          "stamina": 72,
           "attack": 70,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -10471,14 +10471,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Luis",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 84,
-          "tackle": 77,
-          "pass": 80,
-          "kick": 62,
-          "stamina": 84,
-          "attack": 84,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 77,
+          "tackle": 71,
+          "pass": 74,
+          "kick": 61,
+          "stamina": 76,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -10501,13 +10501,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -10530,13 +10530,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -10562,10 +10562,10 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
-          "stamina": 73,
+          "kick": 64,
+          "stamina": 72,
           "attack": 70,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -10590,14 +10590,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Samba",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 70,
+          "tackle": 70,
+          "pass": 70,
+          "kick": 64,
+          "stamina": 72,
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -10620,11 +10620,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-biajoli-cicchetto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10650,14 +10650,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-rondon-rubin/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 73,
+          "speed": 83,
+          "tackle": 64,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 64,
+          "stamina": 75,
+          "attack": 82,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -10680,14 +10680,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-munarski-dexheimer/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -10710,11 +10710,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-de-almeida-lima2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10740,11 +10740,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/filipe-ayres-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10770,11 +10770,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-sibinel-stach2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10800,11 +10800,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaique-catarin-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10830,11 +10830,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-henrique-da-silva-chevicenco/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10860,14 +10860,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clodoaldo-formigoni/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 69,
+          "tackle": 81,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -10890,14 +10890,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristhofer-busch-andres-montes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
+          "overall": 73,
+          "speed": 77,
           "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "pass": 71,
+          "kick": 63,
+          "stamina": 78,
+          "attack": 78,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -10920,11 +10920,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/samuell--pedroso/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10950,11 +10950,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-pisani-amato/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -10980,14 +10980,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-lopes-jose/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 76,
+          "tackle": 66,
+          "pass": 75,
+          "kick": 70,
+          "stamina": 75,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11010,11 +11010,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/abner-evangelista-chaves/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11040,14 +11040,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 66,
+          "tackle": 81,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11070,11 +11070,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-passos-matsuoka/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11100,14 +11100,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-lima-gatti/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
+          "overall": 76,
+          "speed": 76,
           "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "pass": 79,
+          "kick": 74,
+          "stamina": 79,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -11130,14 +11130,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilliano-salvatierry-deleprani-ribeiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11160,11 +11160,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/richard-mondin-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11190,11 +11190,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heitor-nieto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11220,11 +11220,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heitorbrigagaogasparmartins-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11250,11 +11250,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-camargo-caetano/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11280,11 +11280,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henriquedemellochaves-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11310,11 +11310,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hugo-goncalves-bertolassi/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11340,11 +11340,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/israel-nicolas-ribeiro-goncalves-de-lima/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11370,11 +11370,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-dos-santos-cesario2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11400,14 +11400,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rubens-eduardo-amato-junior/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -11430,14 +11430,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-sousa-lobo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11460,14 +11460,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-cavalleri-durante/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 77,
+          "tackle": 71,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11490,14 +11490,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luciano-jose-capogrosso/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 69,
+          "tackle": 79,
+          "pass": 69,
+          "kick": 57,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11520,14 +11520,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcio-rogerio-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 66,
+          "tackle": 82,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11550,14 +11550,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-jose-micelli-mate/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11580,11 +11580,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-omena/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11610,11 +11610,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-henrique-da-conceicao-lima/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11640,11 +11640,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguelpintolima-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11670,11 +11670,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-andre-piovesan-da-cunha2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11700,11 +11700,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nathan-bachner-lepiscopo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11730,14 +11730,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-henrique-giraldini-de-mello/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
+          "overall": 72,
+          "speed": 76,
           "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "pass": 73,
+          "kick": 59,
+          "stamina": 75,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -11760,11 +11760,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patrick-giraldini-de-mello/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11790,11 +11790,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-silva-costa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11820,14 +11820,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-correa-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 79,
+          "tackle": 66,
+          "pass": 74,
+          "kick": 72,
+          "stamina": 76,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -11850,11 +11850,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/artur-carlos-de-figueiredo-pacheco-filho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11880,13 +11880,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-francisco-de-camargo2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 69,
+          "tackle": 74,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 76,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -11910,14 +11910,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rosinaldo-da-silva-alves/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -11940,11 +11940,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-martins-cardoso/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -11970,13 +11970,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-matias-sass/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 73,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "kick": 57,
+          "stamina": 75,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -12000,11 +12000,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-bertoni-dos-santos-alves-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -12030,14 +12030,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sean-tenorio-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 72,
+          "speed": 83,
+          "tackle": 63,
+          "pass": 69,
           "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "stamina": 74,
+          "attack": 81,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -12060,14 +12060,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-ferreira-amaral/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 75,
+          "speed": 77,
+          "tackle": 67,
+          "pass": 82,
+          "kick": 69,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -12090,11 +12090,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-yapura/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -12120,14 +12120,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/adriano-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 82,
+          "tackle": 67,
+          "pass": 72,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 82,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -12150,14 +12150,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-luis-parazi/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -12180,14 +12180,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-nichioka2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 74,
+          "tackle": 65,
+          "pass": 80,
+          "kick": 66,
+          "stamina": 76,
+          "attack": 71,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -12221,13 +12221,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 79,
-          "attack": 70,
+          "overall": 72,
+          "speed": 72,
+          "tackle": 73,
+          "pass": 73,
+          "kick": 60,
+          "stamina": 78,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -12253,13 +12253,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Prof",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 67,
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 77,
           "confidence": "high"
         },
         "stats": {
@@ -12285,14 +12285,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lula",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 56,
-          "tackle": 80,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 78,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 85,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -12317,14 +12317,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Corumbá",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 59,
-          "tackle": 81,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 69,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -12349,13 +12349,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Para",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 84,
-          "attack": 69,
+          "overall": 73,
+          "speed": 68,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -12381,14 +12381,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Germano",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 84,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 74,
+          "tackle": 69,
+          "pass": 78,
+          "kick": 75,
+          "stamina": 78,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -12413,14 +12413,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rafa",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 84,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 73,
+          "tackle": 86,
+          "pass": 71,
+          "kick": 59,
+          "stamina": 86,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -12446,13 +12446,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 87,
-          "attack": 74,
-          "confidence": "medium"
+          "speed": 72,
+          "tackle": 79,
+          "pass": 69,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -12477,14 +12477,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Namiki",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 76,
+          "tackle": 84,
+          "pass": 72,
+          "kick": 57,
+          "stamina": 86,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -12509,14 +12509,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "William",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 77,
+          "tackle": 70,
+          "pass": 78,
+          "kick": 67,
+          "stamina": 79,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -12541,13 +12541,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bonitinho",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 67,
+          "overall": 73,
+          "speed": 70,
+          "tackle": 82,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -12573,13 +12573,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tchuco",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 73,
-          "tackle": 82,
-          "pass": 67,
-          "kick": 47,
-          "stamina": 89,
-          "attack": 77,
+          "overall": 76,
+          "speed": 74,
+          "tackle": 84,
+          "pass": 70,
+          "kick": 57,
+          "stamina": 85,
+          "attack": 80,
           "confidence": "high"
         },
         "stats": {
@@ -12605,14 +12605,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gui",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 80,
-          "tackle": 68,
-          "pass": 88,
-          "kick": 70,
-          "stamina": 90,
-          "attack": 76,
-          "confidence": "high"
+          "overall": 73,
+          "speed": 76,
+          "tackle": 66,
+          "pass": 78,
+          "kick": 66,
+          "stamina": 77,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -12637,14 +12637,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "MoMo",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 78,
+          "overall": 75,
+          "speed": 77,
           "tackle": 66,
-          "pass": 86,
-          "kick": 87,
-          "stamina": 86,
-          "attack": 82,
-          "confidence": "medium"
+          "pass": 77,
+          "kick": 78,
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -12669,14 +12669,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Q9",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 87,
-          "stamina": 86,
-          "attack": 82,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 78,
+          "kick": 76,
+          "stamina": 75,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -12701,13 +12701,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pag",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 84,
-          "attack": 88,
+          "overall": 74,
+          "speed": 82,
+          "tackle": 67,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -12733,13 +12733,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Léo",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 85,
-          "attack": 68,
+          "overall": 75,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 84,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -12765,13 +12765,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Alan",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 94,
-          "tackle": 64,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 85,
-          "attack": 93,
+          "overall": 73,
+          "speed": 79,
+          "tackle": 68,
+          "pass": 72,
+          "kick": 61,
+          "stamina": 76,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -12794,14 +12794,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
+          "overall": 74,
+          "speed": 78,
+          "tackle": 72,
+          "pass": 75,
           "kick": 61,
-          "stamina": 87,
-          "attack": 82,
-          "confidence": "medium"
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -12826,13 +12826,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Sete",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 86,
-          "attack": 88,
+          "overall": 75,
+          "speed": 86,
+          "tackle": 65,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 85,
           "confidence": "high"
         },
         "stats": {
@@ -12858,14 +12858,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Vegetal",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 87,
-          "tackle": 70,
-          "pass": 80,
-          "kick": 95,
-          "stamina": 87,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 80,
+          "tackle": 69,
+          "pass": 79,
+          "kick": 75,
+          "stamina": 80,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -12888,12 +12888,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 78,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
-          "kick": 62,
-          "stamina": 86,
-          "attack": 82,
+          "speed": 82,
+          "tackle": 69,
+          "pass": 78,
+          "kick": 80,
+          "stamina": 79,
+          "attack": 83,
           "confidence": "high"
         },
         "stats": {
@@ -12920,13 +12920,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -12951,13 +12951,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rosa",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 69,
+          "overall": 72,
+          "speed": 67,
+          "tackle": 83,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -12980,13 +12980,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 73,
+          "speed": 68,
+          "tackle": 84,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -13009,14 +13009,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 69,
+          "overall": 70,
+          "speed": 67,
+          "tackle": 73,
           "pass": 70,
-          "kick": 62,
-          "stamina": 74,
-          "attack": 69,
-          "confidence": "high"
+          "kick": 60,
+          "stamina": 75,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 3,
@@ -13041,14 +13041,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Polanic",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 74,
+          "speed": 81,
+          "tackle": 69,
+          "pass": 72,
           "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "stamina": 77,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -13073,13 +13073,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 68,
+          "tackle": 79,
+          "pass": 65,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -13104,13 +13104,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "WILOW",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 73,
+          "speed": 67,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -13138,11 +13138,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "skills": {
           "overall": 74,
           "speed": 73,
-          "tackle": 83,
-          "pass": 67,
-          "kick": 47,
-          "stamina": 89,
-          "attack": 78,
+          "tackle": 81,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 83,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -13168,13 +13168,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ceara",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 73,
+          "speed": 82,
+          "tackle": 64,
           "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 69,
+          "kick": 64,
+          "stamina": 75,
+          "attack": 82,
           "confidence": "medium"
         },
         "stats": {
@@ -13200,14 +13200,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Yogui",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 68,
+          "tackle": 76,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 76,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -13230,13 +13230,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 69,
+          "tackle": 75,
+          "pass": 66,
+          "kick": 58,
+          "stamina": 75,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -13261,13 +13261,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Soldado",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
+          "overall": 71,
+          "speed": 75,
+          "tackle": 67,
+          "pass": 72,
           "kick": 61,
-          "stamina": 84,
-          "attack": 82,
+          "stamina": 73,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -13293,13 +13293,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 72,
+          "tackle": 63,
+          "pass": 73,
+          "kick": 69,
+          "stamina": 71,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -13324,13 +13324,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cássio Zanatto / Portuga",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 72,
+          "speed": 83,
+          "tackle": 63,
+          "pass": 69,
           "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "stamina": 74,
+          "attack": 81,
           "confidence": "medium"
         },
         "stats": {
@@ -13357,10 +13357,10 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
-          "stamina": 73,
+          "kick": 64,
+          "stamina": 72,
           "attack": 70,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -13383,11 +13383,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-e-silva-martins/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13413,11 +13413,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/lucas-kaua-de-aquino-santos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13443,13 +13443,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-micalli-pedrinelli/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "tackle": 73,
+          "pass": 67,
+          "kick": 58,
+          "stamina": 74,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -13473,14 +13473,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-mendes-moura/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 69,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -13503,11 +13503,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-ferreira-da-mata/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13533,14 +13533,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-henrique-ferraz/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 80,
+          "tackle": 69,
+          "pass": 73,
+          "kick": 63,
+          "stamina": 77,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -13563,11 +13563,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-gustavo-han/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13593,14 +13593,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jorge-luiz-de-sales/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 72,
+          "speed": 79,
+          "tackle": 66,
+          "pass": 69,
           "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "stamina": 74,
+          "attack": 79,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -13623,11 +13623,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-rodrigues4/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13653,14 +13653,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-medici-aoad-2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 72,
+          "tackle": 75,
+          "pass": 68,
+          "kick": 59,
+          "stamina": 77,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -13683,11 +13683,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-de-moura-braga/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13713,14 +13713,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-elias-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 84,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 85,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -13743,14 +13743,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/christian-harold-frenzel-belotto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 80,
+          "tackle": 74,
+          "pass": 76,
+          "kick": 64,
+          "stamina": 79,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -13773,11 +13773,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-morais/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13803,11 +13803,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-silva-de-souza2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13833,14 +13833,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leandro-andre-pereira-bezerra/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 72,
+          "speed": 75,
+          "tackle": 69,
+          "pass": 74,
           "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "stamina": 74,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -13863,11 +13863,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-amancio-tavares2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13893,11 +13893,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-filipe-volpini2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -13923,13 +13923,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -13966,13 +13966,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 1,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 59,
-          "tackle": 85,
-          "pass": 61,
-          "kick": 47,
-          "stamina": 82,
-          "attack": 73,
+          "overall": 75,
+          "speed": 68,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -13998,13 +13998,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "ANDRÉ BRANDÃO",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 63,
-          "tackle": 86,
-          "pass": 62,
-          "kick": 47,
-          "stamina": 80,
-          "attack": 80,
+          "overall": 77,
+          "speed": 71,
+          "tackle": 89,
+          "pass": 71,
+          "kick": 61,
+          "stamina": 85,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -14030,13 +14030,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "RAPHA",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 63,
-          "tackle": 85,
-          "pass": 63,
-          "kick": 47,
-          "stamina": 85,
-          "attack": 74,
+          "overall": 73,
+          "speed": 68,
+          "tackle": 83,
+          "pass": 67,
+          "kick": 56,
+          "stamina": 83,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -14061,13 +14061,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 63,
+          "overall": 75,
+          "speed": 70,
           "tackle": 85,
-          "pass": 63,
-          "kick": 47,
-          "stamina": 83,
-          "attack": 74,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 84,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -14093,13 +14093,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "nicolas azevedo",
         "appeared2026": true,
         "skills": {
-          "overall": 85,
-          "speed": 83,
-          "tackle": 71,
-          "pass": 91,
-          "kick": 95,
-          "stamina": 87,
-          "attack": 91,
+          "overall": 78,
+          "speed": 77,
+          "tackle": 68,
+          "pass": 80,
+          "kick": 86,
+          "stamina": 78,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -14125,13 +14125,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gutão",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 82,
-          "tackle": 88,
-          "pass": 73,
-          "kick": 51,
-          "stamina": 91,
-          "attack": 95,
+          "overall": 77,
+          "speed": 80,
+          "tackle": 77,
+          "pass": 74,
+          "kick": 61,
+          "stamina": 82,
+          "attack": 84,
           "confidence": "high"
         },
         "stats": {
@@ -14156,14 +14156,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 7,
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 79,
-          "tackle": 87,
+          "overall": 77,
+          "speed": 77,
+          "tackle": 84,
           "pass": 71,
-          "kick": 49,
-          "stamina": 90,
-          "attack": 88,
-          "confidence": "medium"
+          "kick": 57,
+          "stamina": 85,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -14185,13 +14185,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 76,
-          "tackle": 88,
-          "pass": 70,
-          "kick": 50,
-          "stamina": 89,
-          "attack": 84,
+          "overall": 77,
+          "speed": 74,
+          "tackle": 86,
+          "pass": 71,
+          "kick": 59,
+          "stamina": 86,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -14216,14 +14216,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 9,
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 82,
-          "tackle": 72,
-          "pass": 91,
-          "kick": 72,
-          "stamina": 89,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 77,
+          "tackle": 70,
+          "pass": 81,
+          "kick": 68,
+          "stamina": 81,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -14247,13 +14247,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 9,
         "appeared2026": true,
         "skills": {
-          "overall": 87,
-          "speed": 95,
-          "tackle": 75,
-          "pass": 86,
-          "kick": 84,
-          "stamina": 88,
-          "attack": 95,
+          "overall": 77,
+          "speed": 84,
+          "tackle": 68,
+          "pass": 75,
+          "kick": 73,
+          "stamina": 78,
+          "attack": 85,
           "confidence": "high"
         },
         "stats": {
@@ -14276,13 +14276,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 76,
-          "tackle": 88,
+          "overall": 74,
+          "speed": 73,
+          "tackle": 80,
           "pass": 70,
-          "kick": 50,
-          "stamina": 89,
-          "attack": 84,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -14308,14 +14308,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ariel",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 95,
+          "overall": 76,
+          "speed": 85,
           "tackle": 68,
-          "pass": 77,
-          "kick": 65,
-          "stamina": 85,
-          "attack": 95,
-          "confidence": "medium"
+          "pass": 73,
+          "kick": 64,
+          "stamina": 78,
+          "attack": 87,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -14340,14 +14340,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "cardoso",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 93,
-          "tackle": 67,
-          "pass": 74,
-          "kick": 65,
-          "stamina": 82,
-          "attack": 92,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 81,
+          "tackle": 66,
+          "pass": 73,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -14372,14 +14372,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Drudi",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 85,
-          "tackle": 79,
-          "pass": 82,
-          "kick": 63,
-          "stamina": 87,
-          "attack": 86,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 82,
+          "tackle": 73,
+          "pass": 76,
+          "kick": 66,
+          "stamina": 79,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -14403,13 +14403,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 13,
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 88,
-          "tackle": 80,
-          "pass": 84,
-          "kick": 64,
-          "stamina": 88,
-          "attack": 92,
+          "overall": 78,
+          "speed": 84,
+          "tackle": 74,
+          "pass": 77,
+          "kick": 65,
+          "stamina": 80,
+          "attack": 86,
           "confidence": "high"
         },
         "stats": {
@@ -14435,13 +14435,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Chagas",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 95,
-          "tackle": 67,
-          "pass": 76,
-          "kick": 65,
-          "stamina": 82,
-          "attack": 95,
+          "overall": 74,
+          "speed": 78,
+          "tackle": 64,
+          "pass": 75,
+          "kick": 73,
+          "stamina": 75,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -14467,13 +14467,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Super choque",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 91,
+          "overall": 71,
+          "speed": 80,
+          "tackle": 64,
+          "pass": 67,
+          "kick": 60,
+          "stamina": 73,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -14498,13 +14498,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 15,
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 86,
-          "tackle": 80,
-          "pass": 83,
-          "kick": 64,
-          "stamina": 86,
-          "attack": 88,
+          "overall": 74,
+          "speed": 79,
+          "tackle": 69,
+          "pass": 74,
+          "kick": 65,
+          "stamina": 77,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -14530,13 +14530,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Barnão",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 58,
-          "tackle": 84,
-          "pass": 59,
-          "kick": 46,
-          "stamina": 78,
-          "attack": 71,
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -14562,13 +14562,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Babinha",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 61,
-          "tackle": 86,
-          "pass": 61,
-          "kick": 46,
-          "stamina": 78,
-          "attack": 76,
+          "overall": 76,
+          "speed": 70,
+          "tackle": 88,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 84,
+          "attack": 80,
           "confidence": "high"
         },
         "stats": {
@@ -14594,14 +14594,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Boi",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 77,
-          "tackle": 72,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 71,
+          "tackle": 88,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 85,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -14626,14 +14626,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Piero",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 70,
+          "tackle": 81,
+          "pass": 67,
+          "kick": 58,
+          "stamina": 80,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -14656,14 +14656,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 19,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 63,
-          "tackle": 84,
-          "pass": 62,
-          "kick": 46,
-          "stamina": 81,
-          "attack": 73,
-          "confidence": "high"
+          "overall": 73,
+          "speed": 69,
+          "tackle": 83,
+          "pass": 67,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -14688,12 +14688,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
+          "speed": 70,
+          "tackle": 76,
+          "pass": 70,
+          "kick": 58,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -14720,13 +14720,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "speed": 72,
+          "tackle": 63,
+          "pass": 78,
+          "kick": 68,
+          "stamina": 74,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -14751,13 +14751,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Machado",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 73,
+          "speed": 72,
+          "tackle": 79,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -14783,14 +14783,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Wood",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 78,
+          "tackle": 77,
+          "pass": 76,
+          "kick": 64,
+          "stamina": 83,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -14812,13 +14812,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -14844,13 +14844,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marcola",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
+          "overall": 73,
+          "speed": 67,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -14874,11 +14874,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -14904,14 +14904,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/viniciushenrique/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 75,
+          "tackle": 64,
+          "pass": 76,
+          "kick": 69,
+          "stamina": 74,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -14934,13 +14934,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/anderson-chaves-de-almeida2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -14965,11 +14965,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Huber",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -14995,14 +14995,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/anthonygabrielgomesdasilva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 78,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15024,11 +15024,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15053,14 +15053,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 86,
+          "tackle": 69,
+          "pass": 74,
+          "kick": 66,
+          "stamina": 79,
+          "attack": 88,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -15083,14 +15083,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolasdossantosdias1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 72,
+          "speed": 81,
+          "tackle": 65,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 61,
+          "stamina": 74,
+          "attack": 80,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15112,11 +15112,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15142,14 +15142,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 73,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "tackle": 82,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15172,11 +15172,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15202,14 +15202,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiagocesarguimaraesleite/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -15232,11 +15232,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15262,13 +15262,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-eduardo-pereira-proenca-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 69,
+          "pass": 75,
+          "kick": 61,
+          "stamina": 76,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -15292,14 +15292,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cauademouraferreiratenorio/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 82,
+          "tackle": 62,
+          "pass": 68,
+          "kick": 61,
+          "stamina": 73,
+          "attack": 80,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15322,11 +15322,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15352,11 +15352,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaiky-de-araujo-franca-santos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15382,14 +15382,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheuscruzvergueiroesilva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 79,
+          "tackle": 68,
+          "pass": 79,
+          "kick": 77,
+          "stamina": 78,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -15412,14 +15412,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eder-almeida-batista-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 71,
+          "tackle": 71,
+          "pass": 71,
+          "kick": 65,
+          "stamina": 73,
+          "attack": 71,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15442,11 +15442,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15472,11 +15472,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15502,11 +15502,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15532,11 +15532,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15562,13 +15562,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-frazao-de-souza-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 76,
+          "tackle": 67,
+          "pass": 69,
+          "kick": 61,
+          "stamina": 74,
+          "attack": 77,
           "confidence": "base"
         },
         "stats": {
@@ -15592,14 +15592,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlosrafaelaparecidosouzademoura/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 81,
+          "tackle": 68,
+          "pass": 76,
+          "kick": 76,
+          "stamina": 77,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -15622,11 +15622,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15652,13 +15652,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -15682,14 +15682,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-augusto-ramos-fabiano/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 74,
+          "tackle": 78,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15712,11 +15712,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15742,14 +15742,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luisgustavomarquesdasilva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 79,
+          "kick": 65,
+          "stamina": 75,
           "attack": 70,
-          "confidence": "base"
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15772,11 +15772,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15802,11 +15802,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15832,11 +15832,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15862,11 +15862,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-pimentel-furst/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -15892,12 +15892,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
+          "overall": 70,
+          "speed": 71,
+          "tackle": 62,
+          "pass": 77,
+          "kick": 67,
+          "stamina": 73,
           "attack": 70,
           "confidence": "base"
         },
@@ -15922,14 +15922,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juan-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 72,
+          "tackle": 77,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -15952,14 +15952,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carloseduardodesouzaandrade/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 84,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -15982,11 +15982,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauamoraesdejesusamaral1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16012,14 +16012,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauanoronhadoartegomes-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16042,11 +16042,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauamarchesinirodrigues/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16073,14 +16073,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Godzila",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16103,14 +16103,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardodasilvasoares/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 86,
+          "tackle": 69,
+          "pass": 73,
+          "kick": 65,
+          "stamina": 79,
+          "attack": 88,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -16133,14 +16133,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-da-silva-conceicao-reis-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 75,
+          "speed": 74,
+          "tackle": 81,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 58,
+          "stamina": 83,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -16163,11 +16163,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16193,11 +16193,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16223,14 +16223,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diegohenriquedesouzaoliveira-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 68,
+          "tackle": 83,
+          "pass": 67,
+          "kick": 56,
+          "stamina": 82,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16253,11 +16253,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16283,13 +16283,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolasleonardocunha/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 74,
+          "tackle": 63,
+          "pass": 75,
+          "kick": 68,
+          "stamina": 73,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -16313,11 +16313,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16343,14 +16343,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
+          "overall": 77,
+          "speed": 84,
           "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "pass": 74,
+          "kick": 70,
+          "stamina": 79,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -16373,13 +16373,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 67,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -16403,11 +16403,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16433,11 +16433,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheusnogueirasantos-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16462,11 +16462,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16492,14 +16492,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-roque/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 74,
+          "pass": 72,
+          "kick": 59,
+          "stamina": 78,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16522,11 +16522,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucasantonylemedossantos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16552,11 +16552,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16582,14 +16582,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raytemendescorrea/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16612,13 +16612,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 73,
+          "kick": 69,
+          "stamina": 71,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -16642,11 +16642,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16671,14 +16671,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 79,
+          "tackle": 64,
+          "pass": 71,
+          "kick": 68,
+          "stamina": 73,
+          "attack": 78,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16701,11 +16701,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-morais-ribeiro-filho-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16731,14 +16731,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexfrancelinosantos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16760,11 +16760,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16790,14 +16790,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-vilas-boas/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 75,
+          "tackle": 68,
+          "pass": 72,
+          "kick": 60,
+          "stamina": 73,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16819,11 +16819,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16849,11 +16849,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaogabrielnascimentosilva-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16879,11 +16879,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16909,11 +16909,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -16939,14 +16939,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 66,
+          "pass": 75,
+          "kick": 71,
+          "stamina": 74,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -16982,14 +16982,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pecin",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
+          "overall": 73,
+          "speed": 66,
           "tackle": 85,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 82,
-          "attack": 71,
-          "confidence": "high"
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -17014,13 +17014,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Fabinho",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
-          "tackle": 85,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 82,
-          "attack": 71,
+          "overall": 76,
+          "speed": 72,
+          "tackle": 86,
+          "pass": 70,
+          "kick": 58,
+          "stamina": 85,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -17046,13 +17046,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lango",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 58,
-          "tackle": 85,
-          "pass": 60,
-          "kick": 46,
-          "stamina": 82,
-          "attack": 71,
+          "overall": 76,
+          "speed": 70,
+          "tackle": 88,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 84,
+          "attack": 80,
           "confidence": "high"
         },
         "stats": {
@@ -17078,13 +17078,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cirilo",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
+          "overall": 76,
           "speed": 71,
-          "tackle": 82,
-          "pass": 65,
-          "kick": 46,
+          "tackle": 86,
+          "pass": 70,
+          "kick": 59,
           "stamina": 85,
-          "attack": 88,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -17109,14 +17109,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 61,
-          "tackle": 81,
-          "pass": 60,
-          "kick": 45,
-          "stamina": 84,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 71,
+          "tackle": 86,
+          "pass": 70,
+          "kick": 59,
+          "stamina": 85,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -17140,13 +17140,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 62,
-          "tackle": 84,
-          "pass": 62,
-          "kick": 46,
-          "stamina": 85,
-          "attack": 72,
+          "overall": 73,
+          "speed": 71,
+          "tackle": 82,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -17169,13 +17169,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 74,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 87,
-          "attack": 76,
+          "overall": 71,
+          "speed": 68,
+          "tackle": 80,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -17199,13 +17199,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 7,
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 75,
-          "tackle": 86,
-          "pass": 69,
-          "kick": 49,
-          "stamina": 89,
-          "attack": 82,
+          "overall": 75,
+          "speed": 74,
+          "tackle": 82,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 77,
           "confidence": "high"
         },
         "stats": {
@@ -17231,12 +17231,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tobi",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
+          "overall": 72,
+          "speed": 74,
+          "tackle": 74,
+          "pass": 70,
+          "kick": 58,
+          "stamina": 77,
           "attack": 75,
           "confidence": "medium"
         },
@@ -17263,14 +17263,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Alishow",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 76,
-          "tackle": 85,
-          "pass": 70,
-          "kick": 49,
-          "stamina": 90,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 83,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 85,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -17295,12 +17295,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 75,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
-          "attack": 77,
+          "speed": 74,
+          "tackle": 83,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -17326,13 +17326,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gui",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 86,
-          "tackle": 70,
-          "pass": 92,
+          "overall": 77,
+          "speed": 81,
+          "tackle": 68,
+          "pass": 81,
           "kick": 72,
-          "stamina": 90,
-          "attack": 87,
+          "stamina": 79,
+          "attack": 81,
           "confidence": "high"
         },
         "stats": {
@@ -17357,14 +17357,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 10,
         "appeared2026": true,
         "skills": {
-          "overall": 86,
-          "speed": 86,
-          "tackle": 70,
-          "pass": 91,
-          "kick": 95,
-          "stamina": 86,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 65,
+          "pass": 80,
+          "kick": 83,
+          "stamina": 77,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -17388,14 +17388,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 11,
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 92,
-          "tackle": 66,
+          "overall": 76,
+          "speed": 85,
+          "tackle": 68,
           "pass": 73,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 90,
-          "confidence": "medium"
+          "kick": 65,
+          "stamina": 79,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -17420,13 +17420,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cafu",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 95,
-          "tackle": 67,
-          "pass": 77,
-          "kick": 67,
-          "stamina": 82,
-          "attack": 95,
+          "overall": 75,
+          "speed": 85,
+          "tackle": 66,
+          "pass": 72,
+          "kick": 65,
+          "stamina": 77,
+          "attack": 85,
           "confidence": "medium"
         },
         "stats": {
@@ -17451,13 +17451,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Peres",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 85,
-          "tackle": 79,
-          "pass": 82,
-          "kick": 63,
-          "stamina": 88,
-          "attack": 86,
+          "overall": 75,
+          "speed": 78,
+          "tackle": 74,
+          "pass": 75,
+          "kick": 62,
+          "stamina": 79,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -17482,13 +17482,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 13,
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 85,
-          "tackle": 79,
-          "pass": 82,
-          "kick": 63,
-          "stamina": 88,
-          "attack": 86,
+          "overall": 77,
+          "speed": 82,
+          "tackle": 73,
+          "pass": 77,
+          "kick": 64,
+          "stamina": 80,
+          "attack": 83,
           "confidence": "high"
         },
         "stats": {
@@ -17514,13 +17514,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dani",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 95,
-          "tackle": 68,
-          "pass": 77,
-          "kick": 65,
-          "stamina": 86,
-          "attack": 95,
+          "overall": 77,
+          "speed": 85,
+          "tackle": 67,
+          "pass": 74,
+          "kick": 70,
+          "stamina": 78,
+          "attack": 87,
           "confidence": "high"
         },
         "stats": {
@@ -17543,14 +17543,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 84,
-          "speed": 91,
-          "tackle": 72,
-          "pass": 82,
-          "kick": 82,
-          "stamina": 87,
-          "attack": 91,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 84,
+          "tackle": 65,
+          "pass": 72,
+          "kick": 68,
+          "stamina": 76,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -17575,14 +17575,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lucas",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 64,
-          "stamina": 73,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 65,
+          "tackle": 81,
+          "pass": 65,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -17607,14 +17607,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Niko",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 71,
-          "tackle": 72,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -17640,13 +17640,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 71,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -17670,14 +17670,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "CAIÇARA",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
-          "tackle": 73,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 74,
-          "attack": 73,
-          "confidence": "high"
+          "overall": 70,
+          "speed": 65,
+          "tackle": 81,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 3,
@@ -17701,14 +17701,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 19,
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 72,
+          "overall": 73,
+          "speed": 76,
           "tackle": 73,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 74,
-          "attack": 73,
-          "confidence": "high"
+          "pass": 69,
+          "kick": 59,
+          "stamina": 79,
+          "attack": 78,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -17733,14 +17733,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "joãozinho",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 77,
-          "tackle": 72,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 70,
+          "speed": 68,
+          "tackle": 79,
+          "pass": 65,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -17763,13 +17763,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 21,
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 74,
-          "tackle": 73,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 74,
-          "attack": 76,
+          "overall": 75,
+          "speed": 81,
+          "tackle": 67,
+          "pass": 76,
+          "kick": 68,
+          "stamina": 78,
+          "attack": 80,
           "confidence": "high"
         },
         "stats": {
@@ -17792,14 +17792,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 84,
-          "speed": 91,
-          "tackle": 73,
-          "pass": 83,
-          "kick": 83,
-          "stamina": 84,
-          "attack": 91,
-          "confidence": "high"
+          "overall": 72,
+          "speed": 76,
+          "tackle": 64,
+          "pass": 73,
+          "kick": 72,
+          "stamina": 73,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -17824,13 +17824,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Torus",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "overall": 73,
+          "speed": 75,
+          "tackle": 73,
+          "pass": 72,
+          "kick": 61,
+          "stamina": 77,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -17855,13 +17855,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 23,
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 95,
-          "tackle": 67,
-          "pass": 75,
-          "kick": 65,
-          "stamina": 82,
-          "attack": 95,
+          "overall": 76,
+          "speed": 81,
+          "tackle": 72,
+          "pass": 76,
+          "kick": 63,
+          "stamina": 79,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -17885,11 +17885,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gui-abraao/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -17915,11 +17915,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-bastos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -17945,14 +17945,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/aramis-amador-pellizer-victorica-padilla/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 72,
+          "tackle": 72,
+          "pass": 73,
+          "kick": 61,
+          "stamina": 78,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -17975,14 +17975,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-chinedu-de-jesus-anyaorah/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 84,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 85,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -18005,14 +18005,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/dan-de-almeida-ferraz-pellicciari/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 81,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -18035,14 +18035,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-fagundes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 76,
+          "tackle": 67,
+          "pass": 81,
+          "kick": 84,
+          "stamina": 78,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -18065,13 +18065,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-matias-de-oliveira-araujo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 68,
+          "tackle": 79,
+          "pass": 65,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -18095,11 +18095,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquin-caride/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18125,11 +18125,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18155,14 +18155,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiggi-mammocci/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 81,
+          "tackle": 65,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 75,
+          "attack": 81,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -18184,11 +18184,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18214,14 +18214,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-ascenco-peloggia/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 76,
           "speed": 70,
-          "tackle": 70,
+          "tackle": 88,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 60,
+          "stamina": 84,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -18244,11 +18244,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bartolome/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18274,11 +18274,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-fonzaghi-ferramola2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18304,14 +18304,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-de-faccio-nunes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -18334,11 +18334,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matias-amador-pellizer-victorica-padilla2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18363,11 +18363,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18393,11 +18393,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18423,11 +18423,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/peter-bernardi-grandjean-thomsen2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18453,14 +18453,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/segundo-maria-duret/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 69,
+          "tackle": 80,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -18483,11 +18483,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/guilherme-toro-de-nose/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18513,14 +18513,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-marcos-de-medeiros-matile/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -18543,11 +18543,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-viana-da-silva-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -18587,14 +18587,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Balda",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 81,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 71,
+          "tackle": 88,
+          "pass": 71,
+          "kick": 61,
+          "stamina": 85,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -18618,13 +18618,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 2,
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 82,
-          "attack": 69,
+          "overall": 75,
+          "speed": 68,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -18650,13 +18650,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Paulo Fernandes",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 57,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 45,
-          "stamina": 82,
-          "attack": 69,
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
           "confidence": "high"
         },
         "stats": {
@@ -18679,14 +18679,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
           "stamina": 84,
-          "attack": 69,
-          "confidence": "medium"
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -18711,14 +18711,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marito",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
           "stamina": 84,
-          "attack": 68,
-          "confidence": "medium"
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -18743,14 +18743,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Maurão",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 61,
-          "tackle": 82,
-          "pass": 60,
-          "kick": 45,
-          "stamina": 84,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 70,
+          "tackle": 83,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -18775,13 +18775,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gnu",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 63,
-          "tackle": 82,
-          "pass": 61,
-          "kick": 45,
-          "stamina": 83,
-          "attack": 74,
+          "overall": 75,
+          "speed": 73,
+          "tackle": 83,
+          "pass": 70,
+          "kick": 57,
+          "stamina": 84,
+          "attack": 77,
           "confidence": "high"
         },
         "stats": {
@@ -18808,13 +18808,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 74,
-          "speed": 72,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 90,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
           "attack": 76,
-          "confidence": "medium"
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -18839,13 +18839,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thomas",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 72,
-          "tackle": 85,
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
           "pass": 67,
-          "kick": 48,
-          "stamina": 87,
-          "attack": 76,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -18872,11 +18872,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
+          "speed": 72,
+          "tackle": 80,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
           "attack": 75,
           "confidence": "medium"
         },
@@ -18904,11 +18904,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 74,
-          "speed": 72,
-          "tackle": 84,
-          "pass": 67,
-          "kick": 48,
-          "stamina": 87,
+          "speed": 73,
+          "tackle": 81,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
           "attack": 76,
           "confidence": "high"
         },
@@ -18935,13 +18935,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Henricão",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 76,
-          "tackle": 85,
-          "pass": 69,
-          "kick": 48,
-          "stamina": 91,
-          "attack": 84,
+          "overall": 76,
+          "speed": 75,
+          "tackle": 84,
+          "pass": 70,
+          "kick": 57,
+          "stamina": 85,
+          "attack": 80,
           "confidence": "high"
         },
         "stats": {
@@ -18967,13 +18967,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gu Gobeti",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 85,
-          "tackle": 70,
-          "pass": 91,
-          "kick": 80,
-          "stamina": 90,
-          "attack": 86,
+          "overall": 77,
+          "speed": 78,
+          "tackle": 68,
+          "pass": 82,
+          "kick": 75,
+          "stamina": 80,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -18999,14 +18999,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Zé",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 88,
-          "stamina": 86,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 76,
+          "tackle": 67,
+          "pass": 78,
+          "kick": 77,
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19028,14 +19028,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 91,
+          "overall": 74,
+          "speed": 85,
           "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 85,
-          "attack": 89,
-          "confidence": "medium"
+          "pass": 70,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -19060,14 +19060,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ronaldo",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 95,
-          "tackle": 66,
-          "pass": 75,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 78,
+          "speed": 90,
+          "tackle": 67,
+          "pass": 73,
+          "kick": 67,
+          "stamina": 79,
+          "attack": 91,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19092,14 +19092,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lipe",
         "appeared2026": true,
         "skills": {
-          "overall": 84,
-          "speed": 93,
-          "tackle": 77,
-          "pass": 83,
-          "kick": 62,
-          "stamina": 87,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 81,
+          "tackle": 73,
+          "pass": 78,
+          "kick": 65,
+          "stamina": 79,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19124,14 +19124,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Leo",
         "appeared2026": true,
         "skills": {
-          "overall": 85,
-          "speed": 92,
-          "tackle": 75,
-          "pass": 83,
-          "kick": 79,
-          "stamina": 87,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 79,
+          "tackle": 72,
+          "pass": 77,
+          "kick": 70,
+          "stamina": 79,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -19156,14 +19156,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Guto",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 89,
-          "tackle": 75,
-          "pass": 81,
-          "kick": 61,
-          "stamina": 84,
-          "attack": 92,
-          "confidence": "medium"
+          "overall": 76,
+          "speed": 83,
+          "tackle": 69,
+          "pass": 74,
+          "kick": 65,
+          "stamina": 77,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19185,13 +19185,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 77,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 82,
-          "attack": 88,
+          "overall": 74,
+          "speed": 77,
+          "tackle": 71,
+          "pass": 73,
+          "kick": 64,
+          "stamina": 78,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -19217,13 +19217,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gabi",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 85,
-          "attack": 89,
+          "overall": 72,
+          "speed": 80,
+          "tackle": 66,
+          "pass": 71,
+          "kick": 61,
+          "stamina": 74,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -19246,14 +19246,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
-          "speed": 92,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 91,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 79,
+          "tackle": 72,
+          "pass": 70,
+          "kick": 61,
+          "stamina": 79,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -19278,13 +19278,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bryan",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 88,
-          "tackle": 72,
-          "pass": 81,
-          "kick": 82,
-          "stamina": 86,
-          "attack": 86,
+          "overall": 78,
+          "speed": 81,
+          "tackle": 71,
+          "pass": 79,
+          "kick": 74,
+          "stamina": 79,
+          "attack": 84,
           "confidence": "high"
         },
         "stats": {
@@ -19310,14 +19310,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rafa",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 81,
-          "tackle": 70,
-          "pass": 89,
-          "kick": 71,
-          "stamina": 89,
+          "overall": 77,
+          "speed": 79,
+          "tackle": 69,
+          "pass": 83,
+          "kick": 72,
+          "stamina": 81,
           "attack": 78,
-          "confidence": "medium"
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19342,13 +19342,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Platão",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 69,
+          "overall": 73,
+          "speed": 68,
+          "tackle": 84,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -19374,13 +19374,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nicolas Rocha",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "overall": 73,
+          "speed": 67,
+          "tackle": 84,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -19406,14 +19406,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Baiacu",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
+          "overall": 73,
           "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 62,
-          "stamina": 74,
-          "attack": 71,
-          "confidence": "high"
+          "tackle": 81,
+          "pass": 69,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -19438,14 +19438,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pedro Xotta",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 62,
-          "stamina": 74,
-          "attack": 71,
-          "confidence": "high"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -19470,14 +19470,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Caminhoneiro",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 78,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 85,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 82,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19502,14 +19502,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Diegão",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 80,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -19534,14 +19534,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Malvadão",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 71,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 75,
+          "tackle": 81,
+          "pass": 70,
+          "kick": 57,
+          "stamina": 84,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19566,13 +19566,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Star",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 74,
-          "tackle": 71,
+          "overall": 74,
+          "speed": 80,
+          "tackle": 67,
           "pass": 72,
-          "kick": 63,
-          "stamina": 73,
-          "attack": 76,
+          "kick": 67,
+          "stamina": 77,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -19598,14 +19598,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Samurai",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 77,
-          "pass": 81,
-          "kick": 62,
-          "stamina": 84,
-          "attack": 89,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 80,
+          "tackle": 71,
+          "pass": 73,
+          "kick": 66,
+          "stamina": 78,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19630,14 +19630,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jorgito",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 84,
-          "tackle": 77,
-          "pass": 80,
-          "kick": 62,
-          "stamina": 84,
-          "attack": 84,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 80,
+          "tackle": 70,
+          "pass": 75,
+          "kick": 64,
+          "stamina": 78,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -19660,14 +19660,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/adrio-luiz-de-melo-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -19690,11 +19690,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/caio-falzoni-leite-orioli/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -19720,14 +19720,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ashwin-devito-regenald/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 73,
+          "tackle": 73,
+          "pass": 73,
+          "kick": 67,
+          "stamina": 75,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -19750,13 +19750,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquim-sartori-de-souza-campos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -19780,11 +19780,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-cintra-batelli/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -19810,13 +19810,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-bank-setti-konder-comparato/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 71,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 52,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -19840,11 +19840,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ismael-vilela-resende-almeida/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -19870,11 +19870,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-marques-o-palacao/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -19900,14 +19900,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-bonini/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 67,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -19930,11 +19930,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cedric-jackson-piembeng-wamba/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -19960,11 +19960,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-henrique-faria-barrozo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -19990,11 +19990,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/darius-bourdon/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20020,11 +20020,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-dias-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20050,11 +20050,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-dos-santos-cavalcante/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20080,14 +20080,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diorge-jefferson-alexandre-de-jesus-junior/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 79,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -20110,13 +20110,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/enzo-rodrigues-carvalho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 66,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -20140,11 +20140,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erich-sebastian-hacker-poetscher/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20170,13 +20170,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-henrique-troguilho-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 71,
+          "pass": 71,
+          "kick": 65,
+          "stamina": 73,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -20200,11 +20200,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/felipe-teodoro-sa-rodrigues/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20230,11 +20230,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/felipe-altieri-lopez/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20260,11 +20260,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-gaion-correa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20290,13 +20290,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-goncalves-cunha/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 74,
+          "kick": 69,
           "stamina": 72,
-          "attack": 70,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -20320,14 +20320,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-donato-pires-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -20350,11 +20350,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20380,11 +20380,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-augusto-dantas-veriato/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20410,11 +20410,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-de-arruda-reis-lopes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20440,14 +20440,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geronimo-jose-bouzas-sanchis-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 77,
+          "speed": 79,
+          "tackle": 69,
+          "pass": 81,
+          "kick": 74,
+          "stamina": 80,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -20470,14 +20470,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-martins-pinheiro-rocha/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 85,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -20500,11 +20500,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-gandin-caldeira-cardoso-neves/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20530,11 +20530,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-lima-haluska/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20560,11 +20560,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/higor-egidio-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20590,14 +20590,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jack-robert-ruiz-saavedra/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 83,
+          "tackle": 65,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -20620,13 +20620,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaco-botha/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 73,
+          "kick": 69,
+          "stamina": 71,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -20650,11 +20650,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-fiorio-mobrige-tryanno/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20680,11 +20680,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-kenzo-sato/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20710,11 +20710,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-saraiva-lemos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20740,13 +20740,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/luigi-martorelli-brito-siqueira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 70,
+          "speed": 68,
+          "tackle": 79,
+          "pass": 65,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -20770,11 +20770,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-augusto-haderspeck-sales-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20800,11 +20800,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcello-arminante-bruno/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20830,14 +20830,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-sugarava-breviglieri-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 78,
+          "tackle": 68,
+          "pass": 78,
+          "kick": 74,
+          "stamina": 77,
+          "attack": 82,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -20860,11 +20860,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matias-broussain-de-moraes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20890,11 +20890,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-assis-marques-guimaraes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20920,11 +20920,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nikolas-henrique-goncalves-gouvea-paninka/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20950,11 +20950,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benjamin-anness-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -20980,14 +20980,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-orion-teles-fernandes-mariano/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 76,
+          "speed": 75,
+          "tackle": 83,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 85,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -21010,11 +21010,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21040,14 +21040,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-rojas-duailibi/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -21070,13 +21070,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-augusto-souza-di-pilla/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 71,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
+          "tackle": 63,
+          "pass": 75,
+          "kick": 74,
           "stamina": 72,
-          "attack": 70,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -21100,13 +21100,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-bresciani-rotger-armelin2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 77,
+          "kick": 67,
+          "stamina": 74,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -21130,11 +21130,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-do-nascimento-carneiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21160,11 +21160,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/leonardo-lins-pitanga/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21190,14 +21190,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-ferrer-spago/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 72,
+          "tackle": 72,
+          "pass": 72,
+          "kick": 66,
+          "stamina": 75,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -21220,14 +21220,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-barre/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 77,
+          "tackle": 69,
+          "pass": 73,
+          "kick": 63,
+          "stamina": 77,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -21250,11 +21250,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/reginaldo-cavalcante-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21280,14 +21280,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-gabriel-sarti-miranda/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 75,
+          "tackle": 69,
+          "pass": 71,
+          "kick": 63,
+          "stamina": 76,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -21310,11 +21310,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sebastien-younan-cubero/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21340,14 +21340,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-ferrer-spago/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 76,
+          "tackle": 66,
+          "pass": 81,
+          "kick": 69,
+          "stamina": 78,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -21370,11 +21370,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/tariq-ibn-massud/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21400,11 +21400,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/theo-gaussot/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21430,11 +21430,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/theo-barbosa-cavalcante-simao/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21460,14 +21460,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-maihara/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 75,
+          "speed": 78,
+          "tackle": 67,
+          "pass": 79,
+          "kick": 73,
+          "stamina": 78,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -21490,13 +21490,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-pereira-lisboa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 63,
+          "pass": 69,
           "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "stamina": 71,
+          "attack": 76,
           "confidence": "base"
         },
         "stats": {
@@ -21520,13 +21520,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-nenartavis/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
+          "overall": 71,
+          "speed": 67,
+          "tackle": 78,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 78,
+          "attack": 73,
           "confidence": "base"
         },
         "stats": {
@@ -21550,11 +21550,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-martini-de-oliveira-cordeiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21580,11 +21580,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/vinicius-palmero-farias-ribeiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21610,14 +21610,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-bezerra-de-medeiros/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -21640,11 +21640,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gomes-juca/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -21684,13 +21684,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-hugo-da-mata/1-Thumbnail.jpeg",
         "registered2026": false,
         "skills": {
-          "overall": 65,
-          "speed": 56,
-          "tackle": 80,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 80,
-          "attack": 66,
+          "overall": 73,
+          "speed": 66,
+          "tackle": 85,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 81,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -21713,14 +21713,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 83,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 82,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -21745,13 +21745,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Crazy Cop",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
+          "overall": 73,
+          "speed": 69,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 57,
           "stamina": 81,
-          "attack": 67,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -21777,13 +21777,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thalão",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 67,
+          "overall": 75,
+          "speed": 68,
+          "tackle": 87,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 83,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -21806,14 +21806,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 84,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 71,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -21835,13 +21835,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
+          "overall": 73,
+          "speed": 69,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 58,
           "stamina": 81,
-          "attack": 68,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -21867,14 +21867,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Teacher",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 84,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 77,
+          "pass": 71,
+          "kick": 60,
+          "stamina": 81,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -21896,13 +21896,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 80,
-          "speed": 85,
-          "tackle": 75,
-          "pass": 80,
-          "kick": 61,
-          "stamina": 88,
-          "attack": 86,
+          "overall": 77,
+          "speed": 78,
+          "tackle": 78,
+          "pass": 75,
+          "kick": 62,
+          "stamina": 82,
+          "attack": 82,
           "confidence": "high"
         },
         "stats": {
@@ -21929,12 +21929,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 74,
+          "speed": 72,
+          "tackle": 81,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 82,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -21960,14 +21960,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jojo",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
+          "overall": 76,
+          "speed": 75,
           "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
-          "confidence": "medium"
+          "pass": 71,
+          "kick": 57,
+          "stamina": 85,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -21992,14 +21992,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lolo",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
+          "overall": 75,
+          "speed": 73,
           "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 75,
-          "confidence": "medium"
+          "pass": 70,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -22023,12 +22023,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "skills": {
           "overall": 73,
           "speed": 71,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 91,
-          "attack": 74,
-          "confidence": "high"
+          "tackle": 82,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -22053,14 +22053,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Buldogue",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 71,
+          "overall": 77,
+          "speed": 77,
           "tackle": 83,
-          "pass": 66,
-          "kick": 47,
-          "stamina": 90,
-          "attack": 74,
-          "confidence": "medium"
+          "pass": 72,
+          "kick": 59,
+          "stamina": 86,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -22085,13 +22085,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Juan",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 80,
+          "overall": 75,
+          "speed": 76,
           "tackle": 68,
-          "pass": 88,
-          "kick": 70,
-          "stamina": 90,
-          "attack": 76,
+          "pass": 81,
+          "kick": 68,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "high"
         },
         "stats": {
@@ -22114,14 +22114,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 80,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 87,
-          "stamina": 86,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 76,
+          "tackle": 70,
+          "pass": 80,
+          "kick": 81,
+          "stamina": 79,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -22146,13 +22146,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Aislan",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
+          "overall": 75,
+          "speed": 84,
+          "tackle": 68,
+          "pass": 71,
           "kick": 63,
-          "stamina": 86,
-          "attack": 88,
+          "stamina": 79,
+          "attack": 83,
           "confidence": "high"
         },
         "stats": {
@@ -22175,13 +22175,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
-          "speed": 83,
-          "tackle": 75,
-          "pass": 79,
-          "kick": 61,
-          "stamina": 88,
-          "attack": 82,
+          "overall": 74,
+          "speed": 78,
+          "tackle": 68,
+          "pass": 74,
+          "kick": 70,
+          "stamina": 76,
+          "attack": 78,
           "confidence": "high"
         },
         "stats": {
@@ -22207,14 +22207,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bob",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 86,
-          "tackle": 75,
-          "pass": 80,
-          "kick": 64,
-          "stamina": 87,
-          "attack": 87,
-          "confidence": "medium"
+          "overall": 77,
+          "speed": 81,
+          "tackle": 74,
+          "pass": 77,
+          "kick": 65,
+          "stamina": 80,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -22239,13 +22239,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Titino",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 64,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 86,
-          "attack": 88,
+          "overall": 77,
+          "speed": 85,
+          "tackle": 68,
+          "pass": 75,
+          "kick": 71,
+          "stamina": 79,
+          "attack": 85,
           "confidence": "high"
         },
         "stats": {
@@ -22271,13 +22271,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "André Pires",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 87,
-          "tackle": 70,
-          "pass": 80,
-          "kick": 85,
-          "stamina": 87,
-          "attack": 85,
+          "overall": 71,
+          "speed": 76,
+          "tackle": 63,
+          "pass": 71,
+          "kick": 72,
+          "stamina": 71,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -22303,14 +22303,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Felipe",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 70,
-          "pass": 80,
-          "kick": 81,
-          "stamina": 84,
-          "attack": 84,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 74,
+          "tackle": 69,
+          "pass": 76,
+          "kick": 72,
+          "stamina": 77,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -22335,14 +22335,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gustavão",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 56,
+          "overall": 72,
+          "speed": 68,
           "tackle": 81,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 78,
-          "attack": 67,
-          "confidence": "high"
+          "pass": 67,
+          "kick": 58,
+          "stamina": 79,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -22364,14 +22364,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 74,
-          "speed": 79,
-          "tackle": 70,
-          "pass": 74,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 86,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 78,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -22397,13 +22397,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -22428,14 +22428,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lincoln",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 59,
-          "tackle": 81,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 78,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 70,
+          "tackle": 85,
+          "pass": 69,
+          "kick": 60,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -22461,13 +22461,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -22492,13 +22492,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tchelo",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 72,
+          "speed": 79,
+          "tackle": 66,
           "pass": 70,
           "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "stamina": 75,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -22522,13 +22522,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -22553,13 +22553,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Prosty",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
+          "overall": 73,
           "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "tackle": 80,
+          "pass": 69,
+          "kick": 59,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -22583,13 +22583,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 67,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -22612,13 +22612,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 20,
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 81,
-          "attack": 68,
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -22643,14 +22643,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 21,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 69,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 74,
-          "attack": 69,
-          "confidence": "high"
+          "overall": 70,
+          "speed": 71,
+          "tackle": 62,
+          "pass": 77,
+          "kick": 67,
+          "stamina": 72,
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 3,
@@ -22675,13 +22675,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "MACHADO",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
+          "overall": 72,
+          "speed": 69,
+          "tackle": 77,
+          "pass": 69,
+          "kick": 60,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -22708,13 +22708,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 73,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 72,
+          "tackle": 63,
+          "pass": 73,
+          "kick": 69,
+          "stamina": 71,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -22739,14 +22739,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Facundo",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 78,
+          "overall": 73,
+          "speed": 77,
           "tackle": 66,
-          "pass": 86,
-          "kick": 87,
-          "stamina": 83,
-          "attack": 81,
-          "confidence": "high"
+          "pass": 75,
+          "kick": 67,
+          "stamina": 76,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 3,
@@ -22769,11 +22769,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/filipe-cesar-lopes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -22799,11 +22799,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-piassi-dias-de-castro2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -22829,11 +22829,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fillipe-gibran/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -22859,11 +22859,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michel-silva-fernandes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -22889,11 +22889,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hugo--henrique-nunes-prisco/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -22919,11 +22919,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquin-tacchi-28-03-1989/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -22949,11 +22949,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/karlos-eduardo-dos-santos-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -22979,14 +22979,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-aguiar-ramos-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 77,
+          "tackle": 73,
+          "pass": 74,
+          "kick": 61,
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -23009,11 +23009,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luciano-rodrigo-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23039,11 +23039,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-antonio-de-olveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23069,11 +23069,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-tulio-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23099,11 +23099,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maykon-teodoro-mesquita2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23129,11 +23129,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-henrique-couto-rodrigues/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23159,11 +23159,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elcio-pinheiro-lopes-junior2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23189,14 +23189,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/roberto-franco-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
+          "overall": 73,
+          "speed": 69,
+          "tackle": 79,
           "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "kick": 61,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -23219,14 +23219,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-henrique-rodrigues/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 82,
+          "tackle": 65,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 75,
+          "attack": 81,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -23249,11 +23249,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tiago-jose-de-souza-gomes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23279,11 +23279,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-timoteu-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23309,11 +23309,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-gabriel-de-souza-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23339,11 +23339,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victorhugodamata-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 70,
           "tackle": 70,
           "pass": 70,
-          "kick": 62,
+          "kick": 64,
           "stamina": 72,
           "attack": 70,
           "confidence": "base"
@@ -23369,14 +23369,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-gomes-costas/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 72,
-          "attack": 70,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 77,
+          "tackle": 67,
+          "pass": 76,
+          "kick": 72,
+          "stamina": 76,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -23399,13 +23399,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-cesar-zanon2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 74,
+          "kick": 69,
           "stamina": 72,
-          "attack": 70,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -23442,14 +23442,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Denner",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 55,
-          "tackle": 80,
-          "pass": 56,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23474,14 +23474,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "indio",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 55,
-          "tackle": 81,
-          "pass": 56,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23505,14 +23505,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "gui",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 58,
-          "tackle": 82,
-          "pass": 58,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -23537,14 +23537,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "gilvan",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 55,
-          "tackle": 80,
-          "pass": 57,
-          "kick": 43,
-          "stamina": 76,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -23569,14 +23569,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "GUTO",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 59,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 71,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 83,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -23601,14 +23601,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "BAIANO",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 59,
-          "tackle": 79,
-          "pass": 58,
-          "kick": 42,
-          "stamina": 82,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 69,
+          "tackle": 75,
+          "pass": 70,
+          "kick": 63,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23630,13 +23630,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 59,
-          "tackle": 81,
-          "pass": 59,
-          "kick": 43,
-          "stamina": 82,
-          "attack": 69,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 75,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 77,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -23659,13 +23659,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 72,
-          "speed": 70,
-          "tackle": 83,
-          "pass": 66,
-          "kick": 46,
-          "stamina": 85,
-          "attack": 75,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 76,
+          "pass": 64,
+          "kick": 52,
+          "stamina": 77,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -23691,14 +23691,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Yuri",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 70,
-          "tackle": 82,
-          "pass": 65,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 76,
+          "pass": 70,
+          "kick": 60,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23724,13 +23724,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 70,
-          "tackle": 84,
-          "pass": 66,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 75,
-          "confidence": "medium"
+          "speed": 72,
+          "tackle": 80,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -23754,14 +23754,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "VOLMAR",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 79,
-          "tackle": 83,
-          "pass": 69,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 91,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 75,
+          "tackle": 81,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23786,14 +23786,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Andrei Santos",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 79,
-          "tackle": 69,
-          "pass": 88,
-          "kick": 76,
-          "stamina": 87,
-          "attack": 77,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 77,
+          "tackle": 67,
+          "pass": 81,
+          "kick": 71,
+          "stamina": 79,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -23818,14 +23818,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "kiko",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 77,
-          "tackle": 67,
-          "pass": 86,
-          "kick": 86,
-          "stamina": 84,
-          "attack": 82,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 75,
+          "tackle": 66,
+          "pass": 78,
+          "kick": 77,
+          "stamina": 76,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -23850,14 +23850,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "ARTHUR",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 90,
-          "tackle": 63,
-          "pass": 71,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 88,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 82,
+          "tackle": 62,
+          "pass": 69,
+          "kick": 62,
+          "stamina": 75,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23882,14 +23882,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Professor",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 95,
-          "tackle": 64,
-          "pass": 73,
-          "kick": 71,
-          "stamina": 83,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 79,
+          "tackle": 68,
+          "pass": 72,
+          "kick": 62,
+          "stamina": 76,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23914,14 +23914,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "TAINÃ",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 88,
-          "tackle": 76,
-          "pass": 81,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 93,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 78,
+          "tackle": 69,
+          "pass": 75,
+          "kick": 70,
+          "stamina": 77,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -23946,14 +23946,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "vini",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 82,
-          "tackle": 75,
-          "pass": 78,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 80,
+          "tackle": 67,
+          "pass": 71,
+          "kick": 62,
+          "stamina": 76,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -23978,14 +23978,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "noll",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 90,
-          "tackle": 65,
-          "pass": 72,
-          "kick": 62,
-          "stamina": 83,
-          "attack": 89,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 83,
+          "tackle": 63,
+          "pass": 69,
+          "kick": 63,
+          "stamina": 75,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -24010,13 +24010,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "GUGA",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 86,
-          "tackle": 71,
-          "pass": 80,
-          "kick": 80,
-          "stamina": 85,
-          "attack": 85,
+          "overall": 71,
+          "speed": 76,
+          "tackle": 63,
+          "pass": 71,
+          "kick": 71,
+          "stamina": 72,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -24042,14 +24042,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Davi",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -24073,13 +24073,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dodo",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -24105,13 +24105,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Felipão",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 71,
+          "speed": 66,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 78,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -24136,14 +24136,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "GASPARETTO",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 73,
-          "tackle": 83,
-          "pass": 67,
-          "kick": 46,
-          "stamina": 85,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 76,
+          "tackle": 79,
+          "pass": 70,
+          "kick": 57,
+          "stamina": 82,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -24168,13 +24168,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Kowa",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 82,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -24200,13 +24200,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tulio",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 75,
-          "tackle": 70,
-          "pass": 71,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 78,
+          "overall": 70,
+          "speed": 68,
+          "tackle": 77,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -24229,14 +24229,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 76,
+          "overall": 75,
           "speed": 78,
-          "tackle": 70,
-          "pass": 74,
-          "kick": 81,
-          "stamina": 71,
-          "attack": 86,
-          "confidence": "medium"
+          "tackle": 68,
+          "pass": 75,
+          "kick": 74,
+          "stamina": 76,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -24260,14 +24260,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 23,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 72,
-          "tackle": 70,
-          "pass": 71,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 75,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 80,
+          "tackle": 65,
+          "pass": 72,
+          "kick": 69,
+          "stamina": 75,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -24290,11 +24290,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giovani-gregori-amaral/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -24320,11 +24320,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauricio-rocha-ribeiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -24350,14 +24350,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaue-dornelles/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 73,
+          "speed": 75,
+          "tackle": 76,
           "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "kick": 56,
+          "stamina": 80,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -24380,11 +24380,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hiago-alexandre-perrotti2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -24409,14 +24409,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 73,
+          "speed": 70,
+          "tackle": 82,
           "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "kick": 55,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -24438,11 +24438,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -24468,11 +24468,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/taina-girardi2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -24509,13 +24509,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 1,
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 55,
-          "tackle": 81,
-          "pass": 56,
-          "kick": 43,
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 68,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -24541,13 +24541,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "DUDU",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 55,
+          "overall": 69,
+          "speed": 63,
           "tackle": 81,
-          "pass": 56,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 68,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -24571,13 +24571,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 59,
-          "tackle": 80,
-          "pass": 58,
-          "kick": 43,
-          "stamina": 82,
-          "attack": 69,
+          "overall": 71,
+          "speed": 66,
+          "tackle": 82,
+          "pass": 65,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -24603,13 +24603,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "BANDEIRA",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 79,
-          "tackle": 83,
-          "pass": 69,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 91,
+          "overall": 72,
+          "speed": 71,
+          "tackle": 78,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -24635,13 +24635,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Limon",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 70,
-          "tackle": 83,
-          "pass": 65,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 77,
+          "pass": 64,
           "kick": 50,
-          "stamina": 88,
-          "attack": 75,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -24667,13 +24667,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Angelo Marcucci",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 79,
-          "tackle": 83,
+          "overall": 72,
+          "speed": 72,
+          "tackle": 75,
           "pass": 69,
-          "kick": 46,
-          "stamina": 82,
-          "attack": 91,
+          "kick": 57,
+          "stamina": 78,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -24698,13 +24698,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Matheus",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 69,
-          "stamina": 87,
-          "attack": 77,
+          "overall": 72,
+          "speed": 75,
+          "tackle": 65,
+          "pass": 78,
+          "kick": 66,
+          "stamina": 76,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -24730,14 +24730,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Chuck",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 77,
-          "tackle": 66,
-          "pass": 85,
-          "kick": 95,
-          "stamina": 84,
-          "attack": 82,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 78,
+          "kick": 80,
+          "stamina": 74,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -24759,14 +24759,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 82,
-          "tackle": 75,
-          "pass": 78,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 65,
+          "pass": 75,
+          "kick": 73,
+          "stamina": 75,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -24788,14 +24788,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
-          "speed": 95,
+          "overall": 73,
+          "speed": 75,
           "tackle": 64,
-          "pass": 73,
-          "kick": 62,
-          "stamina": 83,
-          "attack": 95,
-          "confidence": "medium"
+          "pass": 77,
+          "kick": 73,
+          "stamina": 75,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -24819,14 +24819,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "CK",
         "appeared2026": true,
         "skills": {
-          "overall": 84,
-          "speed": 95,
-          "tackle": 70,
-          "pass": 83,
-          "kick": 80,
-          "stamina": 85,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 64,
+          "pass": 75,
+          "kick": 75,
+          "stamina": 74,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -24852,13 +24852,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -24882,13 +24882,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 17,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 65,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 73,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -24915,12 +24915,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "speed": 65,
+          "tackle": 79,
+          "pass": 64,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -24945,13 +24945,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 20,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -24976,13 +24976,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 21,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 71,
+          "speed": 79,
+          "tackle": 62,
+          "pass": 70,
+          "kick": 62,
+          "stamina": 74,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -25008,13 +25008,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pedro",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 71,
+          "speed": 68,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -25040,13 +25040,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Paulo Barbosa",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 69,
+          "overall": 71,
+          "speed": 75,
           "tackle": 68,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 69,
+          "pass": 72,
+          "kick": 59,
+          "stamina": 74,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -25070,13 +25070,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 24,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
+          "overall": 70,
           "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "tackle": 77,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -25102,13 +25102,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Nando",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
+          "overall": 73,
+          "speed": 75,
+          "tackle": 73,
           "pass": 69,
           "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "stamina": 78,
+          "attack": 80,
           "confidence": "medium"
         },
         "stats": {
@@ -25134,14 +25134,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "MARCOS",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 68,
+          "speed": 68,
+          "tackle": 68,
+          "pass": 68,
+          "kick": 62,
+          "stamina": 70,
+          "attack": 68,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -25164,13 +25164,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 28,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
+          "overall": 72,
+          "speed": 79,
+          "tackle": 67,
           "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "kick": 60,
+          "stamina": 76,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -25196,13 +25196,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Italo",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 81,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -25226,12 +25226,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "skills": {
           "overall": 69,
           "speed": 69,
-          "tackle": 70,
+          "tackle": 69,
           "pass": 69,
-          "kick": 61,
+          "kick": 63,
           "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "attack": 69,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -25254,11 +25254,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25284,14 +25284,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-binde-de-souza/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 75,
+          "speed": 79,
+          "tackle": 72,
+          "pass": 75,
+          "kick": 62,
+          "stamina": 78,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -25313,14 +25313,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 69,
+          "tackle": 75,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -25343,11 +25343,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-bourscheid-chaves/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25373,14 +25373,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristian-pick/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 78,
+          "tackle": 63,
+          "pass": 74,
+          "kick": 64,
+          "stamina": 76,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -25403,11 +25403,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/dalai-ossel-dietrich/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25433,14 +25433,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-sparrenberger2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 69,
+          "tackle": 78,
+          "pass": 65,
+          "kick": 51,
+          "stamina": 79,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -25463,11 +25463,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-andre-correa-silveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25493,14 +25493,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-henrique-machado2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 79,
+          "tackle": 65,
+          "pass": 72,
+          "kick": 71,
+          "stamina": 74,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -25523,11 +25523,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/israel-antonio-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25553,11 +25553,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/denis-almeida-parreiras-de-santana/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25583,11 +25583,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/josue-da-silveira-machado/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25613,14 +25613,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-do-nascimento-alves/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 70,
+          "tackle": 70,
+          "pass": 70,
+          "kick": 64,
+          "stamina": 72,
+          "attack": 70,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -25643,11 +25643,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-alvarenga-menezes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25673,11 +25673,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-motta/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -25702,14 +25702,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 66,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -25732,14 +25732,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/roberto-zancanaro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 78,
+          "kick": 64,
+          "stamina": 74,
+          "attack": 69,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -25762,14 +25762,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/romulo-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 71,
+          "speed": 67,
+          "tackle": 76,
+          "pass": 69,
           "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -25802,13 +25802,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 80,
-          "pass": 56,
-          "kick": 42,
-          "stamina": 76,
-          "attack": 66,
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -25834,14 +25834,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Índio",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 64,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 71,
+          "tackle": 84,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 83,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -25863,13 +25863,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 64,
-          "speed": 55,
-          "tackle": 80,
-          "pass": 56,
-          "kick": 42,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 67,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -25895,14 +25895,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Clayton",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 66,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -25926,14 +25926,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 4,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 59,
-          "tackle": 79,
-          "pass": 58,
-          "kick": 42,
+          "overall": 73,
+          "speed": 69,
+          "tackle": 83,
+          "pass": 67,
+          "kick": 56,
           "stamina": 82,
-          "attack": 67,
-          "confidence": "medium"
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -25958,13 +25958,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Edson",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 79,
-          "pass": 58,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 67,
+          "overall": 71,
+          "speed": 66,
+          "tackle": 82,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -25989,13 +25989,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 6,
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 77,
           "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
+          "kick": 50,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -26021,14 +26021,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dariva",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 73,
+          "overall": 75,
+          "speed": 74,
           "tackle": 82,
-          "pass": 66,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 78,
-          "confidence": "medium"
+          "pass": 69,
+          "kick": 56,
+          "stamina": 84,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -26050,13 +26050,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 72,
-          "speed": 70,
-          "tackle": 82,
+          "overall": 70,
+          "speed": 69,
+          "tackle": 78,
           "pass": 65,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
+          "kick": 51,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -26079,14 +26079,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 76,
-          "speed": 78,
+          "overall": 72,
+          "speed": 75,
           "tackle": 66,
-          "pass": 86,
-          "kick": 68,
-          "stamina": 81,
-          "attack": 75,
-          "confidence": "medium"
+          "pass": 74,
+          "kick": 67,
+          "stamina": 76,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -26108,14 +26108,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 79,
-          "tackle": 67,
-          "pass": 87,
-          "kick": 71,
-          "stamina": 87,
-          "attack": 75,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 75,
+          "tackle": 64,
+          "pass": 79,
+          "kick": 79,
+          "stamina": 76,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -26140,14 +26140,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Joilson",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 90,
-          "tackle": 63,
+          "overall": 75,
+          "speed": 78,
+          "tackle": 74,
           "pass": 71,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 88,
-          "confidence": "medium"
+          "kick": 62,
+          "stamina": 80,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -26172,13 +26172,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Luan",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 77,
-          "tackle": 65,
-          "pass": 85,
-          "kick": 85,
-          "stamina": 84,
-          "attack": 80,
+          "overall": 71,
+          "speed": 78,
+          "tackle": 62,
+          "pass": 70,
+          "kick": 67,
+          "stamina": 73,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -26204,13 +26204,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lucas",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 87,
-          "tackle": 74,
-          "pass": 80,
-          "kick": 59,
-          "stamina": 82,
-          "attack": 91,
+          "overall": 71,
+          "speed": 70,
+          "tackle": 75,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 76,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -26236,14 +26236,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Django",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 88,
-          "tackle": 74,
-          "pass": 80,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 90,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 82,
+          "tackle": 70,
+          "pass": 71,
+          "kick": 63,
+          "stamina": 78,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -26268,14 +26268,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Teteu",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 82,
-          "tackle": 74,
-          "pass": 78,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 72,
+          "pass": 74,
+          "kick": 60,
+          "stamina": 78,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -26299,13 +26299,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 14,
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 92,
-          "tackle": 63,
-          "pass": 72,
-          "kick": 66,
-          "stamina": 80,
-          "attack": 92,
+          "overall": 69,
+          "speed": 79,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 60,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -26330,14 +26330,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 15,
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 86,
-          "tackle": 69,
-          "pass": 79,
-          "kick": 87,
-          "stamina": 85,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 81,
+          "tackle": 66,
+          "pass": 73,
+          "kick": 74,
+          "stamina": 76,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -26362,14 +26362,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thor",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 80,
-          "pass": 56,
-          "kick": 42,
-          "stamina": 76,
-          "attack": 66,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 83,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -26395,13 +26395,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 69,
-          "confidence": "medium"
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -26426,13 +26426,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Barba",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 82,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -26458,14 +26458,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Baiano",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 69,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 69,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -26490,13 +26490,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gigante",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 69,
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -26522,13 +26522,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "JOÃO MONASSA",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
+          "overall": 69,
+          "speed": 65,
+          "tackle": 79,
+          "pass": 64,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -26554,13 +26554,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Erick",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 89,
-          "tackle": 63,
-          "pass": 71,
-          "kick": 61,
-          "stamina": 80,
-          "attack": 87,
+          "overall": 70,
+          "speed": 76,
+          "tackle": 66,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 73,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -26583,14 +26583,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 77,
+          "tackle": 70,
+          "pass": 74,
+          "kick": 61,
+          "stamina": 76,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -26615,13 +26615,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marcos",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 69,
+          "overall": 71,
+          "speed": 79,
+          "tackle": 63,
+          "pass": 70,
+          "kick": 61,
+          "stamina": 73,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -26646,13 +26646,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 22,
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
+          "overall": 69,
+          "speed": 78,
+          "tackle": 60,
+          "pass": 67,
+          "kick": 61,
           "stamina": 71,
-          "attack": 68,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -26678,14 +26678,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Douglas",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 69,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 65,
+          "tackle": 82,
+          "pass": 65,
+          "kick": 56,
+          "stamina": 79,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -26707,13 +26707,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 69,
+          "overall": 71,
+          "speed": 71,
+          "tackle": 77,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -26737,14 +26737,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-cavalheiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 80,
+          "tackle": 64,
+          "pass": 69,
+          "kick": 62,
+          "stamina": 75,
+          "attack": 80,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -26767,11 +26767,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristiam-cardoso-de-araujo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -26797,11 +26797,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-dos-santos3/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -26827,14 +26827,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-rufino-dos-reis2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 75,
+          "tackle": 65,
+          "pass": 70,
+          "kick": 66,
+          "stamina": 73,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -26857,14 +26857,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-eugenio-lovato/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -26887,13 +26887,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-d-avila-camargo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 77,
+          "tackle": 63,
+          "pass": 67,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 76,
           "confidence": "base"
         },
         "stats": {
@@ -26917,11 +26917,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-campos-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -26947,14 +26947,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-fernando-campos-amundaray/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 69,
           "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "tackle": 77,
+          "pass": 64,
+          "kick": 50,
+          "stamina": 78,
+          "attack": 71,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -26977,14 +26977,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hiam-borges-rombaldi/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 71,
+          "tackle": 77,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -27007,11 +27007,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-gusta-cortez/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27037,11 +27037,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonathan-patrick-da-rosa2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27067,11 +27067,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-maciel-gomes2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27097,11 +27097,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-ricardo-mota-moraes2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27127,11 +27127,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-calixto-mattivi2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27169,13 +27169,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Alecão",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
+          "overall": 71,
+          "speed": 65,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 66,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -27201,13 +27201,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dani",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 66,
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -27233,13 +27233,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dias",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 66,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -27264,13 +27264,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 4,
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
-          "stamina": 82,
-          "attack": 67,
+          "overall": 70,
+          "speed": 65,
+          "tackle": 81,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -27296,13 +27296,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marcos",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
-          "stamina": 82,
-          "attack": 67,
+          "overall": 70,
+          "speed": 70,
+          "tackle": 72,
+          "pass": 68,
+          "kick": 59,
+          "stamina": 75,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -27328,13 +27328,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Wes",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
+          "overall": 70,
           "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
+          "tackle": 78,
+          "pass": 65,
+          "kick": 51,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -27360,12 +27360,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Benjamim",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
+          "overall": 70,
+          "speed": 71,
+          "tackle": 74,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 77,
           "attack": 73,
           "confidence": "medium"
         },
@@ -27392,13 +27392,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gabriel Levi",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
+          "overall": 70,
+          "speed": 67,
+          "tackle": 79,
+          "pass": 65,
+          "kick": 52,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -27421,13 +27421,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 77,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 68,
-          "stamina": 87,
-          "attack": 75,
+          "overall": 70,
+          "speed": 68,
+          "tackle": 71,
+          "pass": 72,
+          "kick": 60,
+          "stamina": 76,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -27453,13 +27453,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "jeff",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 76,
-          "tackle": 63,
-          "pass": 84,
-          "kick": 85,
-          "stamina": 84,
-          "attack": 79,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 61,
+          "pass": 73,
+          "kick": 73,
+          "stamina": 70,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -27484,13 +27484,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 11,
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 89,
-          "tackle": 62,
-          "pass": 70,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 87,
+          "overall": 69,
+          "speed": 80,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -27513,13 +27513,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 77,
-          "speed": 81,
-          "tackle": 73,
-          "pass": 77,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 81,
+          "overall": 69,
+          "speed": 73,
+          "tackle": 67,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 71,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -27545,13 +27545,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gustavo Eduardo Custodio",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 81,
-          "tackle": 73,
-          "pass": 77,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 81,
+          "overall": 69,
+          "speed": 73,
+          "tackle": 67,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 71,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -27577,13 +27577,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jeff",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 89,
-          "tackle": 62,
-          "pass": 70,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 87,
+          "overall": 69,
+          "speed": 80,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -27608,13 +27608,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 15,
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 85,
-          "tackle": 68,
-          "pass": 78,
-          "kick": 79,
-          "stamina": 85,
-          "attack": 83,
+          "overall": 69,
+          "speed": 74,
+          "tackle": 61,
+          "pass": 69,
+          "kick": 70,
+          "stamina": 69,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -27640,14 +27640,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rasta",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -27673,13 +27673,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -27705,13 +27705,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -27734,13 +27734,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robson-afonso-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 69,
           "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "tackle": 77,
+          "pass": 64,
+          "kick": 50,
+          "stamina": 77,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -27764,11 +27764,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/theo-ballinhas-soares/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27794,11 +27794,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-amancio/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27824,11 +27824,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-augusto-dos-santos-anjos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27854,11 +27854,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-gabriel-de-morais/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27884,11 +27884,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heitor-vaselechen-rodrigues-teixeira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27914,11 +27914,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jordan-luiz-francisco-martins2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27944,11 +27944,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jorge-amadoris-milan-gonzalez/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -27974,11 +27974,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -28004,11 +28004,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauricio-picanco-de-carvalho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -28034,11 +28034,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-francisco-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -28064,11 +28064,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/graciano-ruan-da-costa-de-assis/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -28094,13 +28094,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/anderson-sena-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 80,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "base"
         },
         "stats": {
@@ -28137,13 +28137,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Shrek/Rondonia",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 65,
-          "tackle": 83,
-          "pass": 61,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 84,
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -28168,13 +28168,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 2,
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 56,
+          "overall": 70,
+          "speed": 63,
           "tackle": 82,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 76,
-          "attack": 69,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -28199,14 +28199,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 3,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -28230,13 +28230,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 4,
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 60,
+          "overall": 71,
+          "speed": 66,
           "tackle": 82,
-          "pass": 60,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 70,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -28261,13 +28261,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 69,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 81,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -28292,13 +28292,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 7,
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 71,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 47,
-          "stamina": 88,
-          "attack": 76,
+          "overall": 70,
+          "speed": 69,
+          "tackle": 78,
+          "pass": 65,
+          "kick": 51,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -28324,14 +28324,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Léo Bomfim",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 74,
-          "tackle": 85,
-          "pass": 68,
-          "kick": 47,
-          "stamina": 88,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 74,
+          "pass": 71,
+          "kick": 58,
+          "stamina": 78,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -28355,13 +28355,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 9,
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 80,
-          "tackle": 70,
-          "pass": 89,
-          "kick": 70,
-          "stamina": 87,
-          "attack": 78,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 79,
+          "kick": 65,
+          "stamina": 75,
+          "attack": 70,
           "confidence": "medium"
         },
         "stats": {
@@ -28386,13 +28386,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 10,
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 77,
-          "tackle": 66,
-          "pass": 85,
-          "kick": 95,
-          "stamina": 84,
-          "attack": 82,
+          "overall": 72,
+          "speed": 74,
+          "tackle": 64,
+          "pass": 76,
+          "kick": 72,
+          "stamina": 74,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -28417,12 +28417,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 11,
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 71,
-          "tackle": 85,
-          "pass": 67,
-          "kick": 47,
-          "stamina": 88,
+          "overall": 70,
+          "speed": 75,
+          "tackle": 69,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 75,
           "attack": 76,
           "confidence": "medium"
         },
@@ -28446,14 +28446,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 82,
-          "speed": 89,
-          "tackle": 77,
-          "pass": 82,
+          "overall": 74,
+          "speed": 79,
+          "tackle": 71,
+          "pass": 72,
           "kick": 61,
-          "stamina": 85,
-          "attack": 94,
-          "confidence": "medium"
+          "stamina": 78,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -28478,13 +28478,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Piloto",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 82,
-          "tackle": 75,
-          "pass": 78,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 83,
+          "overall": 70,
+          "speed": 74,
+          "tackle": 68,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 73,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -28509,14 +28509,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 14,
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 90,
-          "tackle": 64,
-          "pass": 71,
-          "kick": 66,
-          "stamina": 83,
-          "attack": 89,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 74,
+          "tackle": 77,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -28541,14 +28541,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Danilo",
         "appeared2026": true,
         "skills": {
-          "overall": 83,
-          "speed": 92,
-          "tackle": 70,
-          "pass": 81,
-          "kick": 80,
-          "stamina": 85,
-          "attack": 93,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 81,
+          "tackle": 66,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 75,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -28572,13 +28572,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 15,
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 86,
-          "tackle": 70,
-          "pass": 79,
-          "kick": 80,
-          "stamina": 85,
-          "attack": 85,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 62,
+          "pass": 69,
+          "kick": 66,
+          "stamina": 71,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -28604,13 +28604,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -28635,14 +28635,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ultra",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 68,
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -28667,13 +28667,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tio",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -28699,13 +28699,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bigmike",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 67,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -28731,13 +28731,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 71,
+          "tackle": 71,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 75,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -28761,13 +28761,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 20,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 71,
-          "pass": 70,
-          "kick": 62,
+          "overall": 69,
+          "speed": 69,
+          "tackle": 63,
+          "pass": 71,
+          "kick": 69,
           "stamina": 71,
-          "attack": 71,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -28793,13 +28793,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Abobrão",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 78,
-          "tackle": 70,
+          "overall": 71,
+          "speed": 75,
+          "tackle": 67,
           "pass": 73,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 86,
+          "kick": 60,
+          "stamina": 74,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -28824,14 +28824,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 22,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 71,
+          "overall": 68,
+          "speed": 69,
+          "tackle": 66,
           "pass": 70,
-          "kick": 62,
+          "kick": 61,
           "stamina": 71,
-          "attack": 71,
-          "confidence": "medium"
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -28856,13 +28856,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jaime",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 91,
-          "tackle": 65,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 80,
-          "attack": 90,
+          "overall": 72,
+          "speed": 82,
+          "tackle": 63,
+          "pass": 69,
+          "kick": 62,
+          "stamina": 74,
+          "attack": 81,
           "confidence": "medium"
         },
         "stats": {
@@ -28888,13 +28888,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lucas \"Bolt\" Petkowicz",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 95,
-          "tackle": 65,
-          "pass": 75,
-          "kick": 63,
-          "stamina": 80,
-          "attack": 95,
+          "overall": 73,
+          "speed": 82,
+          "tackle": 63,
+          "pass": 70,
+          "kick": 64,
+          "stamina": 75,
+          "attack": 83,
           "confidence": "medium"
         },
         "stats": {
@@ -28917,13 +28917,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 76,
-          "speed": 78,
-          "tackle": 70,
+          "overall": 73,
+          "speed": 77,
+          "tackle": 64,
           "pass": 73,
-          "kick": 81,
-          "stamina": 71,
-          "attack": 86,
+          "kick": 74,
+          "stamina": 73,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -28949,14 +28949,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cidão",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 71,
-          "pass": 70,
-          "kick": 62,
+          "overall": 69,
+          "speed": 69,
+          "tackle": 69,
+          "pass": 69,
+          "kick": 63,
           "stamina": 71,
-          "attack": 71,
-          "confidence": "medium"
+          "attack": 69,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -28979,11 +28979,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alejandro-gonzales-jesus-moura/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29009,11 +29009,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-nicolas-pereira-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29039,11 +29039,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-santana-rogerio/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29069,14 +29069,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ector-cilla-ramalho-franquilino-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 69,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 52,
+          "stamina": 80,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -29098,11 +29098,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29128,11 +29128,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-sanches-nogueira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29158,11 +29158,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-philipe-pires-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29188,14 +29188,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlosrafaelaparecidosouzademoura/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 74,
+          "tackle": 70,
+          "pass": 71,
+          "kick": 59,
+          "stamina": 74,
+          "attack": 75,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -29218,11 +29218,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iohan-petkowicz-alfieri/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29248,14 +29248,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-da-silveira-bertao/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 69,
+          "speed": 69,
+          "tackle": 69,
+          "pass": 69,
+          "kick": 63,
+          "stamina": 72,
+          "attack": 69,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -29278,11 +29278,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaovitorcamposaraujo-ms/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29308,14 +29308,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-vilas-boas-raimundo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 69,
+          "tackle": 78,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -29338,11 +29338,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-fernando-langame-alegro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29368,11 +29368,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-henrique-mazon-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29398,13 +29398,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-passoni-correia2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 69,
+          "speed": 67,
+          "tackle": 72,
+          "pass": 67,
           "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "stamina": 73,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -29428,11 +29428,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-da-silva-avila/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -29470,14 +29470,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 1,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 58,
-          "tackle": 81,
-          "pass": 57,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 68,
+          "tackle": 86,
+          "pass": 68,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -29501,13 +29501,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 2,
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 55,
-          "tackle": 81,
-          "pass": 56,
-          "kick": 43,
+          "overall": 69,
+          "speed": 65,
+          "tackle": 78,
+          "pass": 64,
+          "kick": 55,
           "stamina": 76,
-          "attack": 67,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -29533,14 +29533,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "JACKSHOW",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 66,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -29564,14 +29564,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 3,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 64,
-          "tackle": 81,
-          "pass": 60,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -29595,14 +29595,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 4,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 59,
-          "tackle": 80,
-          "pass": 58,
-          "kick": 43,
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
           "stamina": 82,
-          "attack": 68,
-          "confidence": "medium"
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -29626,14 +29626,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 59,
-          "tackle": 80,
-          "pass": 58,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 69,
+          "tackle": 84,
+          "pass": 68,
+          "kick": 57,
+          "stamina": 83,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -29657,14 +29657,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 6,
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 70,
-          "tackle": 83,
-          "pass": 65,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 73,
+          "tackle": 78,
+          "pass": 69,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -29689,13 +29689,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ademar",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 70,
-          "tackle": 83,
-          "pass": 65,
-          "kick": 46,
-          "stamina": 85,
-          "attack": 74,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 77,
+          "pass": 64,
+          "kick": 50,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -29722,10 +29722,10 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "skills": {
           "overall": 71,
           "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
+          "tackle": 80,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 80,
           "attack": 73,
           "confidence": "medium"
         },
@@ -29752,13 +29752,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bagé",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 76,
-          "tackle": 83,
-          "pass": 67,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 84,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 72,
+          "pass": 68,
+          "kick": 61,
+          "stamina": 76,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -29784,14 +29784,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lolo",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 69,
-          "stamina": 87,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 74,
+          "tackle": 64,
+          "pass": 78,
+          "kick": 66,
+          "stamina": 76,
+          "attack": 72,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -29816,14 +29816,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Lucas",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 77,
-          "tackle": 66,
-          "pass": 85,
-          "kick": 95,
-          "stamina": 84,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 74,
+          "tackle": 64,
+          "pass": 76,
+          "kick": 78,
+          "stamina": 74,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -29845,13 +29845,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 82,
-          "tackle": 75,
-          "pass": 78,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 83,
+          "overall": 71,
+          "speed": 75,
+          "tackle": 69,
+          "pass": 72,
+          "kick": 58,
+          "stamina": 74,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -29874,14 +29874,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
-          "speed": 87,
-          "tackle": 73,
-          "pass": 79,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 89,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 81,
+          "tackle": 68,
+          "pass": 72,
+          "kick": 62,
+          "stamina": 76,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -29906,14 +29906,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jadinho",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 88,
-          "tackle": 75,
-          "pass": 80,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 91,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 82,
+          "tackle": 69,
+          "pass": 73,
+          "kick": 63,
+          "stamina": 78,
+          "attack": 83,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -29935,14 +29935,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
-          "speed": 95,
-          "tackle": 64,
-          "pass": 75,
-          "kick": 62,
-          "stamina": 83,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 86,
+          "tackle": 65,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 77,
+          "attack": 86,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -29967,14 +29967,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Alemão",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 86,
-          "tackle": 70,
-          "pass": 79,
-          "kick": 84,
-          "stamina": 85,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 77,
+          "tackle": 66,
+          "pass": 75,
+          "kick": 74,
+          "stamina": 76,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -29996,14 +29996,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -30025,13 +30025,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 95,
-          "tackle": 64,
-          "pass": 73,
-          "kick": 62,
-          "stamina": 80,
-          "attack": 95,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 65,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 73,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -30057,14 +30057,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Péter",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 64,
+          "tackle": 80,
+          "pass": 64,
+          "kick": 52,
+          "stamina": 77,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -30089,13 +30089,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Guampa",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 69,
+          "overall": 71,
+          "speed": 74,
           "tackle": 69,
           "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 69,
+          "kick": 60,
+          "stamina": 76,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -30121,14 +30121,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gema",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 72,
+          "pass": 75,
+          "kick": 64,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -30152,13 +30152,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 22,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 70,
+          "tackle": 72,
+          "pass": 67,
+          "kick": 59,
+          "stamina": 75,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -30184,13 +30184,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Brenno",
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
+          "overall": 71,
+          "speed": 79,
+          "tackle": 64,
+          "pass": 70,
           "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "stamina": 73,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -30216,13 +30216,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "nickname": "Felipe",
         "skills": {
-          "overall": 79,
-          "speed": 93,
-          "tackle": 65,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 82,
-          "attack": 94,
+          "overall": 72,
+          "speed": 80,
+          "tackle": 64,
+          "pass": 70,
+          "kick": 62,
+          "stamina": 75,
+          "attack": 79,
           "confidence": "high"
         },
         "stats": {
@@ -30246,11 +30246,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30276,14 +30276,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isaque-putumuju-borges/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 67,
+          "tackle": 79,
+          "pass": 65,
+          "kick": 52,
+          "stamina": 79,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -30306,14 +30306,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-pedro-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 69,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 52,
+          "stamina": 80,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -30336,13 +30336,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cicero-da-silva-rodrigues--junior/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 72,
+          "tackle": 67,
+          "pass": 70,
+          "kick": 58,
+          "stamina": 72,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -30366,13 +30366,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-figueiredo-batista-costa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 64,
+          "tackle": 79,
+          "pass": 64,
+          "kick": 55,
+          "stamina": 76,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -30396,11 +30396,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-dos-santos-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30426,14 +30426,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-macedo-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 53,
+          "stamina": 77,
+          "attack": 71,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -30456,14 +30456,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/frederico-amaral-marinho-pinto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 81,
+          "tackle": 63,
+          "pass": 70,
+          "kick": 62,
+          "stamina": 75,
+          "attack": 80,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -30486,14 +30486,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gilmar-almeida-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -30516,14 +30516,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/givanilson-oliveira-da-costa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 82,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -30546,11 +30546,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-kauklin-pereira-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30576,14 +30576,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-pelegrin-netto/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 81,
+          "tackle": 63,
+          "pass": 69,
+          "kick": 62,
+          "stamina": 75,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -30606,13 +30606,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonathan-moises-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 68,
+          "speed": 75,
+          "tackle": 61,
+          "pass": 67,
           "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "stamina": 69,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -30636,14 +30636,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-silva-fonseca-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 74,
+          "tackle": 75,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 79,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -30666,14 +30666,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joel-victor-araujo-dos-santos-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
+          "overall": 75,
+          "speed": 76,
           "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "pass": 77,
+          "kick": 72,
+          "stamina": 77,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -30696,11 +30696,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaique-gomes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30726,11 +30726,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-lopes-de-oliveira2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30756,13 +30756,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-gustavo-suzana-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -30786,11 +30786,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-tadeu-santos-calbo2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30816,11 +30816,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-gomes-dias2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30846,14 +30846,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicholas-silva-de-souza2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 71,
+          "tackle": 77,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -30876,11 +30876,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-dos-santos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30906,11 +30906,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-ferreira-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -30936,14 +30936,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patricio-veloso-dos-santos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 73,
+          "speed": 72,
+          "tackle": 81,
           "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "kick": 54,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -30966,14 +30966,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robson-alves-de-moraes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 75,
+          "tackle": 71,
+          "pass": 71,
+          "kick": 65,
+          "stamina": 77,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -30996,14 +30996,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-kenko-folli-xavier/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
+          "overall": 74,
+          "speed": 78,
           "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "pass": 72,
+          "kick": 70,
+          "stamina": 76,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -31026,14 +31026,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-dos-santos-silva-3/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 75,
+          "speed": 82,
+          "tackle": 69,
+          "pass": 73,
+          "kick": 63,
+          "stamina": 77,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -31056,14 +31056,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edmo-moreno-da-cunha-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 65,
+          "tackle": 81,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -31086,14 +31086,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/weverton-ferreira-de-jesus-viana-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 73,
+          "speed": 72,
+          "tackle": 80,
           "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "kick": 54,
+          "stamina": 82,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -31126,11 +31126,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 66,
-          "speed": 60,
-          "tackle": 79,
-          "pass": 57,
-          "kick": 42,
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
           "attack": 74,
           "confidence": "medium"
@@ -31157,14 +31157,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaue-luiz-de-freitas-silva3/1-Thumbnail.jpeg",
         "registered2026": false,
         "skills": {
-          "overall": 64,
-          "speed": 55,
-          "tackle": 81,
-          "pass": 56,
-          "kick": 43,
-          "stamina": 76,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 83,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31189,14 +31189,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bacon",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 55,
-          "tackle": 81,
-          "pass": 56,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31218,14 +31218,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 65,
-          "speed": 55,
-          "tackle": 80,
-          "pass": 56,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 83,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31250,14 +31250,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Jean",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 59,
-          "tackle": 79,
-          "pass": 58,
-          "kick": 43,
+          "overall": 72,
+          "speed": 68,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
           "stamina": 82,
-          "attack": 68,
-          "confidence": "medium"
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -31282,12 +31282,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Celio",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 62,
-          "tackle": 80,
-          "pass": 59,
-          "kick": 43,
-          "stamina": 82,
+          "overall": 71,
+          "speed": 66,
+          "tackle": 82,
+          "pass": 65,
+          "kick": 54,
+          "stamina": 80,
           "attack": 73,
           "confidence": "medium"
         },
@@ -31311,13 +31311,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 74,
-          "speed": 75,
-          "tackle": 80,
+          "overall": 71,
+          "speed": 69,
+          "tackle": 78,
           "pass": 66,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 81,
+          "kick": 53,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -31343,14 +31343,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pantera",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 70,
-          "tackle": 83,
-          "pass": 65,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 75,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 72,
+          "tackle": 84,
+          "pass": 69,
+          "kick": 57,
+          "stamina": 84,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -31375,14 +31375,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Zacarias",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 70,
-          "tackle": 83,
-          "pass": 65,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 69,
+          "tackle": 80,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 80,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31407,13 +31407,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Iago",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 77,
           "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
+          "kick": 50,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -31439,14 +31439,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-da-silva-arantes/1-Thumbnail.jpeg",
         "registered2026": false,
         "skills": {
-          "overall": 71,
-          "speed": 70,
-          "tackle": 79,
-          "pass": 65,
-          "kick": 46,
-          "stamina": 87,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 72,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 82,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -31469,14 +31469,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 9,
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 79,
-          "tackle": 68,
-          "pass": 87,
-          "kick": 69,
-          "stamina": 84,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 72,
+          "tackle": 64,
+          "pass": 78,
+          "kick": 65,
+          "stamina": 76,
+          "attack": 71,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31501,14 +31501,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "JAC",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 77,
-          "tackle": 66,
-          "pass": 85,
-          "kick": 86,
-          "stamina": 84,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 62,
+          "pass": 77,
+          "kick": 76,
+          "stamina": 74,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31533,14 +31533,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Javier",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 90,
-          "tackle": 63,
-          "pass": 71,
-          "kick": 62,
-          "stamina": 83,
-          "attack": 88,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 84,
+          "tackle": 64,
+          "pass": 70,
+          "kick": 64,
+          "stamina": 76,
+          "attack": 85,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31565,14 +31565,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gabriel",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 58,
-          "tackle": 80,
-          "pass": 57,
-          "kick": 43,
-          "stamina": 79,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 70,
+          "tackle": 84,
+          "pass": 69,
+          "kick": 58,
+          "stamina": 82,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31597,14 +31597,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "VITOR GUSTAVO",
         "appeared2026": true,
         "skills": {
-          "overall": 84,
-          "speed": 91,
-          "tackle": 75,
-          "pass": 82,
-          "kick": 76,
-          "stamina": 85,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 77,
+          "tackle": 69,
+          "pass": 72,
+          "kick": 64,
+          "stamina": 74,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31629,14 +31629,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Rhyan",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 82,
-          "tackle": 67,
-          "pass": 88,
-          "kick": 69,
-          "stamina": 87,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 77,
+          "tackle": 70,
+          "pass": 73,
+          "kick": 61,
+          "stamina": 77,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31661,13 +31661,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Fernando",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 86,
-          "tackle": 70,
-          "pass": 79,
-          "kick": 80,
-          "stamina": 85,
-          "attack": 85,
+          "overall": 70,
+          "speed": 74,
+          "tackle": 63,
+          "pass": 70,
+          "kick": 69,
+          "stamina": 71,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -31693,14 +31693,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cabelinho",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 85,
-          "tackle": 74,
-          "pass": 79,
-          "kick": 64,
-          "stamina": 85,
-          "attack": 87,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 79,
+          "tackle": 67,
+          "pass": 76,
+          "kick": 73,
+          "stamina": 77,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -31726,13 +31726,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 69,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 69,
-          "confidence": "medium"
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -31754,13 +31754,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 64,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -31783,13 +31783,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
+          "overall": 69,
+          "speed": 64,
+          "tackle": 80,
+          "pass": 63,
+          "kick": 53,
+          "stamina": 77,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -31812,13 +31812,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 69,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 69,
+          "overall": 70,
+          "speed": 65,
+          "tackle": 81,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -31844,13 +31844,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Tchelo",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
+          "overall": 70,
           "speed": 69,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 69,
+          "tackle": 77,
+          "pass": 65,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -31875,13 +31875,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 20,
         "appeared2026": true,
         "skills": {
-          "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 64,
+          "pass": 68,
+          "kick": 59,
+          "stamina": 73,
+          "attack": 77,
           "confidence": "medium"
         },
         "stats": {
@@ -31906,13 +31906,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 20,
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 69,
-          "tackle": 69,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 69,
+          "overall": 70,
+          "speed": 74,
+          "tackle": 70,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 75,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -31938,13 +31938,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Vitor",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 90,
-          "tackle": 64,
-          "pass": 71,
+          "overall": 71,
+          "speed": 78,
+          "tackle": 63,
+          "pass": 70,
           "kick": 62,
-          "stamina": 80,
-          "attack": 88,
+          "stamina": 74,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -31967,14 +31967,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 80,
+          "tackle": 65,
+          "pass": 71,
+          "kick": 66,
+          "stamina": 75,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -31997,11 +31997,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-da-silva-arantes2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32027,11 +32027,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clayton-morgado-lino2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32057,13 +32057,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-abdias-bocardo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 68,
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -32087,14 +32087,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-moreira-lima/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 73,
           "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "tackle": 83,
+          "pass": 67,
+          "kick": 56,
+          "stamina": 83,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -32117,13 +32117,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-santos-de-moraes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 66,
+          "tackle": 79,
+          "pass": 64,
+          "kick": 51,
+          "stamina": 77,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -32147,13 +32147,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erison-carlos-dos-santos-monteiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 68,
+          "speed": 64,
+          "tackle": 74,
+          "pass": 67,
+          "kick": 57,
+          "stamina": 74,
+          "attack": 70,
           "confidence": "base"
         },
         "stats": {
@@ -32177,11 +32177,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-fernandes-ramos/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32207,11 +32207,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaue-luiz-de-freitas-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32237,14 +32237,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-cabral2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 73,
+          "tackle": 82,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 83,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -32267,11 +32267,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-alcino-da-silva-lopes2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32297,13 +32297,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mahasiah-libera-martins/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -32327,11 +32327,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-alexandre-cardoso-dos-santos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32357,11 +32357,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marlon-junior/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32387,11 +32387,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michel-olimpio-domes-de-oliveira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32417,11 +32417,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-morini2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32447,14 +32447,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-guilherme-da-silva-souza2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 70,
+          "tackle": 77,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 79,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -32477,14 +32477,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-miguel-martins-ramos2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 74,
+          "speed": 81,
+          "tackle": 66,
+          "pass": 71,
+          "kick": 67,
+          "stamina": 77,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -32506,11 +32506,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -32536,14 +32536,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wallace-ferreira-sales/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 75,
+          "speed": 78,
+          "tackle": 67,
+          "pass": 80,
+          "kick": 68,
+          "stamina": 79,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -32566,14 +32566,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 76,
+          "tackle": 67,
+          "pass": 72,
+          "kick": 66,
+          "stamina": 74,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -32609,13 +32609,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Luquinhas",
         "appeared2026": true,
         "skills": {
-          "overall": 63,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 76,
-          "attack": 65,
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -32640,14 +32640,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 2,
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 65,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -32672,14 +32672,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Torto",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 66,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -32704,14 +32704,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Danilo Oddone (Menoti)",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 65,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -32736,14 +32736,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Loki",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
+          "overall": 73,
+          "speed": 67,
+          "tackle": 84,
+          "pass": 67,
+          "kick": 57,
           "stamina": 82,
-          "attack": 67,
-          "confidence": "medium"
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -32768,14 +32768,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Thor",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
           "stamina": 82,
-          "attack": 66,
-          "confidence": "medium"
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -32800,14 +32800,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Andre",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
+          "overall": 73,
+          "speed": 70,
+          "tackle": 81,
+          "pass": 68,
+          "kick": 55,
           "stamina": 82,
-          "attack": 66,
-          "confidence": "medium"
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -32832,14 +32832,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "NÊGO",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
+          "overall": 72,
           "speed": 69,
           "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 85,
-          "attack": 72,
-          "confidence": "medium"
+          "pass": 67,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -32865,11 +32865,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
+          "speed": 70,
+          "tackle": 79,
+          "pass": 66,
+          "kick": 53,
+          "stamina": 80,
           "attack": 73,
           "confidence": "medium"
         },
@@ -32893,13 +32893,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 74,
-          "speed": 75,
-          "tackle": 81,
-          "pass": 66,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 81,
+          "overall": 69,
+          "speed": 69,
+          "tackle": 73,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -32925,14 +32925,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Hamilton",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 68,
+          "tackle": 82,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -32957,14 +32957,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "LEIS",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
-          "speed": 75,
-          "tackle": 81,
-          "pass": 66,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -32989,14 +32989,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gus",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 68,
-          "stamina": 87,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 79,
+          "kick": 66,
+          "stamina": 77,
+          "attack": 71,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -33020,14 +33020,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 10,
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 76,
-          "tackle": 64,
-          "pass": 84,
-          "kick": 92,
-          "stamina": 84,
-          "attack": 79,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 75,
+          "tackle": 65,
+          "pass": 79,
+          "kick": 81,
+          "stamina": 77,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -33052,13 +33052,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Eminem",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 89,
+          "overall": 71,
+          "speed": 80,
           "tackle": 62,
-          "pass": 70,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 86,
+          "pass": 69,
+          "kick": 64,
+          "stamina": 73,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -33084,14 +33084,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Choque",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 81,
-          "tackle": 73,
-          "pass": 77,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 78,
+          "tackle": 67,
+          "pass": 71,
+          "kick": 60,
+          "stamina": 75,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -33116,14 +33116,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pit",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 81,
-          "tackle": 73,
-          "pass": 77,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 82,
+          "tackle": 65,
+          "pass": 70,
+          "kick": 62,
+          "stamina": 76,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -33148,14 +33148,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dudu",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 95,
-          "tackle": 62,
-          "pass": 72,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 80,
+          "tackle": 63,
+          "pass": 70,
+          "kick": 66,
+          "stamina": 74,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -33181,13 +33181,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 75,
-          "speed": 89,
-          "tackle": 62,
+          "speed": 78,
+          "tackle": 77,
           "pass": 70,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 86,
-          "confidence": "medium"
+          "kick": 58,
+          "stamina": 82,
+          "attack": 81,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -33212,14 +33212,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Luccas",
         "appeared2026": true,
         "skills": {
-          "overall": 80,
-          "speed": 85,
-          "tackle": 68,
-          "pass": 78,
-          "kick": 83,
-          "stamina": 85,
-          "attack": 83,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 76,
+          "tackle": 67,
+          "pass": 74,
+          "kick": 71,
+          "stamina": 75,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -33245,11 +33245,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 69,
-          "speed": 71,
-          "tackle": 68,
-          "pass": 69,
-          "kick": 60,
-          "stamina": 71,
+          "speed": 64,
+          "tackle": 79,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 76,
           "attack": 72,
           "confidence": "medium"
         },
@@ -33276,14 +33276,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ruizão",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -33305,14 +33305,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 70,
-          "speed": 74,
-          "tackle": 68,
-          "pass": 70,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 68,
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -33338,13 +33338,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 79,
+          "pass": 63,
+          "kick": 51,
+          "stamina": 76,
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -33369,14 +33369,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Di",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 76,
+          "tackle": 64,
+          "pass": 73,
+          "kick": 70,
+          "stamina": 74,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -33401,14 +33401,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Capão",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 84,
-          "tackle": 73,
-          "pass": 78,
+          "overall": 72,
+          "speed": 75,
+          "tackle": 71,
+          "pass": 72,
           "kick": 59,
-          "stamina": 82,
-          "attack": 85,
-          "confidence": "medium"
+          "stamina": 76,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -33433,13 +33433,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "DNA",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
+          "overall": 71,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 76,
+          "kick": 71,
+          "stamina": 73,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -33464,14 +33464,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 23,
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 68,
+          "speed": 75,
+          "tackle": 61,
+          "pass": 67,
           "kick": 60,
-          "stamina": 71,
-          "attack": 67,
-          "confidence": "medium"
+          "stamina": 69,
+          "attack": 74,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -33497,12 +33497,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 74,
-          "tackle": 68,
-          "pass": 70,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 76,
+          "speed": 71,
+          "tackle": 74,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -33527,14 +33527,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 24,
         "appeared2026": true,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 67,
-          "confidence": "medium"
+          "kick": 62,
+          "stamina": 70,
+          "attack": 68,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -33559,14 +33559,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Xexa",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
+          "overall": 69,
+          "speed": 69,
+          "tackle": 69,
+          "pass": 69,
+          "kick": 63,
           "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "attack": 69,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -33589,13 +33589,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/gustavo-barbosa-monteiro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 68,
+          "speed": 73,
+          "tackle": 61,
+          "pass": 70,
+          "kick": 62,
+          "stamina": 69,
+          "attack": 72,
           "confidence": "base"
         },
         "stats": {
@@ -33619,14 +33619,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-de-almeida-pinho-dos-santos-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 71,
+          "speed": 78,
+          "tackle": 62,
+          "pass": 71,
+          "kick": 64,
+          "stamina": 74,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -33649,13 +33649,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-silva-moreira/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 68,
+          "speed": 75,
+          "tackle": 61,
+          "pass": 67,
           "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "stamina": 69,
+          "attack": 74,
           "confidence": "base"
         },
         "stats": {
@@ -33679,14 +33679,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-neves-nunes-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -33709,13 +33709,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/manoel-angel-monteiro-barba-banzer/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 53,
+          "stamina": 76,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -33739,11 +33739,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-coutinho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -33769,11 +33769,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/julio-cesar-matos-de-oliveira2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -33799,14 +33799,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-augusto-burini-ludovico/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 73,
+          "speed": 72,
+          "tackle": 81,
           "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "kick": 54,
+          "stamina": 82,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -33829,14 +33829,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-costa-marinho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 69,
+          "tackle": 63,
+          "pass": 74,
+          "kick": 72,
+          "stamina": 72,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -33859,11 +33859,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bolso/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -33889,11 +33889,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-carvalho-castro/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -33919,14 +33919,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-goncalves-martins/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 73,
+          "speed": 74,
+          "tackle": 75,
+          "pass": 71,
+          "kick": 58,
+          "stamina": 79,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 0,
@@ -33949,14 +33949,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-henrique-tomanik/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 69,
+          "speed": 67,
+          "tackle": 77,
+          "pass": 64,
+          "kick": 50,
+          "stamina": 78,
+          "attack": 71,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -33979,13 +33979,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yan-bueno-bandeira2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 68,
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -34009,11 +34009,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-luiz-corvo-ribas/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -34052,13 +34052,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cadu",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 91,
-          "tackle": 66,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 83,
-          "attack": 90,
+          "overall": 69,
+          "speed": 80,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -34084,14 +34084,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Casca",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 73,
-          "tackle": 71,
-          "pass": 71,
+          "overall": 68,
+          "speed": 74,
+          "tackle": 61,
+          "pass": 68,
           "kick": 62,
-          "stamina": 74,
-          "attack": 76,
-          "confidence": "medium"
+          "stamina": 69,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -34115,14 +34115,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Macedo",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 77,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 72,
+          "tackle": 77,
+          "pass": 68,
+          "kick": 55,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -34148,12 +34148,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 77,
-          "attack": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -34179,14 +34179,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "GEUDSY",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 77,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 77,
+          "tackle": 67,
+          "pass": 72,
+          "kick": 62,
+          "stamina": 75,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -34211,14 +34211,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Zé",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 77,
-          "tackle": 85,
+          "overall": 74,
+          "speed": 74,
+          "tackle": 80,
           "pass": 69,
-          "kick": 47,
-          "stamina": 88,
-          "attack": 86,
-          "confidence": "medium"
+          "kick": 55,
+          "stamina": 82,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34243,14 +34243,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "BOQUINHA",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 80,
-          "tackle": 70,
-          "pass": 89,
-          "kick": 70,
-          "stamina": 87,
-          "attack": 78,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 73,
+          "tackle": 65,
+          "pass": 78,
+          "kick": 65,
+          "stamina": 77,
+          "attack": 72,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34275,12 +34275,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 77,
-          "attack": 70,
+          "speed": 75,
+          "tackle": 66,
+          "pass": 70,
+          "kick": 59,
+          "stamina": 73,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -34306,14 +34306,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Casalino",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
+          "overall": 71,
+          "speed": 64,
           "tackle": 83,
-          "pass": 58,
-          "kick": 44,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 69,
-          "confidence": "medium"
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34338,13 +34338,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ed",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 56,
+          "overall": 70,
+          "speed": 63,
           "tackle": 82,
-          "pass": 57,
-          "kick": 44,
-          "stamina": 76,
-          "attack": 69,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -34370,13 +34370,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Caio",
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 69,
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -34402,14 +34402,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Uli",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 60,
-          "tackle": 82,
-          "pass": 60,
-          "kick": 44,
+          "overall": 74,
+          "speed": 72,
+          "tackle": 81,
+          "pass": 68,
+          "kick": 58,
           "stamina": 82,
-          "attack": 70,
-          "confidence": "medium"
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34433,14 +34433,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 5,
         "appeared2026": true,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 69,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34466,13 +34466,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 71,
-          "tackle": 83,
-          "pass": 67,
-          "kick": 47,
-          "stamina": 88,
+          "speed": 73,
+          "tackle": 79,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 82,
           "attack": 76,
-          "confidence": "medium"
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34497,14 +34497,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Matheus",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 80,
-          "tackle": 85,
+          "overall": 75,
+          "speed": 74,
+          "tackle": 81,
           "pass": 70,
-          "kick": 47,
-          "stamina": 88,
-          "attack": 91,
-          "confidence": "medium"
+          "kick": 56,
+          "stamina": 83,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34529,14 +34529,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Villaça",
         "appeared2026": true,
         "skills": {
-          "overall": 72,
-          "speed": 69,
-          "tackle": 80,
-          "pass": 63,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 71,
+          "tackle": 83,
+          "pass": 68,
+          "kick": 56,
+          "stamina": 83,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34561,14 +34561,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Hyan Garcia",
         "appeared2026": true,
         "skills": {
-          "overall": 85,
-          "speed": 87,
-          "tackle": 68,
-          "pass": 90,
-          "kick": 87,
-          "stamina": 84,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 78,
+          "tackle": 66,
+          "pass": 76,
+          "kick": 76,
+          "stamina": 76,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34593,14 +34593,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Dani",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 91,
-          "tackle": 65,
-          "pass": 72,
-          "kick": 63,
-          "stamina": 80,
-          "attack": 90,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 73,
+          "tackle": 74,
+          "pass": 69,
+          "kick": 57,
+          "stamina": 79,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34625,14 +34625,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gregg",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 88,
-          "tackle": 75,
-          "pass": 80,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 91,
-          "confidence": "medium"
+          "overall": 74,
+          "speed": 74,
+          "tackle": 65,
+          "pass": 78,
+          "kick": 77,
+          "stamina": 75,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -34657,14 +34657,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Robles",
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 89,
-          "tackle": 77,
-          "pass": 82,
+          "overall": 73,
+          "speed": 77,
+          "tackle": 70,
+          "pass": 74,
           "kick": 61,
-          "stamina": 85,
-          "attack": 94,
-          "confidence": "medium"
+          "stamina": 76,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34688,14 +34688,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 14,
         "appeared2026": true,
         "skills": {
-          "overall": 82,
-          "speed": 89,
-          "tackle": 77,
-          "pass": 82,
-          "kick": 61,
-          "stamina": 85,
-          "attack": 94,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 84,
+          "tackle": 66,
+          "pass": 72,
+          "kick": 67,
+          "stamina": 77,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34720,14 +34720,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mateusinho",
         "appeared2026": true,
         "skills": {
-          "overall": 87,
-          "speed": 95,
-          "tackle": 72,
-          "pass": 85,
-          "kick": 95,
-          "stamina": 85,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 75,
+          "speed": 82,
+          "tackle": 65,
+          "pass": 72,
+          "kick": 72,
+          "stamina": 76,
+          "attack": 84,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34751,13 +34751,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 16,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 71,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 71,
-          "attack": 71,
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -34784,13 +34784,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 64,
+          "tackle": 80,
+          "pass": 64,
+          "kick": 53,
+          "stamina": 77,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -34815,14 +34815,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "SEIJI",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 60,
+          "overall": 72,
+          "speed": 67,
           "tackle": 81,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 70,
-          "confidence": "medium"
+          "pass": 66,
+          "kick": 57,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -34848,12 +34848,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 73,
-          "speed": 76,
-          "tackle": 71,
-          "pass": 72,
-          "kick": 62,
-          "stamina": 71,
-          "attack": 81,
+          "speed": 69,
+          "tackle": 83,
+          "pass": 67,
+          "kick": 55,
+          "stamina": 82,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -34876,13 +34876,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 75,
-          "speed": 79,
-          "tackle": 71,
-          "pass": 74,
-          "kick": 66,
-          "stamina": 71,
-          "attack": 87,
+          "overall": 72,
+          "speed": 74,
+          "tackle": 65,
+          "pass": 76,
+          "kick": 67,
+          "stamina": 75,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -34908,12 +34908,12 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 70,
-          "speed": 70,
-          "tackle": 71,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 71,
-          "attack": 71,
+          "speed": 74,
+          "tackle": 63,
+          "pass": 73,
+          "kick": 65,
+          "stamina": 72,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -34937,11 +34937,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-gregg/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -34977,13 +34977,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 66,
-          "speed": 56,
-          "tackle": 83,
-          "pass": 58,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 69,
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -35009,14 +35009,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Celso",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 59,
-          "tackle": 83,
-          "pass": 59,
-          "kick": 44,
-          "stamina": 79,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 65,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -35038,14 +35038,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 66,
-          "speed": 56,
+          "overall": 71,
+          "speed": 64,
           "tackle": 83,
-          "pass": 58,
-          "kick": 44,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 69,
-          "confidence": "medium"
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -35070,13 +35070,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Daniel",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 60,
-          "tackle": 82,
-          "pass": 60,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 70,
+          "overall": 70,
+          "speed": 66,
+          "tackle": 79,
+          "pass": 65,
+          "kick": 53,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -35102,14 +35102,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Gui",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 60,
-          "tackle": 82,
-          "pass": 60,
-          "kick": 44,
-          "stamina": 82,
-          "attack": 70,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 67,
+          "tackle": 81,
+          "pass": 65,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -35133,13 +35133,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 6,
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 70,
-          "tackle": 83,
-          "pass": 65,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 75,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 77,
+          "pass": 64,
+          "kick": 50,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -35165,13 +35165,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mapimpi",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 76,
-          "tackle": 83,
-          "pass": 67,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 83,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 73,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 76,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -35197,13 +35197,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Merlin",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 76,
-          "tackle": 83,
-          "pass": 67,
-          "kick": 46,
-          "stamina": 88,
-          "attack": 83,
+          "overall": 69,
+          "speed": 68,
+          "tackle": 77,
+          "pass": 64,
+          "kick": 50,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -35229,14 +35229,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Little",
         "appeared2026": true,
         "skills": {
-          "overall": 74,
+          "overall": 72,
           "speed": 71,
-          "tackle": 85,
+          "tackle": 80,
           "pass": 67,
-          "kick": 47,
-          "stamina": 88,
-          "attack": 76,
-          "confidence": "medium"
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -35260,13 +35260,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 9,
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 80,
-          "tackle": 70,
-          "pass": 89,
-          "kick": 86,
-          "stamina": 87,
-          "attack": 78,
+          "overall": 72,
+          "speed": 75,
+          "tackle": 64,
+          "pass": 78,
+          "kick": 66,
+          "stamina": 76,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -35292,14 +35292,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Careca",
         "appeared2026": true,
         "skills": {
-          "overall": 85,
-          "speed": 87,
-          "tackle": 68,
-          "pass": 90,
-          "kick": 87,
-          "stamina": 84,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 73,
+          "tackle": 67,
+          "pass": 76,
+          "kick": 71,
+          "stamina": 75,
+          "attack": 77,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -35324,13 +35324,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "João",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 90,
-          "tackle": 64,
-          "pass": 71,
-          "kick": 62,
-          "stamina": 83,
-          "attack": 89,
+          "overall": 69,
+          "speed": 80,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -35353,13 +35353,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 81,
-          "speed": 88,
-          "tackle": 75,
-          "pass": 80,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 91,
+          "overall": 69,
+          "speed": 73,
+          "tackle": 67,
+          "pass": 70,
+          "kick": 56,
+          "stamina": 71,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -35385,13 +35385,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Carneiro",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 82,
-          "tackle": 75,
-          "pass": 78,
-          "kick": 60,
-          "stamina": 85,
-          "attack": 83,
+          "overall": 72,
+          "speed": 74,
+          "tackle": 73,
+          "pass": 71,
+          "kick": 57,
+          "stamina": 77,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -35416,14 +35416,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 14,
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 94,
-          "tackle": 66,
-          "pass": 74,
-          "kick": 63,
-          "stamina": 83,
-          "attack": 95,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 83,
+          "tackle": 62,
+          "pass": 68,
+          "kick": 62,
+          "stamina": 74,
+          "attack": 82,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -35448,13 +35448,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Isaak ferreira",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 71,
-          "pass": 80,
-          "kick": 81,
-          "stamina": 82,
-          "attack": 86,
+          "overall": 69,
+          "speed": 74,
+          "tackle": 61,
+          "pass": 69,
+          "kick": 68,
+          "stamina": 70,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -35478,11 +35478,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 69,
-          "speed": 70,
-          "tackle": 70,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 71,
+          "speed": 62,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 53,
+          "stamina": 77,
           "attack": 71,
           "confidence": "medium"
         },
@@ -35509,13 +35509,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marcão",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 69,
-          "tackle": 68,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 69,
+          "overall": 71,
+          "speed": 67,
+          "tackle": 81,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -35539,14 +35539,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 18,
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 73,
-          "tackle": 71,
-          "pass": 71,
-          "kick": 62,
-          "stamina": 71,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -35570,14 +35570,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 19,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 71,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 71,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 69,
+          "tackle": 73,
+          "pass": 65,
+          "kick": 57,
+          "stamina": 75,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -35601,14 +35601,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Toquinha",
         "appeared2026": true,
         "skills": {
-          "overall": 70,
-          "speed": 70,
-          "tackle": 71,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 71,
-          "attack": 71,
-          "confidence": "medium"
+          "overall": 68,
+          "speed": 66,
+          "tackle": 77,
+          "pass": 63,
+          "kick": 50,
+          "stamina": 76,
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -35632,14 +35632,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 21,
         "appeared2026": true,
         "skills": {
-          "overall": 70,
+          "overall": 69,
           "speed": 70,
-          "tackle": 71,
-          "pass": 70,
-          "kick": 62,
-          "stamina": 71,
+          "tackle": 66,
+          "pass": 72,
+          "kick": 63,
+          "stamina": 73,
           "attack": 71,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -35665,13 +35665,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 69,
-          "speed": 69,
-          "tackle": 70,
-          "pass": 69,
-          "kick": 61,
-          "stamina": 71,
-          "attack": 70,
-          "confidence": "medium"
+          "speed": 70,
+          "tackle": 61,
+          "pass": 76,
+          "kick": 66,
+          "stamina": 72,
+          "attack": 69,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -35696,13 +35696,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Heverton",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 87,
-          "tackle": 71,
-          "pass": 80,
-          "kick": 81,
-          "stamina": 82,
-          "attack": 86,
+          "overall": 69,
+          "speed": 73,
+          "tackle": 62,
+          "pass": 69,
+          "kick": 69,
+          "stamina": 70,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -35728,13 +35728,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Noa",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 94,
-          "tackle": 65,
-          "pass": 73,
-          "kick": 63,
-          "stamina": 80,
-          "attack": 95,
+          "overall": 69,
+          "speed": 79,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -35758,11 +35758,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaua-eduardo-januario-pecanha2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -35788,11 +35788,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-alves-dios2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -35818,11 +35818,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-francois-marie-mas/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -35848,14 +35848,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauan-oliveira-de-sousa-1/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 72,
+          "speed": 80,
+          "tackle": 64,
+          "pass": 70,
+          "kick": 66,
+          "stamina": 74,
+          "attack": 79,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -35878,11 +35878,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-soares-motta/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -35908,13 +35908,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wagner-santos-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 77,
+          "tackle": 60,
+          "pass": 69,
+          "kick": 61,
+          "stamina": 71,
+          "attack": 75,
           "confidence": "base"
         },
         "stats": {
@@ -35938,11 +35938,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elizeu-alves-da-silva/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -35968,14 +35968,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patrick-mesquita-moura/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
+          "overall": 70,
+          "speed": 72,
           "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "pass": 72,
+          "kick": 58,
+          "stamina": 74,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -35997,14 +35997,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 73,
+          "tackle": 72,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 74,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -36027,11 +36027,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jefferson-da-silva-rocha/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -36056,11 +36056,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -36086,14 +36086,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elizeu-xavier-lucio-de-magalhaes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 70,
+          "tackle": 73,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -36129,14 +36129,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "João Mário \"MOICANO\" Soares Silva",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 65,
-          "confidence": "medium"
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -36158,13 +36158,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 63,
-          "speed": 54,
+          "overall": 70,
+          "speed": 67,
           "tackle": 78,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 65,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 76,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -36190,13 +36190,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Viking",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 66,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -36222,13 +36222,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Grampola",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 66,
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -36254,14 +36254,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Fresno",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
           "stamina": 82,
-          "attack": 66,
-          "confidence": "medium"
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -36286,13 +36286,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "GUILHERME \"urutau\" CHITZ NETO",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
-          "stamina": 82,
-          "attack": 67,
+          "overall": 69,
+          "speed": 64,
+          "tackle": 79,
+          "pass": 64,
+          "kick": 52,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "medium"
         },
         "stats": {
@@ -36318,14 +36318,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "BOMBEIRO",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -36350,13 +36350,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Smurf",
         "appeared2026": true,
         "skills": {
-          "overall": 73,
-          "speed": 72,
-          "tackle": 81,
-          "pass": 65,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 77,
+          "overall": 71,
+          "speed": 69,
+          "tackle": 80,
+          "pass": 66,
+          "kick": 52,
+          "stamina": 80,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -36382,13 +36382,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "JOTAPÊ",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 61,
-          "tackle": 78,
-          "pass": 58,
-          "kick": 42,
-          "stamina": 82,
-          "attack": 71,
+          "overall": 72,
+          "speed": 68,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -36414,14 +36414,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Oompa-Loompa",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 81,
-          "tackle": 66,
-          "pass": 87,
-          "kick": 68,
-          "stamina": 87,
-          "attack": 79,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 75,
+          "tackle": 64,
+          "pass": 77,
+          "kick": 65,
+          "stamina": 76,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -36443,13 +36443,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 77,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 68,
-          "stamina": 87,
-          "attack": 75,
+          "overall": 70,
+          "speed": 72,
+          "tackle": 63,
+          "pass": 78,
+          "kick": 65,
+          "stamina": 74,
+          "attack": 69,
           "confidence": "medium"
         },
         "stats": {
@@ -36472,14 +36472,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 76,
-          "tackle": 64,
-          "pass": 84,
-          "kick": 85,
-          "stamina": 84,
-          "attack": 80,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 70,
+          "tackle": 61,
+          "pass": 76,
+          "kick": 77,
+          "stamina": 72,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -36504,14 +36504,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "CARNEIRO",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 76,
-          "tackle": 63,
-          "pass": 84,
-          "kick": 85,
-          "stamina": 84,
-          "attack": 79,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 74,
+          "tackle": 67,
+          "pass": 73,
+          "kick": 62,
+          "stamina": 74,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -36536,13 +36536,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "EDDIE",
         "appeared2026": true,
         "skills": {
-          "overall": 75,
-          "speed": 89,
-          "tackle": 61,
-          "pass": 70,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 86,
+          "overall": 69,
+          "speed": 80,
+          "tackle": 60,
+          "pass": 66,
+          "kick": 59,
+          "stamina": 71,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -36568,14 +36568,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "GIOVANI",
         "appeared2026": true,
         "skills": {
-          "overall": 78,
-          "speed": 84,
-          "tackle": 73,
-          "pass": 78,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 85,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 78,
+          "tackle": 70,
+          "pass": 73,
+          "kick": 60,
+          "stamina": 76,
+          "attack": 78,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -36600,14 +36600,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marciano",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 72,
+          "tackle": 78,
+          "pass": 68,
+          "kick": 54,
+          "stamina": 80,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -36632,13 +36632,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bumas",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 89,
-          "tackle": 61,
-          "pass": 70,
-          "kick": 68,
-          "stamina": 80,
-          "attack": 86,
+          "overall": 71,
+          "speed": 77,
+          "tackle": 67,
+          "pass": 67,
+          "kick": 59,
+          "stamina": 75,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -36664,13 +36664,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Samuel",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 89,
-          "tackle": 62,
-          "pass": 70,
-          "kick": 61,
-          "stamina": 83,
-          "attack": 87,
+          "overall": 71,
+          "speed": 73,
+          "tackle": 75,
+          "pass": 66,
+          "kick": 54,
+          "stamina": 79,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -36693,13 +36693,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 79,
-          "speed": 85,
-          "tackle": 68,
-          "pass": 78,
-          "kick": 79,
-          "stamina": 85,
-          "attack": 83,
+          "overall": 69,
+          "speed": 74,
+          "tackle": 61,
+          "pass": 69,
+          "kick": 70,
+          "stamina": 69,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -36725,13 +36725,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "TDAH",
         "appeared2026": true,
         "skills": {
-          "overall": 81,
-          "speed": 85,
-          "tackle": 68,
-          "pass": 78,
-          "kick": 90,
-          "stamina": 85,
-          "attack": 83,
+          "overall": 71,
+          "speed": 76,
+          "tackle": 63,
+          "pass": 71,
+          "kick": 72,
+          "stamina": 72,
+          "attack": 74,
           "confidence": "medium"
         },
         "stats": {
@@ -36757,13 +36757,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Fabão",
         "appeared2026": true,
         "skills": {
-          "overall": 63,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 76,
-          "attack": 65,
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -36790,13 +36790,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -36821,14 +36821,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "PEDRO \"TERNURA\" HENRIQUE MARROQUE",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 53,
+          "stamina": 77,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -36853,13 +36853,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Arthur \"Cabelo\" Coser",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 71,
+          "speed": 80,
+          "tackle": 64,
+          "pass": 67,
           "kick": 60,
-          "stamina": 71,
-          "attack": 68,
+          "stamina": 74,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -36883,13 +36883,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": false,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -36911,14 +36911,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 70,
+          "tackle": 69,
+          "pass": 67,
+          "kick": 59,
+          "stamina": 73,
+          "attack": 73,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -36940,14 +36940,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 67,
-          "confidence": "medium"
+          "overall": 68,
+          "speed": 66,
+          "tackle": 77,
+          "pass": 63,
+          "kick": 50,
+          "stamina": 76,
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -36972,13 +36972,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
+          "speed": 69,
+          "tackle": 60,
+          "pass": 75,
+          "kick": 65,
+          "stamina": 70,
           "attack": 68,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -37001,11 +37001,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-cesar-lopes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37031,14 +37031,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/asenjo-guerrin-lucien/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -37061,11 +37061,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-araujo2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37091,11 +37091,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tarcio-borgo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37121,13 +37121,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-leandro-oliveira-campos-de-angelo2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 68,
+          "speed": 62,
+          "tackle": 80,
+          "pass": 62,
+          "kick": 53,
+          "stamina": 75,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -37150,11 +37150,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37180,11 +37180,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/z.-diego-miranda-fagundes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37210,11 +37210,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-silva-de-souza2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37240,13 +37240,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-cardozo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 68,
+          "speed": 70,
+          "tackle": 61,
+          "pass": 71,
+          "kick": 67,
+          "stamina": 69,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -37269,13 +37269,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 66,
+          "tackle": 79,
+          "pass": 64,
+          "kick": 52,
+          "stamina": 77,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -37299,11 +37299,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-filipi-coelho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37329,11 +37329,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-gatti-bezerra/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37359,14 +37359,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kleverson-alencastre-do-nascimento/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 77,
+          "attack": 72,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -37388,13 +37388,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 67,
+          "tackle": 78,
+          "pass": 64,
+          "kick": 51,
+          "stamina": 77,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -37418,11 +37418,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-malave/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37448,14 +37448,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-miranda-fagundes/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 70,
+          "speed": 77,
+          "tackle": 62,
           "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "kick": 65,
+          "stamina": 71,
+          "attack": 76,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -37478,14 +37478,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-minelle/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 69,
+          "speed": 78,
+          "tackle": 60,
+          "pass": 67,
           "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "stamina": 71,
+          "attack": 77,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -37507,11 +37507,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37537,13 +37537,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-loureiro-seglia/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 72,
+          "tackle": 62,
+          "pass": 73,
+          "kick": 64,
+          "stamina": 71,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -37567,11 +37567,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-barcellos-reis/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -37597,14 +37597,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wellerson-cardozo-costa-/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 70,
+          "speed": 65,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -37640,14 +37640,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "BIG RED",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 77,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 71,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -37672,13 +37672,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Big Danny",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 77,
-          "attack": 68,
+          "overall": 70,
+          "speed": 63,
+          "tackle": 82,
+          "pass": 64,
+          "kick": 54,
+          "stamina": 78,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -37703,13 +37703,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 0,
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 77,
-          "attack": 68,
+          "overall": 70,
+          "speed": 69,
+          "tackle": 78,
+          "pass": 65,
+          "kick": 51,
+          "stamina": 79,
+          "attack": 72,
           "confidence": "medium"
         },
         "stats": {
@@ -37735,14 +37735,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "BIG PHILL",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 72,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 70,
+          "tackle": 80,
+          "pass": 67,
+          "kick": 53,
+          "stamina": 82,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -37767,13 +37767,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Ivan",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
           "stamina": 79,
-          "attack": 65,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -37799,13 +37799,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Mathis",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 77,
-          "attack": 68,
+          "overall": 73,
+          "speed": 74,
+          "tackle": 63,
+          "pass": 76,
+          "kick": 78,
+          "stamina": 74,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -37828,13 +37828,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 76,
-          "tackle": 64,
-          "pass": 84,
-          "kick": 85,
-          "stamina": 84,
-          "attack": 79,
+          "overall": 71,
+          "speed": 70,
+          "tackle": 61,
+          "pass": 76,
+          "kick": 77,
+          "stamina": 72,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -37860,13 +37860,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Pedrinho",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 71,
+          "speed": 76,
+          "tackle": 67,
           "pass": 68,
           "kick": 60,
-          "stamina": 77,
-          "attack": 68,
+          "stamina": 75,
+          "attack": 78,
           "confidence": "medium"
         },
         "stats": {
@@ -37889,13 +37889,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
+          "overall": 70,
+          "speed": 76,
+          "tackle": 64,
+          "pass": 69,
           "kick": 60,
-          "stamina": 77,
-          "attack": 68,
+          "stamina": 73,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -37921,14 +37921,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Puxa Frango",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
-          "stamina": 82,
-          "attack": 66,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 67,
+          "tackle": 82,
+          "pass": 66,
+          "kick": 55,
+          "stamina": 81,
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -37953,13 +37953,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "PG",
         "appeared2026": true,
         "skills": {
-          "overall": 64,
-          "speed": 54,
-          "tackle": 79,
-          "pass": 55,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 66,
+          "overall": 70,
+          "speed": 65,
+          "tackle": 80,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 77,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -37982,14 +37982,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 66,
-          "speed": 60,
-          "tackle": 79,
-          "pass": 57,
-          "kick": 42,
-          "stamina": 79,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 66,
+          "tackle": 84,
+          "pass": 66,
+          "kick": 56,
+          "stamina": 80,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -38014,14 +38014,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Taís",
         "appeared2026": true,
         "skills": {
-          "overall": 65,
-          "speed": 58,
-          "tackle": 78,
-          "pass": 57,
-          "kick": 42,
+          "overall": 72,
+          "speed": 69,
+          "tackle": 81,
+          "pass": 67,
+          "kick": 54,
           "stamina": 82,
-          "attack": 67,
-          "confidence": "medium"
+          "attack": 74,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -38046,14 +38046,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Bônus",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 74,
+          "tackle": 74,
+          "pass": 70,
+          "kick": 57,
+          "stamina": 78,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -38078,13 +38078,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "David",
         "appeared2026": true,
         "skills": {
-          "overall": 71,
-          "speed": 69,
-          "tackle": 81,
-          "pass": 64,
-          "kick": 45,
-          "stamina": 88,
-          "attack": 73,
+          "overall": 72,
+          "speed": 72,
+          "tackle": 77,
+          "pass": 69,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 75,
           "confidence": "medium"
         },
         "stats": {
@@ -38110,14 +38110,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Montinho",
         "appeared2026": true,
         "skills": {
-          "overall": 76,
-          "speed": 78,
-          "tackle": 66,
-          "pass": 86,
-          "kick": 68,
-          "stamina": 84,
-          "attack": 74,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 73,
+          "tackle": 64,
+          "pass": 79,
+          "kick": 66,
+          "stamina": 77,
+          "attack": 71,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -38139,13 +38139,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 78,
-          "speed": 95,
-          "tackle": 62,
-          "pass": 72,
+          "overall": 72,
+          "speed": 80,
+          "tackle": 66,
+          "pass": 70,
           "kick": 61,
-          "stamina": 83,
-          "attack": 95,
+          "stamina": 74,
+          "attack": 79,
           "confidence": "medium"
         },
         "stats": {
@@ -38171,14 +38171,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Elliott",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 81,
-          "tackle": 73,
-          "pass": 77,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 75,
+          "tackle": 69,
+          "pass": 72,
+          "kick": 58,
+          "stamina": 74,
+          "attack": 75,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -38203,14 +38203,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Leo",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 81,
-          "tackle": 73,
-          "pass": 77,
-          "kick": 59,
-          "stamina": 85,
-          "attack": 81,
-          "confidence": "medium"
+          "overall": 72,
+          "speed": 76,
+          "tackle": 69,
+          "pass": 72,
+          "kick": 60,
+          "stamina": 75,
+          "attack": 76,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -38235,14 +38235,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Cabelo",
         "appeared2026": true,
         "skills": {
-          "overall": 77,
-          "speed": 92,
-          "tackle": 62,
+          "overall": 73,
+          "speed": 81,
+          "tackle": 64,
           "pass": 71,
-          "kick": 63,
-          "stamina": 80,
-          "attack": 91,
-          "confidence": "medium"
+          "kick": 66,
+          "stamina": 75,
+          "attack": 80,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -38267,14 +38267,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Marco",
         "appeared2026": true,
         "skills": {
-          "overall": 79,
-          "speed": 85,
-          "tackle": 68,
-          "pass": 78,
-          "kick": 83,
-          "stamina": 82,
-          "attack": 82,
-          "confidence": "medium"
+          "overall": 73,
+          "speed": 80,
+          "tackle": 64,
+          "pass": 71,
+          "kick": 69,
+          "stamina": 75,
+          "attack": 79,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 2,
@@ -38299,14 +38299,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Xtudo",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 71,
+          "speed": 64,
+          "tackle": 83,
+          "pass": 65,
+          "kick": 55,
+          "stamina": 79,
+          "attack": 73,
+          "confidence": "high"
         },
         "stats": {
           "appearances": 1,
@@ -38330,14 +38330,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 17,
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -38359,14 +38359,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "registered2026": false,
         "skills": {
-          "overall": 70,
-          "speed": 74,
-          "tackle": 68,
-          "pass": 70,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 76,
-          "confidence": "medium"
+          "overall": 69,
+          "speed": 63,
+          "tackle": 81,
+          "pass": 63,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 72,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -38392,13 +38392,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "speed": 65,
+          "tackle": 77,
+          "pass": 63,
+          "kick": 50,
+          "stamina": 76,
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -38424,13 +38424,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
-          "confidence": "medium"
+          "speed": 65,
+          "tackle": 78,
+          "pass": 63,
+          "kick": 51,
+          "stamina": 76,
+          "attack": 70,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -38455,13 +38455,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "ROMULLO CARDOZO",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
+          "overall": 70,
+          "speed": 70,
+          "tackle": 74,
+          "pass": 67,
+          "kick": 54,
+          "stamina": 76,
+          "attack": 73,
           "confidence": "medium"
         },
         "stats": {
@@ -38487,14 +38487,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "wesley",
         "appeared2026": true,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
+          "overall": 68,
+          "speed": 69,
+          "tackle": 66,
+          "pass": 69,
+          "kick": 62,
           "stamina": 71,
-          "attack": 67,
-          "confidence": "medium"
+          "attack": 71,
+          "confidence": "base"
         },
         "stats": {
           "appearances": 2,
@@ -38520,13 +38520,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": true,
         "skills": {
           "overall": 68,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 71,
+          "speed": 69,
+          "tackle": 60,
+          "pass": 75,
+          "kick": 65,
+          "stamina": 70,
           "attack": 68,
-          "confidence": "medium"
+          "confidence": "base"
         },
         "stats": {
           "appearances": 1,
@@ -38551,13 +38551,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "nickname": "Klinsman",
         "appeared2026": true,
         "skills": {
-          "overall": 68,
-          "speed": 68,
-          "tackle": 68,
+          "overall": 70,
+          "speed": 78,
+          "tackle": 62,
           "pass": 68,
-          "kick": 60,
-          "stamina": 71,
-          "attack": 68,
+          "kick": 63,
+          "stamina": 72,
+          "attack": 76,
           "confidence": "medium"
         },
         "stats": {
@@ -38581,11 +38581,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/achile/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38611,11 +38611,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rosendo-da-silva-junior/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38641,11 +38641,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/demitri/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38671,11 +38671,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-ferreira-pessanha/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38701,11 +38701,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eric-jose-atencia-molina/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38731,11 +38731,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-coutinho/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38761,11 +38761,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-lisboa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38791,11 +38791,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-sanjuan-netis-teles-cardoso/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38821,11 +38821,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clerc-jonathan/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38851,13 +38851,13 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-do-rego-almeida/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
+          "overall": 69,
+          "speed": 66,
+          "tackle": 78,
+          "pass": 64,
+          "kick": 51,
+          "stamina": 78,
+          "attack": 71,
           "confidence": "base"
         },
         "stats": {
@@ -38881,11 +38881,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-eduardo/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38911,11 +38911,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mario-figueiroa/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38941,11 +38941,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/merlin-lloyd/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -38971,14 +38971,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paul-henri-victor-raguenet/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
-          "speed": 68,
-          "tackle": 68,
-          "pass": 68,
-          "kick": 60,
-          "stamina": 70,
-          "attack": 68,
-          "confidence": "base"
+          "overall": 69,
+          "speed": 69,
+          "tackle": 69,
+          "pass": 69,
+          "kick": 63,
+          "stamina": 71,
+          "attack": 69,
+          "confidence": "medium"
         },
         "stats": {
           "appearances": 0,
@@ -39001,11 +39001,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-elias-batista-da-silva2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"
@@ -39031,11 +39031,11 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maicon-keterson-gouveia2/1-Thumbnail.jpeg",
         "appeared2026": false,
         "skills": {
-          "overall": 67,
+          "overall": 68,
           "speed": 68,
           "tackle": 68,
           "pass": 68,
-          "kick": 60,
+          "kick": 62,
           "stamina": 70,
           "attack": 68,
           "confidence": "base"

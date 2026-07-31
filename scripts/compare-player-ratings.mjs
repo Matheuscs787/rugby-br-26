@@ -6,6 +6,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(SCRIPT_DIR, "..");
+const ROSTER_PATH = resolve(PROJECT_ROOT, "app/rosters.ts");
 const REFERENCE_YEAR = 2026;
 const ATTRIBUTE_KEYS = ["speed", "tackle", "pass", "kick", "stamina", "attack"];
 const ATTRIBUTE_WEIGHTS = {
@@ -545,12 +546,44 @@ export function calculateCandidateRating(player, evidence, division) {
   };
 }
 
-async function loadRosters(rosterPath = resolve(PROJECT_ROOT, "app/rosters.ts")) {
+async function loadRosters(rosterPath = ROSTER_PATH) {
   const source = await readFile(rosterPath, "utf8");
   const marker = source.indexOf("export const ROSTERS_2026");
   const start = source.indexOf("=", marker) + 1;
   if (marker < 0 || start <= 0) throw new Error(`ROSTERS_2026 não encontrado em ${rosterPath}`);
   return JSON.parse(source.slice(start).trim().replace(/;$/, ""));
+}
+
+export function applyCandidateRatings(rosters, teamComparisons) {
+  const updated = structuredClone(rosters);
+  teamComparisons.forEach(({ teamId, comparison }) => {
+    const players = updated[teamId]?.players;
+    if (!players || players.length !== comparison.players.length) {
+      throw new Error(`Elenco incompatível ao aplicar ratings: ${teamId}`);
+    }
+    players.forEach((player, index) => {
+      const candidate = comparison.players[index].candidate;
+      player.skills = {
+        overall: candidate.overall,
+        ...candidate.skills,
+        confidence: candidate.confidenceLabel === "alta"
+          ? "high"
+          : candidate.confidenceLabel === "média"
+            ? "medium"
+            : "base",
+      };
+    });
+  });
+  return updated;
+}
+
+async function writeRosters(rosters, rosterPath = ROSTER_PATH) {
+  const source = await readFile(rosterPath, "utf8");
+  const declaration = "export const ROSTERS_2026: Record<string, TeamRoster> = ";
+  const marker = source.indexOf(declaration);
+  if (marker < 0) throw new Error(`Declaração de elenco não encontrada em ${rosterPath}`);
+  const prefix = source.slice(0, marker + declaration.length);
+  await writeFile(rosterPath, `${prefix}${JSON.stringify(rosters, null, 2)};\n`);
 }
 
 async function ensureParent(path) {
@@ -1084,6 +1117,7 @@ function parseArguments(argv) {
     offline: false,
     refresh: false,
     all: false,
+    apply: false,
   };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
@@ -1091,6 +1125,7 @@ function parseArguments(argv) {
     const value = inlineValue ?? argv[index + 1];
     if (key === "--team") { options.teamId = value; if (!inlineValue) index += 1; }
     else if (key === "--all") options.all = true;
+    else if (key === "--apply") options.apply = true;
     else if (key === "--years") {
       options.years = value.split(",").map(Number).filter(Number.isFinite);
       if (!inlineValue) index += 1;
@@ -1106,7 +1141,8 @@ function parseArguments(argv) {
 
 function usage() {
   return `Uso:\n  npm run ratings:compare -- --team pe-vermelho [--years 2024,2025,2026] [--refresh]\n  npm run ratings:compare -- --all [--years 2024,2025,2026] [--refresh]\n\n` +
-    `Saídas: JSON, CSV e Markdown. O gerador nunca reescreve app/rosters.ts.\n`;
+    `Aplicação: npm run ratings:compare -- --all --apply [--refresh]\n` +
+    `Sem --apply, o gerador nunca reescreve app/rosters.ts.\n`;
 }
 
 export async function runComparison(options) {
@@ -1155,6 +1191,9 @@ export async function runAllComparisons(options) {
   });
   const aggregate = buildAllTeamsComparison(teamComparisons);
   const recommendation = buildRecommendedTeamsComparison(teamComparisons);
+  if (options.apply) {
+    await writeRosters(applyCandidateRatings(rosters, teamComparisons));
+  }
   await mkdir(options.outputDir, { recursive: true });
   const base = resolve(options.outputDir, "ratings-all-teams");
   const recommendedBase = resolve(options.outputDir, "ratings-all-teams-recommended");
@@ -1169,6 +1208,7 @@ export async function runAllComparisons(options) {
   return {
     aggregate,
     recommendation,
+    applied: Boolean(options.apply),
     files: [
       `${base}.md`, `${base}.csv`, `${base}.json`,
       `${recommendedBase}.md`, `${recommendedBase}.csv`, `${recommendedBase}.json`,
@@ -1182,6 +1222,8 @@ if (isMain) {
     const options = parseArguments(process.argv.slice(2));
     if (options.help) {
       process.stdout.write(usage());
+    } else if (options.apply && !options.all) {
+      throw new Error("--apply exige --all para impedir uma atualização parcial dos elencos");
     } else if (options.all) {
       const result = await runAllComparisons(options);
       process.stdout.write(

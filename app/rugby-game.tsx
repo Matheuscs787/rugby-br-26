@@ -237,12 +237,18 @@ function officialFormBonus(teamId: string) {
   if (!form.played) return 0;
   const winRate = (form.wins + form.draws * 0.5) / form.played;
   const scoreBalance = (form.pointsFor - form.pointsAgainst) / form.played;
-  return clamp((winRate - 0.5) * 8 + clamp(scoreBalance / 18, -2.5, 2.5), -5, 5);
+  const sample = Math.min(1, form.played / 3);
+  return clamp((winRate - 0.5) * 8 + clamp(scoreBalance / 18, -2.5, 2.5), -5, 5) * sample;
 }
 
 function teamStrength(teamId: string) {
   const rosterOverall = teamRosterOverall(teamId);
   return (rosterOverall || 65) + officialFormBonus(teamId);
+}
+
+function signedRating(value: number) {
+  const rounded = Math.round(value * 10) / 10;
+  return `${rounded > 0 ? "+" : ""}${String(rounded).replace(".", ",")}`;
 }
 
 function hasClearTryLane(match: Match, carrier: Player) {
@@ -2404,7 +2410,7 @@ export function RugbyGame() {
                   <div className="versus-grid">
                     <label className="team-select">
                       <span>Time selecionado</span>
-                      <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.state} · {home.division}ª divisão</small><em>OVR {teamRosterOverall(home.id)}</em></div></div>
+                      <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.state} · {home.division}ª divisão</small><em>OVR {teamRosterOverall(home.id)} · FORMA {signedRating(officialFormBonus(home.id))} · FOR {Math.round(teamStrength(home.id))}</em></div></div>
                       <select value={homeId} onChange={(event) => setHomeId(event.target.value)}>
                         {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} ({team.state}) — {team.division}ª divisão</option>)}
                       </select>
@@ -2412,7 +2418,7 @@ export function RugbyGame() {
                     <span className="versus-mark">VS</span>
                     <label className="team-select">
                       <span>Adversário</span>
-                      <div className="team-preview"><TeamBadge team={away} large /><div><strong>{away.name}</strong><small>{away.state} · {away.division}ª divisão</small><em>OVR {teamRosterOverall(away.id)}</em></div></div>
+                      <div className="team-preview"><TeamBadge team={away} large /><div><strong>{away.name}</strong><small>{away.state} · {away.division}ª divisão</small><em>OVR {teamRosterOverall(away.id)} · FORMA {signedRating(officialFormBonus(away.id))} · FOR {Math.round(teamStrength(away.id))}</em></div></div>
                       <select value={awayId} onChange={(event) => setAwayId(event.target.value)}>
                         {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} ({team.state}) — {team.division}ª divisão</option>)}
                       </select>
@@ -2439,7 +2445,7 @@ export function RugbyGame() {
                   </div>
                   <label className="team-select championship-team-select">
                     <span>Seu clube no campeonato</span>
-                    <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.group} · {home.division}ª divisão</small><em>OVR {teamRosterOverall(home.id)}</em></div></div>
+                    <div className="team-preview"><TeamBadge team={home} large /><div><strong>{home.name}</strong><small>{home.group} · {home.division}ª divisão</small><em>OVR {teamRosterOverall(home.id)} · FORMA {signedRating(officialFormBonus(home.id))} · FOR {Math.round(teamStrength(home.id))}</em></div></div>
                     <select value={homeId} onChange={(event) => setHomeId(event.target.value)}>
                       {TEAMS.map((team) => <option value={team.id} key={team.id}>{team.name} — {team.group}</option>)}
                     </select>
@@ -2570,9 +2576,9 @@ export function RugbyGame() {
                     <>
                       <div className="next-fixture-kicker"><span>PRÓXIMA PARTIDA</span><strong>{phaseLabel(currentCampaignFixture.phase)} · Rodada {currentCampaignFixture.round}</strong></div>
                       <div className="campaign-versus">
-                        <div><TeamBadge team={teamById(currentCampaignFixture.homeId)} large /><strong>{teamById(currentCampaignFixture.homeId).name}</strong><span className="match-team-overall"><b>{teamRosterOverall(currentCampaignFixture.homeId)}</b><small>OVR</small></span><small>Mandante · {officialTeamForm(currentCampaignFixture.homeId).wins}V {officialTeamForm(currentCampaignFixture.homeId).draws}E {officialTeamForm(currentCampaignFixture.homeId).losses}D</small></div>
+                        <div><TeamBadge team={teamById(currentCampaignFixture.homeId)} large /><strong>{teamById(currentCampaignFixture.homeId).name}</strong><span className="match-team-overall"><b>{teamRosterOverall(currentCampaignFixture.homeId)}</b><small>OVR · FOR {Math.round(teamStrength(currentCampaignFixture.homeId))}</small></span><small>Mandante · forma {signedRating(officialFormBonus(currentCampaignFixture.homeId))} · {officialTeamForm(currentCampaignFixture.homeId).wins}V {officialTeamForm(currentCampaignFixture.homeId).draws}E {officialTeamForm(currentCampaignFixture.homeId).losses}D</small></div>
                         <span><b>VS</b><small>{currentCampaignFixture.date ?? "Data a definir"}{currentCampaignFixture.time ? ` · ${currentCampaignFixture.time}` : ""}</small></span>
-                        <div><TeamBadge team={teamById(currentCampaignFixture.awayId)} large /><strong>{teamById(currentCampaignFixture.awayId).name}</strong><span className="match-team-overall"><b>{teamRosterOverall(currentCampaignFixture.awayId)}</b><small>OVR</small></span><small>Visitante · {officialTeamForm(currentCampaignFixture.awayId).wins}V {officialTeamForm(currentCampaignFixture.awayId).draws}E {officialTeamForm(currentCampaignFixture.awayId).losses}D</small></div>
+                        <div><TeamBadge team={teamById(currentCampaignFixture.awayId)} large /><strong>{teamById(currentCampaignFixture.awayId).name}</strong><span className="match-team-overall"><b>{teamRosterOverall(currentCampaignFixture.awayId)}</b><small>OVR · FOR {Math.round(teamStrength(currentCampaignFixture.awayId))}</small></span><small>Visitante · forma {signedRating(officialFormBonus(currentCampaignFixture.awayId))} · {officialTeamForm(currentCampaignFixture.awayId).wins}V {officialTeamForm(currentCampaignFixture.awayId).draws}E {officialTeamForm(currentCampaignFixture.awayId).losses}D</small></div>
                       </div>
                       <div className="campaign-play-options">
                         <button className="play-button" type="button" onClick={() => openCampaignMatch("control")}><span>Controlar {teamById(campaign.teamId).short}</span><span>→</span></button>

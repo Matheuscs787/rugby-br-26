@@ -1,4 +1,5 @@
 import { writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 
 const firstDivision =
   "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino";
@@ -535,3 +536,15 @@ const generated = `// Gerado do BID, das súmulas masculinas de 2026 e dos perfi
 `export const ROSTERS_2026: Record<string, TeamRoster> = ${JSON.stringify(rosters, null, 2)};\n`;
 
 await writeFile(new URL("../app/rosters.ts", import.meta.url), generated);
+
+if (!process.argv.includes("--skip-historical-ratings")) {
+  const { runAllComparisons } = await import("./compare-player-ratings.mjs");
+  await runAllComparisons({
+    years: [2024, 2025, 2026],
+    outputDir: fileURLToPath(new URL("../outputs", import.meta.url)),
+    cacheDir: fileURLToPath(new URL("../work/ratings-cache", import.meta.url)),
+    offline: false,
+    refresh: true,
+    apply: true,
+  });
+}

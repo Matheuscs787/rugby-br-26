@@ -56,7 +56,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v16-fullback-restarts/);
+  assert.match(serviceWorker, /rugby-br-26-v17-official-ratings/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -127,6 +127,8 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /teamRosterOverall/);
   assert.match(gameSource, /match-team-overall/);
   assert.match(gameSource, /officialFormBonus/);
+  assert.match(gameSource, /Math\.min\(1, form\.played \/ 3\)/);
+  assert.match(gameSource, /FORMA \{signedRating/);
   assert.match(gameSource, /forma oficial de 2026/);
   assert.match(championshipSource, /OFFICIAL_GROUP_FIXTURES/);
   assert.match(championshipSource, /createRoundRobinFixtures/);
@@ -166,8 +168,22 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(rosterSource, /export type PlayerStats/);
   assert.ok((rosterSource.match(/"overall":/g) ?? []).length > 1200);
   assert.ok((rosterSource.match(/"appearances":/g) ?? []).length > 1200);
+  const rosterMarker = rosterSource.indexOf("export const ROSTERS_2026");
+  const rosterJsonStart = rosterSource.indexOf("=", rosterMarker) + 1;
+  const rosters = JSON.parse(rosterSource.slice(rosterJsonStart).trim().replace(/;$/, ""));
+  const peVermelho = rosters["pe-vermelho"].players;
+  const peVermelhoOverall = Math.round(
+    [...peVermelho]
+      .sort((a, b) => b.skills.overall - a.skills.overall)
+      .slice(0, 12)
+      .reduce((total, player) => total + player.skills.overall, 0) / 12,
+  );
+  assert.equal(peVermelhoOverall, 72);
+  assert.equal(peVermelho.find((player) => player.name === "DAVI SANTANA")?.skills.overall, 74);
   assert.match(readme, /## Cálculo dos atributos e do overall/);
   assert.match(readme, /0,18 × VEL/);
+  assert.match(readme, /OVR 72 · FORMA \+3,3 · FOR 75/);
+  assert.doesNotMatch(readme, /chatgpt\.site/i);
   assert.match(readme, /## Como os atributos afetam a partida/);
   assert.match(readme, /## Regras e simplificações do protótipo/);
 

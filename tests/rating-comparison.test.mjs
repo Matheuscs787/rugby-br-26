@@ -3,6 +3,7 @@ import test from "node:test";
 
 import {
   analyzeOfficialMatch,
+  applyCandidateRatings,
   allTeamsMarkdown,
   buildAllTeamsComparison,
   buildRecommendedTeamsComparison,
@@ -166,4 +167,34 @@ test("mantém a forma do clube separada e reduz o peso de amostra pequena", () =
   assert.equal(recommendation.teams[0].rosterOverall, 72);
   assert.equal(recommendation.teams[0].strength, 75);
   assert.equal(recommendation.productionRatingsChanged, false);
+});
+
+test("aplica somente os ratings candidatos e preserva os demais dados do atleta", () => {
+  const rosters = {
+    teste: {
+      source: "https://example.test/time",
+      players: [{
+        name: "ATLETA TESTE",
+        nickname: "Teste",
+        skills: { overall: 80, speed: 80, tackle: 80, pass: 80, kick: 80, stamina: 80, attack: 80, confidence: "high" },
+        stats: { appearances: 2, starts: 1 },
+      }],
+    },
+  };
+  const updated = applyCandidateRatings(rosters, [{
+    teamId: "teste",
+    comparison: {
+      players: [{ candidate: {
+        overall: 70,
+        skills: { speed: 71, tackle: 72, pass: 69, kick: 65, stamina: 73, attack: 70 },
+        confidenceLabel: "média",
+      } }],
+    },
+  }]);
+
+  assert.equal(updated.teste.players[0].skills.overall, 70);
+  assert.equal(updated.teste.players[0].skills.confidence, "medium");
+  assert.equal(updated.teste.players[0].nickname, "Teste");
+  assert.equal(updated.teste.players[0].stats.appearances, 2);
+  assert.equal(rosters.teste.players[0].skills.overall, 80);
 });

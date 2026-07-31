@@ -4,7 +4,6 @@ Protótipo leve de rugby sevens 2D para navegador, com 24 clubes da 1ª e da 2ª
 divisões nacionais masculinas de 2026, elencos públicos do Sporti, partidas
 controláveis ou simuladas e modo campeonato.
 
-- Jogo publicado: <https://rugby-br-26-arcade.teal-lark-0270.chatgpt.site/>
 - GitHub Pages: <https://matheuscs787.github.io/rugby-br-26/>
 - Repositório: <https://github.com/Matheuscs787/rugby-br-26>
 
@@ -151,71 +150,88 @@ Velocidade, tackles realizados, força física e qualidade de passe não são
 publicados de forma completa nessas súmulas. Por isso, os atributos correspondentes
 são estimativas posicionais ajustadas pelos eventos que realmente existem.
 
-### Gerador separado de comparação histórica
+### Atualização e auditoria dos ratings históricos
 
-O projeto também tem um modelo candidato em
-`scripts/compare-player-ratings.mjs`. Ele serve para estudar uma possível revisão
-dos ratings sem alterar `app/rosters.ts` nem as notas usadas pelo jogo. O comando:
+O modelo aplicado usa `scripts/compare-player-ratings.mjs` para coletar e
+conciliar as súmulas adultas de 2024, 2025 e 2026. Para auditar um clube sem
+alterar o jogo, use:
 
 ```bash
 npm run ratings:compare -- --team pe-vermelho --years 2024,2025,2026 --refresh
 ```
 
-consulta o histórico oficial adulto do clube no Sporti, abre as súmulas e produz
-três arquivos em `outputs/`: um relatório legível em Markdown, uma planilha CSV
-e os dados completos em JSON. Depois da primeira coleta, `--offline` permite
-repetir a análise usando somente o cache local; `--refresh` renova esse cache.
-
-Para comparar o OVR dos 24 clubes antes de aplicar a fórmula, use:
+O comando produz Markdown, CSV e JSON em `outputs/`. Para auditar os 24 clubes:
 
 ```bash
 npm run ratings:compare -- --all --years 2024,2025,2026 --refresh
 ```
 
-Esse modo gera `ratings-all-teams.md`, `.csv` e `.json`, com OVR e ranking atual
-e candidato, cobertura oficial por elenco e quantidade de súmulas processadas.
-Ele também gera `ratings-all-teams-recommended.*`, que mantém o OVR do elenco
-separado da forma oficial do clube. Nesse cenário, a força usada pela simulação
-é o OVR candidato mais um ajuste de resultados do Super 12 de 2026. O ajuste é
-limitado a ±5 e liberado gradualmente: 1/3 com uma partida, 2/3 com duas e por
-inteiro somente a partir da terceira partida.
+Sem `--apply`, os relatórios não alteram o jogo. Para aplicar os ratings depois
+de revisar o comparativo:
 
-O modelo candidato usa critérios mais conservadores para reservas e separa a
-posição do nível geral do atleta:
+```bash
+npm run ratings:apply -- --refresh
+```
 
-- partida como titular no XV vale 1,00 de participação efetiva;
-- entrada confirmada por evento de substituição vale 0,50;
-- presença na relação de uma partida de sevens vale 0,35;
-- reserva do XV sem entrada confirmada vale 0;
-- dados de 2026 têm peso 1,00, os de 2025 peso 0,65 e os de 2024 peso 0,4225;
-- experiência cresce de forma logarítmica até +4 no OVR;
-- tries, conversões, penalidades e drops dão bônus limitado; cartões dão
-  penalidade limitada;
-- vitórias do clube não entram no OVR individual;
-- a posição define o perfil de `VEL`, `TAC`, `PAS`, `CHU`, `FIS` e `ATA`, mas
-  esses atributos são recentrados para que uma camisa não aumente o OVR sozinha.
-
-A base provisória é 70 para a 1ª divisão e 68 para a 2ª. Quanto menor a
-participação oficial efetiva, menor a confiança do resultado. Associações de
-nomes ambíguas são descartadas e aparecem no relatório para revisão humana.
-Assim, uma ausência de dados nunca é tratada como prova de desempenho ruim.
+`--offline` usa o cache local. `--refresh` renova as fontes. Associações de nomes
+ambíguas são descartadas e listadas para revisão, em vez de transferir
+estatísticas para o atleta errado. O atualizador geral de elencos executa essa
+etapa histórica automaticamente; `--skip-historical-ratings` existe apenas para
+diagnóstico da coleta básica.
 
 ## Cálculo dos atributos e do overall
 
-Cada atributo é um inteiro entre **40 e 95**. O cálculo tem duas etapas:
+O modelo separa **nível**, **posição** e **forma do clube**. O OVR individual é
+calculado primeiro pela divisão e pelas participações oficiais. A posição só
+distribui esse nível entre `VEL`, `TAC`, `PAS`, `CHU`, `FIS` e `ATA`; portanto,
+uma camisa 15 não recebe OVR maior que uma camisa 1 apenas pela posição.
 
-1. determinar os seis atributos a partir de uma base posicional e das estatísticas;
-2. calcular o overall como média ponderada desses seis atributos já arredondados.
+### 1. Participação oficial ponderada
 
-O `overall` não substitui os atributos dentro da partida. Ele resume o atleta
-para seleção e comparação; o motor usa `VEL`, `TAC`, `PAS`, `CHU`, `FIS` e `ATA`
-separadamente.
+Cada relação encontrada recebe um peso de participação:
 
-### 1. Posição usada no cálculo
+| Evidência oficial | Peso |
+| --- | ---: |
+| Titular no XV | 1,00 |
+| Entrada confirmada por substituição | 0,50 |
+| Relacionado em partida de sevens | 0,35 |
+| Reserva do XV sem entrada confirmada | 0 |
 
-O sistema escolhe o número de camisa de 1 a 15 mais frequente nas súmulas. Se
-não houver uma camisa observada, usa o número disponível no elenco; sem qualquer
-número válido, usa a base `Desconhecida`.
+O peso da partida também diminui com o tempo: 2026 vale 1,00; 2025 vale 0,65;
+2024 vale 0,4225. A participação efetiva `P` é a soma desses pesos. Ser apenas
+relacionado no banco do XV não prova que o atleta entrou em campo.
+
+### 2. OVR individual
+
+A base é 70 na 1ª divisão e 68 na 2ª. A partir dela:
+
+```text
+confiança_numérica = P / (P + 3)
+experiência = min(4; log2(1 + P) × 1,25)
+
+evidência_pontos =
+  0,65 × tries_ponderados
+  + 0,08 × conversões_ponderadas
+  + 0,25 × penalidades_ponderadas
+  + 0,60 × drops_ponderados
+
+bônus_pontos = confiança_numérica × min(4; evidência_pontos)
+evidência_disciplina = 0,50 × amarelos_ponderados + 1,50 × vermelhos_ponderados
+penalidade_disciplina = confiança_numérica × min(2,5; evidência_disciplina)
+
+OVR = arredondar e limitar entre 40 e 95:
+  base_divisão + experiência + bônus_pontos - penalidade_disciplina
+```
+
+Vitórias do clube não entram nessa conta. Assim, um reserva não herda uma nota
+alta somente porque seu time venceu, e um atleta sem dados fica na base
+provisória em vez de ser tratado como ruim.
+
+### 3. Posição e distribuição dos atributos
+
+A posição principal é inferida pelas camisas 1–15 usadas como titular no XV.
+Quando há mais de um papel, as bases posicionais são misturadas. Sem observação
+suficiente, o número atual oferece apenas uma indicação de baixa confiança.
 
 | Base posicional | Camisas | VEL | TAC | PAS | CHU | FIS | ATA |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -232,66 +248,8 @@ número válido, usa a base `Desconhecida`.
 Essas bases são parâmetros de balanceamento do protótipo e não medições dos
 atletas reais.
 
-### 2. Variáveis derivadas das súmulas
-
-Para um atleta, o atualizador calcula:
-
-```text
-amostra = min(1, jogos / 3)
-taxa_vitória = (vitórias + 0,5 × empates) / jogos
-forma = (taxa_vitória - 0,5) × 8 × amostra
-experiência = min(7, jogos × 1,25 + titularidades × 0,45)
-taxa_try = tries / jogos
-taxa_titular = titularidades / jogos
-eventos_chute = conversões + 1,4 × penalidades + 2 × drops
-taxa_chute = eventos_chute / jogos
-disciplina = 1,2 × amarelos + 4 × vermelhos
-bônus_divisão = 2 na 1ª divisão; 0 na 2ª
-```
-
-Quando não há jogos, as taxas que exigem divisão usam valores neutros: taxa de
-vitória 0,5 e as demais taxas 0. O fator `amostra` impede que uma única vitória
-tenha o mesmo peso de uma sequência de três ou mais partidas.
-
-### 3. Fórmula dos seis atributos
-
-Cada resultado abaixo é arredondado e limitado ao intervalo 40–95:
-
-```text
-VEL = base.VEL + bônus_divisão
-    + 0,30 × experiência
-    + min(9, 6 × taxa_try)
-    + 0,35 × forma
-
-TAC = base.TAC + bônus_divisão
-    + 0,55 × experiência
-    + 0,65 × forma
-    - disciplina
-
-PAS = base.PAS + bônus_divisão
-    + 0,40 × experiência
-    + 0,45 × forma
-    + min(4, 2 × taxa_try)
-
-CHU = base.CHU + bônus_divisão
-    + 0,25 × experiência
-    + 0,35 × forma
-    + min(20, 4,5 × taxa_chute)
-
-FIS = base.FIS + bônus_divisão
-    + min(8, 6 × taxa_titular + 0,7 × jogos)
-    - vermelhos
-
-ATA = base.ATA + bônus_divisão
-    + 0,40 × experiência
-    + 0,75 × forma
-    + min(16, 7 × taxa_try + 1,4 × tries)
-    - 0,35 × disciplina
-```
-
-### 4. Fórmula do overall
-
-Depois de arredondar os seis atributos, o jogo calcula:
+Os seis atributos preservam as diferenças da posição, mas são recentrados no
+OVR já calculado. Os pesos usados para recentrar são:
 
 ```text
 OVR = arredondar(
@@ -313,34 +271,45 @@ OVR = arredondar(
 | Físico/fôlego | 16% |
 | Ataque | 16% |
 
-Os pesos somam 100%. Tackle é o atributo individual de maior peso; chute tem o
-menor peso porque nem todo papel tático é cobrador.
+Primeiro calcula-se a média ponderada da base posicional. Depois, 75% da
+diferença de cada atributo para essa média vira um deslocamento em torno do OVR.
+Os eventos observáveis fazem apenas ajustes específicos: tries podem acrescentar
+até 3 em velocidade e 6 em ataque; chutes oficiais podem acrescentar até 7 em
+chute; experiência pode acrescentar até 3 em físico. Passe e tackle não recebem
+bônus estatístico porque as súmulas não publicam essas ações de forma completa.
+
+Por fim, todos os deslocamentos são recentrados e cada atributo é arredondado e
+limitado a 40–95. Isso mantém o perfil posicional sem recriar o antigo viés de
+OVR entre forwards e backs.
 
 ### Exemplo real do arquivo atual
 
-Vicente Nery Galvão aparece como primeira linha da 1ª divisão, com 3 jogos, 3
-titularidades, 3 vitórias e 2 tries. Aplicando as fórmulas, seus atributos ficam
-`VEL 63`, `TAC 86`, `PAS 62`, `CHU 47`, `FIS 82` e `ATA 81`.
+Davi Santana, do Pé Vermelho, soma participação efetiva `P = 7,39` nas súmulas
+adultas de 2024–2026. Isso produz confiança numérica de 71%, experiência `+3,84`,
+bônus de pontuação `+2,58` e nenhuma penalidade disciplinar ponderada:
 
 ```text
-OVR = arredondar(
-  63×0,18 + 86×0,20 + 62×0,18 +
-  47×0,12 + 82×0,16 + 81×0,16
-)
-OVR = arredondar(71,42) = 71
+OVR = arredondar(68 + 3,84 + 2,58 - 0) = 74
 ```
+
+As camisas históricas indicam principalmente centro, com passagens por ponta e
+terceira linha. Depois do recentramento, seus atributos ficam `VEL 79`, `TAC 71`,
+`PAS 72`, `CHU 61`, `FIS 78` e `ATA 80`. A posição explica o formato dos
+atributos, enquanto a evidência oficial explica o OVR.
 
 ### Confiança da nota
 
 | Nível | Amostra |
 | --- | --- |
-| Base | nenhum jogo encontrado em súmula |
-| Média | 1 ou 2 jogos |
-| Alta | 3 ou mais jogos |
+| Base | `P < 1`; nota provisória |
+| Média | `1 ≤ P < 5` |
+| Alta | `P ≥ 5` |
 
 Confiança não é um bônus na nota. Ela apenas informa quanto do cálculo foi
-ajustado por partidas observadas. Um atleta `Base` fica muito mais próximo do
-perfil padrão da posição.
+ajustado por participação oficial. Exemplo: Marcelo de Agostini Junior tem
+apenas duas partidas registradas em `stats` de 2026, mas recebe confiança alta
+porque o rating também encontrou participação adulta em 2024 e 2025. O painel
+de estatísticas continua mostrando apenas 2026; o OVR usa o histórico ponderado.
 
 ### Overall do time e forma oficial
 
@@ -348,22 +317,56 @@ perfil padrão da posição.
   selecionados para a partida.
 - **OVR exibido para os clubes:** média dos 12 atletas de maior OVR do elenco;
   empates são ordenados por número de jogos e depois por nome.
-- **Força para simulações fora de campo:** OVR dos 12 melhores mais um bônus de
-  forma oficial entre -5 e +5.
+- **Forma:** ajuste separado, calculado somente com resultados encerrados do
+  Super 12 de 2026.
+- **Força atual (`FOR`):** `arredondar(OVR + forma)`; é usada no favoritismo das
+  simulações e influencia moderadamente a IA e as ações durante a partida.
 
 O bônus de forma do clube é:
 
 ```text
 taxa_vitória_clube = (vitórias + 0,5 × empates) / jogos
 saldo_médio = (pontos_marcados - pontos_sofridos) / jogos
+amostra_clube = min(1; jogos / 3)
 
-forma_clube = limitar entre -5 e +5:
+forma_bruta = limitar entre -5 e +5:
   (taxa_vitória_clube - 0,5) × 8
-  + limitar(saldo_médio / 18, entre -2,5 e +2,5)
+  + limitar(saldo_médio / 18; entre -2,5 e +2,5)
+
+forma_clube = forma_bruta × amostra_clube
+força_atual = arredondar(OVR do elenco + forma_clube)
 ```
 
-Esse bônus não altera o OVR mostrado. Ele é aplicado separadamente pelo motor
-para representar resultados recentes sem reescrever a nota individual.
+Uma partida libera 1/3 do ajuste; duas liberam 2/3; três ou mais usam o ajuste
+completo. Isso impede que um único placar transforme imediatamente um time no
+mais forte ou mais fraco da divisão. A tela mostra os três valores, por exemplo
+`OVR 72 · FORMA +3,3 · FOR 75`.
+
+#### Exemplo: Pé Vermelho
+
+O Pé Vermelho venceu Leões por 50–48 e Urutu por 49–19. Portanto, tem duas
+vitórias, 99 pontos marcados, 67 sofridos e saldo médio de 16:
+
+```text
+taxa_vitória = 1,00
+forma_bruta = (1 - 0,5) × 8 + 16 / 18 = 4,89
+amostra = 2 / 3
+forma = 4,89 × 2/3 = +3,3
+força_atual = arredondar(OVR 72 + 3,3) = 75
+```
+
+O OVR dos jogadores permanece igual. Apenas o favoritismo atual do clube sobe.
+
+#### Exemplo: Leões e Brummers
+
+Leões tem uma vitória e uma derrota, saldo médio de +4 e duas partidas. Seu
+ajuste fica em aproximadamente `+0,1`: `OVR 74 · FOR 74`. Já o Brummers venceu
+sua única partida por 54–31. A forma bruta atingiria o teto de +5, mas uma única
+partida libera apenas 1/3: `forma +1,7`, `OVR 73` e `FOR 75`.
+
+Esses exemplos mostram por que forma e OVR não devem ser fundidos: a forma pode
+mudar a cada rodada; as notas individuais só mudam quando os dados oficiais dos
+atletas são novamente coletados e aplicados.
 
 ## Como os atributos afetam a partida
 
@@ -438,6 +441,7 @@ Arquivos principais:
 | `app/championship.ts` | calendário, resultados oficiais observados e tipos da campanha |
 | `app/globals.css` | identidade visual, responsividade e controles |
 | `scripts/update-club-rosters.mjs` | coleta e geração dos elencos/atributos |
+| `scripts/compare-player-ratings.mjs` | histórico, auditoria e aplicação dos ratings |
 | `public/sw.js` | cache da PWA |
 | `vite.github-pages.config.ts` | build estático com base correta no GitHub Pages |
 | `.github/workflows/deploy-pages.yml` | publicação automática no GitHub Pages |
@@ -462,6 +466,8 @@ npm run build        # build da versão vinext
 npm run build:pages  # gera a versão estática em dist-pages/
 npm test             # build + testes automatizados
 npm run lint         # ESLint do projeto
+npm run ratings:compare -- --all  # audita sem alterar o jogo
+npm run ratings:apply -- --refresh # aplica o histórico oficial
 ```
 
 ## Atualização dos elencos
@@ -472,10 +478,10 @@ O atualizador acessa páginas públicas do Sporti e requer conexão com a intern
 node scripts/update-club-rosters.mjs
 ```
 
-Ele reescreve `app/rosters.ts`, portanto revise o diff e execute `npm test` antes
-de publicar. Mudanças no HTML das fontes podem exigir ajustes nos parsers. O
-estado atual do projeto contém os dados e resultados publicados e coletados até
-31/07/2026.
+Ele reescreve `app/rosters.ts` e aplica automaticamente a fórmula histórica de
+2024–2026. Portanto, revise o diff e execute `npm test` antes de publicar.
+Mudanças no HTML das fontes podem exigir ajustes nos parsers. O estado atual do
+projeto contém os dados e resultados publicados e coletados até 31/07/2026.
 
 ## Publicação gratuita no GitHub Pages
 
@@ -513,6 +519,7 @@ atletas e titulares; o uso aqui é demonstrativo neste protótipo independente.
 - OVR e atributos servem ao balanceamento do jogo e não devem ser tratados como
   ranking esportivo oficial.
 
-Para alterar o modelo de rating, edite `POSITION_SKILLS` e `calculateSkills` em
-`scripts/update-club-rosters.mjs`, gere novamente `app/rosters.ts`, execute os
-testes e documente a mudança neste arquivo.
+Para alterar o modelo de rating, edite `POSITION_SKILLS` e
+`calculateCandidateRating` em `scripts/compare-player-ratings.mjs`, gere o
+comparativo, aplique somente após revisá-lo, execute os testes e documente a
+mudança neste arquivo.
