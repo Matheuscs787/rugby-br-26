@@ -51,7 +51,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v11-player-portraits/);
+  assert.match(serviceWorker, /rugby-br-26-v12-player-ratings/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -71,7 +71,12 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /athlete\.nickname/);
   assert.match(gameSource, /getPlayerPhoto/);
   assert.match(gameSource, /playerDisplayName/);
-  assert.match(gameSource, /se apareceu uma vez, está incluído/);
+  assert.match(gameSource, /attributeFactor/);
+  assert.match(gameSource, /tackleRoll/);
+  assert.match(gameSource, /completionChance/);
+  assert.match(gameSource, /dropRangeThreshold/);
+  assert.match(gameSource, /overall-rating/);
+  assert.match(gameSource, /inclusive atletas registrados apenas nos eventos da partida/);
   assert.match(gameSource, /match\.half === 1/);
   assert.match(gameSource, /match\.halftime = true/);
   assert.match(gameSource, /5 m da linha de try/);
@@ -107,6 +112,9 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(styles, /\.roster-grid/);
   assert.match(styles, /\.roster-avatar/);
   assert.match(styles, /\.roster-nickname/);
+  assert.match(styles, /\.roster-skills/);
+  assert.match(styles, /\.overall-rating/);
+  assert.match(styles, /\.ratings-method/);
   assert.match(styles, /\.roster-search/);
   assert.match(styles, /\.squad-summary/);
   assert.match(rosterSource, /ROSTERS_2026/);
@@ -121,6 +129,10 @@ test("ships lightweight PWA and game assets", async () => {
   assert.ok((rosterSource.match(/"appeared2026": true/g) ?? []).length > 700);
   assert.ok((rosterSource.match(/"photo":/g) ?? []).length > 500);
   assert.ok((rosterSource.match(/"nickname":/g) ?? []).length > 500);
+  assert.match(rosterSource, /export type PlayerSkills/);
+  assert.match(rosterSource, /export type PlayerStats/);
+  assert.ok((rosterSource.match(/"overall":/g) ?? []).length > 1200);
+  assert.ok((rosterSource.match(/"appearances":/g) ?? []).length > 1200);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));

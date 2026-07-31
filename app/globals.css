@@ -905,6 +905,45 @@ kbd {
   white-space: nowrap;
 }
 
+.ratings-method {
+  align-items: center;
+  background: rgba(126, 231, 255, 0.045);
+  border: 1px solid rgba(126, 231, 255, 0.18);
+  display: grid;
+  gap: 6px 14px;
+  grid-template-columns: minmax(180px, 1fr) repeat(3, auto);
+  margin: 0 0 12px;
+  padding: 10px 12px;
+}
+
+.ratings-method > strong {
+  color: #dff8ff;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ratings-method p {
+  color: var(--muted);
+  font-size: 8px;
+  grid-column: 1;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ratings-method > span {
+  color: var(--muted);
+  font-size: 8px;
+  grid-row: 1 / span 2;
+  text-transform: uppercase;
+}
+
+.ratings-method > span b {
+  color: #e9f5ee;
+  display: block;
+  font-size: 9px;
+}
+
 .roster-grid {
   display: grid;
   gap: 7px;
@@ -919,8 +958,8 @@ kbd {
   cursor: pointer;
   display: grid;
   gap: 10px;
-  grid-template-columns: 44px minmax(0, 1fr) 30px;
-  min-height: 70px;
+  grid-template-columns: 44px minmax(0, 1fr) 36px 30px;
+  min-height: 108px;
   padding: 8px 10px;
   text-align: left;
 }
@@ -989,6 +1028,67 @@ kbd {
   font-size: 8px;
   margin-top: 4px;
   text-transform: uppercase;
+}
+
+.roster-player .roster-official-stats {
+  color: #c7d7ce;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-top: 3px;
+}
+
+.roster-skills {
+  display: grid;
+  gap: 2px 6px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 6px;
+}
+
+.roster-skills > span {
+  color: #7f9589;
+  font-size: 7px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.roster-skills b {
+  color: #dcebe3;
+  display: inline;
+  font-size: 8px;
+}
+
+.overall-rating {
+  align-items: center;
+  border: 1px solid rgba(223, 255, 73, 0.28);
+  display: flex;
+  flex-direction: column;
+  height: 38px;
+  justify-content: center;
+  width: 34px;
+}
+
+.overall-rating b {
+  color: var(--acid);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.overall-rating small {
+  color: #93a99d;
+  font-size: 6px;
+  margin: 2px 0 0;
+}
+
+.overall-rating--medium {
+  border-color: rgba(126, 231, 255, 0.32);
+}
+
+.overall-rating--base {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.overall-rating--base b {
+  color: #b8c8bf;
 }
 
 .roster-player i {
@@ -1497,6 +1597,19 @@ footer > span {
 
   .roster-search small {
     padding: 0;
+  }
+
+  .ratings-method {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ratings-method > strong,
+  .ratings-method p {
+    grid-column: 1 / -1;
+  }
+
+  .ratings-method > span {
+    grid-row: auto;
   }
 
   .match-card,

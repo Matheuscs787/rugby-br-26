@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ROSTERS_2026, type RosterPlayer } from "./rosters";
+import { ROSTERS_2026, type PlayerSkills, type RosterPlayer } from "./rosters";
 
 type Division = 1 | 2;
 type UniformPattern = "solid" | "hoops" | "sash" | "quarters";
@@ -22,6 +22,7 @@ type Player = {
   id: number;
   name: string;
   photo?: string;
+  skills: PlayerSkills;
   side: 0 | 1;
   slot: number;
   x: number;
@@ -117,6 +118,16 @@ const SQUAD_SIZE = 12;
 const MID_SLOT = Math.floor(PLAYERS_PER_SIDE / 2);
 const SWEEPER_SLOT = 6;
 const REPLACEMENTS_PER_SIDE = 5;
+const NEUTRAL_SKILLS: PlayerSkills = {
+  overall: 65,
+  speed: 68,
+  tackle: 68,
+  pass: 68,
+  kick: 60,
+  stamina: 70,
+  attack: 68,
+  confidence: "base",
+};
 
 const TEAMS: Team[] = [
   { id: "farrapos", name: "Farrapos", state: "RS", division: 1, group: "Grupo A", primary: "#7d1731", secondary: "#f2c84b", short: "FAR", logo: "/clubs/farrapos.png", pattern: "hoops" },
@@ -193,6 +204,18 @@ function playerDisplayName(player: RosterPlayer) {
   return player.nickname?.trim() || player.name;
 }
 
+function attributeFactor(value: number) {
+  return 0.68 + value * 0.0045;
+}
+
+function staminaDrainFactor(player: Player) {
+  return 1.2 - player.skills.stamina * 0.004;
+}
+
+function dropRangeThreshold(player: Player) {
+  return FIELD_W * (0.6 - player.skills.kick * 0.0014);
+}
+
 function publicAsset(path: string) {
   return path.replace(/^\/+/, "");
 }
@@ -219,11 +242,12 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
   );
   return [
     ...lanes.map((y, slot) => {
-      const athlete = homeSquad[slot] ?? { name: `Atleta ${slot + 1}`, number: slot + 1 };
+      const athlete = homeSquad[slot];
       return {
         id: slot,
-        name: playerDisplayName(athlete),
-        photo: athlete.photo,
+        name: athlete ? playerDisplayName(athlete) : `Atleta ${slot + 1}`,
+        photo: athlete?.photo,
+        skills: athlete?.skills ?? NEUTRAL_SKILLS,
         side: 0 as const,
         slot,
         x: TRY_LINE + 210 - Math.abs(MID_SLOT - slot) * 14,
@@ -231,18 +255,19 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
         stun: 0,
         tackleLock: 0,
         stamina: 100,
-        jersey: athlete.number ?? slot + 1,
+        jersey: athlete?.number ?? slot + 1,
         routeX: 0,
         routeY: 0,
         routeTime: 0,
       };
     }),
     ...lanes.map((y, slot) => {
-      const athlete = awaySquad[slot] ?? { name: `Atleta ${slot + 1}`, number: slot + 1 };
+      const athlete = awaySquad[slot];
       return {
         id: slot + PLAYERS_PER_SIDE,
-        name: playerDisplayName(athlete),
-        photo: athlete.photo,
+        name: athlete ? playerDisplayName(athlete) : `Atleta ${slot + 1}`,
+        photo: athlete?.photo,
+        skills: athlete?.skills ?? NEUTRAL_SKILLS,
         side: 1 as const,
         slot,
         x: RIGHT_TRY_LINE - 210 + Math.abs(MID_SLOT - slot) * 14,
@@ -250,7 +275,7 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
         stun: 0,
         tackleLock: 0,
         stamina: 100,
-        jersey: athlete.number ?? slot + 1,
+        jersey: athlete?.number ?? slot + 1,
         routeX: 0,
         routeY: 0,
         routeTime: 0,
@@ -840,6 +865,7 @@ export function RugbyGame() {
         if (replacement) {
           tiredDefender.name = playerDisplayName(replacement);
           tiredDefender.photo = replacement.photo;
+          tiredDefender.skills = replacement.skills;
           tiredDefender.stamina = 100;
           tiredDefender.jersey = replacement.number ?? tiredDefender.jersey;
           match.substitutesLeft[1] = match.bench[1].length;
@@ -906,17 +932,24 @@ export function RugbyGame() {
         side === 0
           ? Math.min(target.x, owner.x - 3)
           : Math.max(target.x, owner.x + 3);
+      const completionChance = clamp(
+        0.55 + owner.skills.pass * 0.0038 + target.skills.pass * 0.0006,
+        0.76,
+        0.97,
+      );
+      const completed = Math.random() <= completionChance;
       match.ball.owner = null;
-      match.ball.target = target;
+      match.ball.target = completed ? target : null;
       match.ball.air = clamp(Math.hypot(legalTargetX - owner.x, target.y - owner.y) / 470, 0.18, 0.46);
       match.ball.flightDuration = match.ball.air;
       match.ball.kind = "pass";
       match.ball.vx = (legalTargetX - owner.x) / match.ball.air;
-      match.ball.vy = (target.y - owner.y) / match.ball.air;
+      const passError = completed ? 0 : Math.sin(match.seconds * 3.1 + owner.id) * 48;
+      match.ball.vy = (target.y + passError - owner.y) / match.ball.air;
       match.actionLock = 0.28;
       owner.stamina = Math.max(0, owner.stamina - 0.8);
       if (side === 0) {
-        setMessage(match, `Passe para o ${target.slot + 1}`);
+        setMessage(match, completed ? `Passe para o ${target.slot + 1}` : "Passe impreciso — bola viva!");
         haptic();
         beep(480, 0.06);
       }
@@ -929,7 +962,7 @@ export function RugbyGame() {
     if (!match || match.paused || match.over || match.actionLock > 0) return;
     const owner = match.ball.owner;
     if (!owner || owner.side !== 0) return;
-    if (owner.x < FIELD_W * 0.48) {
+    if (owner.x < dropRangeThreshold(owner)) {
       setMessage(match, "Avance mais para tentar o drop", 1.25);
       return;
     }
@@ -954,9 +987,10 @@ export function RugbyGame() {
 
       const targetX = FIELD_W - TRY_LINE;
       const precision = Math.hypot((x - targetX) * 0.4, y - CENTRE_Y);
-      const inRange = owner.x >= FIELD_W * 0.48;
+      const inRange = owner.x >= dropRangeThreshold(owner);
+      const precisionLimit = 38 + owner.skills.kick * 0.38;
       match.actionLock = 1;
-      if (inRange && precision <= 58) {
+      if (inRange && precision <= precisionLimit) {
         match.score[0] += 3;
         owner.stamina = Math.max(0, owner.stamina - 7);
         prepareRestart(match, 0);
@@ -1014,14 +1048,14 @@ export function RugbyGame() {
         : keyState.has("ArrowDown") || keyState.has("KeyS")
           ? 1
           : 0;
-    const flight = 0.82;
+    const flight = 0.68 + owner.skills.kick * 0.002;
     match.ball.owner = null;
     match.ball.target = null;
     match.ball.kind = "kick";
     match.ball.air = flight;
     match.ball.flightDuration = flight;
-    match.ball.vx = 455;
-    match.ball.vy = directionY * 135;
+    match.ball.vx = 360 + owner.skills.kick * 1.45;
+    match.ball.vy = directionY * (105 + owner.skills.kick * 0.4);
     match.actionLock = 0.52;
     owner.stamina = Math.max(0, owner.stamina - 7);
     setMessage(match, "Chute à frente — corra para recuperar!", 1.25);
@@ -1043,8 +1077,20 @@ export function RugbyGame() {
         return;
       }
 
-      carrier.stun = 0.56;
-      tackler.stun = 0.72;
+      const tackleRoll = tackler.skills.tackle + Math.random() * 24;
+      const breakRoll = carrier.skills.attack + Math.random() * 24;
+      if (breakRoll > tackleRoll + 7) {
+        carrier.tackleLock = 0.64;
+        tackler.stun = 0.58;
+        tackler.tackleLock = 0.82;
+        carrier.stamina = Math.max(0, carrier.stamina - 3.5);
+        setMessage(match, carrier.side === 0 ? "Quebra de tackle!" : "Adversário quebrou o tackle", 0.9);
+        beep(carrier.side === 0 ? 530 : 180, 0.07);
+        return;
+      }
+
+      carrier.stun = clamp(0.72 - tackler.skills.tackle * 0.002, 0.5, 0.62);
+      tackler.stun = clamp(0.84 - tackler.skills.tackle * 0.0018, 0.65, 0.76);
       carrier.tackleLock = 1;
       tackler.tackleLock = 1;
       carrier.stamina = Math.max(0, carrier.stamina - 3);
@@ -1058,7 +1104,8 @@ export function RugbyGame() {
         .sort((a, b) => distance(a, carrier) - distance(b, carrier))[0];
       const retained =
         Boolean(support) &&
-        distance(support, carrier) < distance(pressure, carrier) + 55;
+        distance(support, carrier) - (support?.skills.pass ?? 65) * 0.28 <
+          distance(pressure, carrier) - (pressure?.skills.tackle ?? 65) * 0.18 + 52;
       const nextSide = retained ? carrier.side : ((1 - carrier.side) as 0 | 1);
       const nextOwner = match.players
         .filter((player) => player.side === nextSide && player.stun <= 0)
@@ -1089,14 +1136,15 @@ export function RugbyGame() {
         if (match.kickoff <= 0 && match.restartSide !== null) {
           const kickingSide = match.restartSide;
           const kicker = match.ball.owner;
-          const flight = 0.86;
+          const kickSkill = kicker?.skills.kick ?? 65;
+          const flight = 0.76 + kickSkill * 0.0015;
           match.restartSide = null;
           match.ball.owner = null;
           match.ball.target = null;
           match.ball.kind = "restart";
           match.ball.air = flight;
           match.ball.flightDuration = flight;
-          match.ball.vx = kickingSide === 0 ? 365 : -365;
+          match.ball.vx = (kickingSide === 0 ? 1 : -1) * (315 + kickSkill * 0.75);
           match.ball.vy = Math.sin(match.seconds * 1.7) * 82;
           match.actionLock = 0.22;
           if (kicker) kicker.stamina = Math.max(0, kicker.stamina - 3);
@@ -1163,13 +1211,13 @@ export function RugbyGame() {
       const staminaFactor = (player: Player) => 0.58 + player.stamina * 0.0042;
 
       if (controlled && controlled.stun <= 0) {
-        const speed = (sprinting ? 244 : 190) * staminaFactor(controlled);
+        const speed = (sprinting ? 244 : 190) * staminaFactor(controlled) * attributeFactor(controlled.skills.speed);
         controlled.x += (inputX / inputLength) * speed * dt;
         controlled.y += (inputY / inputLength) * speed * dt;
         if (hasMovementInput) {
           controlled.stamina = Math.max(
             0,
-            controlled.stamina - dt * (sprinting ? 2.65 : 0.92),
+            controlled.stamina - dt * (sprinting ? 2.65 : 0.92) * staminaDrainFactor(controlled),
           );
         }
       }
@@ -1179,11 +1227,11 @@ export function RugbyGame() {
         const dx = tx - player.x;
         const dy = ty - player.y;
         const length = Math.hypot(dx, dy) || 1;
-        const actualSpeed = speed * staminaFactor(player);
+        const actualSpeed = speed * staminaFactor(player) * attributeFactor(player.skills.speed);
         player.x += (dx / length) * actualSpeed * dt;
         player.y += (dy / length) * actualSpeed * dt;
         if (length > 10) {
-          player.stamina = Math.max(0, player.stamina - dt * 0.54);
+          player.stamina = Math.max(0, player.stamina - dt * 0.54 * staminaDrainFactor(player));
         }
       };
 
@@ -1193,7 +1241,7 @@ export function RugbyGame() {
         const dx = player.routeX - player.x;
         const dy = player.routeY - player.y;
         const length = Math.hypot(dx, dy) || 1;
-        const speed = 252 * staminaFactor(player);
+        const speed = 252 * staminaFactor(player) * attributeFactor(player.skills.speed);
         player.x += (dx / length) * speed * dt;
         player.y += (dy / length) * speed * dt;
         return true;
@@ -1220,7 +1268,7 @@ export function RugbyGame() {
               const wave = Math.sin(match.seconds * 1.7 + player.slot) * 62;
               const targetY = clamp(CENTRE_Y + wave, 80, FIELD_H - 80);
               const dy = targetY - player.y;
-              player.x -= 174 * dt;
+              player.x -= 174 * attributeFactor(player.skills.speed) * dt;
               player.y += clamp(dy, -110 * dt, 110 * dt);
             }
           } else {
@@ -1569,6 +1617,7 @@ export function RugbyGame() {
       if (!replacement) return;
       player.name = playerDisplayName(replacement);
       player.photo = replacement.photo;
+      player.skills = replacement.skills;
       player.stamina = 100;
       player.jersey = replacement.number ?? player.jersey;
       player.stun = 0;
@@ -2043,6 +2092,14 @@ export function RugbyGame() {
                 </div>
                 <small>{filteredRoster.length} de {homeRoster.players.length} atletas exibidos</small>
               </div>
+              <div className="ratings-method">
+                <strong>OVR estatístico 2026</strong>
+                <p>
+                  Usa jogos, titularidades, vitórias, tries, conversões, penalidades, drops e cartões das súmulas oficiais.
+                  Velocidade e tackle são estimativas pela posição mais utilizada e pela forma — não medições físicas.
+                </p>
+                <span><b>Alta</b> 3+ jogos</span><span><b>Média</b> 1–2 jogos</span><span><b>Base</b> sem súmula</span>
+              </div>
               <div className="roster-grid">
                 {filteredRoster.map(({ athlete, index }) => {
                   const selectedPosition = selectedRosterIndexes.indexOf(index);
@@ -2077,6 +2134,25 @@ export function RugbyGame() {
                             ? `${athlete.number ? `#${athlete.number} · ${rosterRole(athlete.number)} · ` : ""}BID + súmula 2026`
                             : "Disponível no BID 2026"}
                         </small>
+                        <small className="roster-official-stats">
+                          {athlete.stats.appearances
+                            ? `${athlete.stats.appearances}J · ${athlete.stats.wins}V · ${athlete.stats.tries}T · ${athlete.stats.points}PTS`
+                            : "Sem evento oficial em 2026"}
+                        </small>
+                        <span className="roster-skills" aria-label="Atributos do atleta">
+                          <span>VEL <b>{athlete.skills.speed}</b></span>
+                          <span>TAC <b>{athlete.skills.tackle}</b></span>
+                          <span>PAS <b>{athlete.skills.pass}</b></span>
+                          <span>CHU <b>{athlete.skills.kick}</b></span>
+                          <span>FIS <b>{athlete.skills.stamina}</b></span>
+                          <span>ATA <b>{athlete.skills.attack}</b></span>
+                        </span>
+                      </span>
+                      <span
+                        className={`overall-rating overall-rating--${athlete.skills.confidence}`}
+                        title={`Overall ${athlete.skills.overall} · confiança ${athlete.skills.confidence}`}
+                      >
+                        <b>{athlete.skills.overall}</b><small>OVR</small>
                       </span>
                       <i>
                         {selectedPosition < 0
@@ -2094,7 +2170,8 @@ export function RugbyGame() {
               </div>
               <p className="roster-source">
                 Lista formada pelos inscritos no BID oficial e por todos os atletas encontrados nas {homeRoster.sheets.length} súmulas
-                masculinas do clube em 2026 — se apareceu uma vez, está incluído. Fotos exibidas somente quando disponíveis.{" "}
+                masculinas do clube em 2026 — inclusive atletas registrados apenas nos eventos da partida. O OVR é recalculado a partir
+                desses dados e usa uma base posicional quando não existe amostra. Fotos exibidas somente quando disponíveis.{" "}
                 <a href={homeRoster.bid} target="_blank" rel="noreferrer">BID 2026</a>{" · "}
                 <a href={homeRoster.competition} target="_blank" rel="noreferrer">Campeonato</a>{" · "}
                 <a href={homeRoster.source} target="_blank" rel="noreferrer">Perfil do clube no Sporti</a>.
@@ -2111,6 +2188,7 @@ export function RugbyGame() {
                     <strong>
                       {athlete.number ? `#${athlete.number} ` : ""}{athlete.name}
                       {athlete.nickname ? ` · “${athlete.nickname}”` : ""}
+                      {` · OVR ${athlete.skills.overall}`}
                     </strong>
                   </div>
                 ))}

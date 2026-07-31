@@ -112,6 +112,19 @@ O GitHub Pages não precisa de servidor: o workflow publica somente o conteúdo
 estático gerado em `dist-pages/`. A hospedagem atual via Sites continua compatível
 com `npm run build` e não é substituída por essa configuração.
 
+## Atributos dos atletas
+
+O atualizador de elencos também lê placares, escalações e eventos das súmulas
+oficiais de 2026. Cada atleta recebe `overall`, velocidade, tackle, passe, chute,
+físico e ataque. Jogos, titularidades, vitórias, tries, conversões, penalidades,
+drops e cartões são dados observados; velocidade e tackle são estimativas
+posicionais porque as súmulas não publicam medições de sprint ou tackles completos.
+
+O overall pondera velocidade (18%), tackle (20%), passe (18%), chute (12%),
+físico (16%) e ataque (16%). A interface informa a confiança da amostra: base
+sem súmula, média com 1–2 jogos e alta a partir de 3 jogos. Os atributos afetam
+diretamente deslocamento, fadiga, passes, chutes, quebras de tackle e rucks.
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)

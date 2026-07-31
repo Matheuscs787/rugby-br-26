@@ -54,6 +54,114 @@ function normalize(value) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
+const EMPTY_MATCH_STATS = {
+  appearances: 0,
+  starts: 0,
+  wins: 0,
+  draws: 0,
+  tries: 0,
+  conversions: 0,
+  penalties: 0,
+  dropGoals: 0,
+  yellowCards: 0,
+  redCards: 0,
+  jerseyCounts: {},
+};
+
+const POSITION_SKILLS = {
+  frontRow: { speed: 54, tackle: 79, pass: 55, kick: 42, stamina: 72, attack: 66 },
+  lock: { speed: 58, tackle: 78, pass: 57, kick: 42, stamina: 75, attack: 67 },
+  backRow: { speed: 69, tackle: 81, pass: 64, kick: 45, stamina: 81, attack: 73 },
+  scrumHalf: { speed: 78, tackle: 66, pass: 86, kick: 68, stamina: 80, attack: 75 },
+  flyHalf: { speed: 76, tackle: 64, pass: 84, kick: 85, stamina: 77, attack: 80 },
+  wing: { speed: 89, tackle: 62, pass: 70, kick: 61, stamina: 76, attack: 87 },
+  centre: { speed: 81, tackle: 73, pass: 77, kick: 59, stamina: 78, attack: 81 },
+  fullback: { speed: 85, tackle: 68, pass: 78, kick: 79, stamina: 78, attack: 83 },
+  unknown: { speed: 68, tackle: 68, pass: 68, kick: 60, stamina: 70, attack: 68 },
+};
+
+function matchStatsWith(previous, addition) {
+  const left = previous ?? EMPTY_MATCH_STATS;
+  const right = addition ?? EMPTY_MATCH_STATS;
+  return {
+    appearances: left.appearances + right.appearances,
+    starts: left.starts + right.starts,
+    wins: left.wins + right.wins,
+    draws: left.draws + right.draws,
+    tries: left.tries + right.tries,
+    conversions: left.conversions + right.conversions,
+    penalties: left.penalties + right.penalties,
+    dropGoals: left.dropGoals + right.dropGoals,
+    yellowCards: left.yellowCards + right.yellowCards,
+    redCards: left.redCards + right.redCards,
+    jerseyCounts: Object.fromEntries(
+      [...new Set([...Object.keys(left.jerseyCounts), ...Object.keys(right.jerseyCounts)])]
+        .map((number) => [number, (left.jerseyCounts[number] ?? 0) + (right.jerseyCounts[number] ?? 0)]),
+    ),
+  };
+}
+
+function positionFromNumber(number) {
+  if (number >= 1 && number <= 3) return "frontRow";
+  if (number >= 4 && number <= 5) return "lock";
+  if (number >= 6 && number <= 8) return "backRow";
+  if (number === 9) return "scrumHalf";
+  if (number === 10) return "flyHalf";
+  if (number === 11 || number === 14) return "wing";
+  if (number === 12 || number === 13) return "centre";
+  if (number === 15) return "fullback";
+  return "unknown";
+}
+
+function ratingPosition(player) {
+  const observed = Object.entries(player.matchStats?.jerseyCounts ?? {})
+    .map(([number, count]) => ({ number: Number(number), count }))
+    .filter(({ number }) => number >= 1 && number <= 15)
+    .sort((a, b) => b.count - a.count || a.number - b.number)[0]?.number;
+  return observed ?? player.number ?? 0;
+}
+
+function clampSkill(value) {
+  return Math.round(Math.max(40, Math.min(95, value)));
+}
+
+function calculateSkills(player, competition) {
+  const stats = player.matchStats ?? EMPTY_MATCH_STATS;
+  const appearances = stats.appearances;
+  const base = POSITION_SKILLS[positionFromNumber(ratingPosition(player))];
+  const sample = Math.min(1, appearances / 3);
+  const winRate = appearances ? (stats.wins + stats.draws * 0.5) / appearances : 0.5;
+  const formBonus = (winRate - 0.5) * 8 * sample;
+  const experience = Math.min(7, appearances * 1.25 + stats.starts * 0.45);
+  const tryRate = appearances ? stats.tries / appearances : 0;
+  const startRate = appearances ? stats.starts / appearances : 0;
+  const kickEvents = stats.conversions + stats.penalties * 1.4 + stats.dropGoals * 2;
+  const kickRate = appearances ? kickEvents / appearances : 0;
+  const disciplinePenalty = stats.yellowCards * 1.2 + stats.redCards * 4;
+  const divisionBonus = competition === firstDivision ? 2 : 0;
+
+  const skills = {
+    speed: clampSkill(base.speed + divisionBonus + experience * 0.3 + Math.min(9, tryRate * 6) + formBonus * 0.35),
+    tackle: clampSkill(base.tackle + divisionBonus + experience * 0.55 + formBonus * 0.65 - disciplinePenalty),
+    pass: clampSkill(base.pass + divisionBonus + experience * 0.4 + formBonus * 0.45 + Math.min(4, tryRate * 2)),
+    kick: clampSkill(base.kick + divisionBonus + experience * 0.25 + formBonus * 0.35 + Math.min(20, kickRate * 4.5)),
+    stamina: clampSkill(base.stamina + divisionBonus + Math.min(8, startRate * 6 + appearances * 0.7) - stats.redCards),
+    attack: clampSkill(base.attack + divisionBonus + experience * 0.4 + formBonus * 0.75 + Math.min(16, tryRate * 7 + stats.tries * 1.4) - disciplinePenalty * 0.35),
+  };
+  return {
+    overall: clampSkill(
+      skills.speed * 0.18 +
+      skills.tackle * 0.2 +
+      skills.pass * 0.18 +
+      skills.kick * 0.12 +
+      skills.stamina * 0.16 +
+      skills.attack * 0.16,
+    ),
+    ...skills,
+    confidence: appearances >= 3 ? "high" : appearances ? "medium" : "base",
+  };
+}
+
 async function fetchText(url) {
   let lastError;
   for (let attempt = 0; attempt < 3; attempt += 1) {
@@ -95,16 +203,43 @@ function parseTeamPlayers(html, bodyId) {
   });
 }
 
+function parseScore(html, id) {
+  return Number.parseInt(
+    decodeEntities(html.match(new RegExp(`<h1[^>]+id=["']${id}["'][^>]*>([\\s\\S]*?)<\\/h1>`, "i"))?.[1] ?? ""),
+    10,
+  );
+}
+
+function parseEvents(html) {
+  const table = html.match(/<table[^>]+id=["']tabelaEventos["'][^>]*>([\s\S]*?)<\/table>/i)?.[1] ?? "";
+  return Array.from(table.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)).flatMap(([, row]) => {
+    const cells = Array.from(row.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi), (match) => decodeEntities(match[1]));
+    if (cells.length < 6) return [];
+    const athleteMatch = cells[5].match(/^(\d+)\s*-\s*(.+)$/);
+    return [{
+      event: cells[3],
+      team: cells[4],
+      athlete: athleteMatch?.[2]?.trim() ?? cells[5].trim(),
+      number: athleteMatch ? Number.parseInt(athleteMatch[1], 10) : undefined,
+    }];
+  });
+}
+
 function parseSheet(html, url) {
   const names = Array.from(
     html.matchAll(/<h2[^>]*class=["'][^"']*nomesEquipes[^"']*["'][^>]*>([\s\S]*?)<\/h2>/gi),
     (match) => decodeEntities(match[1]),
   ).slice(0, 2);
   if (names.length !== 2) throw new Error(`${url}: equipes não encontradas`);
-  return [
-    { team: names[0], players: parseTeamPlayers(html, "bodyCasa") },
-    { team: names[1], players: parseTeamPlayers(html, "bodyVisitante") },
-  ];
+  const scores = [parseScore(html, "headerGolsCasa"), parseScore(html, "headerGolsVisitante")];
+  if (scores.some((score) => !Number.isFinite(score))) throw new Error(`${url}: placar não encontrado`);
+  return {
+    teams: [
+      { team: names[0], players: parseTeamPlayers(html, "bodyCasa"), score: scores[0], opponentScore: scores[1] },
+      { team: names[1], players: parseTeamPlayers(html, "bodyVisitante"), score: scores[1], opponentScore: scores[0] },
+    ],
+    events: parseEvents(html),
+  };
 }
 
 function parseProfiles(html, source) {
@@ -174,6 +309,31 @@ function resolveTeamId(name) {
     .filter((team) => normalizedName.includes(team.normalized) || team.normalized.includes(normalizedName))
     .sort((a, b) => b.normalized.length - a.normalized.length)[0]?.id;
 }
+
+function assignEventsToPlayers(events, players) {
+  const assigned = new Map(players.map((player) => [player, []]));
+  for (const event of events) {
+    const eventName = normalize(event.athlete);
+    const nameMatches = players
+      .map((player) => ({ player, name: normalize(player.name) }))
+      .filter(({ name }) => eventName && name && (
+        eventName === name ||
+        (eventName.length >= 5 && name.includes(eventName)) ||
+        (name.length >= 5 && eventName.includes(name))
+      ))
+      .sort((a, b) => {
+        const exactA = Number(a.name === eventName);
+        const exactB = Number(b.name === eventName);
+        return exactB - exactA || Math.abs(a.name.length - eventName.length) - Math.abs(b.name.length - eventName.length);
+      });
+    const player = nameMatches[0]?.player ?? players.find((candidate) => (
+      Number.isFinite(event.number) && candidate.number === event.number
+    ));
+    if (player) assigned.get(player).push(event);
+  }
+  return assigned;
+}
+
 const rosters = Object.fromEntries(teams.map(([id, , source]) => [id, {
   source,
   competition: "",
@@ -212,7 +372,11 @@ for (const competition of divisions) {
   }
 }
 
-const sheets = await mapPool(sheetJobs, 5, async (job) => ({ ...job, teams: parseSheet(await fetchText(job.url), job.url) }));
+const uniqueSheetJobs = [...new Map(sheetJobs.map((job) => [job.url, job])).values()];
+const sheets = await mapPool(uniqueSheetJobs, 5, async (job) => ({
+  ...job,
+  ...parseSheet(await fetchText(job.url), job.url),
+}));
 for (const sheet of sheets) {
   for (const team of sheet.teams) {
     const id = resolveTeamId(team.team);
@@ -220,7 +384,21 @@ for (const sheet of sheets) {
     const roster = rosters[id];
     roster.competition = sheet.competition;
     roster.sheets.add(sheet.url);
-    for (const player of team.players) {
+    const teamEvents = sheet.events.filter((event) => resolveTeamId(event.team) === id);
+    const eventOnlyPlayers = [...new Map(teamEvents.flatMap((event) => {
+      if (!event.athlete) return [];
+      const eventName = normalize(event.athlete);
+      const alreadyListed = team.players.some((player) => {
+        const playerName = normalize(player.name);
+        return eventName === playerName ||
+          (eventName.length >= 5 && playerName.includes(eventName)) ||
+          (playerName.length >= 5 && eventName.includes(playerName));
+      });
+      return alreadyListed ? [] : [[eventName, { name: event.athlete, number: event.number, eventOnly: true }]];
+    })).values()];
+    const participants = [...team.players, ...eventOnlyPlayers];
+    const assignedEvents = assignEventsToPlayers(teamEvents, participants);
+    for (const player of participants) {
       const playerKey = normalize(player.name);
       sheetAppearances[id].add(playerKey);
       const matchedEntry = [...roster.players].find(([, candidate]) =>
@@ -232,6 +410,23 @@ for (const sheet of sheets) {
       const nickname = bidName && normalize(bidName) !== playerKey
         ? bidName
         : previous?.nickname;
+      const events = assignedEvents.get(player) ?? [];
+      const enteredAsSubstitute = events.some((event) => normalize(event.event) === "substituicaoentrou");
+      const eventCount = (type) => events.filter((event) => normalize(event.event) === type).length;
+      const matchStats = matchStatsWith(previous?.matchStats, {
+        ...EMPTY_MATCH_STATS,
+        appearances: 1,
+        starts: !player.eventOnly && !enteredAsSubstitute && (player.number ?? 99) <= 15 ? 1 : 0,
+        wins: team.score > team.opponentScore ? 1 : 0,
+        draws: team.score === team.opponentScore ? 1 : 0,
+        tries: eventCount("try"),
+        conversions: eventCount("conversao"),
+        penalties: eventCount("penalidade"),
+        dropGoals: eventCount("dropgoal"),
+        yellowCards: eventCount("cartaoamarelo"),
+        redCards: eventCount("cartaovermelho"),
+        jerseyCounts: Number.isFinite(player.number) ? { [player.number]: 1 } : {},
+      });
       roster.players.set(key, {
         ...previous,
         ...player,
@@ -239,6 +434,7 @@ for (const sheet of sheets) {
         ...(nickname ? { nickname } : {}),
         appeared2026: true,
         appearanceKeys: [...new Set([...(previous?.appearanceKeys ?? []), playerKey])],
+        matchStats,
         ...(player.number || previous?.number ? { number: player.number ?? previous.number } : {}),
       });
     }
@@ -278,6 +474,7 @@ for (const [id, clubProfiles] of profiles) {
       appeared2026: Boolean(previous?.appeared2026 || player.appeared2026),
       nickname: player.nickname ?? previous?.nickname,
       appearanceKeys: [...new Set([...(previous?.appearanceKeys ?? []), ...(player.appearanceKeys ?? [])])],
+      matchStats: matchStatsWith(previous?.matchStats, player.matchStats),
       number: player.number ?? previous?.number,
       photo: player.photo ?? previous?.photo,
     });
@@ -285,9 +482,26 @@ for (const [id, clubProfiles] of profiles) {
   roster.players = [...mergedPlayers.values()]
     .map((player) => {
       const publicPlayer = { ...player };
+      const matchStats = player.matchStats ?? EMPTY_MATCH_STATS;
+      publicPlayer.skills = calculateSkills(player, roster.competition);
+      publicPlayer.stats = {
+        appearances: matchStats.appearances,
+        starts: matchStats.starts,
+        wins: matchStats.wins,
+        draws: matchStats.draws,
+        tries: matchStats.tries,
+        conversions: matchStats.conversions,
+        penalties: matchStats.penalties,
+        dropGoals: matchStats.dropGoals,
+        points: matchStats.tries * 5 + matchStats.conversions * 2 + matchStats.penalties * 3 + matchStats.dropGoals * 3,
+        yellowCards: matchStats.yellowCards,
+        redCards: matchStats.redCards,
+      };
       delete publicPlayer.profileKey;
       delete publicPlayer.teamPath;
       delete publicPlayer.bidName;
+      delete publicPlayer.eventOnly;
+      delete publicPlayer.matchStats;
       return publicPlayer;
     })
     .sort((a, b) =>
@@ -314,7 +528,9 @@ for (const [id, clubProfiles] of profiles) {
 
 const generated = `// Gerado do BID, das súmulas masculinas de 2026 e dos perfis públicos dos clubes no Sporti.\n` +
 `// Execute \`node scripts/update-club-rosters.mjs\` para atualizar.\n` +
-`export type RosterPlayer = {\n  name: string;\n  nickname?: string;\n  number?: number;\n  photo?: string;\n  profile?: string;\n  registered2026?: boolean;\n  appeared2026?: boolean;\n};\n\n` +
+`export type PlayerSkills = {\n  overall: number;\n  speed: number;\n  tackle: number;\n  pass: number;\n  kick: number;\n  stamina: number;\n  attack: number;\n  confidence: "base" | "medium" | "high";\n};\n\n` +
+`export type PlayerStats = {\n  appearances: number;\n  starts: number;\n  wins: number;\n  draws: number;\n  tries: number;\n  conversions: number;\n  penalties: number;\n  dropGoals: number;\n  points: number;\n  yellowCards: number;\n  redCards: number;\n};\n\n` +
+`export type RosterPlayer = {\n  name: string;\n  nickname?: string;\n  number?: number;\n  photo?: string;\n  profile?: string;\n  registered2026?: boolean;\n  appeared2026?: boolean;\n  skills: PlayerSkills;\n  stats: PlayerStats;\n};\n\n` +
 `export type TeamRoster = {\n  source: string;\n  competition: string;\n  bid: string;\n  sheets: string[];\n  players: RosterPlayer[];\n};\n\n` +
 `export const ROSTERS_2026: Record<string, TeamRoster> = ${JSON.stringify(rosters, null, 2)};\n`;
 
