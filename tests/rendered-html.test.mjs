@@ -51,7 +51,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v9-complete-rosters/);
+  assert.match(serviceWorker, /rugby-br-26-v10-bid-rosters/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
   assert.match(gameSource, /const SQUAD_SIZE = 12/);
@@ -67,6 +67,7 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /O elenco exibido não tem limite/);
   assert.match(gameSource, /className="roster-search"/);
   assert.match(gameSource, /athlete\.photo/);
+  assert.match(gameSource, /se apareceu uma vez, está incluído/);
   assert.match(gameSource, /match\.half === 1/);
   assert.match(gameSource, /match\.halftime = true/);
   assert.match(gameSource, /5 m da linha de try/);
@@ -109,7 +110,10 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(rosterSource, /NICOLAS DE AZEVEDO RIBEIRO/);
   assert.match(rosterSource, /JOSÉ VÍTOR TAVARES DA COSTA BESSA/);
   assert.equal((rosterSource.match(/"competition":/g) ?? []).length, 24);
-  assert.ok((rosterSource.match(/"name":/g) ?? []).length > 700);
+  assert.equal((rosterSource.match(/"bid":/g) ?? []).length, 24);
+  assert.ok((rosterSource.match(/"name":/g) ?? []).length > 1200);
+  assert.ok((rosterSource.match(/"registered2026": true/g) ?? []).length > 1100);
+  assert.ok((rosterSource.match(/"appeared2026": true/g) ?? []).length > 700);
   assert.ok((rosterSource.match(/"photo":/g) ?? []).length > 500);
 
   await access(new URL("../public/icon-192.png", import.meta.url));

@@ -706,6 +706,10 @@ export function RugbyGame() {
       .map((athlete, index) => ({ athlete, index }))
       .filter(({ athlete }) => !query || athlete.name.toLocaleLowerCase("pt-BR").includes(query));
   }, [homeRoster, rosterQuery]);
+  const homeRosterStats = useMemo(() => ({
+    registered: homeRoster.players.filter((athlete) => athlete.registered2026).length,
+    appeared: homeRoster.players.filter((athlete) => athlete.appeared2026).length,
+  }), [homeRoster]);
   const visibleTeams = useMemo(
     () => TEAMS.filter((team) => divisionFilter === "all" || team.division === divisionFilter),
     [divisionFilter],
@@ -1934,8 +1938,11 @@ export function RugbyGame() {
             <section className="roster-picker" aria-label={`Elenco masculino de ${home.name}`}>
               <div className="roster-toolbar">
                 <div>
-                  <p className="eyebrow">ELENCO ENCONTRADO · SÚMULAS 2026</p>
+                  <p className="eyebrow">ELENCO DISPONÍVEL · BID 2026</p>
                   <h2>{homeRoster.players.length} atletas disponíveis</h2>
+                  <small className="roster-breakdown">
+                    {homeRosterStats.registered} inscritos no BID · {homeRosterStats.appeared} presentes em súmula
+                  </small>
                 </div>
                 <strong className={selectedSquad.length === SQUAD_SIZE ? "is-complete" : ""}>
                   {selectedSquad.length}/{SQUAD_SIZE}
@@ -1985,7 +1992,11 @@ export function RugbyGame() {
                       </span>
                       <span>
                         <strong>{athlete.name}</strong>
-                        <small>{athlete.number ? `#${athlete.number} · ${rosterRole(athlete.number)}` : rosterRole()}</small>
+                        <small>
+                          {athlete.appeared2026
+                            ? `${athlete.number ? `#${athlete.number} · ${rosterRole(athlete.number)} · ` : ""}BID + súmula 2026`
+                            : "Disponível no BID 2026"}
+                        </small>
                       </span>
                       <i>
                         {selectedPosition < 0
@@ -2002,8 +2013,9 @@ export function RugbyGame() {
                 )}
               </div>
               <p className="roster-source">
-                Lista formada por todos os atletas encontrados nas {homeRoster.sheets.length} súmulas masculinas
-                disputadas pelo clube em 2026. Fotos exibidas somente quando cadastradas no perfil público.{" "}
+                Lista formada pelos inscritos no BID oficial e por todos os atletas encontrados nas {homeRoster.sheets.length} súmulas
+                masculinas do clube em 2026 — se apareceu uma vez, está incluído. Fotos exibidas somente quando disponíveis.{" "}
+                <a href={homeRoster.bid} target="_blank" rel="noreferrer">BID 2026</a>{" · "}
                 <a href={homeRoster.competition} target="_blank" rel="noreferrer">Campeonato</a>{" · "}
                 <a href={homeRoster.source} target="_blank" rel="noreferrer">Perfil do clube no Sporti</a>.
               </p>

@@ -91,7 +91,7 @@ function parseTeamPlayers(html, bodyId) {
     const cells = Array.from(row.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi), (match) => decodeEntities(match[1]));
     const number = Number.parseInt(cells[0] ?? "", 10);
     const name = cells[1]?.trim();
-    return Number.isFinite(number) && name ? [{ name, number }] : [];
+    return name ? [{ name, ...(Number.isFinite(number) ? { number } : {}) }] : [];
   });
 }
 
@@ -130,7 +130,40 @@ function parseProfiles(html, source) {
   return players;
 }
 
+function parseBid(html, source) {
+  const expected = Number.parseInt(
+    html.match(/Total de atletas inscritos:[\s\S]*?numCabecalhoBid[^>]*>(\d+)</i)?.[1] ?? "",
+    10,
+  );
+  const players = [];
+  const blocks = html.split(/<div\s+class=["']box["'][^>]*>/i).slice(1);
+  for (const block of blocks) {
+    const profilePath = block.match(/<a[^>]+href=["']([^"']*\/atleta\/[^"']+)["']/i)?.[1];
+    const teamPath = block.match(/<a[^>]+href=["']([^"']*\/equipe\/[^"']+)["'][^>]*>[\s\S]*?<h3[^>]*class=["'][^"']*equipePesquisa[^"']*["']/i)?.[1];
+    const rawName = block.match(/<h1[^>]*class=["'][^"']*nomeItemPesquisa2Lines[^"']*["'][^>]*>([\s\S]*?)<\/h1>/i)?.[1];
+    if (!profilePath || !teamPath || !rawName) continue;
+    const profile = new URL(profilePath, source).href;
+    const profileSlug = decodeURIComponent(profile.split("/").filter(Boolean).at(-1) ?? "").replace(/-\d+$/, "");
+    const rawPhoto = block.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
+    players.push({
+      teamPath: new URL(teamPath, source).pathname.toLocaleLowerCase("pt-BR"),
+      name: decodeEntities(rawName),
+      profile,
+      profileKey: normalize(profileSlug),
+      registered2026: true,
+      photo: rawPhoto && !/no_img_user/i.test(rawPhoto)
+        ? new URL(decodeEntities(rawPhoto).split("?")[0], source).href
+        : undefined,
+    });
+  }
+  if (Number.isFinite(expected) && players.length !== expected) {
+    throw new Error(`${source}: BID informa ${expected} atletas, mas ${players.length} foram coletados`);
+  }
+  return players;
+}
+
 const teamIdByName = new Map(teams.map(([id, name]) => [normalize(name), id]));
+const teamIdBySlug = new Map(teams.map(([id, , source]) => [new URL(source).pathname.split("/").filter(Boolean).at(-1)?.toLocaleLowerCase("pt-BR"), id]));
 function resolveTeamId(name) {
   const normalizedName = normalize(name);
   const exact = teamIdByName.get(normalizedName);
@@ -143,20 +176,39 @@ function resolveTeamId(name) {
 const rosters = Object.fromEntries(teams.map(([id, , source]) => [id, {
   source,
   competition: "",
+  bid: "",
   sheets: new Set(),
   players: new Map(),
 }]));
+const sheetAppearances = Object.fromEntries(teams.map(([id]) => [id, new Set()]));
 
-const divisions = [
-  { competition: firstDivision, phase: 1367 },
-  { competition: secondDivision, phase: 1368 },
-];
+const divisions = [firstDivision, secondDivision];
 
 const sheetJobs = [];
-for (const division of divisions) {
-  const partial = await fetchText(`https://plataforma.sporti.com.br/Campeonatos/PartialViewJogosPorFase/${division.phase}`);
-  const ids = [...new Set(Array.from(partial.matchAll(/sumula\/(\d+)/gi), (match) => match[1]))];
-  for (const id of ids) sheetJobs.push({ competition: division.competition, url: `${division.competition}/sumula/${id}` });
+for (const competition of divisions) {
+  const page = await fetchText(competition);
+  const bidUrl = `${competition}/bid`;
+  for (const athlete of parseBid(await fetchText(bidUrl), bidUrl)) {
+    const teamSlug = athlete.teamPath.split("/").filter(Boolean).at(-1);
+    const id = teamIdBySlug.get(teamSlug);
+    if (!id) throw new Error(`${bidUrl}: clube desconhecido ${athlete.teamPath}`);
+    const roster = rosters[id];
+    roster.competition = competition;
+    roster.bid = bidUrl;
+    const key = athlete.profileKey || normalize(athlete.name);
+    roster.players.set(key, athlete);
+  }
+  const phaseJson = page.match(/var\s+fases\s*=\s*(\[[^;]+\])/i)?.[1];
+  if (!phaseJson) throw new Error(`${competition}: fases não encontradas`);
+  const phases = JSON.parse(phaseJson);
+  for (const phase of phases) {
+    const endpoint = phase.IdTipoCampeonato === 1
+      ? "PartialViewMataMataPorFase"
+      : "PartialViewJogosPorFase";
+    const partial = await fetchText(`https://plataforma.sporti.com.br/Campeonatos/${endpoint}/${phase.IdFase}`);
+    const ids = [...new Set(Array.from(partial.matchAll(/sumula\/(\d+)/gi), (match) => match[1]))];
+    for (const id of ids) sheetJobs.push({ competition, url: `${competition}/sumula/${id}` });
+  }
 }
 
 const sheets = await mapPool(sheetJobs, 5, async (job) => ({ ...job, teams: parseSheet(await fetchText(job.url), job.url) }));
@@ -167,7 +219,22 @@ for (const sheet of sheets) {
     const roster = rosters[id];
     roster.competition = sheet.competition;
     roster.sheets.add(sheet.url);
-    for (const player of team.players) roster.players.set(normalize(player.name), player);
+    for (const player of team.players) {
+      const playerKey = normalize(player.name);
+      sheetAppearances[id].add(playerKey);
+      const matchedEntry = [...roster.players].find(([, candidate]) =>
+        candidate.profileKey === playerKey || normalize(candidate.name) === playerKey,
+      );
+      const key = matchedEntry?.[0] ?? playerKey;
+      const previous = matchedEntry?.[1] ?? roster.players.get(key);
+      roster.players.set(key, {
+        ...previous,
+        ...player,
+        name: player.name,
+        appeared2026: true,
+        ...(player.number || previous?.number ? { number: player.number ?? previous.number } : {}),
+      });
+    }
   }
 }
 
@@ -180,19 +247,51 @@ for (const [id, clubProfiles] of profiles) {
     );
     if (profile) {
       player.profile = profile.profile;
+      if (!player.appeared2026 && normalize(profile.label).length > normalize(player.name).length) {
+        player.name = profile.label;
+      }
       if (profile.photo) player.photo = profile.photo;
     }
   }
-  roster.players = [...roster.players.values()].sort((a, b) => a.number - b.number || a.name.localeCompare(b.name, "pt-BR"));
+  const mergedPlayers = new Map();
+  for (const player of roster.players.values()) {
+    const identity = player.profile
+      ? `profile:${new URL(player.profile).pathname.toLocaleLowerCase("pt-BR")}`
+      : `name:${normalize(player.name)}`;
+    const previous = mergedPlayers.get(identity);
+    mergedPlayers.set(identity, {
+      ...previous,
+      ...player,
+      name: player.appeared2026 ? player.name : previous?.name ?? player.name,
+      registered2026: Boolean(previous?.registered2026 || player.registered2026),
+      appeared2026: Boolean(previous?.appeared2026 || player.appeared2026),
+      number: player.number ?? previous?.number,
+      photo: player.photo ?? previous?.photo,
+    });
+  }
+  roster.players = [...mergedPlayers.values()]
+    .map(({ profileKey, teamPath, ...player }) => player)
+    .sort((a, b) =>
+      Number(Boolean(b.appeared2026)) - Number(Boolean(a.appeared2026)) ||
+      (a.number ?? 999) - (b.number ?? 999) ||
+      a.name.localeCompare(b.name, "pt-BR"),
+    );
   roster.sheets = [...roster.sheets];
+  const listedNames = new Set(roster.players.filter((player) => player.appeared2026).map((player) => normalize(player.name)));
+  const missingAppearances = [...sheetAppearances[id]].filter((name) => !listedNames.has(name));
+  if (missingAppearances.length) {
+    throw new Error(`${id}: ${missingAppearances.length} atletas de súmula não foram incluídos`);
+  }
   const photos = roster.players.filter((player) => player.photo).length;
-  console.log(`${id}: ${roster.players.length} atletas · ${photos} fotos`);
+  const appeared = roster.players.filter((player) => player.appeared2026).length;
+  const registered = roster.players.filter((player) => player.registered2026).length;
+  console.log(`${id}: ${roster.players.length} atletas · ${registered} no BID · ${appeared} em súmula · ${photos} fotos`);
 }
 
-const generated = `// Gerado das súmulas masculinas de 2026 e dos perfis públicos dos clubes no Sporti.\n` +
+const generated = `// Gerado do BID, das súmulas masculinas de 2026 e dos perfis públicos dos clubes no Sporti.\n` +
 `// Execute \`node scripts/update-club-rosters.mjs\` para atualizar.\n` +
-`export type RosterPlayer = {\n  name: string;\n  number?: number;\n  photo?: string;\n  profile?: string;\n};\n\n` +
-`export type TeamRoster = {\n  source: string;\n  competition: string;\n  sheets: string[];\n  players: RosterPlayer[];\n};\n\n` +
+`export type RosterPlayer = {\n  name: string;\n  number?: number;\n  photo?: string;\n  profile?: string;\n  registered2026?: boolean;\n  appeared2026?: boolean;\n};\n\n` +
+`export type TeamRoster = {\n  source: string;\n  competition: string;\n  bid: string;\n  sheets: string[];\n  players: RosterPlayer[];\n};\n\n` +
 `export const ROSTERS_2026: Record<string, TeamRoster> = ${JSON.stringify(rosters, null, 2)};\n`;
 
 await writeFile(new URL("../app/rosters.ts", import.meta.url), generated);

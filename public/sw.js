@@ -1,4 +1,4 @@
-const CACHE = "rugby-br-26-v9-complete-rosters";
+const CACHE = "rugby-br-26-v10-bid-rosters";
 const CORE = ["/", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png"];
 
 self.addEventListener("install", (event) => {

@@ -1,15 +1,18 @@
-// Gerado das súmulas masculinas de 2026 e dos perfis públicos dos clubes no Sporti.
+// Gerado do BID, das súmulas masculinas de 2026 e dos perfis públicos dos clubes no Sporti.
 // Execute `node scripts/update-club-rosters.mjs` para atualizar.
 export type RosterPlayer = {
   name: string;
   number?: number;
   photo?: string;
   profile?: string;
+  registered2026?: boolean;
+  appeared2026?: boolean;
 };
 
 export type TeamRoster = {
   source: string;
   competition: string;
+  bid: string;
   sheets: string[];
   players: RosterPlayer[];
 };
@@ -18,6 +21,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
   "farrapos": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/farrapos-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106461",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106465",
@@ -26,185 +30,348 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "VICENTE NERY GALVÃO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vicente-nery-galvao-",
+        "registered2026": true,
         "number": 1,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vicente-nery-galvao-"
+        "appeared2026": true
       },
       {
         "name": "ENDY WILLIAN DE JESUS PINHEIRO",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/endy-willian-de-jesus-pinheiro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/endy-willian-de-jesus-pinheiro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/endy-willian-de-jesus-pinheiro/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "LAFAIETE PANDOLFO DE PAULA",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lafaiete-pandolfo-de-paula",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lafaiete-pandolfo-de-paula/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lafaiete-pandolfo-de-paula/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "BRUNO MARANGONI",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-marangoni",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-marangoni/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-marangoni/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "MAURICIO AQUINO CANTERLE",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mauricio-aquino-canterle",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauricio-aquino-canterle/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauricio-aquino-canterle/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO PANDOLFO DE PAULA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-pandolfo-de-paula",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-pandolfo-de-paula/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-pandolfo-de-paula/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "CRISTIANO ANDRÉ PRIMEL",
-        "number": 7
+        "number": 7,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RODOLFO GONÇALVES DE SOUZA MARTHINS",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodolfo-goncalves-de-souza-marthins",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodolfo-goncalves-de-souza-marthins/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodolfo-goncalves-de-souza-marthins/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS ALEXANDRE MENEZES DE ALMEIDA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-alexandre-menezes-de-almeida",
+        "registered2026": true,
         "number": 9,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-alexandre-menezes-de-almeida"
+        "appeared2026": true
       },
       {
         "name": "FACUNDO RODRIGO FLORES",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/facundo-rodrigo-flores",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-rodrigo-flores/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-rodrigo-flores/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "BERNARDO LAZZAROTTI BONESSO",
-        "number": 11
+        "number": 11,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "WAGNER FAREZIN DA COSTA",
-        "number": 12
+        "number": 12,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DIOGO FAREZIN DE ALMEIDA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diogo-farezin-de-almeida",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-farezin-de-almeida/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-farezin-de-almeida/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO MANOSSO ZANROSSO",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-manosso-zanrosso",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-manosso-zanrosso/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-manosso-zanrosso/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "MURILLO LAZZAROTTI BONESSO",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/murillo-lazzarotti-bonesso",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/murillo-lazzarotti-bonesso/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/murillo-lazzarotti-bonesso/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO CARVALHO REDANTE",
-        "number": 16
+        "number": 16,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DAIAN CRISTIAN ZONATTO RAMA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daian-cristian-zonatto-rama",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daian-cristian-zonatto-rama/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daian-cristian-zonatto-rama/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "FABIO VARGAS MACHADO",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabio-vargas-machado",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-vargas-machado/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-vargas-machado/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "MATEUS FRANCISCO GALLON RIZZI",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mateus-francisco-gallon-rizzi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-francisco-gallon-rizzi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-francisco-gallon-rizzi/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "CLEDER RODRIGO MORAIS JUNIOR",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/cleder-rodrigo-morais-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cleder-rodrigo-morais-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cleder-rodrigo-morais-junior/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME BORBA DE BRITO",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-borba-de-brito",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-borba-de-brito/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-borba-de-brito/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "BOLÍVAR ZIMERMANN MACHADO",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bolivar-zimermann-machado",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bolivar-zimermann-machado/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bolivar-zimermann-machado/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE RANGEL MAGALHÃES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-rangel-magalhaes-1",
+        "registered2026": true,
         "number": 21,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-rangel-magalhaes-1"
+        "appeared2026": true
       },
       {
         "name": "MARCOS FERNANDO CIVARDI",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-fernando-civardi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-fernando-civardi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-fernando-civardi/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "CLAUDINEI JOSÉ WRONSKI",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/claudinei-jose-wronski",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/claudinei-jose-wronski/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/claudinei-jose-wronski/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "MARCOS",
-        "number": 23
+        "number": 23,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ALISSON AMARAL DOS SANTOS",
-        "number": 25,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alisson-amaral-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-amaral-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-amaral-dos-santos/1-Thumbnail.jpeg",
+        "number": 25,
+        "appeared2026": true
       },
       {
         "name": "OTAVIO AUGUSTO FINATTO TAIARIOL",
-        "number": 26,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/otavio-augusto-finatto-taiariol",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/otavio-augusto-finatto-taiariol/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/otavio-augusto-finatto-taiariol/1-Thumbnail.jpeg",
+        "number": 26,
+        "appeared2026": true
       },
       {
         "name": "WILLIAM MARCELO MACHADO CRIPPA",
-        "number": 27
+        "number": 27,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "BRUNO DA SILVA MARQUES",
-        "number": 28,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-da-silva-marques-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-da-silva-marques-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-da-silva-marques-/1-Thumbnail.jpeg",
+        "number": 28,
+        "appeared2026": true
       },
       {
         "name": "MAIKON KLAUS DE OLIVEIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/maikon-klaus-de-oliveira",
+        "registered2026": true,
         "number": 30,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/maikon-klaus-de-oliveira"
+        "appeared2026": true
       },
       {
         "name": "JOSÉ CARLOS FAGUNDES JUNIOR",
-        "number": 31,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-carlos-fagundes-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-carlos-fagundes-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-carlos-fagundes-junior/1-Thumbnail.jpeg",
+        "number": 31,
+        "appeared2026": true
+      },
+      {
+        "name": "Bernardo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bernardo-bonesso",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-bonesso/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "CAETANO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/caetano-gasparetto-costa-arantes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caetano-gasparetto-costa-arantes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cavera",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcio-nunes-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcio-nunes-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Coghetto",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-coghetto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-coghetto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Crippa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/william-marcelo-machado-crippa2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-marcelo-machado-crippa2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Felipe",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-eugenio-lovato",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-eugenio-lovato/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marquinhos Maguila",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-vinicius-klaus-guedes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-vinicius-klaus-guedes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Massari",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lorenzo-temer-massari",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-temer-massari/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pelado",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/cristiano-primel",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristiano-primel/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Redante",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-redante",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-redante/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Rizzi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/wilian-de-moraes-rizzi",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wilian-de-moraes-rizzi/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Rudi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rudinei-styburski",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rudinei-styburski/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "TECO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jonatan-gobatto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonatan-gobatto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Wag",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/wagner-farezin-da-costa2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wagner-farezin-da-costa2/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "charrua": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/charrua-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106463",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106465",
@@ -213,210 +380,322 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "JULIO ORTOLAN COLE",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/julio-ortolan-cole",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/julio-ortolan-cole/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/julio-ortolan-cole/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL MIRANDA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-miranda",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-miranda/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-miranda/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL KRÜTZMANN SANTOS",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-krutzmann-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-krutzmann-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-krutzmann-santos/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "DIEGO GIOVANNI PIETROBON TEIXEIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-giovanni-pietrobon-teixeira-",
+        "registered2026": true,
         "number": 4,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-giovanni-pietrobon-teixeira-"
+        "appeared2026": true
       },
       {
         "name": "IGOR LUIS SILVA GOMES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-luis-silva-gomes",
+        "registered2026": true,
         "number": 5,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-luis-silva-gomes"
+        "appeared2026": true
       },
       {
         "name": "THIAGO BOFFA BARROSO BRAGA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-boffa-barroso-braga",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-boffa-barroso-braga/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-boffa-barroso-braga/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "YOHAN ALVES SOUZA DOS SANTOS",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/yohan-alves-souza-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yohan-alves-souza-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yohan-alves-souza-dos-santos/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO LANFERDINI BORDIGNON",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-lanferdini-bordignon",
+        "registered2026": true,
         "number": 7,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-lanferdini-bordignon"
+        "appeared2026": true
       },
       {
         "name": "YLAN MACHADO SILVEIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ylan-machado-silveira",
+        "registered2026": true,
         "number": 7,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ylan-machado-silveira"
+        "appeared2026": true
       },
       {
         "name": "FELIPE QUEVEDO ARAUJO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-quevedo-araujo",
+        "registered2026": true,
         "number": 8,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-quevedo-araujo"
+        "appeared2026": true
       },
       {
         "name": "MATEO VIANA ACHE",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mateo-viana-ache",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateo-viana-ache/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateo-viana-ache/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE BITENCOURT DE MELLO",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-bitencourt-de-mello",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-bitencourt-de-mello/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-bitencourt-de-mello/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO ROSA UNIVERSINDO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-rosa-universindo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-rosa-universindo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-rosa-universindo/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "CÉSAR AUGUSTO FAVOTO ALVES PEREIRA",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/cesar-augusto-favoto-alves-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cesar-augusto-favoto-alves-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cesar-augusto-favoto-alves-pereira/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "LUIZ FELIPE SIMON RIBAS",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-felipe-simon-ribas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-felipe-simon-ribas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-felipe-simon-ribas/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL BOLZAN MOTTA",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-bolzan-motta",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-bolzan-motta/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-bolzan-motta/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL SILVA VARGAS",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-silva-vargas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-silva-vargas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-silva-vargas/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "WESLEY DE SOUZA ROPKE",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/wesley-de-souza-ropke",
+        "registered2026": true,
         "number": 13,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/wesley-de-souza-ropke"
+        "appeared2026": true
       },
       {
         "name": "EROS DE OLIVEIRA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/eros-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eros-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eros-de-oliveira/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "SAULO DALLA CORT FILIPPI",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/saulo-dalla-cort-filippi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/saulo-dalla-cort-filippi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/saulo-dalla-cort-filippi/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS",
-        "number": 15
+        "number": 15,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "THOMAS ROSA FERNANDES DOS SANTOS",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thomas-rosa-fernandes-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomas-rosa-fernandes-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomas-rosa-fernandes-dos-santos/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL CRISTANE MICHEL",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-cristane-michel",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cristane-michel/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cristane-michel/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL DE MELO LEAL",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-de-melo-leal",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-de-melo-leal/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-de-melo-leal/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "ALEXSANDRO BARBOSA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alexsandro-barbosa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexsandro-barbosa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexsandro-barbosa/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "TIAGO GONÇALVES DOS SANTOS JUNIOR",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/tiago-goncalves-dos-santos-junior",
+        "registered2026": true,
         "number": 17,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/tiago-goncalves-dos-santos-junior"
+        "appeared2026": true
       },
       {
         "name": "GUILHERME SCHLABITZ PITSCH",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-schlabitz-pitsch",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-schlabitz-pitsch/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-schlabitz-pitsch/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "ALEX ACHERNAR DA ROSA WENDT",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alex-achernar-da-rosa-wendt",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-achernar-da-rosa-wendt/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-achernar-da-rosa-wendt/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "JESUS DUQUIA",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jesus-duquia",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jesus-duquia/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jesus-duquia/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "JARDEL",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jardel-vandre-diesel-martins",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jardel-vandre-diesel-martins/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jardel-vandre-diesel-martins/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "DERICK PRADIE GARCEZ",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/derick-pradie-garcez",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/derick-pradie-garcez/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/derick-pradie-garcez/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE DE PAULA LOPES",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-de-paula-lopes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-de-paula-lopes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-de-paula-lopes/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "MAIQUEL ANDRÉ NEUMANN",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/maiquel-andre-neumann",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maiquel-andre-neumann/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maiquel-andre-neumann/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO CORREA FREITAS",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-correa-freitas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-correa-freitas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-correa-freitas/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "UARY PACHECO RIBEIRO GONDIM",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/uary-pacheco-ribeiro-gondim",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/uary-pacheco-ribeiro-gondim/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/uary-pacheco-ribeiro-gondim/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
+      },
+      {
+        "name": "CARLOS EDUARDO MOLINA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-eduardo-molina",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "CARLOS HENRIQUE DE MACHADO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-henrique-de-machado",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-henrique-de-machado/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fernando Amarilho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-amarilho-silveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-amarilho-silveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lelê",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leandro-jose-wagner",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leandro-jose-wagner/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "SESSEL",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-vinicius-sessel",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-vinicius-sessel/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vovolandro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/valandro-santos-manzoni-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/valandro-santos-manzoni-/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "desterro": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/desterro-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106461",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106467",
@@ -425,218 +704,541 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "DANIEL XAVIER DANIELEWICZ",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-xavier-danielewicz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-xavier-danielewicz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-xavier-danielewicz/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "JONAS AFONSO HAUSCHILD",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jonas-afonso-hauschild",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonas-afonso-hauschild/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonas-afonso-hauschild/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "MARIANO ARIEL NAIMOQUIN",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mariano-ariel-naimoquin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mariano-ariel-naimoquin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mariano-ariel-naimoquin/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO HAUSMANN",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-hausmann",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-hausmann/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-hausmann/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "THIAGO LAURENTINO RIAL",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-laurentino-rial",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "FACUNDO",
-        "number": 3
+        "number": 3,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ROGER DE LIMA PIZUTTI",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/roger-de-lima-pizutti",
+        "registered2026": true,
         "number": 3,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/roger-de-lima-pizutti"
+        "appeared2026": true
       },
       {
         "name": "MATTHEW ALEXANDER COX",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matthew-alexander-cox",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matthew-alexander-cox/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matthew-alexander-cox/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE LESSA DOMINGUES PINHO DE OLIVEIRA",
-        "number": 5
+        "number": 5,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "TOBIAS ALFREDO SALGADO",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tobias-alfredo-salgado",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tobias-alfredo-salgado/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tobias-alfredo-salgado/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "VINICIUS NASCIMENTO DE MOURA",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-nascimento-de-moura",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-nascimento-de-moura/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-nascimento-de-moura/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "DANIEL GONÇALVES FERNANDES DA ROSA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-goncalves-fernandes-da-rosa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-goncalves-fernandes-da-rosa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-goncalves-fernandes-da-rosa/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO RODRIGUES DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-rodrigues-da-silva-1",
+        "registered2026": true,
         "number": 6,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-rodrigues-da-silva-1"
+        "appeared2026": true
       },
       {
         "name": "IGOR RINQUE DE MOURA",
-        "number": 6
+        "number": 6,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "KAIQUE MUTTER HALEPLIAN",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaique-mutter-haleplian",
+        "registered2026": true,
         "number": 7,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaique-mutter-haleplian"
+        "appeared2026": true
       },
       {
         "name": "MATHEUS ANTONIO ALLI DOS SANTOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-antonio-alli-dos-santos",
+        "registered2026": true,
         "number": 7,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-antonio-alli-dos-santos"
+        "appeared2026": true
       },
       {
         "name": "RUDA BIEDERMANN",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ruda-biedermann",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ruda-biedermann/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ruda-biedermann/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "FRANCISCO CARVALHO DA ROS",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/francisco-carvalho-da-ros",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/francisco-carvalho-da-ros/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/francisco-carvalho-da-ros/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME SCHEEREN",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-scheeren",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-scheeren/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-scheeren/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "FELIPE ARTIGIANI GARCIA",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-artigiani-garcia",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-artigiani-garcia/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-artigiani-garcia/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME ZORZAN LEONHARDT",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-zorzan-leonhardt",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-zorzan-leonhardt/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-zorzan-leonhardt/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "FELIPE DELL AGNOLO FRANÇA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-dell-agnolo-franca",
+        "registered2026": true,
         "number": 12,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-dell-agnolo-franca"
+        "appeared2026": true
       },
       {
         "name": "IBERÊ BULBARELLI TRIVELLA",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ibere-bulbarelli-trivella-",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "NÍCOLAS VALER HORN",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolas-valer-horn",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-valer-horn/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-valer-horn/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "CAIO VAVOLIZZA FRANÇA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/caio-vavolizza-franca",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-vavolizza-franca/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-vavolizza-franca/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME STRATE FOGAÇA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-strate-fogaca",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-strate-fogaca/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-strate-fogaca/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "JOÃO VITOR RODRIGUES DALSECCO",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-rodrigues-dalsecco",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-rodrigues-dalsecco/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-rodrigues-dalsecco/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "LORENZO ROY DE GIACOMO",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lorenzo-roy-de-giacomo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-roy-de-giacomo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-roy-de-giacomo/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME CARDOSO VIEIRA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-cardoso-vieira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-cardoso-vieira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-cardoso-vieira/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "JOÃO LUIZ DA ROS",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-luiz-da-ros",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-luiz-da-ros/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-luiz-da-ros/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL DANIEL CORREIA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-daniel-correia",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-daniel-correia/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-daniel-correia/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO DOLSAN CORREIA",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-dolsan-correia",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-dolsan-correia/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-dolsan-correia/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "ALEXANDRE RODRIGUES RIBAS",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alexandre-rodrigues-ribas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexandre-rodrigues-ribas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexandre-rodrigues-ribas/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "TUAN LARSEN COMIN",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tuan-larsen-comin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tuan-larsen-comin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tuan-larsen-comin/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS FLEURY BUENO",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-fleury-bueno",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-fleury-bueno/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-fleury-bueno/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "WILLIAM MATEUS ROHRIG NIEDERMEYER",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/william-mateus-rohrig-niedermeyer",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-mateus-rohrig-niedermeyer/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-mateus-rohrig-niedermeyer/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "VINICIUS FIDELES DE OLIVEIRA",
-        "number": 25
+        "number": 25,
+        "appeared2026": true,
+        "registered2026": false
+      },
+      {
+        "name": "Agustin",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/agustin-alvez-paz",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/agustin-alvez-paz/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ale",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-alejandro-leal-bracho2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-alejandro-leal-bracho2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Baby",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-ribeiro-do-couto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-ribeiro-do-couto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bernardo Thiesen",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bernardo-mariotti-thiesen",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-mariotti-thiesen/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Biel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-dos-santos-castro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-dos-santos-castro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "BIEL",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-santos-silva4",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-santos-silva4/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Buda",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-arruda",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-arruda/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cam",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/cameron-wade-webster",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Daniel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-inacio-mallmann",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-inacio-mallmann/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "davi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-antonio-goncalves",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-antonio-goncalves/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Davi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-de-souza",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-de-souza/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Duda",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-alfredo-mallmann",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-alfredo-mallmann/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Enrico",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/enrico-rigotti-bastos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/enrico-rigotti-bastos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fideles",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/viniciusfidelesdeoliveira-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/viniciusfidelesdeoliveira-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gramps",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marco-antonio-carrico-de-oliveira-cervi",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "higor",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/higor-beclar-da-rosa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Hubert",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/hubert-gibory",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hubert-gibory/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "HUDSON ALPHEU",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/hudson-alpheu-da-silva-emiliano",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hudson-alpheu-da-silva-emiliano/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Igor",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/inizinn",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/inizinn/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jery",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gert-cronje",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gert-cronje/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Johnjohn",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/johnathan-michael-donaghy",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Le",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leandro-castro-de-sa",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "lessa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcio-lessa-domingues-pinho-de-oliveira",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "LESSA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-lessa-domingues-pinho-de-oliveira2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-lessa-domingues-pinho-de-oliveira2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Manuel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/manuel-andre-madeira-carvalho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/manuel-andre-madeira-carvalho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "martin",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/martin-joufflineau",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/martin-joufflineau/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Michelzeira",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/michel-simbol-prieto-de-mattos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michel-simbol-prieto-de-mattos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Nono",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/claudionor-luiz-lopes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "PEDRO HENRIQUE MACHADO FERREIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-machado-ferreira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-machado-ferreira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "PEDRO HENRIQUE SANTOS SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-santos-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-santos-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Peixoto",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-figueiredo-peixoto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-figueiredo-peixoto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Retutu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/facundo-horacio-vignolles",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-horacio-vignolles/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Romulo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/romulo-fedatto-pereira",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Sami",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/sami-uehbe-dubena",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sami-uehbe-dubena/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vitão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vitor-cassiano-vicente",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-cassiano-vicente/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Werk",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-clementi-werkhaizer",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
       }
     ]
   },
   "joaca": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/joaca-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106463",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106467",
@@ -645,174 +1247,303 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "RODINEI DA SILVA PEREIRA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodinei-da-silva-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodinei-da-silva-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodinei-da-silva-pereira/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "IGOR PITTIGLIANI JORGE",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-pittigliani-jorge",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-pittigliani-jorge/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-pittigliani-jorge/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "BOUTROS ABBOUD",
-        "number": 3
+        "number": 3,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "VINÍCIUS FERREIRA CHAVES DE SOUZA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-ferreira-chaves-de-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-ferreira-chaves-de-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-ferreira-chaves-de-souza/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "FERNANDO HORÁCIO SALVATIERRA",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-horacio-salvatierra",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-horacio-salvatierra/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-horacio-salvatierra/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO PENNA",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-penna",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-penna/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-penna/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO NASCIMENTO DE SOUZA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-nascimento-de-souza-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-nascimento-de-souza-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-nascimento-de-souza-/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "ISMAEL FERNANDO BONATTO RAIZEL DA SILVA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ismael-fernando-bonatto-raizel-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ismael-fernando-bonatto-raizel-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ismael-fernando-bonatto-raizel-da-silva/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL ANTÔNIO BONATTO RAIZEL DA SILVA",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-antonio-bonatto-raizel-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-antonio-bonatto-raizel-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-antonio-bonatto-raizel-da-silva/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL GATTINO RÉUS",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-gattino-reus",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-gattino-reus/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-gattino-reus/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS SAMPAIO PRESTES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-sampaio-prestes-",
+        "registered2026": true,
         "number": 9,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-sampaio-prestes-"
+        "appeared2026": true
       },
       {
         "name": "CAMILO CORDEIRO FLORES",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/camilo-cordeiro-flores",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/camilo-cordeiro-flores/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/camilo-cordeiro-flores/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS CORRÊA MORAIS",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-correa-morais",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-correa-morais/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-correa-morais/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO FREDERICO MARDER",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-frederico-marder",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-frederico-marder/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-frederico-marder/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "JOAQUIM FERNANDEZ DO LIVRAMENTO MACHADO",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/ra-sports/atleta/joaquim-fernandez-do-livramento-machado",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquim-fernandez-do-livramento-machado/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquim-fernandez-do-livramento-machado/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "AUGUSTO BOGORNI BORTOLÁS",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/augusto-bogorni-bortolas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-bogorni-bortolas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-bogorni-bortolas/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "RENATO ALVES MÖLLERKE",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/renato-alves-mollerke",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-alves-mollerke/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-alves-mollerke/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "AIRTON SPILLERE DALMAGRO JUNIOR",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/airton-spillere-dalmagro-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/airton-spillere-dalmagro-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/airton-spillere-dalmagro-junior/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "NÍCOLA DUARTE MARTINS",
-        "number": 14
+        "number": 14,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RAFAEL HENRIQUE DIAS",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-henrique-dias",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-henrique-dias/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-henrique-dias/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "IAGO MARTINS DA CUNHA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/iago-martins-da-cunha",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-martins-da-cunha/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-martins-da-cunha/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "ANTONIO ROMAN VANZ",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/antonio-roman-vanz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/antonio-roman-vanz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/antonio-roman-vanz/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "FRANCO",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/franco-gaston-laferrara",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/franco-gaston-laferrara/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/franco-gaston-laferrara/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "THOMI DIMAS BRESSAN",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thomi-dimas-bressan",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomi-dimas-bressan/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomi-dimas-bressan/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "LUCIANO GARCIA BUENO",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luciano-garcia-bueno",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luciano-garcia-bueno/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luciano-garcia-bueno/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "NICOLAU CLARINDO PAULO NETO",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolau-clarindo-paulo-neto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolau-clarindo-paulo-neto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolau-clarindo-paulo-neto/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "VALMIR DONATO DE OLIVEIRA NETO",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/valmir-donato-de-oliveira-neto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/valmir-donato-de-oliveira-neto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/valmir-donato-de-oliveira-neto/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL",
-        "number": 22
+        "number": 22,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RODRIGO VELICEV MENDONÇA",
-        "number": 23
+        "number": 23,
+        "appeared2026": true,
+        "registered2026": false
+      },
+      {
+        "name": "Alça",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-alves-raquel",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-alves-raquel/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Artur",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/artur-bosa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/artur-bosa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dalinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-de-souza-nascimento",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-de-souza-nascimento/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Graff",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-reginato-graff",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-reginato-graff/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Leozao",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-de-souza-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-souza-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Nico",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicola-duarte-martins2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicola-duarte-martins2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pedroso",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-silveira-pedroso",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-silveira-pedroso/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Rodrigo",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/rodrigovelicevmendonca-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigovelicevmendonca-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ruas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-walper-ruas",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-walper-ruas/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Turco",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/boutros-youssef-abboud",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/boutros-youssef-abboud/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "poli": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/associacao-esportiva-politecnica-de-rugby",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106473",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106477",
@@ -821,190 +1552,351 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "VITOR HIDEO MINAME",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vitor-hideo-miname",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-hideo-miname/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-hideo-miname/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL ALVES BAPTISTA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-alves-baptista-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-alves-baptista-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-alves-baptista-/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "BRUNO GIL MELO DA SILVA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-gil-melo-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-gil-melo-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-gil-melo-da-silva/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "EDGARD BORGES MALTA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/edgard-borges-malta",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edgard-borges-malta/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edgard-borges-malta/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "ROGÉRIO PAVÃO FRANCO",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rogerio-pavao-franco",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL TORRES PAGANINI",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-torres-paganini",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-torres-paganini/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-torres-paganini/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "SEBASTIÃO DE MIRA FERREIRA GONÇALVES DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/sebastiao-de-mira-ferreira-goncalves-da-silva",
+        "registered2026": true,
         "number": 6,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/sebastiao-de-mira-ferreira-goncalves-da-silva"
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO BERNARDES COPPA XEREGUIN",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-bernardes-coppa-xereguin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-bernardes-coppa-xereguin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-bernardes-coppa-xereguin/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE SOARES APARECIDO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-soares-aparecido-1",
+        "registered2026": true,
         "number": 8,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-soares-aparecido-1"
+        "appeared2026": true
       },
       {
         "name": "JOÃO PEDRO GIORGI FERREIRA CABRAL",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-giorgi-ferreira-cabral",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-giorgi-ferreira-cabral/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-giorgi-ferreira-cabral/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "ISAC LOPES",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/isac-lopes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isac-lopes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isac-lopes/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "LUIZ GUSTAVO SERVOS WILLETS",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-gustavo-servos-willets",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-gustavo-servos-willets/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-gustavo-servos-willets/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "THIAGO HENRIQUE EVARISTO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-henrique-evaristo-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-henrique-evaristo-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-henrique-evaristo-1/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "IVAN MANCINI DA SILVA",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ivan-mancini-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-mancini-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-mancini-da-silva/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "EMERSON BERTAGNOLI MUNIZ PONTES",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/emerson-bertagnoli-muniz-pontes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/emerson-bertagnoli-muniz-pontes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/emerson-bertagnoli-muniz-pontes/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "JOAO PAULO DOS SANTOS NETO",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-paulo-dos-santos-neto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-dos-santos-neto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-dos-santos-neto/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "ROBERT AGUINALDO TENORIO DA SILVA SANTOS",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/robert-aguinaldo-tenorio-da-silva-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robert-aguinaldo-tenorio-da-silva-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robert-aguinaldo-tenorio-da-silva-santos/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "LUIZ FERNANDO FELIZARDO TALERIGA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-fernando-felizardo-taleriga",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-fernando-felizardo-taleriga/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-fernando-felizardo-taleriga/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "NASSOR LUKATA FAUSTINO CRUZ",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nassor-lukata-faustino-cruz-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nassor-lukata-faustino-cruz-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nassor-lukata-faustino-cruz-/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "CARLOS TORRES BARRIA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-torres-barria",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-torres-barria/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-torres-barria/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "ELIAS CARVALHO DOS SANTOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/elias-carvalho-dos-santos-1",
+        "registered2026": true,
         "number": 15,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/elias-carvalho-dos-santos-1"
+        "appeared2026": true
       },
       {
         "name": "GUDEMBERG CERQUEIRA SILVA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gudemberg-cerqueira-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gudemberg-cerqueira-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gudemberg-cerqueira-silva/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "JOÃO RENATO ALBANESE FILHO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-renato-albanese-filho",
+        "registered2026": true,
         "number": 16,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-renato-albanese-filho"
+        "appeared2026": true
       },
       {
         "name": "JOHN GABRIEL GAL RILEY",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/john-gabriel-gal-riley",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/john-gabriel-gal-riley/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/john-gabriel-gal-riley/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL TORRES PEREIRA SARAIVA",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-torres-pereira-saraiva",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "HERON GONÇALVES LEITE DE GODOI",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/heron-goncalves-leite-de-godoi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heron-goncalves-leite-de-godoi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heron-goncalves-leite-de-godoi/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "ARTHUR TARDIN GARCIA CIONGOLI",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-tardin-garcia-ciongoli",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-tardin-garcia-ciongoli/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-tardin-garcia-ciongoli/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "PATRICK OTEMOTI DE OLIVEIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patrick-otemoti-de-oliveira-1",
+        "registered2026": true,
         "number": 21,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patrick-otemoti-de-oliveira-1"
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO HENRIQUE POMPEO MARCELINO",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-henrique-pompeo-marcelino",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-henrique-pompeo-marcelino/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-henrique-pompeo-marcelino/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "HELDER BRYAN SOUZA LUCIO",
-        "number": 25,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/helder-bryan-souza-lucio",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/helder-bryan-souza-lucio/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/helder-bryan-souza-lucio/1-Thumbnail.jpeg",
+        "number": 25,
+        "appeared2026": true
       },
       {
         "name": "LUCAS ABUD DE ANDRADE",
-        "number": 28,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-abud-de-andrade",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-abud-de-andrade/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-abud-de-andrade/1-Thumbnail.jpeg",
+        "number": 28,
+        "appeared2026": true
+      },
+      {
+        "name": "Arthur",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-lima-ferreira2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-lima-ferreira2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bergo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-bomfim-bergo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-bomfim-bergo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Delicia",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-filkauskas-de-melo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-filkauskas-de-melo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Flaco/Maca",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ricardo-bodra-guimaraes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-bodra-guimaraes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Hanz",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luccas-augusto-adib",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Irlanda",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-cardelli-de-amorim",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-cardelli-de-amorim/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joel junior",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joel-freire-dos-santos-junior-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "jota",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-orsi-de-souza",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-orsi-de-souza/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Juliano",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/juliano-nunes-bento-sanglard",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Laurent",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/laurent-bourda-couhet",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/laurent-bourda-couhet/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "marco",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marco-antonio-de-souza-junior",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-de-souza-junior/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Matinha",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matias-santana-torres-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matias-santana-torres-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "NICHOLAS SYDOROWITZ",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicholas-sydorowitz",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicholas-sydorowitz/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Zé",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-rainho-tranquez",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-rainho-tranquez/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "sao-jose": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/associacao-esportiva-rugby-clube-(sao-jose-rugby)",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106475",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106477",
@@ -1013,214 +1905,459 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "BRAIAN VITO",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/braian-vito",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/braian-vito/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/braian-vito/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "NELSON OLIVEIRA SANTOS",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nelson-oliveira-santos-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nelson-oliveira-santos-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nelson-oliveira-santos-/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "BENEDITO RODRIGUES FILHO",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/benedito-rodrigues-filho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benedito-rodrigues-filho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benedito-rodrigues-filho/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "DAVI ANDRADE DA CRUZ MONTEJANO",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-andrade-da-cruz-montejano-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-andrade-da-cruz-montejano-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-andrade-da-cruz-montejano-1/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO DE SOUZA DA SILVA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-de-souza-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-souza-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-souza-da-silva/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "JOSÉ FRANCISCO FONSECA LEÃO",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-francisco-fonseca-leao",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-francisco-fonseca-leao/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-francisco-fonseca-leao/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "CARLOS HENRIQUE DE OLIVEIRA",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-henrique-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-henrique-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-henrique-de-oliveira/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "LUIZ OCTÁVIO PALMA NUNES",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-octavio-palma-nunes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-octavio-palma-nunes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-octavio-palma-nunes/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "JOÃO VICTOR PEREIRA DA SILVA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-victor-pereira-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-pereira-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-pereira-da-silva/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL HENRIQUE DOS SANTOS TEIXEIRA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-henrique-dos-santos-teixeira-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-henrique-dos-santos-teixeira-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-henrique-dos-santos-teixeira-1/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "MICHAEL OLIVEIRA LOPES DE MORAES",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/michael-oliveira-lopes-de-moraes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michael-oliveira-lopes-de-moraes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michael-oliveira-lopes-de-moraes/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL MOURA CORDOBA BOTTURA",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-moura-cordoba-bottura",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-moura-cordoba-bottura/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-moura-cordoba-bottura/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "DANIEL CORDEIRO PANTALENA",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-cordeiro-pantalena",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-cordeiro-pantalena/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-cordeiro-pantalena/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "JOÃO GABRIEL FONSECA RIBEIRO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-gabriel-fonseca-ribeiro-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-gabriel-fonseca-ribeiro-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-gabriel-fonseca-ribeiro-/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "RODRIGO DE OLIVEIRA SANTOS",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-de-oliveira-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-oliveira-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-oliveira-santos/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "ALISSON DE SOUZA REIS FERREIRA CASTRO",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alisson-de-souza-reis-ferreira-castro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-de-souza-reis-ferreira-castro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-de-souza-reis-ferreira-castro/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "RIVALDO",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jefferson-felisberto-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jefferson-felisberto-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jefferson-felisberto-da-silva/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "THIAGO HENRIQUE PEREIRA CAMPOS",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-henrique-pereira-campos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-henrique-pereira-campos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-henrique-pereira-campos/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "PATRICIO GAMARRA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/patricio-gamarra",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patricio-gamarra/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patricio-gamarra/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME HENRIQUE LANDIM MENDES",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-henrique-landim-mendes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-henrique-landim-mendes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-henrique-landim-mendes/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO BARREIROS DE ALBUQUERQUE",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-barreiros-de-albuquerque",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-barreiros-de-albuquerque/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-barreiros-de-albuquerque/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS HENRIQUE DA SILVA MOREIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-henrique-da-silva-moreira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-henrique-da-silva-moreira-2/1.jpg",
         "number": 15,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-henrique-da-silva-moreira"
+        "appeared2026": true
       },
       {
         "name": "ADRIANO RAMOS",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/adriano-ramos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/adriano-ramos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/adriano-ramos/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL BUENO LOMBELLO",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-bueno-lombello",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-bueno-lombello/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-bueno-lombello/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "PEDRO MIGUEL PEREIRA CAMPOS",
-        "number": 17
+        "number": 17,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DANIEL PINHEIRO ORLANDI",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-pinheiro-orlandi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-pinheiro-orlandi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-pinheiro-orlandi/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL",
         "number": 18,
+        "appeared2026": true,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-andrade-da-rocha",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-andrade-da-rocha/1-Thumbnail.jpeg"
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-andrade-da-rocha/1-Thumbnail.jpeg",
+        "registered2026": false
       },
       {
         "name": "JONAS DARC LIMA DE FIGUEREDO",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jonas-darc-lima-de-figueredo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonas-darc-lima-de-figueredo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonas-darc-lima-de-figueredo/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "JOÃO VICTOR DE OLIVEIRA MELO DA CONCEIÇÃO",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-victor-de-oliveira-melo-da-conceicao-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-de-oliveira-melo-da-conceicao-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-de-oliveira-melo-da-conceicao-/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "NICHOLAS JAMES ROBERT VAN PELT",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicholas-james-robert-van-pelt",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicholas-james-robert-van-pelt/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicholas-james-robert-van-pelt/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "TÚLIO EBRAM FIORE",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tulio-ebram-fiore",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-ebram-fiore/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-ebram-fiore/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "PABLO FERNANDO CORREA DOS SANTOS",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pablo-fernando-correa-dos-santos-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-fernando-correa-dos-santos-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-fernando-correa-dos-santos-/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "ELIZEU LUCAS RAMOS",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/elizeu-lucas-ramos--1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elizeu-lucas-ramos--1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elizeu-lucas-ramos--1/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "KLEBER LUCIANO BARACHO FERREIRA",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/kleber-luciano-baracho-ferreira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kleber-luciano-baracho-ferreira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kleber-luciano-baracho-ferreira/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "JUAN HENRIQUE DE BARROS NASCIMENTO",
-        "number": 24
+        "number": 24,
+        "appeared2026": true,
+        "registered2026": false
+      },
+      {
+        "name": "ATÍLIO MASCARENHAS LUI",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/atilio-mascarenhas-lui",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/atilio-mascarenhas-lui/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Baiano",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-da-costa-lopes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-da-costa-lopes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Binho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-caetano-da-silva-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Caio",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/caio-cezar-oliveira-borgonovi-da-costa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-cezar-oliveira-borgonovi-da-costa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Carlos Henrique da Silva Martins",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-henrique-da-silva-martins",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-henrique-da-silva-martins/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Coca",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-pereira-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-pereira-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fael",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-de-jesus-pinto-de-faria-santos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/rafael-de-jesus-pinto-de-faria-santos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "FRANCISCO DE ASSIS RODRIGUES DA SILVA NETO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/francisco-de-assis-rodrigues-da-silva-neto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/francisco-de-assis-rodrigues-da-silva-neto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "GG",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-fernando-da-silva3",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-fernando-da-silva3/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jhow",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jonathan-d-arc-lima-de-figueredo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonathan-d-arc-lima-de-figueredo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Josuca",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/josue-bennati-brito-fonseca",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/josue-bennati-brito-fonseca/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Léo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-cavalcante-lichane",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-cavalcante-lichane/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LUÍS FILIPE NUNES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-filipe-dos-santos-nunes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-filipe-dos-santos-nunes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Martins",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-henrique-da-silva-martins-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-henrique-da-silva-martins-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Mohallem",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-mohallem-do-prado",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/gabriel-mohallem-do-prado/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Molão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-miguel-pereira-campos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-miguel-pereira-campos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Naja",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-campos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-campos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pãozinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-paulo-fernandes-morais-e-vianna",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-paulo-fernandes-morais-e-vianna/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pernilongo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-brasil-dos-santos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-brasil-dos-santos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Plínio",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/plinio-gaiott-tamaoki-junior",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Porpeta",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/diogo-cursino",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-cursino/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Raposo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-moreira-raposo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-moreira-raposo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tanque",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-rodrigues-duque",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Tubarão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/juan-henrique-de-barros-nascimento2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juan-henrique-de-barros-nascimento2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tulio",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/tulio-de-souza-de-oliveira-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-de-souza-de-oliveira-/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "tornados": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/indaiatuba-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106475",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106479",
@@ -1229,195 +2366,635 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "GUILHERME LIMA BORGES SILVA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-lima-borges-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-lima-borges-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-lima-borges-silva/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "RICHARD MONDIN",
-        "number": 1
+        "number": 1,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JEAN DANILO GREGÓRIO",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jean-danilo-gregorio",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-danilo-gregorio/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-danilo-gregorio/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "NINJA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/norbert-berndorfer-rucker",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/norbert-berndorfer-rucker/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/norbert-berndorfer-rucker/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "JOÃO PAULO VILLALBA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-paulo-villalba",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-villalba/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-villalba/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "THIAGO NAVARRO BARBOSA DA SILVA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-navarro-barbosa-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-navarro-barbosa-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-navarro-barbosa-da-silva/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "JAZIEL FERNANDO LEANDRO",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jaziel-fernando-leandro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaziel-fernando-leandro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaziel-fernando-leandro/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "HUGO",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/hugo-montoya",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hugo-montoya/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hugo-montoya/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "MARCELO PISANI SAKAMOTO AMATO",
-        "number": 5
+        "number": 5,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JOSÉ PEREIRA CARDOSO NETO",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-pereira-cardoso-neto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-pereira-cardoso-neto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-pereira-cardoso-neto/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "WESLEY GLINGUE VIEIRA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/wesley-glingue-vieira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-glingue-vieira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-glingue-vieira/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL CICHON FRANZ",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-cichon-franz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cichon-franz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cichon-franz/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "STÉFANO CARNIELLI PENTEADO",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/stefano-carnielli-penteado",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/stefano-carnielli-penteado/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/stefano-carnielli-penteado/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "MARCOS CHIOZZOTTO CORREA",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-chiozzotto-correa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-chiozzotto-correa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-chiozzotto-correa/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "ALCINO PISANI AMATO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alcino-pisani-amato",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alcino-pisani-amato/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alcino-pisani-amato/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "BRUNO DE ALMEIDA LIMA",
-        "number": 10
+        "number": 10,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "VINICIUS GOMES",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-gomes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-gomes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-gomes/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "THIAGO DE ARAUJO",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-de-araujo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-de-araujo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-de-araujo/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "JOÃO VICTOR SABOROSA DE CARVALHO FREIRE",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-victor-saborosa-de-carvalho-freire",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-saborosa-de-carvalho-freire/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-saborosa-de-carvalho-freire/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "LUCAS BERTONI",
-        "number": 13
+        "number": 13,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "PEDRO SELLGE LE GRAZIE",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-sellge-le-grazie",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-sellge-le-grazie/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-sellge-le-grazie/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "VINICIUS CAMPANA PEREIRA SILVA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-campana-pereira-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-campana-pereira-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-campana-pereira-silva/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "DOUGLAS LUÍS PARAZI",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-luis-parazi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-luis-parazi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-luis-parazi/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "TOMÁS MARCONDES DE GOYCOECHEA",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tomas-marcondes-de-goycoechea",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tomas-marcondes-de-goycoechea/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tomas-marcondes-de-goycoechea/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "THIAGO EDILMAR SACACA MAMANI",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-edilmar-sacaca-mamani",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-edilmar-sacaca-mamani/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-edilmar-sacaca-mamani/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "PEDRO SIBINEL STACH",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "OTÁVIO AUGUSTO GARCIA DE CASTRO GONÇALVES",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/otavio-augusto-garcia-de-castro-goncalves-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/otavio-augusto-garcia-de-castro-goncalves-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/otavio-augusto-garcia-de-castro-goncalves-/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "FONTANA",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-fontana-goncalves",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-fontana-goncalves/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-fontana-goncalves/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "RODRIGO DOS SANTOS CESARIO",
-        "number": 21
+        "number": 21,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "LUIS FELIPE ALVES OLIVEIRA",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-felipe-alves-oliveira-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-felipe-alves-oliveira-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-felipe-alves-oliveira-/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "JOSE MARCOS YAPURA",
-        "number": 26
+        "number": 26,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "SAMUELL",
-        "number": 27
+        "number": 27,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MIGUEL ANDRÉ PIOVESAN DA CUNHA",
-        "number": 29
+        "number": 29,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "HENRIQUE ANTUNES DA CRUZ",
-        "number": 30,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-antunes-da-cruz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-antunes-da-cruz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-antunes-da-cruz/1-Thumbnail.jpeg",
+        "number": 30,
+        "appeared2026": true
+      },
+      {
+        "name": "balo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-biajoli-cicchetto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-biajoli-cicchetto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Blacks",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-rondon-rubin",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-rondon-rubin/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Brad",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabricio-munarski-dexheimer",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-munarski-dexheimer/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bruno",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-de-almeida-lima2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-de-almeida-lima2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cabelo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/filipe-ayres-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/filipe-ayres-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cagão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-sibinel-stach2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-sibinel-stach2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "CAÍ AQUI",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaique-catarin-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaique-catarin-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Chevi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-henrique-da-silva-chevicenco",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-henrique-da-silva-chevicenco/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Clodo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/clodoaldo-formigoni",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clodoaldo-formigoni/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cris",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/cristhofer-busch-andres-montes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristhofer-busch-andres-montes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Culão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/samuell--pedroso",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/samuell--pedroso/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Didi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcelo-pisani-amato",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-pisani-amato/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fabinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabio-lopes-jose",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-lopes-jose/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fechner",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/abner-evangelista-chaves",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/abner-evangelista-chaves/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "FELIPE PASSETTI BACHEGGA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-passetti-bachegga",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Flavinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-passos-matsuoka",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-passos-matsuoka/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gatti",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-de-lima-gatti",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-lima-gatti/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Guilliano",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilliano-salvatierry-deleprani-ribeiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilliano-salvatierry-deleprani-ribeiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Hallandão",
+        "profile": "https://plataforma.sporti.com.br/cbfa/atleta/richard-mondin-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/richard-mondin-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "heitor",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/heitor-nieto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heitor-nieto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "heitor g",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/heitorbrigagaogasparmartins-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heitorbrigagaogasparmartins-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "HELP",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-camargo-caetano",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-camargo-caetano/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Henrique",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/henriquedemellochaves-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henriquedemellochaves-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Hugordura",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/hugo-goncalves-bertolassi",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hugo-goncalves-bertolassi/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Israel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/israel-nicolas-ribeiro-goncalves-de-lima",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/israel-nicolas-ribeiro-goncalves-de-lima/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jack",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-dos-santos-cesario2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-dos-santos-cesario2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Juninho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rubens-eduardo-amato-junior",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rubens-eduardo-amato-junior/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lobo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-de-sousa-lobo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-sousa-lobo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Londrina",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-cavalleri-durante",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-cavalleri-durante/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Luci",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luciano-jose-capogrosso",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luciano-jose-capogrosso/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marmitage",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcio-rogerio-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcio-rogerio-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Mate",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-jose-micelli-mate",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-jose-micelli-mate/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "mena",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-omena",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-omena/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Miguel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/miguel-henrique-da-conceicao-lima",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-henrique-da-conceicao-lima/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Miguel",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/miguelpintolima-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguelpintolima-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Miguel André",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/miguel-andre-piovesan-da-cunha2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-andre-piovesan-da-cunha2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "nathan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nathan-bachner-lepiscopo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nathan-bachner-lepiscopo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "pablo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pablo-henrique-giraldini-de-mello",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-henrique-giraldini-de-mello/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "patrick",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patrick-giraldini-de-mello",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patrick-giraldini-de-mello/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pedro Silva Costa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-silva-costa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-silva-costa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Peixe",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-correa-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-correa-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pelé",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/artur-carlos-de-figueiredo-pacheco-filho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/artur-carlos-de-figueiredo-pacheco-filho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ricardo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ricardo-francisco-de-camargo2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-francisco-de-camargo2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ROSI",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rosinaldo-da-silva-alves",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rosinaldo-da-silva-alves/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "roubar",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-martins-cardoso",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-martins-cardoso/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Sass",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-paulo-matias-sass",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-matias-sass/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tadala",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-bertoni-dos-santos-alves-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-bertoni-dos-santos-alves-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "tenorio",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/sean-tenorio-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sean-tenorio-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Th",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-ferreira-amaral",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-ferreira-amaral/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tucumano",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-yapura",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-yapura/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Turkão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/adriano-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/adriano-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vini",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-luis-parazi",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-luis-parazi/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Xixa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-nichioka2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-nichioka2/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "rio-branco": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/rio-branco-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106473",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106479",
@@ -1426,217 +3003,425 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "MARCELO",
-        "number": 0
+        "number": 0,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JORGE LUIS PROFETA DE CASTRO",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jorge-luis-profeta-de-castro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jorge-luis-profeta-de-castro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jorge-luis-profeta-de-castro/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "RODRIGO VILLELA ALEXIADES",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-villela-alexiades",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-villela-alexiades/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-villela-alexiades/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL ALEX DE SOUSA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-alex-de-sousa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-alex-de-sousa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-alex-de-sousa/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "BRIAN RAPHAEL DIAS FRANCO",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/brian-raphael-dias-franco",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brian-raphael-dias-franco/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brian-raphael-dias-franco/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE GERMANO DE MELO",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-germano-de-melo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-germano-de-melo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-germano-de-melo/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL BATISTA",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-batista-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-batista-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-batista-1/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "GIORGIO FELIPPO RICCI BUSO",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/giorgio-felippo-ricci-buso",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giorgio-felippo-ricci-buso/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giorgio-felippo-ricci-buso/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "RODRIGO DE SOUZA NAMIKI",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-de-souza-namiki",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-souza-namiki/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-souza-namiki/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "WILLIAM VIANA DE FREITAS",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/william-viana-de-freitas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-viana-de-freitas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-viana-de-freitas/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "LUCAS MACHEA DE ALMEIDA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-machea-de-almeida",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-machea-de-almeida/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-machea-de-almeida/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "LUCAS FONSECA SAMPAIO",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-fonseca-sampaio",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-fonseca-sampaio/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-fonseca-sampaio/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME BARBOSA LIMA",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-barbosa-lima",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-barbosa-lima/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-barbosa-lima/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "GUILLERMO GARCES SANCHEZ NIETO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guillermo-garces-sanchez-nieto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guillermo-garces-sanchez-nieto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guillermo-garces-sanchez-nieto/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "RODRIGO DE FREITAS QUINTERO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-de-freitas-quintero",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-freitas-quintero/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-freitas-quintero/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "DANIEL LACERDA PAGNOZZI",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-lacerda-pagnozzi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-lacerda-pagnozzi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-lacerda-pagnozzi/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO ELISIÁRIO DOS SANTOS",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-elisiario-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-elisiario-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-elisiario-dos-santos/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "ALAN WAGNER GABRIEL FILHO",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alan-wagner-gabriel-filho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alan-wagner-gabriel-filho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alan-wagner-gabriel-filho/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "RYAN SILVA DE SOUZA",
-        "number": 13
+        "number": 13,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "YUSETT YONAIKEL RIVERA PAREJO",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/yusett-yonaikel-rivera-parejo-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yusett-yonaikel-rivera-parejo-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yusett-yonaikel-rivera-parejo-/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "FELIPE TARSITANO SCHNEIDER",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-tarsitano-schneider",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-tarsitano-schneider/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-tarsitano-schneider/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL MORAIS DE SOUZA",
-        "number": 15
+        "number": 15,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ERICK SANTOS GOMES APARECIDO",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/erick-santos-gomes-aparecido",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/erick-santos-gomes-aparecido/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/erick-santos-gomes-aparecido/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL CALVITTI ANDREGHETTI",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-calvitti-andreghetti",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-calvitti-andreghetti/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-calvitti-andreghetti/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "VINICIUS",
-        "number": 17
+        "number": 17,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "LUCAS RODRIGUES",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JOSÉ RODOLFO OLIVEIRA POLANIC",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-rodolfo-oliveira-polanic",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-rodolfo-oliveira-polanic/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-rodolfo-oliveira-polanic/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE MARENDAZ",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-marendaz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-marendaz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-marendaz/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "SERGIO ANTONIO BRITO PÉREZ",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/sergio-antonio-brito-perez-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sergio-antonio-brito-perez-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sergio-antonio-brito-perez-/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO MERINO",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-merino",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-merino/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-merino/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE MARTINS TORRES",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-martins-torres",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-martins-torres/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-martins-torres/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "GEORGE DOS ANJOS GONÇALVES PEREZ",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/george-dos-anjos-goncalves-perez",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/george-dos-anjos-goncalves-perez/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/george-dos-anjos-goncalves-perez/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "MARCOS FILIPE VOLPINI",
-        "number": 23
+        "number": 23,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RYAN JAMES BUCHANAN",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ryan-james-buchanan",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-james-buchanan/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-james-buchanan/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "ALEXSANDER SENA DE OLIVEIRA",
-        "number": 24,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alexsander-sena-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexsander-sena-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexsander-sena-de-oliveira/1-Thumbnail.jpeg",
+        "number": 24,
+        "appeared2026": true
       },
       {
         "name": "CÁSSIO ZANATTO",
-        "number": 24,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/cassio-zanatto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cassio-zanatto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cassio-zanatto/1-Thumbnail.jpeg",
+        "number": 24,
+        "appeared2026": true
       },
       {
         "name": "IGOR MARTINS",
-        "number": 24
+        "number": 24,
+        "appeared2026": true,
+        "registered2026": false
+      },
+      {
+        "name": "5+",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-e-silva-martins",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-e-silva-martins/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Astro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-kaua-de-aquino-santos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/lucas-kaua-de-aquino-santos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Brunão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-micalli-pedrinelli",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-micalli-pedrinelli/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dago",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marco-antonio-mendes-moura",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-mendes-moura/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Diegão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-ferreira-da-mata",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-ferreira-da-mata/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ferraz",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-henrique-ferraz",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-henrique-ferraz/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Han",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcelo-gustavo-han",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-gustavo-han/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "JO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jorge-luiz-de-sales",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jorge-luiz-de-sales/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lucão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-rodrigues4",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-rodrigues4/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marcola",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marco-antonio-medici-aoad-2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-medici-aoad-2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Moura",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-de-moura-braga",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-de-moura-braga/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pajé",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-elias-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-elias-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Polaco",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/christian-harold-frenzel-belotto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/christian-harold-frenzel-belotto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pulga",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-morais",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-morais/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ryan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ryan-silva-de-souza2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-silva-de-souza2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vando",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leandro-andre-pereira-bezerra",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leandro-andre-pereira-bezerra/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "VINICIUS AMANCIO TAVARES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-amancio-tavares2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-amancio-tavares2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Volpini",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-filipe-volpini2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-filipe-volpini2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Yant'",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/yanthia-bonini-campos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
       }
     ]
   },
   "jacarei": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/associacao-esportiva-jacarei-rugby-1",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106485",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106489",
@@ -1645,175 +3430,718 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "LEVY MARINHO DA SILVA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/levy-marinho-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/levy-marinho-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/levy-marinho-da-silva/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "ANDRÉ INÁCIO BRANDÃO",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-inacio-brandao",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-inacio-brandao/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-inacio-brandao/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL BRUNNO DE SENA MATOS",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-brunno-de-sena-matos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-brunno-de-sena-matos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-brunno-de-sena-matos/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "JOAO VICTOR CAVALCANTE SANTOS",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-victor-cavalcante-santos-10",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "NICOLAS DE AZEVEDO RIBEIRO",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolasdeazevedoribeiro",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "LUIZ GUSTAVO ANDREOTI PINTO",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-gustavo-andreoti-pinto-10",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "MAIKI GUSTAVO LEMES DOS SANTOS",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/maiki-gustavo-lemes-dos-santos-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maiki-gustavo-lemes-dos-santos-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maiki-gustavo-lemes-dos-santos-/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "FURST",
-        "number": 8
+        "number": 8,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "GUSTAVO GONÇALVES",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/sporti/atleta/gustavohenriquegoncalves",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavohenriquegoncalves/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavohenriquegoncalves/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "LYAN WILLIS FONSECA DE AQUINO",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lyanwillisfonsecadeaquino",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lyanwillisfonsecadeaquino/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lyanwillisfonsecadeaquino/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "KAIKY DE ARAUJO FRANÇA SANTOS",
-        "number": 10
+        "number": 10,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ARIEL DA SILVA RODRIGUES",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ariel-da-silva-rodrigues-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ariel-da-silva-rodrigues-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ariel-da-silva-rodrigues-1/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "DAVI TEIXEIRA CARDOSO",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-teixeira-cardoso-10",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-teixeira-cardoso-10/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-teixeira-cardoso-10/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "LUCAS DRUDI ROMEU",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-drudi-romeu",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-drudi-romeu/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-drudi-romeu/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "ANDREI HENRIQUE SANTANA DE SOUZA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andrei-henrique-santana-de-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andrei-henrique-santana-de-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andrei-henrique-santana-de-souza/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL MOLITERNO VICENTE CHAGAS FILHO",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/sporti/atleta/raphaelmoliternovicentechagasfilho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphaelmoliternovicentechagasfilho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphaelmoliternovicentechagasfilho/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "RICHARD DIAS GONÇALVES",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/richarddiasgoncalves",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/richarddiasgoncalves/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/richarddiasgoncalves/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "THIAGO RICHARD GONÇALVEZ PEREIRA",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/sporti/atleta/thiagorichardgoncalvezpereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiagorichardgoncalvezpereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiagorichardgoncalvezpereira/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE ANDREOTI PINTO",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-andreoti-pinto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-andreoti-pinto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-andreoti-pinto/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "JOÃO LUCAS M DE SOUZA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-lucas-m-de-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-lucas-m-de-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-lucas-m-de-souza/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "JOÃO GUILHERME RASPA ARRAEZ",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joaoguilhermeraspaarraez",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaoguilhermeraspaarraez/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaoguilhermeraspaarraez/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "PIERO POZZI",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/piero-pozzi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/piero-pozzi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/piero-pozzi/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL HENRIQUE DE SOUZA OLIVEIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-henrique--de-souza-oliveira",
+        "registered2026": true,
         "number": 19,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-henrique--de-souza-oliveira"
+        "appeared2026": true
       },
       {
         "name": "CAUÃ HENRIQUE DE SOUZA OLIVEIRA",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/caua-henrique-de-souza-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caua-henrique-de-souza-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caua-henrique-de-souza-oliveira/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "ELIEL DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eliel-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elieldasilva/1.jpg",
         "number": 21,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eliel-da-silva"
+        "appeared2026": true
       },
       {
         "name": "PEDRO MACHADO MARQUES",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-machado-marques",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-machado-marques/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-machado-marques/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "MATEUS LUCIANO GONÇALVES FIGUEIREDO",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mateus-luciano-goncalves-figueiredo-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-luciano-goncalves-figueiredo-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-luciano-goncalves-figueiredo-/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME BOTOSI DE FARIA JÚNIOR",
-        "number": 24
+        "number": 24,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MARCUS VINICIUS DE ANDRADE FURINI",
-        "number": 25,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcusviniciusdeandradefurini",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 25,
+        "appeared2026": true
+      },
+      {
+        "name": "Abinho",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/abnerlopesdepaulasantos1-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Amendoim",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/viniciushenrique",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/viniciushenrique/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ANDERSON CHAVES DE ALMEIDA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/anderson-chaves-de-almeida2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/anderson-chaves-de-almeida2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ANTHONY GABRIEL GOMES DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/anthonygabrielgomesdasilva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/anthonygabrielgomesdasilva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "basilio",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/fernandobasiliodemarins-ms",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "BRAYAN CARRIEL DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/brayancarrieldasilva",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Cabelera",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/nicolasdossantosdias1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolasdossantosdias1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "cabrinha",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-dos-santos-",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "café",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-victor-da-costa-sales",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "CALEBE NOGUEIRA SANTOS",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/calebenogueira-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Canudo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiagocesarguimaraesleite",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiagocesarguimaraesleite/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Capivara",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/fabioluizsilvajesusdosantos-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "CARLOS EDUARDO PEREIRA PROENÇA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-eduardo-pereira-proenca-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-eduardo-pereira-proenca-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cauã de Moura Ferreira Tenório",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/cauademouraferreiratenorio",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cauademouraferreiratenorio/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "cl",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/gabrielhenriquedecastrolima",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Cory",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaiky-de-araujo-franca-santos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaiky-de-araujo-franca-santos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cruz",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/matheuscruzvergueiroesilva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheuscruzvergueiroesilva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Eder Oliveira",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eder-almeida-batista-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eder-almeida-batista-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "eiji",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/arthureijisugimototravesani",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Erick",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/erickjosemassarofirmino",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Erik",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/erikbernardodesouza-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Facuri",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/danielsoaresfacuri",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Frazao",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-frazao-de-souza-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-frazao-de-souza-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Godzila",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-afonso-de-carvalho-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardoafonsodecarvalho/1.jpg",
+        "appeared2026": false
+      },
+      {
+        "name": "Hamburgão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlosrafaelaparecidosouzademoura",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlosrafaelaparecidosouzademoura/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "higão",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/higorruzadeoliveira-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Huber",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-fernandes-huber-vicente-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Inocente",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucashenriqueriosmalta",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "irmão urso",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-augusto-ramos-fabiano",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-augusto-ramos-fabiano/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "isac",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/isaacalvesdeoliveiradasilva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Jac Boy",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/luisgustavomarquesdasilva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luisgustavomarquesdasilva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "JOÃO PEDRO DARIO RIBEIRO",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/joaopedrodarioribeiro1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "JOÃO PEDRO DE ARAÚJO",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/joaopedrodearaujo-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "João Saturno",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/joaovitorsantossaturno",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "JOÃO VITOR PIMENTEL FURST",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-pimentel-furst",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-pimentel-furst/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "jp",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/joaopedrosamuelbrazcaldeira1-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "JUAN",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/juan-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juan-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kadu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/carloseduardodesouzaandrade",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carloseduardodesouzaandrade/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kauã Moraes/monstrinho",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/kauamoraesdejesusamaral1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauamoraesdejesusamaral1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "KAUÃ NORONHA DOARTE GOMES",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/kauanoronhadoartegomes-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauanoronhadoartegomes-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kawai",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/kauamarchesinirodrigues",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauamarchesinirodrigues/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LEONARDO DA SILVA SOARES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardodasilvasoares",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardodasilvasoares/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Locão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-da-silva-conceicao-reis-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-da-silva-conceicao-reis-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LOIRÃO",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/guilhermebotosidefariajunior-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "LUCAS RAFAEL CASTRO NEVES",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/lucasrafaelcastroneves",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Lukaku",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/diegohenriquedesouzaoliveira-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diegohenriquedesouzaoliveira-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Manel",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/emanuelgeraldomartinspimenta-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Maori",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolasleonardocunha",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolasleonardocunha/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "MATHEUS HIKARU TOJO SILVA",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/matheushikarutojosilva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Miyakawa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/yago-miyakawa-rodrigues-da-silva-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "MURILO NANARTONIS OLIVER",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/murilonanartonisoliver",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Nagassaki",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/lucasnagassaki",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Nogueira",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/matheusnogueirasantos-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheusnogueirasantos-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "pedro",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/pedrohenriquepodlasinskifiuza-ms",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Pedroca",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-roque",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-roque/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Queixinho",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/lucasantonylemedossantos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucasantonylemedossantos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "RAUL QUIRINO MARTINS",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/raulquirinomartins",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "RAYTÊ MENDES CORRÊA",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/raytemendescorrea",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raytemendescorrea/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ruan Alves",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/ruanpabloalveslopes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Saldanha",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/caiquesaldanhasantos-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "thiago",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-simoes-moreira-de-carvalho",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Tilapia",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/ricardo-morais-ribeiro-filho-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-morais-ribeiro-filho-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Titico",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/alexfrancelinosantos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexfrancelinosantos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "trindade",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/joaovictorsilvatrindade-ms",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Vilas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-vilas-boas",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-vilas-boas/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "VINICIUS GUIMARÃES TENORIO",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/viniciusguimaraestenorio1-ms",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "wakanda",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/joaogabrielnascimentosilva-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaogabrielnascimentosilva-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "WALLISON MELLO",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/wallisonmello",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Wellão",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/wellerlucassantosoliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Weslley",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/weslley-pereira-nunes-barbosa-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
       }
     ]
   },
   "spac": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/sao-paulo-athletic-club",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106487",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106489",
@@ -1822,172 +4150,390 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "FELIPE PECIN SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-pecin-silva",
+        "registered2026": true,
         "number": 1,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-pecin-silva"
+        "appeared2026": true
       },
       {
         "name": "FABIO NERY DE ARAUJO MIRANDA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabio-nery-de-araujo-miranda",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-nery-de-araujo-miranda/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-nery-de-araujo-miranda/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "VICTOR DIONIOS MASTROENI PINHEIRO",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-dionios-mastroeni-pinheiro",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE MOREIRA COUTO SANTOS",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-moreira-couto-santos-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-moreira-couto-santos-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-moreira-couto-santos-1/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "JOÃO MARCOS ZANATA MILLEO",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-marcos-zanata-milleo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-marcos-zanata-milleo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-marcos-zanata-milleo/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS MARTINS",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-martins2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-martins2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-martins2/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "PETER BERNARDI GRANDJEAN THOMSEN",
-        "number": 6
+        "number": 6,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "FRANCISCO JOSE PUYOL",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/francisco-jose-puyol",
+        "registered2026": true,
         "number": 7,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/francisco-jose-puyol"
+        "appeared2026": true
       },
       {
         "name": "TOBIAS MARIA DURET",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tobias-maria-duret",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tobias-maria-duret/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tobias-maria-duret/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "LORENZO FONZAGHI FERRAMOLA",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lorenzo-fonzaghi-ferramola",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-fonzaghi-ferramola/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-fonzaghi-ferramola/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "SANTINO CARDOSO",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/santino-cardoso",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/santino-cardoso/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/santino-cardoso/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME DOS SANTOS OLIVEIRA",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-dos-santos-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-dos-santos-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-dos-santos-oliveira/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "JOÃO PEDRO FERRER DO AMARAL",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-ferrer-do-amaral",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "ONO JATTO",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ono-jatto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ono-jatto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ono-jatto/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "WIDSON MENEZES DO NASCIMENTO",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/widson-menezes-do-nascimento",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/widson-menezes-do-nascimento/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/widson-menezes-do-nascimento/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "FELIPE PERES FERRAZ FREITAS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-peres-ferraz-freitas",
+        "registered2026": true,
         "number": 12,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-peres-ferraz-freitas"
+        "appeared2026": true
       },
       {
         "name": "HECTOR GUERRINI HERRERA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/hector-guerrini-herrera",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hector-guerrini-herrera/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hector-guerrini-herrera/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "DANIEL TERRA EGUCHI",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-terra-eguchi",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "ALISON P S CRISPIN",
-        "number": 15
+        "number": 15,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "LUCAS RAMOS DE SOUSA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-ramos-de-sousa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-ramos-de-sousa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-ramos-de-sousa/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "NIKLAS DANIEL BAUMER",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/niklas-daniel-baumer",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/niklas-daniel-baumer/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/niklas-daniel-baumer/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "CONSTANTINOS LEANDROS CRANAS SOTIROPOULOS",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/constantinos-leandros-cranas-sotiropoulos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/constantinos-leandros-cranas-sotiropoulos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/constantinos-leandros-cranas-sotiropoulos/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO MENDES MATTOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-mendes-mattos",
+        "registered2026": true,
         "number": 18,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-mendes-mattos"
+        "appeared2026": true
       },
       {
         "name": "ALLAN DE PAULO ALVES A. DA SILVA",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/allan-de-paulo-alves-a.-da-silva",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "JOÃO PEDRO KEMP DE FREITAS",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-kemp-de-freitas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-kemp-de-freitas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-kemp-de-freitas/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "ALEXANDRE MASAGÃO CLEAVER",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/alexandre-masagao-cleaver",
+        "registered2026": true,
         "number": 21,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/alexandre-masagao-cleaver"
+        "appeared2026": true
       },
       {
         "name": "MATIAS AMADOR P V PADILLA",
-        "number": 22
+        "number": 22,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JOÃO PIRES DE OLIVEIRA DIAS NETO",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pires-de-oliveira-dias-neto",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "SÉRGIO MANOEL SILVEIRA DE LUNA",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/sergio-manoel-silveira-de-luna",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sergio-manoel-silveira-de-luna/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sergio-manoel-silveira-de-luna/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
+      },
+      {
+        "name": "Abraão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gui-abraao",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gui-abraao/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ANDRE BASTOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-bastos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-bastos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ARAMIS PADILLA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/aramis-amador-pellizer-victorica-padilla",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/aramis-amador-pellizer-victorica-padilla/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bruninho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-chinedu-de-jesus-anyaorah",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-chinedu-de-jesus-anyaorah/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/dan-de-almeida-ferraz-pellicciari",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/dan-de-almeida-ferraz-pellicciari/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Edu Fagundes",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-fagundes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-fagundes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Iago",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/iago-matias-de-oliveira-araujo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-matias-de-oliveira-araujo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joaquín",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joaquin-caride",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquin-caride/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "juan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/juan-martin-salcedo-araya",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Kwid",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiggi-mammocci",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiggi-mammocci/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lenny",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lennard-lanu-seadon-lanzara-",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "LEONARDO ASCENÇO PELOGGIA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-ascenco-peloggia",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-ascenco-peloggia/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lolo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bartolome",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bartolome/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lorenzo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lorenzo-fonzaghi-ferramola2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-fonzaghi-ferramola2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LUCAS DE FACCIO NUNES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-de-faccio-nunes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-de-faccio-nunes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Mati",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matias-amador-pellizer-victorica-padilla2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matias-amador-pellizer-victorica-padilla2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "patrick",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patrick-brulhart-o&amp;#8242;keeffe",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Pedro",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/pedromariatracanevesdonascimentoguedes-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Peter",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/peter-bernardi-grandjean-thomsen2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/peter-bernardi-grandjean-thomsen2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "SEGUNDO MARIA DURET",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/segundo-maria-duret",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/segundo-maria-duret/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Toro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-toro-de-nose",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/guilherme-toro-de-nose/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tucano",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-marcos-de-medeiros-matile",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-marcos-de-medeiros-matile/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Viana",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-viana-da-silva-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-viana-da-silva-1/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "pasteur": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/pasteur-athletique-club",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106487",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106491",
@@ -1996,205 +4542,743 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "MATHEUS WABISZEZEWICZ BALDACIM",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-wabiszezewicz-baldacim",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-wabiszezewicz-baldacim/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-wabiszezewicz-baldacim/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "GUIBBY",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-batista-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-batista-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-batista-da-silva/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "PAULO FERNANDES DE LIMA FILHO",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/paulo-fernandes-de-lima-filho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-fernandes-de-lima-filho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-fernandes-de-lima-filho/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "AUGUSTO GANDINI CALDEIRA CARDOSO NEVES",
-        "number": 4
+        "number": 4,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MARIO GANDINI CALDEIRA CARDOSO NEVES",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mario-gandini-caldeira-cardoso-neves",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mario-gandini-caldeira-cardoso-neves/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mario-gandini-caldeira-cardoso-neves/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "MAURO LUCAS DA ROCHA SOUZA",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mauro-lucas-da-rocha-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauro-lucas-da-rocha-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauro-lucas-da-rocha-souza/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "WAGNER DOS REIS ADÃO",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/wagner-dos-reis-adao",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wagner-dos-reis-adao/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wagner-dos-reis-adao/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "LOUIS MORONI DAVID",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/louis-moroni-david-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/louis-moroni-david-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/louis-moroni-david-1/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "THOMAS THALENBERG",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thomas-thalenberg",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomas-thalenberg/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomas-thalenberg/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "RENATO SANTOS DA SILVA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/renato-santos-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-santos-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-santos-da-silva/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "WENDER DIAS DE SOUZA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/wender-dias-de-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wender-dias-de-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wender-dias-de-souza/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE DELLA COLETTA",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-della-coletta",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-della-coletta/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-della-coletta/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO GOBETI BILECKI",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-gobeti-bilecki-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-gobeti-bilecki-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-gobeti-bilecki-/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "NICOLAS NASCIMENTO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolas-nascimento-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-nascimento-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-nascimento-/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "LUIZ AUGUSTO HADERSPEK SALES DA SILVA",
-        "number": 11
+        "number": 11,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RONALDO DA SILVA SANTOS",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ronaldo-da-silva-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ronaldo-da-silva-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ronaldo-da-silva-santos/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "FELIPE BEZIAN ZENI",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-bezian-zeni",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-bezian-zeni/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-bezian-zeni/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "LEO WALLAERT",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leo-wallaert",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leo-wallaert/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leo-wallaert/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "AUGUSTO JOSE SILVA FONSECA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/augusto-jose-silva-fonseca-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-jose-silva-fonseca-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-jose-silva-fonseca-1/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "BRUNO ANDION DE OLIVEIRA FREITAS",
-        "number": 14
+        "number": 14,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "GABRIEL RUBINSTEIN GIRARD",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-rubinstein-girard-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-rubinstein-girard-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-rubinstein-girard-1/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME PAULO HUHN",
-        "number": 14
+        "number": 14,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "BRYAN ALVES DOS SANTOS",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bryan-alves-dos-santos-3",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bryan-alves-dos-santos-3/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bryan-alves-dos-santos-3/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL CAVALCANTE DA SILVA",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-cavalcante-da-silva-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cavalcante-da-silva-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cavalcante-da-silva-/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "BERNARDO DE HUGO TOFFOLI SIMOENS DA SILVA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bernardo-de-hugo-toffoli-simoens-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-de-hugo-toffoli-simoens-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-de-hugo-toffoli-simoens-da-silva/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "NICOLAS GARCIA ROCHA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolas-garcia-rocha",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-garcia-rocha/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-garcia-rocha/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "VITOR GABRIEL BAGDONAS DE SANTANA WITZEL",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vitor-gabriel-bagdonas-de-santana-witzel-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gabriel-bagdonas-de-santana-witzel-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gabriel-bagdonas-de-santana-witzel-/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE SANTANA XOTTA",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-santana-xotta",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-santana-xotta/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-santana-xotta/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE RIBEIRO FERREIRA",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-ribeiro-ferreira-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-ribeiro-ferreira-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-ribeiro-ferreira-1/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "DIEGO MARTINS GIMENEZ LOPEZ",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-martins-gimenez-lopez",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-martins-gimenez-lopez/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-martins-gimenez-lopez/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "BRENO DA SILVA VITO",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/breno-da-silva-vito",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/breno-da-silva-vito/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/breno-da-silva-vito/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "JOÃO VITOR PLANCKE MARÇAL",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-plancke-marcal",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-plancke-marcal/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-plancke-marcal/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "AUGUSTO CALEGARE DE OLIVEIRA",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/augusto-calegare-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-calegare-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-calegare-de-oliveira/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "MÁRCIO FABIANO DE JESUS MACIEL",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcio-fabiano-de-jesus-maciel",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcio-fabiano-de-jesus-maciel/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcio-fabiano-de-jesus-maciel/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
+      },
+      {
+        "name": "ADRIO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/adrio-luiz-de-melo-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/adrio-luiz-de-melo-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Alemão",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/caio-falzoni-leite-orioli",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/caio-falzoni-leite-orioli/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ashwin Devito Regenald",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ashwin-devito-regenald",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ashwin-devito-regenald/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bagre/Sartori",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joaquim-sartori-de-souza-campos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquim-sartori-de-souza-campos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Batelli",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-cintra-batelli",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-cintra-batelli/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Beco",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bernardo-bank-setti-konder-comparato",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-bank-setti-konder-comparato/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bilu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ismael-vilela-resende-almeida",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ismael-vilela-resende-almeida/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bolinha",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-marques-o-palacao",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-marques-o-palacao/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Boni",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-bonini",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-bonini/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bruno",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/cedric-jackson-piembeng-wamba",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cedric-jackson-piembeng-wamba/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dani",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-henrique-faria-barrozo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-henrique-faria-barrozo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Darius Bourdon",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/darius-bourdon",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/darius-bourdon/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dias",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-dias-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-dias-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Diogo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/diogo-dos-santos-cavalcante",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-dos-santos-cavalcante/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Diorge",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/diorge-jefferson-alexandre-de-jesus-junior",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diorge-jefferson-alexandre-de-jesus-junior/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Enzo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/enzo-rodrigues-carvalho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/enzo-rodrigues-carvalho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ERICH",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/erich-sebastian-hacker-poetscher",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erich-sebastian-hacker-poetscher/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fafa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabricio-henrique-troguilho-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-henrique-troguilho-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Felipão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-teodoro-sa-rodrigues",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/felipe-teodoro-sa-rodrigues/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Felipe",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-altieri-lopez",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/felipe-altieri-lopez/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Felipe",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-gaion-correa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-gaion-correa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Felipinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-goncalves-cunha",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-goncalves-cunha/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Filet",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-donato-pires-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-donato-pires-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Francisco Pipa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/francisco-justiniano-pellim",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Frango",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-augusto-dantas-veriato",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-augusto-dantas-veriato/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gabriel de Arruda Reis Lopes",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-de-arruda-reis-lopes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-de-arruda-reis-lopes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gero",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/geronimo-jose-bouzas-sanchis-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geronimo-jose-bouzas-sanchis-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gordão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabricio-martins-pinheiro-rocha",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-martins-pinheiro-rocha/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gutão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/augusto-gandin-caldeira-cardoso-neves",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-gandin-caldeira-cardoso-neves/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Haluska",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-lima-haluska",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-lima-haluska/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Higor",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/higor-egidio-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/higor-egidio-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jack",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jack-robert-ruiz-saavedra",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jack-robert-ruiz-saavedra/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jaco",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jaco-botha",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaco-botha/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "João",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-fiorio-mobrige-tryanno",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-fiorio-mobrige-tryanno/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kenzo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-kenzo-sato",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-kenzo-sato/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LEMOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-saraiva-lemos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-saraiva-lemos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LUIGI",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luigi-martorelli-brito-siqueira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/luigi-martorelli-brito-siqueira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Luiz",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-augusto-haderspeck-sales-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-augusto-haderspeck-sales-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marcello",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcello-arminante-bruno",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcello-arminante-bruno/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Matheus Sugarava",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-sugarava-breviglieri-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-sugarava-breviglieri-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Matias",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matias-broussain-de-moraes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matias-broussain-de-moraes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Miguel Assis",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/miguel-assis-marques-guimaraes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-assis-marques-guimaraes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Nikolas Paninka",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nikolas-henrique-goncalves-gouvea-paninka",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nikolas-henrique-goncalves-gouvea-paninka/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Nitro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/benjamin-anness-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benjamin-anness-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Orion",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-orion-teles-fernandes-mariano",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-orion-teles-fernandes-mariano/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "PADILHA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-padilha",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "PEDRÃO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-rojas-duailibi",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-rojas-duailibi/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pedrinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-augusto-souza-di-pilla",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-augusto-souza-di-pilla/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pedro Armelin",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-bresciani-rotger-armelin2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-bresciani-rotger-armelin2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pêpê",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-do-nascimento-carneiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-do-nascimento-carneiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pitanga",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-lins-pitanga",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/leonardo-lins-pitanga/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Raj",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-ferrer-spago",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-ferrer-spago/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Rapha Barre",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-barre",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-barre/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Regi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/reginaldo-cavalcante-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/reginaldo-cavalcante-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Sarti",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-gabriel-sarti-miranda",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-gabriel-sarti-miranda/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Sebas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/sebastien-younan-cubero",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sebastien-younan-cubero/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Spaguinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-ferrer-spago",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-ferrer-spago/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tariq",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/tariq-ibn-massud",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/tariq-ibn-massud/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Theo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/theo-gaussot",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/theo-gaussot/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "THEO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/theo-barbosa-cavalcante-simao",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/theo-barbosa-cavalcante-simao/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Thiago Maihara",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-maihara",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-maihara/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tocha",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-pereira-lisboa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-pereira-lisboa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tuco",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-nenartavis",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-nenartavis/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tutu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-martini-de-oliveira-cordeiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-martini-de-oliveira-cordeiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vini",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-palmero-farias-ribeiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/vinicius-palmero-farias-ribeiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vitão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vitor-bezerra-de-medeiros",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-bezerra-de-medeiros/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "VITOR GOMES JUCÁ",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vitor-gomes-juca",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gomes-juca/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "nova-lima": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/nova-lima-rugby3",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106485",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106491",
@@ -2204,197 +5288,422 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
       {
         "name": "VICTOR HUGO DA MATA",
         "number": 1,
+        "appeared2026": true,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-hugo-da-mata",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-hugo-da-mata/1-Thumbnail.jpeg"
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-hugo-da-mata/1-Thumbnail.jpeg",
+        "registered2026": false
       },
       {
         "name": "ARTHUR PIASSI DIAS DE CASTRO",
-        "number": 2
+        "number": 2,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "FERNANDO MARÇAL SOARES BATISTA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-marcal-soares-batista",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-marcal-soares-batista/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-marcal-soares-batista/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "THALES D'ÉRICO ROSA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thales-derico-rosa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thales-derico-rosa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thales-derico-rosa/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "HUGO PRISCO",
-        "number": 4
+        "number": 4,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "PAULO RODRIGUES",
-        "number": 4
+        "number": 4,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RAFAEL RODRIGO PIRES GOMES",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-rodrigo-pires-gomes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-rodrigo-pires-gomes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-rodrigo-pires-gomes/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "CARLOS EDUARDO DOS SANTOS",
-        "number": 5
+        "number": 5,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RYAN LUCAS MARTINS COSTA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ryan-lucas-martins-costa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-lucas-martins-costa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-lucas-martins-costa/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "JOHANNES CLEMENTE DAS DORES",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/johannes-clemente-das-dores",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/johannes-clemente-das-dores/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/johannes-clemente-das-dores/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "LONIERI MÜLLER SILVA PEREIRA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lonieri-muller-silva-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lonieri-muller-silva-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lonieri-muller-silva-pereira/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "FILLIPE GIBRAN MARQUES DE SOUZA",
-        "number": 8
+        "number": 8,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "WILLIAM JORGE SOARES GONÇALVES",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/william-jorge-soares-goncalves",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-jorge-soares-goncalves/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-jorge-soares-goncalves/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "JUAN MANUEL DIDIEGO",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/juan-manuel-didiego-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juan-manuel-didiego-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juan-manuel-didiego-/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "LUIZ ANTONIO DE OLIVEIRA",
-        "number": 10
+        "number": 10,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "AISLAN CRISTIAN BATISTA DUTRA",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/aislan-cristian-batista-dutra",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/aislan-cristian-batista-dutra/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/aislan-cristian-batista-dutra/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "ÉLCIO PINHEIRO LOPES JÚNIOR",
-        "number": 12
+        "number": 12,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DAVID MÜLLER DOGIVÁ DE PÁSCOA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/david-muller-dogiva-de-pascoa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-muller-dogiva-de-pascoa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-muller-dogiva-de-pascoa/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "WILLIAN RIBEIRO DA SILVA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/willian-ribeiro-da-silva-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/willian-ribeiro-da-silva-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/willian-ribeiro-da-silva-/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "ANDRÉ PIRES SANTOS PEREIRA THOMAZ",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-pires-santos-pereira-thomaz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-pires-santos-pereira-thomaz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-pires-santos-pereira-thomaz/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "FELIPE FERREIRA BARBOSA FRANÇA",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-ferreira-barbosa-franca-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ferreira-barbosa-franca-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ferreira-barbosa-franca-/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO SANTOS SIMÕES",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-santos-simoes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-santos-simoes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-santos-simoes/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "LUCAS GABRIEL DE SOUZA SILVA",
-        "number": 16
+        "number": 16,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "GABRIEL FONSECA SAMPAIO",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-fonseca-sampaio-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-fonseca-sampaio-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-fonseca-sampaio-/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "LINCOLN RAFAEL SOARES GONÇAVES",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lincoln-rafael-soares-goncaves",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lincoln-rafael-soares-goncaves/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lincoln-rafael-soares-goncaves/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL BRINA CORGOSINHO",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-brina-corgosinho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-brina-corgosinho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-brina-corgosinho/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "MARCELO HENRIQUE PEREIRA VASCONCELOS",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcelo-henrique-pereira-vasconcelos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-henrique-pereira-vasconcelos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-henrique-pereira-vasconcelos/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "MAYKON TEODORO MESQUITA",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "BRUNO LUCAS SILVA MARQUES",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-lucas-silva-marques",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-lucas-silva-marques/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-lucas-silva-marques/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "LUCIANO CHEN",
-        "number": 19
+        "number": 19,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JOSE MARCOS HURTADO LÓPEZ",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-marcos-hurtado-lopez",
+        "registered2026": true,
         "number": 20,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-marcos-hurtado-lopez"
+        "appeared2026": true
       },
       {
         "name": "PAULO RODRIGO SILVA",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/paulo-rodrigo-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-rodrigo-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-rodrigo-silva/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "ALISSON ANDRADE MACHADO",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alisson-andrade-machado",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-andrade-machado/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-andrade-machado/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "TIAGO PADOAN JUCAS",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tiago-padoan-jucas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tiago-padoan-jucas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tiago-padoan-jucas/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "FACUNDO ALEJANDRO SALOMON",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/facundo-alejandro-salomon",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-alejandro-salomon/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-alejandro-salomon/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
+      },
+      {
+        "name": "Alemão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/filipe-cesar-lopes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/filipe-cesar-lopes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Arthur",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-piassi-dias-de-castro2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-piassi-dias-de-castro2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Beré",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fillipe-gibran",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fillipe-gibran/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cazuza",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/michel-silva-fernandes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michel-silva-fernandes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Hugo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/hugo--henrique-nunes-prisco",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hugo--henrique-nunes-prisco/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joaquin Tacchi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joaquin-tacchi-28-03-1989",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaquin-tacchi-28-03-1989/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Karlão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/karlos-eduardo-dos-santos-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/karlos-eduardo-dos-santos-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Leo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-aguiar-ramos-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-aguiar-ramos-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LUCIANO RODRIGO SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luciano-rodrigo-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luciano-rodrigo-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Luizinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-antonio-de-olveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-antonio-de-olveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "MARCOS TÚLIO DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-tulio-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-tulio-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Maykon",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/maykon-teodoro-mesquita2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maykon-teodoro-mesquita2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Paulão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/paulo-henrique-couto-rodrigues",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-henrique-couto-rodrigues/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "PET 3L",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/elcio-pinheiro-lopes-junior2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elcio-pinheiro-lopes-junior2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Robertão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/roberto-franco-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/roberto-franco-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Selfie",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-henrique-rodrigues",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-henrique-rodrigues/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "TIAGO JOSÉ DE SOUZA GOMES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/tiago-jose-de-souza-gomes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tiago-jose-de-souza-gomes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Timoteu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-timoteu-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-timoteu-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vigarista",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-gabriel-de-souza-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-gabriel-de-souza-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vitão",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/victorhugodamata-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victorhugodamata-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Xuxa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-gomes-costas",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-gomes-costas/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Zanon",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabricio-cesar-zanon2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-cesar-zanon2/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "colonos": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/uniao-de-rugby-tauras-carancho",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106498",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106500"
@@ -2402,299 +5711,572 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "DENNER CARLOS BRESSIANI",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/denner-carlos-bressiani",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/denner-carlos-bressiani/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/denner-carlos-bressiani/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "FERNANDES LEONARDO RAMOS",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernandes-leonardo-ramos",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME MACHADO MARTINI",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-machado-martini",
+        "registered2026": true,
         "number": 2,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-machado-martini"
+        "appeared2026": true
       },
       {
         "name": "GILVAN MACHADO MARTINI",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gilvan-machado-martini",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gilvan-machado-martini/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gilvan-machado-martini/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "AUGUSTO DETONI BETTIO",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/augusto-detoni-bettio",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-detoni-bettio/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-detoni-bettio/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "CARLOS ALEXANDRE SOUZA DOS SANTOS",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-alexandre-souza-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-alexandre-souza-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-alexandre-souza-dos-santos/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "GIOVANE GREGORI AMARAL",
-        "number": 5
+        "number": 5,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "HIAGO ALEXANDRE PERROTTI",
-        "number": 6
+        "number": 6,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "YURI BRITTO DA SILVA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/yuri-britto-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yuri-britto-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yuri-britto-da-silva/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "VICTOR FELIPE DOS SANTOS OLIVEIRA OZEKOSKI",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-felipe-dos-santos-oliveira-ozekoski",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-felipe-dos-santos-oliveira-ozekoski/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-felipe-dos-santos-oliveira-ozekoski/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "VOLMAR ANTONIO FRANCESCHI JUNIOR",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/volmar-antonio-franceschi-junior",
+        "registered2026": true,
         "number": 8,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/volmar-antonio-franceschi-junior"
+        "appeared2026": true
       },
       {
         "name": "ANDREI VINICIUS DOS SANTOS",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andrei-vinicius-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andrei-vinicius-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andrei-vinicius-dos-santos/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE RAMIRES CASTRO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-ramires-castro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-ramires-castro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-ramires-castro/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "ARTHUR JUAN MORAIS",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-juan-morais",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-juan-morais/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-juan-morais/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "JULIANO CAVALCANTI",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/juliano-cavalcanti",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juliano-cavalcanti/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juliano-cavalcanti/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "TAINÃ GIRARDI",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/taina-girardi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/taina-girardi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/taina-girardi/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "VINÍCIUS SILVESTRE",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-silvestre",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-silvestre/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-silvestre/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "VINICIUS DO PILAR NOLL",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-do-pilar-noll",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-do-pilar-noll/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-do-pilar-noll/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO CARDOSO CARVALHO",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-cardoso-carvalho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-cardoso-carvalho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-cardoso-carvalho/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "DAVI JOÃO DA SILVA CHIAPETTI",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-joao-da-silva-chiapetti",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-joao-da-silva-chiapetti/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-joao-da-silva-chiapetti/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "DOUGLAS JUNIOR GONÇALVES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-junior-goncalves-",
+        "registered2026": true,
         "number": 17,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-junior-goncalves-"
+        "appeared2026": true
       },
       {
         "name": "FELIPE FRANCISCO SOARES LEONHARDT",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-francisco-soares-leonhardt",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "MATEUS GASPARETTO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/mateus-gasparetto",
+        "registered2026": true,
         "number": 19,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/mateus-gasparetto"
+        "appeared2026": true
       },
       {
         "name": "LUIZ FERNANDO DALBOSCO DE OLIVEIRA",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-fernando-dalbosco-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-fernando-dalbosco-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-fernando-dalbosco-de-oliveira/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "TULIO DE ALMEIDA BERTAGNOLLI",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tulio-de-almeida-bertagnolli",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-de-almeida-bertagnolli/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-de-almeida-bertagnolli/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "IASANÃ GIRARDI",
-        "number": 22
+        "number": 22,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MISTURINI",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-misturini",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-misturini/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-misturini/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
+      },
+      {
+        "name": "Giovani",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/giovani-gregori-amaral",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giovani-gregori-amaral/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "IASANÃ",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/mauricio-rocha-ribeiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauricio-rocha-ribeiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kaue",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaue-dornelles",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaue-dornelles/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Prea",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/hiago-alexandre-perrotti2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hiago-alexandre-perrotti2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ROGEAN",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rogean-silva-de-oliveira",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "sandro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/sandro-zelindo-lombardi",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Tainã",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/taina-girardi2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/taina-girardi2/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "brummers": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/brummers-rugby-clube2",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106499"
     ],
     "players": [
       {
         "name": "TÁLISON DOS REIS PEREIRA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/talison-dos-reis-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/talison-dos-reis-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/talison-dos-reis-pereira/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO VIER DOS SANTOS",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-vier-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-vier-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-vier-dos-santos/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "JEFERSON SPARRENBERGER",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jeferson-sparrenberger",
+        "registered2026": true,
         "number": 5,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jeferson-sparrenberger"
+        "appeared2026": true
       },
       {
         "name": "GUILHERME DE OLIVEIRA BANDEIRA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-de-oliveira-bandeira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-oliveira-bandeira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-oliveira-bandeira/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "DIEGO HENRIQUE TRESOLDI",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-henrique-tresoldi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-henrique-tresoldi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-henrique-tresoldi/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "ANGELO ALBERTO MARCUCCI VELASCO",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/angelo-alberto-marcucci-velasco",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/angelo-alberto-marcucci-velasco/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/angelo-alberto-marcucci-velasco/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS RAMOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-ramos",
+        "registered2026": true,
         "number": 9,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-ramos"
+        "appeared2026": true
       },
       {
         "name": "BRUNO JOSEPH SCHIEFFELBEIN",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-joseph-schieffelbein",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "JOHN LEANDRO BATISTA SCHILING",
-        "number": 13
+        "number": 13,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ISRAEL ANTONIO DA SILVA",
-        "number": 14
+        "number": 14,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "NICKOLAS DE MENEZES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nickolas-de-menezes",
+        "registered2026": true,
         "number": 15,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nickolas-de-menezes"
+        "appeared2026": true
       },
       {
         "name": "PEDRO PASIN SOUZA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-pasin-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-pasin-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-pasin-souza/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "MARCELLO VIEIRA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcello-vieira",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "FERNANDO CARNIEL BALLIN",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-carniel-ballin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-carniel-ballin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-carniel-ballin/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "GALEGO",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolas-ferreira-dias2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-ferreira-dias2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-ferreira-dias2/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME DE OLIVEIRA",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-de-oliveira-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-oliveira-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-oliveira-1/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "PEDRO VICENTE STEFANELLO MEDEIROS",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-vicente-stefanello-medeiros",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-vicente-stefanello-medeiros/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-vicente-stefanello-medeiros/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "PAULO ROBERTO BARBOSA JUNIOR",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/paulo-roberto-barbosa-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-roberto-barbosa-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-roberto-barbosa-junior/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME DO NASCIMENTO COLAÇO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-do-nascimento-colaco",
+        "registered2026": true,
         "number": 24,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-do-nascimento-colaco"
+        "appeared2026": true
       },
       {
         "name": "LUIS FERNANDO SULZBACH",
-        "number": 25,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-fernando-sulzbach",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-fernando-sulzbach/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-fernando-sulzbach/1-Thumbnail.jpeg",
+        "number": 25,
+        "appeared2026": true
       },
       {
         "name": "MARCOS PAULO DE OLIVEIRA DA SILVA",
-        "number": 27,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-paulo-de-oliveira-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-paulo-de-oliveira-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-paulo-de-oliveira-da-silva/1-Thumbnail.jpeg",
+        "number": 27,
+        "appeared2026": true
       },
       {
         "name": "GIOVANNE LUCAS DE MELLO MIRANDA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/giovanne-lucas-de-mello-miranda",
+        "registered2026": true,
         "number": 28,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/giovanne-lucas-de-mello-miranda"
+        "appeared2026": true
       },
       {
         "name": "ITALO RODRIGO SOARES",
-        "number": 30,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/italo-rodrigo-soares",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/italo-rodrigo-soares/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/italo-rodrigo-soares/1-Thumbnail.jpeg",
+        "number": 30,
+        "appeared2026": true
+      },
+      {
+        "name": "ALESSANDRO GONZAGA MACHADO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/alessandro-gonzaga-machado",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Bindé",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-binde-de-souza",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-binde-de-souza/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "BRYAN DE CHRISTO BACKES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bryan-de-christo-backes",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Chuchu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-bourscheid-chaves",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-bourscheid-chaves/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cristian Pick",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/cristian-pick",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristian-pick/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "DALAI OSSEL DIETRICH",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/dalai-ossel-dietrich",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/dalai-ossel-dietrich/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "GUILHERME SPARRENBERGER",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-sparrenberger2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-sparrenberger2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Igor André",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-andre-correa-silveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-andre-correa-silveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "IGOR HENRIQUE MACHADO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-henrique-machado2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-henrique-machado2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ISRAEL",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/israel-antonio-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/israel-antonio-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "John",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/denis-almeida-parreiras-de-santana",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/denis-almeida-parreiras-de-santana/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Josué",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/josue-da-silveira-machado",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/josue-da-silveira-machado/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "MATHEUS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-do-nascimento-alves",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-do-nascimento-alves/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "PEDRO HENRIQUE MENEZES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-alvarenga-menezes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-alvarenga-menezes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Rafa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-motta",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-motta/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "RAFAEL DA SILVA GARCIA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-da-silva-garcia",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "roberto zancanaro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/roberto-zancanaro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/roberto-zancanaro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ROMULO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/romulo-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/romulo-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "serra-gaucha": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/serra-gaucha-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106498",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106499"
@@ -2702,288 +6284,575 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "GUILHERME MACIEL GOMES",
-        "number": 1
+        "number": 1,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ANDRE LUIZ DOS SANTOS RIBEIRO",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-luiz-dos-santos-ribeiro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-luiz-dos-santos-ribeiro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-luiz-dos-santos-ribeiro/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "IVAN GUSTAVO CORTEZ",
-        "number": 2
+        "number": 2,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "CLAYTON DE CAMARGO",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/clayton-de-camargo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clayton-de-camargo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clayton-de-camargo/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "RÓGER BORGES MACEDO",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/roger-borges-macedo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/roger-borges-macedo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/roger-borges-macedo/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "EDSON PINHEIRO JUNIOR",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/edson-pinheiro-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edson-pinheiro-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edson-pinheiro-junior/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "BRAYAN DANIEL MONTERO VELASQUEZ",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/brayan-daniel-montero-velasquez",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brayan-daniel-montero-velasquez/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brayan-daniel-montero-velasquez/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL DARIVA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-dariva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-dariva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-dariva/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "JONATHAN PATRICK DA ROSA",
-        "number": 8
+        "number": 8,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "PAULO RICARDO MOTA MORAES",
-        "number": 9
+        "number": 9,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DANIEL DOS SANTOS",
-        "number": 10
+        "number": 10,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JOILSON CASTAGNA DOS SANTOS",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joilson-castagna-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joilson-castagna-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joilson-castagna-dos-santos/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "LUAN DOS SANTOS PIRES",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luan-dos-santos-pires",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/luan-dos-santos-pires/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/luan-dos-santos-pires/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "LUCAS CARRIZO",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-carrizo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-carrizo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-carrizo/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "VAGNER MACHADO DE OLIVEIRA",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vagner-machado-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vagner-machado-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vagner-machado-de-oliveira/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS GIMENEZ DE MATOS",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-gimenez-de-matos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-gimenez-de-matos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-gimenez-de-matos/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "DIEGO MACHADO DE OLIVEIRA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-machado-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-machado-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-machado-de-oliveira/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "GREGORY MACHADO PEREIRA",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gregory-machado-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gregory-machado-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gregory-machado-pereira/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS MAIZONAVE VARGAS",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-maizonave-vargas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-maizonave-vargas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-maizonave-vargas/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "PABLO PAZ SULZBACH",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pablo-paz-sulzbach-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-paz-sulzbach-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-paz-sulzbach-/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "NIUMAR AMPESE",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/niumar-ampese",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/niumar-ampese/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/niumar-ampese/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "LUIZ VINICIUS SANTOS FERREIRA",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-vinicius-santos-ferreira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-vinicius-santos-ferreira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-vinicius-santos-ferreira/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS ORTIZ CORRÊA",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-ortiz-correa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-ortiz-correa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-ortiz-correa/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "JOÃO FRANCISCO MANDERBACH MONASSA",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-francisco-manderbach-monassa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-francisco-manderbach-monassa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-francisco-manderbach-monassa/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "ERICK IGNÁCIO ROSANO PEDROSO",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/erick-ignacio-rosano-pedroso",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-ignacio-rosano-pedroso/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-ignacio-rosano-pedroso/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME DE CAMPOS DA SILVA",
-        "number": 21
+        "number": 21,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MARCOS JOSÉ BRITO LUGO",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-jose-brito-lugo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-jose-brito-lugo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-jose-brito-lugo/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "ERIK HENRIQUE MARQUES PEDRO",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/erik-henrique-marques-pedro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erik-henrique-marques-pedro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erik-henrique-marques-pedro/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "DOUGLAS FERNANDES FERRANTI",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-fernandes-ferranti",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-fernandes-ferranti/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-fernandes-ferranti/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "VICTOR CALIXTO MATTIVI",
-        "number": 23
+        "number": 23,
+        "appeared2026": true,
+        "registered2026": false
+      },
+      {
+        "name": "cavalheiro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/erick-cavalheiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-cavalheiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Cristian",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/cristiam-cardoso-de-araujo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cristiam-cardoso-de-araujo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dani",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-dos-santos3",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-dos-santos3/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Douglas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-rufino-dos-reis2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-rufino-dos-reis2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Felipe",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-eugenio-lovato",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-eugenio-lovato/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gabriel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-d-avila-camargo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-d-avila-camargo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gui Campos",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-de-campos-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-campos-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gustavo Fernando Campos Amundaray",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-fernando-campos-amundaray",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-fernando-campos-amundaray/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Hiam",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/hiam-borges-rombaldi",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hiam-borges-rombaldi/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ivan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ivan-gusta-cortez",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-gusta-cortez/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joou",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jonathan-patrick-da-rosa2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonathan-patrick-da-rosa2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Montanha",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-maciel-gomes2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-maciel-gomes2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Paulo Morais",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/paulo-ricardo-mota-moraes2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-ricardo-mota-moraes2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vitão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-calixto-mattivi2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-calixto-mattivi2/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "joinville": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/joinville-rugby-clube2",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106500"
     ],
     "players": [
       {
         "name": "ALEX JUNIOR BELING DA SILVA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/alex-junior-beling-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-junior-beling-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-junior-beling-da-silva/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "DANIEL RICARDO DA SILVA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-ricardo-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-ricardo-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-ricardo-da-silva/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "FERNANDO FERREIRA DIAS",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-ferreira-dias",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-ferreira-dias/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-ferreira-dias/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "DJ",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/djeverson-damian-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/djeverson-damian-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/djeverson-damian-da-silva/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "MARCOS GUIZONI BETT",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-guizoni-bett",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-guizoni-bett/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-guizoni-bett/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "WESLEY ANTUNES PAULO",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/wesley-antunes-paulo-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-antunes-paulo-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-antunes-paulo-/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "BENJAMIM FRANCISCO DE SOUSA NETO",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/benjamim-francisco-de-sousa-neto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benjamim-francisco-de-sousa-neto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benjamim-francisco-de-sousa-neto/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL LEVI GUERREIRO SOARES",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-levi-guerreiro-soares",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-levi-guerreiro-soares/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-levi-guerreiro-soares/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "JORDAN LUIZ FRANCISCO MARTINS",
-        "number": 9
+        "number": 9,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JEFERSON DE AZEVEDO MARTINS",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jeferson-de-azevedo-martins",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jeferson-de-azevedo-martins/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jeferson-de-azevedo-martins/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "GILBERTO DE LIMA MATYAK",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gilberto-de-lima-matyak",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gilberto-de-lima-matyak/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gilberto-de-lima-matyak/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "JORGE AMADORIS",
-        "number": 12
+        "number": 12,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "GUSTAVO CUSTODIO",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-custodio",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-custodio/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-custodio/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "JEFFERSON ANDREO FLORES",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jefferson-andreo-flores",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jefferson-andreo-flores/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jefferson-andreo-flores/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "NATANAEL FLORIANI",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/natanael-floriani2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/natanael-floriani2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/natanael-floriani2/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "LEANDRO GRAD DE CASTRO GOUVEA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leandro-grad-de-castro-gouvea",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leandro-grad-de-castro-gouvea/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leandro-grad-de-castro-gouvea/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "FABRÍCIO LUERCE DA SILVA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabricio-luerce-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-luerce-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-luerce-da-silva/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME ALVES PEREIRA",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-alves-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-alves-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-alves-pereira/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
+      },
+      {
+        "name": "afonso",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/robson-afonso-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robson-afonso-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bala",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/theo-ballinhas-soares",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/theo-ballinhas-soares/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Bruninho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-amancio",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-amancio/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Caverninha",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-augusto-dos-santos-anjos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-augusto-dos-santos-anjos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "GAB",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-gabriel-de-morais",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-gabriel-de-morais/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Heitor Vaselechen Rodrigues Teixeira",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/heitor-vaselechen-rodrigues-teixeira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heitor-vaselechen-rodrigues-teixeira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jordan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jordan-luiz-francisco-martins2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jordan-luiz-francisco-martins2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jorge Amadoris Milán González",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jorge-amadoris-milan-gonzalez",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jorge-amadoris-milan-gonzalez/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marcão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Mauricio Pica",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/mauricio-picanco-de-carvalho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauricio-picanco-de-carvalho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Rodrigo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-francisco-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-francisco-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ruan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/graciano-ruan-da-costa-de-assis",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/graciano-ruan-da-costa-de-assis/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Spyder",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/anderson-sena-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/anderson-sena-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "pe-vermelho": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/pe-vermelho-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106503",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106506"
@@ -2991,167 +6860,333 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "PEDRO HENRIQUE NUNES LOBATO DE SOUZA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-nunes-lobato-de-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-nunes-lobato-de-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-nunes-lobato-de-souza/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "JOAO PEDRO MARTINS PERIN",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-martins-perin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-martins-perin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-martins-perin/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "MARCELO DE AGOSTINI JUNIOR",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcelo-de-agostini-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-de-agostini-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-de-agostini-junior/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "EVALDO RAMALHO FRANQUILINO DOS SANTOS",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/evaldo-ramalho-franquilino-dos-santos2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/evaldo-ramalho-franquilino-dos-santos2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/evaldo-ramalho-franquilino-dos-santos2/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "RODOLFO LORENCETTI DA SILVA",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodolfo-lorencetti-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodolfo-lorencetti-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodolfo-lorencetti-da-silva/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "ENZO BATISTA RAMALHO DOS SANTOS",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/enzo-batista-ramalho-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/enzo-batista-ramalho-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/enzo-batista-ramalho-dos-santos/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO DE OLIVEIRA BOMFIM",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-de-oliveira-bomfim",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-oliveira-bomfim/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-oliveira-bomfim/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "RODRIGO TEIXEIRA MENSATO",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-teixeira-mensato",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-teixeira-mensato/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-teixeira-mensato/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "JOAO PEDRO ALVES PAULINO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-alves-paulino",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-alves-paulino/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-alves-paulino/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "JOAO LUCAS LAZOSKI",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-lucas-lazoski",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-lucas-lazoski/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-lucas-lazoski/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "DAVI SANTANA",
-        "number": 12
+        "number": 12,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MATHEUS MEDEIROS FERRO",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-medeiros-ferro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-medeiros-ferro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-medeiros-ferro/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "XERXES GABRIEL",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi17",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi17/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi17/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "DANILO MESSIAS DA SILVEIRA",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/danilo-messias-da-silveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-messias-da-silveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-messias-da-silveira/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "JOÃO PEDRO LOPES DAMAS",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-lopes-damas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-lopes-damas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-lopes-damas/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO LACERDA DE AGOSTINI",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/pyetrogabrielrodriguesoliveira-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pyetrogabrielrodriguesoliveira-ms/1-Thumbnail.jpeg",
         "number": 16,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-lacerda-de-agostini",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-lacerda-de-agostini/1-Thumbnail.jpeg"
+        "appeared2026": true
       },
       {
         "name": "THIAGO AUGUSTO DA CRUZ DANTAS",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-augusto-da-cruz-dantas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-augusto-da-cruz-dantas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-augusto-da-cruz-dantas/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "WILLIAM PAREDES HECKLER",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/william-paredes-heckler",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-paredes-heckler/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-paredes-heckler/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL HENRIQUE FERNANDES MEIRA",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-henrique-fernandes-meira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-henrique-fernandes-meira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-henrique-fernandes-meira/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE DOS REIS TEIXEIRA",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-dos-reis-teixeira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-dos-reis-teixeira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-dos-reis-teixeira/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "VICTOR HUGO ROCHA AMARAL",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-hugo-rocha-amaral",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-hugo-rocha-amaral/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-hugo-rocha-amaral/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "ANDRE LEONARDO DOS SANTOS",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-leonardo-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-leonardo-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-leonardo-dos-santos/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "MÁRIO FERNANDES RAMOS FILHO",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mario-fernandes-ramos-filho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mario-fernandes-ramos-filho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mario-fernandes-ramos-filho/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "JAIME PROCÓPIO DA SILVA",
-        "number": 26,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jaime-procopio-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaime-procopio-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaime-procopio-da-silva/1-Thumbnail.jpeg",
+        "number": 26,
+        "appeared2026": true
       },
       {
         "name": "LUCAS PETKOWICZ MARIANI",
-        "number": 67,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-petkowicz-mariani",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-petkowicz-mariani/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-petkowicz-mariani/1-Thumbnail.jpeg",
+        "number": 67,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME PHILIPE",
-        "number": 69
+        "number": 69,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "BRUNO SPOSITO GOMES DE SIQUEIRA",
-        "number": 88,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-sposito-gomes-de-siqueira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-sposito-gomes-de-siqueira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-sposito-gomes-de-siqueira/1-Thumbnail.jpeg",
+        "number": 88,
+        "appeared2026": true
+      },
+      {
+        "name": "ALEJANDRO GONZÁLES JESUS MOURA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/alejandro-gonzales-jesus-moura",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alejandro-gonzales-jesus-moura/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Davi-zinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-nicolas-pereira-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-nicolas-pereira-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dvd",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/davi-santana-rogerio",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-santana-rogerio/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ector",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ector-cilla-ramalho-franquilino-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ector-cilla-ramalho-franquilino-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "GABRIEL DE ALMEIDA DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/gabrieldealmeidadasilva-ms",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "GABRIEL SANCHES NOGUEIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-sanches-nogueira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-sanches-nogueira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "GUILHERME",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-philipe-pires-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-philipe-pires-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Hamburgão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlosrafaelaparecidosouzademoura",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlosrafaelaparecidosouzademoura/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Iohan Petkowicz",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/iohan-petkowicz-alfieri",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iohan-petkowicz-alfieri/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "João Victor Da Silveira Bertao",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-victor-da-silveira-bertao",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-da-silveira-bertao/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joao Vitor Campos",
+        "profile": "https://plataforma.sporti.com.br/sporti/atleta/joaovitorcamposaraujo-ms",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaovitorcamposaraujo-ms/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Leo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-vilas-boas-raimundo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-vilas-boas-raimundo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LUIS FERNANDO LANGAME ALEGRO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-fernando-langame-alegro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-fernando-langame-alegro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Negão",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-henrique-mazon-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-henrique-mazon-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Passoni",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-passoni-correia2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-passoni-correia2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "VICTOR DA SILVA AVILA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-da-silva-avila",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-da-silva-avila/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "leoes": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/associacao-esportiva-engenharia-mackenzie",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106503",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106505"
@@ -3159,154 +7194,403 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "EMIR CAMILO MACUL PERALTA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/emir-camilo-macul-peralta",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "HENRY JUNIOR PONCE DAMACEN",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/henry-junior-ponce-damacen2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henry-junior-ponce-damacen2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henry-junior-ponce-damacen2/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "JACKSON PEDRO DOS SANTOS SOUZA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jackson-pedro-dos-santos-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jackson-pedro-dos-santos-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jackson-pedro-dos-santos-souza/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "LUCAS JOSÉ BORELLI DOS SANTOS",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-jose-borelli-dos-santos",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "EDSON GABRIEL FERREIRA CORREIA",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/edson-gabriel-ferreira-correia",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edson-gabriel-ferreira-correia/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edson-gabriel-ferreira-correia/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "JOÃO PEDRO BRASIL CAROZI",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-brasil-carozi",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-brasil-carozi/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-brasil-carozi/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE MEDEIROS COSTA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-medeiros-costa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-medeiros-costa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-medeiros-costa/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "ADEMIR ANTÔNIO DOS SANTOS",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ademir-antonio-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ademir-antonio-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ademir-antonio-dos-santos/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "DANTE RODRIGUES RIOS",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/dante-rodrigues-rios",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/dante-rodrigues-rios/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/dante-rodrigues-rios/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "LUCAS VIÑAS VIEIRA",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-vinas-vieira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-vinas-vieira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-vinas-vieira/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "LUIS EDUARDO PLUMACHER DIAZ",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-eduardo-plumacher-diaz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-eduardo-plumacher-diaz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-eduardo-plumacher-diaz/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "LUCAS JOSÉ DA SILVA PONTES",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-jose-da-silva-pontes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-jose-da-silva-pontes/1-Thumbnail.jpeg"
-      },
-      {
-        "name": "FELIPE JOSÉ DA SILVA DE PONTES",
-        "number": 11,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-jose-da-silva-de-pontes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-jose-da-silva-de-pontes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-jose-da-silva-pontes/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL LOPES DE OLIVEIRA",
-        "number": 12
+        "number": 12,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ABRAAO AVELINO SANTOS",
-        "number": 13
+        "number": 13,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JADSON FELIPE DOS SANTOS",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jadson-felipe-dos-santos-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jadson-felipe-dos-santos-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jadson-felipe-dos-santos-1/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "IGOR KAUKLIN",
-        "number": 14
+        "number": 14,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ITALO MORAIS DE ARAUJO FERNANDES",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/italo-morais-de-araujo-fernandes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/italo-morais-de-araujo-fernandes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/italo-morais-de-araujo-fernandes/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "HENRIQUE GOMES DIAS",
-        "number": 17
+        "number": 17,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RAFAEL FERREIRA DA SILVA",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "PÉTER VALENZUELA AUTOVICZ",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/peter-valenzuela-autovicz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/peter-valenzuela-autovicz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/peter-valenzuela-autovicz/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "PATRÍCIO JULIAN GARMENDIA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patricio-julian-garmendia-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patricio-julian-garmendia/1.jpg",
         "number": 20,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patricio-julian-garmendia-1"
+        "appeared2026": true
       },
       {
         "name": "GEIMISON MARQUES TOMAZ",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/geimison-marques-tomaz",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geimison-marques-tomaz/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geimison-marques-tomaz/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "ALDAIR JOSE DA SILVA",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/aldair-jose-da-silva2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/aldair-jose-da-silva2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/aldair-jose-da-silva2/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "BRENNO PEREIRA SOARES",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/brenno-pereira-soares",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brenno-pereira-soares/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brenno-pereira-soares/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "FELIPE",
-        "number": 24,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-jose-da-silva-de-pontes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-jose-da-silva-de-pontes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-jose-da-silva-de-pontes/1-Thumbnail.jpeg",
+        "number": 24,
+        "appeared2026": true
+      },
+      {
+        "name": "ABRAAO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/abraao-avelino-santos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
+      },
+      {
+        "name": "Bahia",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/isaque-putumuju-borges",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isaque-putumuju-borges/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Caipora",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-pedro-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-pedro-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ci",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/cicero-da-silva-rodrigues--junior",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cicero-da-silva-rodrigues--junior/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Danilo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/danilo-figueiredo-batista-costa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-figueiredo-batista-costa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dudu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-dos-santos-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-dos-santos-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fraboi",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/danilo-macedo-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-macedo-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fred",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/frederico-amaral-marinho-pinto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/frederico-amaral-marinho-pinto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gilmar",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gilmar-almeida-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gilmar-almeida-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Giva",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/givanilson-oliveira-da-costa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/givanilson-oliveira-da-costa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "IGOR KAUKLIN PEREIRA DA SILVA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-kauklin-pereira-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-kauklin-pereira-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "IVAN PELEGRIN NETTO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ivan-pelegrin-netto",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-pelegrin-netto/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jhonny",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jonathan-moises-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonathan-moises-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joao",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-silva-fonseca-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-silva-fonseca-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joel-victor-araujo-dos-santos-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joel-victor-araujo-dos-santos-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kaique Gomes",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaique-gomes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaique-gomes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LOPES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-lopes-de-oliveira2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-lopes-de-oliveira2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Maleke",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/alex-gustavo-suzana-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-gustavo-suzana-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Maurinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-tadeu-santos-calbo2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-tadeu-santos-calbo2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Nariz",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/henrique-gomes-dias2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-gomes-dias2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Nicholas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicholas-silva-de-souza2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicholas-silva-de-souza2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Predador",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-dos-santos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-dos-santos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Rasta",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-ferreira-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-ferreira-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tisso",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patricio-veloso-dos-santos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patricio-veloso-dos-santos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Varejao",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/robson-alves-de-moraes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robson-alves-de-moraes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vini X",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-kenko-folli-xavier",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-kenko-folli-xavier/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Viny Silva",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-dos-santos-silva-3",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-dos-santos-silva-3/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Vovô",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/edmo-moreno-da-cunha-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edmo-moreno-da-cunha-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Weverton",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/weverton-ferreira-de-jesus-viana-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/weverton-ferreira-de-jesus-viana-/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "iguanas": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/iguanas-rugby3",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106504",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106505"
@@ -3314,162 +7598,358 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "MICHEL OLÍMPIO GOMES DE OLIVEIRA",
-        "number": 1
+        "number": 1,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "KAUE LUIZ DE FREITAS SILVA",
         "number": 2,
+        "appeared2026": true,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaue-luiz-de-freitas-silva3",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaue-luiz-de-freitas-silva3/1-Thumbnail.jpeg"
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaue-luiz-de-freitas-silva3/1-Thumbnail.jpeg",
+        "registered2026": false
       },
       {
         "name": "NICOLAS ALKMIN FERREIRA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nicolas-alkmin-ferreira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-alkmin-ferreira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-alkmin-ferreira/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO ALEXANDRE CARDOSO DOS SANTOS",
-        "number": 4
+        "number": 4,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JEAN MATHEUS MORGADO SANTOS",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jean-matheus-morgado-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-matheus-morgado-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-matheus-morgado-santos/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "CÉLIO APARECIDO DE SOUSA BARBOSA JUNIOR",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/celio-aparecido-de-sousa-barbosa-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/celio-aparecido-de-sousa-barbosa-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/celio-aparecido-de-sousa-barbosa-junior/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "JOÃO PEDRO MORINI",
-        "number": 6
+        "number": 6,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DERICK ESTEVÃO PIO",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/derick-estevao-pio",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/derick-estevao-pio/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/derick-estevao-pio/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL ZACARIAS COSTA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-zacarias-costa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-zacarias-costa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-zacarias-costa/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "IAGO JULIOLI DOS SANTOS",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/iago-julioli-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-julioli-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-julioli-dos-santos/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS DA SILVA ARANTES",
         "number": 8,
+        "appeared2026": true,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-da-silva-arantes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-da-silva-arantes/1-Thumbnail.jpeg"
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-da-silva-arantes/1-Thumbnail.jpeg",
+        "registered2026": false
       },
       {
         "name": "GUSTAVO RICIERI DOS SANTOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-ricieri-dos-santos",
+        "registered2026": true,
         "number": 9,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-ricieri-dos-santos"
+        "appeared2026": true
       },
       {
         "name": "ELLEYSON DANIEL NUNES DE ANDRADE REZENDE",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/elleyson-daniel-nunes-de-andrade-rezende",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "JAVIER EDUARDO GARCIA MACIEL",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/javier-eduardo-garcia-maciel",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/javier-eduardo-garcia-maciel/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/javier-eduardo-garcia-maciel/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL BRITO DE SENNE",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-brito-de-senne",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-brito-de-senne/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-brito-de-senne/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "VITOR GUSTAVO ALVES DE LIMA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vitor-gustavo-alves-de-lima",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gustavo-alves-de-lima/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gustavo-alves-de-lima/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "RHYAN EDUARDO MADEIRA DA SILVA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rhyan-eduardo-madeira-da-silva-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rhyan-eduardo-madeira-da-silva-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rhyan-eduardo-madeira-da-silva-/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "FERNANDO S FIORELLI MONTEIRO",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-s-fiorelli-monteiro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-s-fiorelli-monteiro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-s-fiorelli-monteiro/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO VIANNA DA SILVA",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-vianna-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-vianna-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-vianna-da-silva/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "FILIPE CARLIN DE SOUSA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/filipe-carlin-de-sousa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/filipe-carlin-de-sousa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/filipe-carlin-de-sousa/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "CLAYTON MORGADO LINO",
-        "number": 17
+        "number": 17,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "RAFAEL",
-        "number": 17
+        "number": 17,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "IGOR FERNADES RAMOS",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MARCELO FERNANDES DE SOUZA",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcelo-fernandes-de-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-fernandes-de-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-fernandes-de-souza/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL STRAUTMANN RAMOS",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-strautmann-ramos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-strautmann-ramos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-strautmann-ramos/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "VICTOR MATHEUS DE SOUSA MARQUES",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-matheus-de-sousa-marques2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-matheus-de-sousa-marques2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-matheus-de-sousa-marques2/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "VITOR MOREIRA DE OLIVEIRA",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vitor-moreira-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-moreira-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-moreira-de-oliveira/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "LUCAS ALCINO DA SILVA LOPES",
-        "number": 23
+        "number": 23,
+        "appeared2026": true,
+        "registered2026": false
+      },
+      {
+        "name": "Arantes",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-da-silva-arantes2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-da-silva-arantes2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Clayton",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/clayton-morgado-lino2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clayton-morgado-lino2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Don",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/ricardo-abdias-bocardo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-abdias-bocardo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dor",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-moreira-lima",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-moreira-lima/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "eduardo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-santos-de-moraes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-santos-de-moraes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Erison",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/erison-carlos-dos-santos-monteiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erison-carlos-dos-santos-monteiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Igor",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-fernandes-ramos",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-fernandes-ramos/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kaue",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaue-luiz-de-freitas-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaue-luiz-de-freitas-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "leo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-cabral2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-cabral2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lucas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-alcino-da-silva-lopes2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-alcino-da-silva-lopes2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Mahasia",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/mahasiah-libera-martins",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mahasiah-libera-martins/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Mamute",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-alexandre-cardoso-dos-santos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-alexandre-cardoso-dos-santos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marlon",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marlon-junior",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marlon-junior/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Michel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/michel-olimpio-domes-de-oliveira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michel-olimpio-domes-de-oliveira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Morini",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-morini2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-morini2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Moto",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-guilherme-da-silva-souza2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-guilherme-da-silva-souza2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "PEDRO MIGUEL MARTINS RAMOS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-miguel-martins-ramos2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-miguel-martins-ramos2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "RAFAEL ANTUNES SANCHES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-antunes-sanches",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Wallace",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/wallace-ferreira-sales",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wallace-ferreira-sales/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "YAGO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/yago-da-silva-gomes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "appeared2026": false
       }
     ]
   },
   "urutu": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/urutu-rugby-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106504",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106506"
@@ -3477,191 +7957,359 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "LUCAS DA SILVA ANTONIO",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-da-silva-antonio",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-da-silva-antonio/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-da-silva-antonio/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "DIEGO MONTEIRO GUTIERREZ",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-monteiro-gutierrez",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-monteiro-gutierrez/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-monteiro-gutierrez/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "DIOGO CORSO KRUK",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diogo-corso-kruk",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-corso-kruk/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-corso-kruk/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "DANILO ODDONE",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/danilo-oddone",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-oddone/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-oddone/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "LEONARDO ABILEL HIPÓLITO",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-abilel-hipolito",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-abilel-hipolito/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-abilel-hipolito/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "THOR VOLOSHYN MASTROTTI",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thor-voloshyn-mastrotti",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thor-voloshyn-mastrotti/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thor-voloshyn-mastrotti/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "ANDRÉ THALES DE CARVALHO SIMÕES",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-thales-de-carvalho-simoes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-thales-de-carvalho-simoes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-thales-de-carvalho-simoes/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL SANTANA MELO DOS SANTOS",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-santana-melo-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-santana-melo-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-santana-melo-dos-santos/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "FERNANDO BURKHARDT ANTONOFF",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-burkhardt-antonoff",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-burkhardt-antonoff/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-burkhardt-antonoff/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE GOULARTE LIMA",
-        "number": 7
+        "number": 7,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MATEUS SANTOS MARIN",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mateus-santos-marin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-santos-marin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-santos-marin/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "RENATO DE OLIVEIRA LEIS",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/renato-de-oliveira-leis",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-de-oliveira-leis/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-de-oliveira-leis/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "GUSTAVO LESSA TRONCHIN",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-lessa-tronchin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-lessa-tronchin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-lessa-tronchin/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "VINICIUS HIDEO MIYAGUNI FRANCISCATTE",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbfa/atleta/vinicius-hideo-miyaguni-franciscatte",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-hideo-miyaguni-franciscatte/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-hideo-miyaguni-franciscatte/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "FELIPE MORETI ZEITLIN",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-moreti-zeitlin",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-moreti-zeitlin/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-moreti-zeitlin/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "PEDRO ANDION DE OLIVEIRA FREITAS",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-andion-de-oliveira-freitas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-andion-de-oliveira-freitas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-andion-de-oliveira-freitas/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL DE ALMEIDA FREITAS",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-de-almeida-freitas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-de-almeida-freitas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-de-almeida-freitas/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "MARCELO ALMEIDA LEITE DOS SANTOS",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcelo-almeida-leite-dos-santos-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-almeida-leite-dos-santos-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-almeida-leite-dos-santos-/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "RODRIGO VION LOCHETI",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-vion-locheti",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-vion-locheti/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-vion-locheti/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "LUCCAS DA CUNHA LASTE",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luccas-da-cunha-laste",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luccas-da-cunha-laste/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luccas-da-cunha-laste/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "MARCO ANTÔNIO CHIRI JÚNIOR",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marco-antonio-chiri-junior",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-chiri-junior/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-chiri-junior/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "RUI FELIPE DOS SANTOS MOURA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rui-felipe-dos-santos-moura",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rui-felipe-dos-santos-moura/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rui-felipe-dos-santos-moura/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "JÚLIO CESAR MATOS DE OLIVEIRA",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "GABRIEL KIRSTEN COELHO",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-kirsten-coelho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-kirsten-coelho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-kirsten-coelho/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "DIEGO QUEIROZ MARQUES",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-queiroz-marques",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-queiroz-marques/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-queiroz-marques/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "CAIQUE MOREIRA SOUTO",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/caique-moreira-souto-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caique-moreira-souto-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caique-moreira-souto-/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "DANILO AUGUSTO SILVA",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/danilo-augusto-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-augusto-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-augusto-silva/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "PIETRO NASCIMENTO MARCHI DE OLIVEIRA",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/sporti/atleta/pietronascimentomarchideoliveira-ms",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pietronascimentomarchideoliveira-ms/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pietronascimentomarchideoliveira-ms/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "SOCRATES KENTARO MATSUURA",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/socrates-kentaro-matsuura",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/socrates-kentaro-matsuura/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/socrates-kentaro-matsuura/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
       },
       {
         "name": "ARTHUR",
-        "number": 24,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-vinicius-da-silva-buonso2",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-vinicius-da-silva-buonso2/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-vinicius-da-silva-buonso2/1-Thumbnail.jpeg",
+        "number": 24,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL SILVA SOUSA",
-        "number": 25,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-silva-sousa-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-silva-sousa-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-silva-sousa-/1-Thumbnail.jpeg",
+        "number": 25,
+        "appeared2026": true
+      },
+      {
+        "name": "Barbosa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-barbosa-monteiro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/gustavo-barbosa-monteiro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Biscoito",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-de-almeida-pinho-dos-santos-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-de-almeida-pinho-dos-santos-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "D2",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-paulo-silva-moreira",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-silva-moreira/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gui",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-neves-nunes-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-neves-nunes-/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Irmão do Jorel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/manoel-angel-monteiro-barba-banzer",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/manoel-angel-monteiro-barba-banzer/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "João Paulo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-paulo-coutinho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-coutinho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Julio",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/julio-cesar-matos-de-oliveira2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/julio-cesar-matos-de-oliveira2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Ludo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-augusto-burini-ludovico",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-augusto-burini-ludovico/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-costa-marinho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-costa-marinho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pedro",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bolso",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bolso/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "RODRIGO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-carvalho-castro",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-carvalho-castro/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Stark",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-goncalves-martins",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-goncalves-martins/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tomanik",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-henrique-tomanik",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-henrique-tomanik/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Yan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/yan-bueno-bandeira2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yan-bueno-bandeira2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Zé",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-luiz-corvo-ribas",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-luiz-corvo-ribas/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "niteroi": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/niteroi-rugby-football-clube",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106510",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106512"
@@ -3669,172 +8317,236 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "CARLOS EDUARDO BAPTISTA",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-eduardo-baptista",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-eduardo-baptista/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-eduardo-baptista/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "FERNANDO DE PAIVA REIS",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fernando-de-paiva-reis",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-de-paiva-reis/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-de-paiva-reis/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL DA SILVA MACEDO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-da-silva-macedo",
+        "registered2026": true,
         "number": 0,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-da-silva-macedo"
+        "appeared2026": true
       },
       {
         "name": "GABRIEL HENRIQUE FERREIRA ENNES",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-henrique-ferreira-ennes",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "GEUDSY MARINS ABIB",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/geudsy-marins-abib",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geudsy-marins-abib/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geudsy-marins-abib/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "JOSÉ VÍTOR TAVARES DA COSTA BESSA",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/jose-vitor-tavares-da-costa-bessa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-vitor-tavares-da-costa-bessa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-vitor-tavares-da-costa-bessa/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "PEDRO LUÍS PEREIRA BARBOSA",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-luis-pereira-barbosa",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL DE AZEVEDO ROCHA VIEIRA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-de-azevedo-rocha-vieira",
+        "registered2026": true,
         "number": 0,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-de-azevedo-rocha-vieira"
+        "appeared2026": true
       },
       {
         "name": "DANIEL CASALINO TEIXEIRA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-casalino-teixeira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-casalino-teixeira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-casalino-teixeira/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "EDNILSON DA SILVA JOAQUIM",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ednilson-da-silva-joaquim",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ednilson-da-silva-joaquim/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ednilson-da-silva-joaquim/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "CAIO FERREIRA IRINEU",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/caio-ferreira-irineu-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-ferreira-irineu-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-ferreira-irineu-1/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "ULISSES MIGUEL DA COSTA CORREIA",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ulisses-miguel-da-costa-correia",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ulisses-miguel-da-costa-correia/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ulisses-miguel-da-costa-correia/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "SILAS RODRIGUES DE SOUZA",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/silas-rodrigues-de-souza",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/silas-rodrigues-de-souza/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/silas-rodrigues-de-souza/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "LUCAS LIMA MENEZES",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-lima-menezes-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-lima-menezes-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-lima-menezes-/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS RAYMOND MARQUES KRAEMER FERREIRA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-raymond-marques-kraemer-ferreira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-raymond-marques-kraemer-ferreira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-raymond-marques-kraemer-ferreira/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "ANDRÉ LUIZ CARESTIATO VILLAÇA",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-luiz-carestiato-villaca",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-luiz-carestiato-villaca/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-luiz-carestiato-villaca/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "HYAN GARCIA SOUSA SILVA",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/hyan-garcia-sousa-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hyan-garcia-sousa-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hyan-garcia-sousa-silva/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "DANIEL LIMA CUNHA",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-lima-cunha",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-lima-cunha/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-lima-cunha/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "DANIEL HUBERT GREGG",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-hubert-gregg",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-hubert-gregg/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-hubert-gregg/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "ROBLEDO MESQUITA DA VEIGA",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/robledo-mesquita-da-veiga",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robledo-mesquita-da-veiga/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robledo-mesquita-da-veiga/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "DAVID GRAEL",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/david-grael",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-grael/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-grael/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS SIQUEIRA GALVEAS",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-siqueira-galveas-",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-siqueira-galveas-/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-siqueira-galveas-/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "RAFAEL MIRANDA",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rafael-miranda",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-miranda/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-miranda/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "CARLOS BORBA NOBRE MACHADO",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlos-borba-nobre-machado",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-borba-nobre-machado/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-borba-nobre-machado/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO SEIJI TSUMORI",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-seiji-tsumori",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-seiji-tsumori/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-seiji-tsumori/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "LUCAS RAYMOND MARQUES KRAEMER FERREIRA",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-raymond-marques-kraemer-ferreira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-raymond-marques-kraemer-ferreira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-raymond-marques-kraemer-ferreira/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "GABRIEL CHEVRAND GREGG",
-        "number": 21
+        "number": 21,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "CAIO MASSARI NAVEGA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/caio-massari-navega",
+        "registered2026": true,
         "number": 23,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/caio-massari-navega"
+        "appeared2026": true
+      },
+      {
+        "name": "Gabriel",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-gregg",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-gregg/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "rio": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/rio-rugby-football-club",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106509",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106511"
@@ -3842,149 +8554,282 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "EDUARDO ALVES DIOS",
-        "number": 1
+        "number": 1,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "CELSO CANDIDO DE ALMEIDA",
-        "number": 2,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/celso-candido-de-almeida",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/celso-candido-de-almeida/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/celso-candido-de-almeida/1-Thumbnail.jpeg",
+        "number": 2,
+        "appeared2026": true
       },
       {
         "name": "ELIZEU",
-        "number": 3
+        "number": 3,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DANIEL LUIZ GASPAR MACABU",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-luiz-gaspar-macabu",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-luiz-gaspar-macabu/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-luiz-gaspar-macabu/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME RODRIGUES DE SOUZA PEREIRA",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-rodrigues-de-souza-pereira",
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "ARTHUR MONDEGO",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-felipe-mondego-bezerra",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-felipe-mondego-bezerra/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-felipe-mondego-bezerra/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "ANDRÉ FERNANDES DE ARAÚJO BAPTISTA",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-fernandes-de-araujo-baptista",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-fernandes-de-araujo-baptista/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-fernandes-de-araujo-baptista/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "MERLIN VIGNEAULT",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/merlin-vigneault",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/merlin-vigneault/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/merlin-vigneault/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "DOUGLAS HOLANDA",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-holanda",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-holanda/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-holanda/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "FRANKLIN DA CRUZ MAIA",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/franklin-da-cruz-maia",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/franklin-da-cruz-maia/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/franklin-da-cruz-maia/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "MARCOS MILIANO DE OLIVEIRA PAIXÃO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-miliano-de-oliveira-paixao",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-miliano-de-oliveira-paixao/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-miliano-de-oliveira-paixao/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "JOÃO VITOR OASKI DO ESPIRITO SANTO",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-vitor-oaski-do-espirito-santo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-oaski-do-espirito-santo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-oaski-do-espirito-santo/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "KAUÃ EDUARDO JANUARIO PEÇANHA",
-        "number": 12
+        "number": 12,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "LEONARDO CARNEIRO DE OLIVEIRA DA SILVA",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-carneiro-de-oliveira-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-carneiro-de-oliveira-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-carneiro-de-oliveira-da-silva/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "MATHEUS MOREIRA DA SILVA",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-moreira-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-moreira-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-moreira-da-silva/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "ISAAK FERREIRA DA SILVA ALVES AGUIAR",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/isaak-ferreira-da-silva-alves-aguiar",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isaak-ferreira-da-silva-alves-aguiar/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isaak-ferreira-da-silva-alves-aguiar/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "MARCOS VINICIUS RODRIGUES DOS ANJOS",
-        "number": 16
+        "number": 16,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "MARCOS LUIZ OLIVEIRA DA SILVA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marcos-luiz-oliveira-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-luiz-oliveira-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-luiz-oliveira-da-silva/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "YURI VIEIRA FARIA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/yuri-vieira-faria",
+        "registered2026": true,
         "number": 18,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/yuri-vieira-faria"
+        "appeared2026": true
       },
       {
         "name": "DIGÃO",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodrigo-silva-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-silva-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-silva-dos-santos/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "LUCAS EMANUEL AQUINO CHAGAS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-emanuel-aquino-chagas",
+        "registered2026": true,
         "number": 20,
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-emanuel-aquino-chagas"
+        "appeared2026": true
       },
       {
         "name": "MATHEUS VICTORINO DE OLIVEIRA",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-victorino-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-victorino-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-victorino-de-oliveira/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "MIGUEL CARNEIRO DE CASTRO",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/miguel-carneiro-de-castro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-carneiro-de-castro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-carneiro-de-castro/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "HEVERTON PATRICK FERREIRA MACHADO DA SILVA",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/heverton-patrick-ferreira-machado-da-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heverton-patrick-ferreira-machado-da-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heverton-patrick-ferreira-machado-da-silva/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "NOA CHAVE",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/noa-chave",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/noa-chave/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/noa-chave/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
+      },
+      {
+        "name": "Baeza",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaua-eduardo-januario-pecanha2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kaua-eduardo-januario-pecanha2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Dudu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-alves-dios2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-alves-dios2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jean",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jean-francois-marie-mas",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-francois-marie-mas/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kauan",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kauan-oliveira-de-sousa-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauan-oliveira-de-sousa-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lucas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-soares-motta",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-soares-motta/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Passarinho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/wagner-santos-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wagner-santos-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pastor",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/elizeu-alves-da-silva",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elizeu-alves-da-silva/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Patrick",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/patrick-mesquita-moura",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patrick-mesquita-moura/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Roy",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rodolfo-rodrigo-verocai-margall",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "sidis",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/jefferson-da-silva-rocha",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jefferson-da-silva-rocha/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Yuri",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/yuri-silva-vieira-pereira2",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Zeu",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/elizeu-xavier-lucio-de-magalhaes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elizeu-xavier-lucio-de-magalhaes/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "vitoria": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/vitoria-rugby-club3",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106510",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106511"
@@ -3992,163 +8837,363 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "JOÃO MÁRIO SOARES SILVA",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-mario-soares-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-mario-soares-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-mario-soares-silva/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "FÁBIO SILVA DE SOUZA",
-        "number": 2
+        "number": 2,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ERICK MONTEIRO QUIRINO",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/erick-monteiro-quirino",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-monteiro-quirino/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-monteiro-quirino/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "RICARDO FASSARELLA",
-        "number": 3,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ricardo-fassarella-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-fassarella-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-fassarella-1/1-Thumbnail.jpeg",
+        "number": 3,
+        "appeared2026": true
       },
       {
         "name": "PAULO CAMARGO BERTOLUCI",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/paulo-camargo-bertoluci",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-camargo-bertoluci/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-camargo-bertoluci/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "GUILHERME CHITZ NETO",
-        "number": 5,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-chitz-neto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-chitz-neto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-chitz-neto/1-Thumbnail.jpeg",
+        "number": 5,
+        "appeared2026": true
       },
       {
         "name": "FELIPE RAMON GONÇALVES LOPES",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-ramon-goncalves-lopes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ramon-goncalves-lopes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ramon-goncalves-lopes/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "VINICIUS VALVERDE DE ASSIS DUARTE",
-        "number": 7,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-valverde-de-assis-duarte",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-valverde-de-assis-duarte/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-valverde-de-assis-duarte/1-Thumbnail.jpeg",
+        "number": 7,
+        "appeared2026": true
       },
       {
         "name": "JOÃO PEDRO COSTA DIAS",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-costa-dias",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-costa-dias/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-costa-dias/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "GIANLUCA SCALZI SAMPOGNA",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gianluca-scalzi-sampogna",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gianluca-scalzi-sampogna/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gianluca-scalzi-sampogna/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "MARCANITO",
-        "number": 9
+        "number": 9,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ANDRÉ",
-        "number": 10
+        "number": 10,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "LUAN CAMARGO CARNEIRO",
-        "number": 10,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/luan-camargo-carneiro",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luan-camargo-carneiro/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luan-camargo-carneiro/1-Thumbnail.jpeg",
+        "number": 10,
+        "appeared2026": true
       },
       {
         "name": "EDUARDO ALMEIDA DE BARROS",
-        "number": 11,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-almeida-de-barros",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-almeida-de-barros/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-almeida-de-barros/1-Thumbnail.jpeg",
+        "number": 11,
+        "appeared2026": true
       },
       {
         "name": "GIOVANNI SCALZI SAMPOGNA",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/giovanni-scalzi-sampogna",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giovanni-scalzi-sampogna/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giovanni-scalzi-sampogna/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "HARRISON NEVES MARCIANO",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/harrison-neves-marciano",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/harrison-neves-marciano/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/harrison-neves-marciano/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "RAPHAEL SANTOS BALMAS",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-santos-balmas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-santos-balmas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-santos-balmas/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "SAMUEL MARTINS DE MEDEIROS",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/samuel-martins-de-medeiros",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/samuel-martins-de-medeiros/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/samuel-martins-de-medeiros/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "DENIS",
-        "number": 15
+        "number": 15,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "JOÃO VICTOR NASCIMENTO MARQUES",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-victor-nascimento-marques",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-nascimento-marques/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-nascimento-marques/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "FÁBIO GONÇALVES GOMES",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabio-goncalves-gomes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-goncalves-gomes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-goncalves-gomes/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "ELBER DOS SANTOS PEREIRA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/elber-dos-santos-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elber-dos-santos-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elber-dos-santos-pereira/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "PEDRO HENRIQUE MARROQUE",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-marroque",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-marroque/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-marroque/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "ARTHUR COSER CHAGAS",
-        "number": 18,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/arthur-coser-chagas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-coser-chagas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-coser-chagas/1-Thumbnail.jpeg",
+        "number": 18,
+        "appeared2026": true
       },
       {
         "name": "DOUGLAS SILVA DE ARAÚJO",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "PEDRO GATTI",
-        "number": 19
+        "number": 19,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "DIEGO MIRANDA FAGUNDES",
-        "number": 20
+        "number": 20,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "THARCIO DALLA BERNARDINA",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tharcio-dalla-bernardina",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tharcio-dalla-bernardina/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tharcio-dalla-bernardina/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
+      },
+      {
+        "name": "ANDRÉ CESAR LOPES",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/andre-cesar-lopes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-cesar-lopes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ASENJO GUERRIN LUCIEN",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/asenjo-guerrin-lucien",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/asenjo-guerrin-lucien/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "BARBUDO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-araujo2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-araujo2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Canadá",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/tarcio-borgo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tarcio-borgo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Daniel \"paulista\" Leandro O.C. Campos de Angelo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-leandro-oliveira-campos-de-angelo2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-leandro-oliveira-campos-de-angelo2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "DENIS BUGHETTO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/denis-bughetto",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Diego",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/z.-diego-miranda-fagundes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/z.-diego-miranda-fagundes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Fabiño “mc”",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/fabio-silva-de-souza2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-silva-de-souza2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "FElipe Cardozo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-cardozo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-cardozo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "FEREGUETTI",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/tiago-fereguetti",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "Gabriel \"Trans\" Filipi Coelho",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-filipi-coelho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-filipi-coelho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "João Pedro Gatti",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-gatti-bezerra",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-gatti-bezerra/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Kleverson \"KLESTON\" Alencastre do Nascimento",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/kleverson-alencastre-do-nascimento",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kleverson-alencastre-do-nascimento/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LEONARDO \"Léo\" CANTARELLA DE SOUZA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-cantarella-de-souza",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "LUIS MALAVE",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luis-malave",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-malave/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Luquinha",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-miranda-fagundes",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-miranda-fagundes/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Marco \"Pato\" Minele",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/marco-minelle",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-minelle/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Matheus \"canetinha\" Soares Esteca",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-soares-esteca",
+        "registered2026": true,
+        "appeared2026": false
+      },
+      {
+        "name": "PEDRADA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-loureiro-seglia",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-loureiro-seglia/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Pollo",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-barcellos-reis",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-barcellos-reis/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "WELLERSON \"LULA\" CARDOZO COSTA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/wellerson-cardozo-costa-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wellerson-cardozo-costa-/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   },
   "carioca": {
     "source": "https://plataforma.sporti.com.br/CBRU/equipe/carioca-rugby-football-club",
     "competition": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1",
+    "bid": "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/bid",
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106509",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino1/sumula/106512"
@@ -4156,167 +9201,344 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "players": [
       {
         "name": "CALLUM WALTERS",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/callum-walters",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/callum-walters/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/callum-walters/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "DANIEL BRUNO OLIVEIRA DE CARVALHO",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/daniel-bruno-oliveira-de-carvalho",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-bruno-oliveira-de-carvalho/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-bruno-oliveira-de-carvalho/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "DAVID PATTERSON",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/david-patterson",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-patterson/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-patterson/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "FELIPE IGNACIO MUÑOZ TOLEDO",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-ignacio-munoz-toledo",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ignacio-munoz-toledo/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ignacio-munoz-toledo/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "IVAN FRANKLIN CORREIA NETO",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ivan-franklin-correia-neto",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-franklin-correia-neto/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-franklin-correia-neto/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "MATHIS MARC JEAN LAUZERAL",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mathis-marc-jean-lauzeral",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mathis-marc-jean-lauzeral/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mathis-marc-jean-lauzeral/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "MERLIN PIERRE LLOYD",
-        "number": 0
+        "number": 0,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "PEDRO HENRIQUE LEAL DA ROCHA",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-leal-da-rocha",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-leal-da-rocha/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-leal-da-rocha/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "THIAGO ELIAS BATISTA DA SILVA",
-        "number": 0
+        "number": 0,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ULYSSES JERÔNIMO BARREIRA DA SILVA",
-        "number": 0,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ulysses-jeronimo-barreira-da-silva-1",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ulysses-jeronimo-barreira-da-silva-1/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ulysses-jeronimo-barreira-da-silva-1/1-Thumbnail.jpeg",
+        "number": 0,
+        "appeared2026": true
       },
       {
         "name": "PEDRO GABRIEL COSTA TORRES MARTINS",
-        "number": 1,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-gabriel-costa-torres-martins",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-gabriel-costa-torres-martins/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-gabriel-costa-torres-martins/1-Thumbnail.jpeg",
+        "number": 1,
+        "appeared2026": true
       },
       {
         "name": "LUIZ COUTINHO CALDEIRA",
-        "number": 3
+        "number": 3,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "VINICIUS PEREIRA",
-        "number": 4,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vinicius-pereira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-pereira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-pereira/1-Thumbnail.jpeg",
+        "number": 4,
+        "appeared2026": true
       },
       {
         "name": "PABLO BULLE PORTILHO DE OLIVEIRA",
-        "number": 6,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pablo-bulle-portilho-de-oliveira",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-bulle-portilho-de-oliveira/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-bulle-portilho-de-oliveira/1-Thumbnail.jpeg",
+        "number": 6,
+        "appeared2026": true
       },
       {
         "name": "CHRISTOPHER DAVID CHATTERTON",
-        "number": 8,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/christopher-david-chatterton",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/christopher-david-chatterton/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/christopher-david-chatterton/1-Thumbnail.jpeg",
+        "number": 8,
+        "appeared2026": true
       },
       {
         "name": "THIAGO MONTE DOS SANTOS",
-        "number": 9,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-monte-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-monte-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-monte-dos-santos/1-Thumbnail.jpeg",
+        "number": 9,
+        "appeared2026": true
       },
       {
         "name": "JONATHAN CLERC",
-        "number": 11
+        "number": 11,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "ELLIOTT LLOYD WILSON",
-        "number": 12,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/elliott-lloyd-wilson",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elliott-lloyd-wilson/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elliott-lloyd-wilson/1-Thumbnail.jpeg",
+        "number": 12,
+        "appeared2026": true
       },
       {
         "name": "LEO AFONSO PEREZ",
-        "number": 13,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/leo-afonso-perez",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leo-afonso-perez/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leo-afonso-perez/1-Thumbnail.jpeg",
+        "number": 13,
+        "appeared2026": true
       },
       {
         "name": "DAVID JACOB MARQUES DANTAS",
-        "number": 14,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/david-jacob-marques-dantas",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-jacob-marques-dantas/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-jacob-marques-dantas/1-Thumbnail.jpeg",
+        "number": 14,
+        "appeared2026": true
       },
       {
         "name": "MARCO AURELIO PACHECO PADILHA FROES",
-        "number": 15,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/marco-aurelio-pacheco-padilha-froes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-aurelio-pacheco-padilha-froes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-aurelio-pacheco-padilha-froes/1-Thumbnail.jpeg",
+        "number": 15,
+        "appeared2026": true
       },
       {
         "name": "DIEGO FERNANDES XIMENES",
-        "number": 16,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-fernandes-ximenes",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-fernandes-ximenes/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-fernandes-ximenes/1-Thumbnail.jpeg",
+        "number": 16,
+        "appeared2026": true
       },
       {
         "name": "JOÃO HENRIQUE DE ALMEIDA E SILVA",
-        "number": 17,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-henrique-de-almeida-e-silva",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-henrique-de-almeida-e-silva/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-henrique-de-almeida-e-silva/1-Thumbnail.jpeg",
+        "number": 17,
+        "appeared2026": true
       },
       {
         "name": "MAICON GOUVEIA",
-        "number": 18
+        "number": 18,
+        "appeared2026": true,
+        "registered2026": false
       },
       {
         "name": "TOMAS PALACIOS",
-        "number": 19,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tomas-palacios",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tomas-palacios/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tomas-palacios/1-Thumbnail.jpeg",
+        "number": 19,
+        "appeared2026": true
       },
       {
         "name": "ROMULLO CARDOZO DOS SANTOS",
-        "number": 20,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/romullo-cardozo-dos-santos",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/romullo-cardozo-dos-santos/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/romullo-cardozo-dos-santos/1-Thumbnail.jpeg",
+        "number": 20,
+        "appeared2026": true
       },
       {
         "name": "RENATO COSTA",
-        "number": 21,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/renato-costa",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-costa/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-costa/1-Thumbnail.jpeg",
+        "number": 21,
+        "appeared2026": true
       },
       {
         "name": "WESLEY RODRIGUES MENDONÇA",
-        "number": 22,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/wesley-rodrigues-mendonca",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-rodrigues-mendonca/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-rodrigues-mendonca/1-Thumbnail.jpeg",
+        "number": 22,
+        "appeared2026": true
       },
       {
         "name": "KLINSMAN BARBOSA MIRANDA",
-        "number": 23,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/klinsman-barbosa-miranda",
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/klinsman-barbosa-miranda/1-Thumbnail.jpeg"
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/klinsman-barbosa-miranda/1-Thumbnail.jpeg",
+        "number": 23,
+        "appeared2026": true
+      },
+      {
+        "name": "ACHILLE DOMENS",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/achile",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/achile/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Big nego",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/rosendo-da-silva-junior",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rosendo-da-silva-junior/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "CJAY",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-silva-de-souza-santos-1",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-silva-de-souza-santos-1/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Demitri",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/demitri",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/demitri/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "DICAPRIO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-ferreira-pessanha",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-ferreira-pessanha/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Eric",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/eric-jose-atencia-molina",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eric-jose-atencia-molina/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Gelado",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/luiz-coutinho",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-coutinho/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "IGOR LISBOA",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-lisboa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-lisboa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Joao amigo do Joao",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-pedro-sanjuan-netis-teles-cardoso",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-sanjuan-netis-teles-cardoso/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Jon",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/clerc-jonathan",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clerc-jonathan/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Leo do mar",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-do-rego-almeida",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-do-rego-almeida/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Lucas",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-eduardo",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-eduardo/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Mario Figueiroa",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/mario-figueiroa",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mario-figueiroa/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Merl The Swirl",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/merlin-lloyd",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/merlin-lloyd/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Paul",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/paul-henri-victor-raguenet",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paul-henri-victor-raguenet/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Thiago",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/thiago-elias-batista-da-silva2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-elias-batista-da-silva2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "Tinder",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/maicon-keterson-gouveia2",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maicon-keterson-gouveia2/1-Thumbnail.jpeg",
+        "appeared2026": false
       }
     ]
   }
