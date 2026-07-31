@@ -56,7 +56,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v21-possession-pressure/);
+  assert.match(serviceWorker, /rugby-br-26-v22-match-audio/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -87,6 +87,11 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /5 m da linha de try/);
   assert.match(gameSource, /RUGBY SEVENS · 7 CONTRA 7/);
   assert.match(gameSource, /Sound is optional and must never prevent a match from starting/);
+  assert.match(gameSource, /ensureAudioContext/);
+  assert.match(gameSource, /audioPrimedRef/);
+  assert.match(gameSource, /playWhistle/);
+  assert.match(gameSource, /playCrowdCelebration/);
+  assert.match(gameSource, /onClick=\{toggleSound\}/);
   assert.match(gameSource, /const beginDropAim/);
   assert.match(gameSource, /const finishDropAim/);
   assert.match(gameSource, /const performBlock/);

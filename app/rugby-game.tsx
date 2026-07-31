@@ -1182,6 +1182,8 @@ export function RugbyGame() {
   const aimRef = useRef<AimPoint>({ active: false, x: FIELD_W - TRY_LINE, y: CENTRE_Y });
   const gestureRef = useRef({ active: false, x: 0, y: 0 });
   const audioRef = useRef<AudioContext | null>(null);
+  const audioPrimedRef = useRef(false);
+  const soundOnRef = useRef(true);
   const controlModeRef = useRef<ControlMode>("control");
   const simulationSpeedRef = useRef<1 | 2>(1);
 
@@ -1259,22 +1261,57 @@ export function RugbyGame() {
     simulationSpeedRef.current = simulationSpeed;
   }, [simulationSpeed]);
 
+  useEffect(() => {
+    soundOnRef.current = soundOn;
+  }, [soundOn]);
+
+  const ensureAudioContext = useCallback((allowMuted = false) => {
+    if ((!soundOnRef.current && !allowMuted) || typeof window === "undefined") return null;
+    try {
+      const AudioCtx = window.AudioContext ??
+        (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (!AudioCtx) return null;
+      const audio = audioRef.current ?? new AudioCtx();
+      audioRef.current = audio;
+      if (audio.state === "suspended") {
+        void audio.resume().catch(() => undefined);
+      }
+      if (!audioPrimedRef.current) {
+        const silentBuffer = audio.createBuffer(1, 1, audio.sampleRate);
+        const silentSource = audio.createBufferSource();
+        silentSource.buffer = silentBuffer;
+        silentSource.connect(audio.destination);
+        silentSource.start();
+        audioPrimedRef.current = true;
+      }
+      return audio;
+    } catch {
+      return null;
+    }
+  }, []);
+
+  useEffect(() => {
+    const unlock = () => {
+      if (soundOnRef.current) ensureAudioContext();
+    };
+    window.addEventListener("pointerdown", unlock, { passive: true });
+    window.addEventListener("keydown", unlock);
+    return () => {
+      window.removeEventListener("pointerdown", unlock);
+      window.removeEventListener("keydown", unlock);
+    };
+  }, [ensureAudioContext]);
+
   const beep = useCallback(
     (frequency: number, duration = 0.08) => {
-      if (!soundOn || typeof window === "undefined") return;
+      const audio = ensureAudioContext();
+      if (!audio) return;
       try {
-        const AudioCtx = window.AudioContext ?? (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-        if (!AudioCtx) return;
-        const audio = audioRef.current ?? new AudioCtx();
-        audioRef.current = audio;
-        if (audio.state === "suspended") {
-          void audio.resume().catch(() => undefined);
-        }
         const oscillator = audio.createOscillator();
         const gain = audio.createGain();
         oscillator.type = "square";
         oscillator.frequency.value = frequency;
-        gain.gain.setValueAtTime(0.035, audio.currentTime);
+        gain.gain.setValueAtTime(0.09, audio.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, audio.currentTime + duration);
         oscillator.connect(gain);
         gain.connect(audio.destination);
@@ -1284,8 +1321,99 @@ export function RugbyGame() {
         // Sound is optional and must never prevent a match from starting.
       }
     },
-    [soundOn],
+    [ensureAudioContext],
   );
+
+  const playWhistle = useCallback(() => {
+    const audio = ensureAudioContext();
+    if (!audio) return;
+    const scheduleBurst = (offset: number, duration: number, frequency: number) => {
+      const start = audio.currentTime + offset;
+      const gain = audio.createGain();
+      const primary = audio.createOscillator();
+      const overtone = audio.createOscillator();
+      const vibrato = audio.createOscillator();
+      const vibratoDepth = audio.createGain();
+      primary.type = "sine";
+      overtone.type = "triangle";
+      primary.frequency.setValueAtTime(frequency * 0.92, start);
+      primary.frequency.exponentialRampToValueAtTime(frequency, start + 0.045);
+      overtone.frequency.setValueAtTime(frequency * 1.52, start);
+      vibrato.frequency.setValueAtTime(23, start);
+      vibratoDepth.gain.setValueAtTime(34, start);
+      vibrato.connect(vibratoDepth);
+      vibratoDepth.connect(primary.detune);
+      gain.gain.setValueAtTime(0.001, start);
+      gain.gain.exponentialRampToValueAtTime(0.16, start + 0.018);
+      gain.gain.setValueAtTime(0.13, start + duration * 0.72);
+      gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+      primary.connect(gain);
+      overtone.connect(gain);
+      gain.connect(audio.destination);
+      primary.start(start);
+      overtone.start(start);
+      vibrato.start(start);
+      primary.stop(start + duration);
+      overtone.stop(start + duration);
+      vibrato.stop(start + duration);
+    };
+    try {
+      scheduleBurst(0.01, 0.2, 2380);
+      scheduleBurst(0.25, 0.28, 2550);
+    } catch {
+      // Audio effects must never interrupt the match loop.
+    }
+  }, [ensureAudioContext]);
+
+  const playCrowdCelebration = useCallback(() => {
+    const audio = ensureAudioContext();
+    if (!audio) return;
+    try {
+      const duration = 2.35;
+      const frameCount = Math.floor(audio.sampleRate * duration);
+      const buffer = audio.createBuffer(1, frameCount, audio.sampleRate);
+      const samples = buffer.getChannelData(0);
+      let previous = 0;
+      for (let index = 0; index < frameCount; index += 1) {
+        const white = Math.random() * 2 - 1;
+        previous = previous * 0.82 + white * 0.18;
+        const time = index / audio.sampleRate;
+        const swell = Math.min(1, time / 0.22) * Math.min(1, (duration - time) / 0.7);
+        const pulse = 0.72 + Math.sin(time * 31) * 0.12 + Math.sin(time * 47) * 0.08;
+        samples[index] = previous * swell * pulse;
+      }
+      const source = audio.createBufferSource();
+      const bandpass = audio.createBiquadFilter();
+      const crowdGain = audio.createGain();
+      source.buffer = buffer;
+      bandpass.type = "bandpass";
+      bandpass.frequency.value = 1050;
+      bandpass.Q.value = 0.7;
+      crowdGain.gain.setValueAtTime(0.001, audio.currentTime);
+      crowdGain.gain.exponentialRampToValueAtTime(0.2, audio.currentTime + 0.16);
+      crowdGain.gain.setValueAtTime(0.15, audio.currentTime + 1.3);
+      crowdGain.gain.exponentialRampToValueAtTime(0.001, audio.currentTime + duration);
+      source.connect(bandpass);
+      bandpass.connect(crowdGain);
+      crowdGain.connect(audio.destination);
+      source.start();
+      source.stop(audio.currentTime + duration);
+    } catch {
+      // Audio effects must never interrupt the match loop.
+    }
+  }, [ensureAudioContext]);
+
+  const toggleSound = useCallback(() => {
+    const next = !soundOnRef.current;
+    soundOnRef.current = next;
+    setSoundOn(next);
+    if (next) {
+      ensureAudioContext(true);
+      window.setTimeout(() => beep(720, 0.11), 0);
+    } else if (audioRef.current?.state === "running") {
+      void audioRef.current.suspend().catch(() => undefined);
+    }
+  }, [beep, ensureAudioContext]);
 
   const setMessage = useCallback((match: Match, message: string, duration = 1.1) => {
     match.message = message;
@@ -1442,6 +1570,7 @@ export function RugbyGame() {
         owner.stamina = Math.max(0, owner.stamina - 7);
         prepareRestart(match, 0);
         setMessage(match, "DROP GOAL! · +3 · seu time reinicia", 1.8);
+        playCrowdCelebration();
         beep(760, 0.22);
       } else {
         prepareRestart(match, 1);
@@ -1449,7 +1578,7 @@ export function RugbyGame() {
         beep(160, 0.14);
       }
     },
-    [beep, prepareRestart, setMessage],
+    [beep, playCrowdCelebration, prepareRestart, setMessage],
   );
 
   const performBlock = useCallback(() => {
@@ -1605,7 +1734,7 @@ export function RugbyGame() {
           match.actionLock = 0.22;
           if (kicker) kicker.stamina = Math.max(0, kicker.stamina - 3);
           setMessage(match, "Drop-kick de reinício — bola viva!", 1.25);
-          beep(590, 0.08);
+          playWhistle();
         }
         return;
       }
@@ -2261,11 +2390,12 @@ export function RugbyGame() {
               : "Try adversário · eles cobram o reinício",
             1.8,
           );
+          playCrowdCelebration();
           beep(newCarrier.side === 0 ? 880 : 120, newCarrier.side === 0 ? 0.22 : 0.2);
         }
       }
     },
-    [beep, bestWins, gameMode, passBall, prepareRestart, setMessage, tackle],
+    [beep, bestWins, gameMode, passBall, playCrowdCelebration, playWhistle, prepareRestart, setMessage, tackle],
   );
 
   const frame = useCallback(
@@ -2811,7 +2941,7 @@ export function RugbyGame() {
           <button
             className="utility-button"
             type="button"
-            onClick={() => setSoundOn((value) => !value)}
+            onClick={toggleSound}
             aria-label={soundOn ? "Desativar som" : "Ativar som"}
           >
             {soundOn ? "Som on" : "Som off"}

@@ -41,6 +41,8 @@ controláveis ou simuladas e modo campeonato.
 - nomes, apelidos, fotos e estatísticas quando disponíveis nas fontes públicas;
 - escalação automática dos 12 maiores overalls, que pode ser alterada pelo usuário;
 - PWA instalável, funcionamento offline básico e layout adaptado para celular;
+- áudio procedural leve, com apito no início/reinícios, efeitos das ações e
+  torcida comemorando tries e drop goals, sem baixar arquivos grandes de som;
 - publicação estática compatível com GitHub Pages.
 
 ## Como jogar
@@ -81,6 +83,20 @@ para enganar o defensor.
 
 Os botões `Pausar`, `Encerrar partida` e `Tela cheia` também ficam abaixo do
 campo.
+
+### Som
+
+O áudio começa ligado. No primeiro toque, clique ou tecla, o jogo desbloqueia o
+`AudioContext`, requisito dos navegadores móveis e do Safari. O botão `Som on`
+ou `Som off` alterna o áudio; ao reativar, um sinal curto confirma imediatamente
+que o navegador liberou a saída.
+
+- o drop-kick de início e cada reinício recebem um apito duplo;
+- tries e drop goals recebem uma comemoração de torcida com aproximadamente
+  2,35 segundos;
+- passes, tackles, chutes e rucks mantêm efeitos curtos de resposta;
+- todos os sons são sintetizados no navegador, preservando o tamanho reduzido
+  e o funcionamento offline do jogo.
 
 ### Celular e tablet
 
