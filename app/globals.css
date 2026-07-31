@@ -971,6 +971,18 @@ kbd {
   white-space: nowrap;
 }
 
+.roster-nickname {
+  color: var(--acid);
+  display: block;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 850;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .roster-player small {
   color: var(--muted);
   display: block;

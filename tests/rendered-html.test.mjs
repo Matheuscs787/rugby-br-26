@@ -51,7 +51,8 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v10-bid-rosters/);
+  assert.match(serviceWorker, /rugby-br-26-v11-player-portraits/);
+  assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
   assert.match(gameSource, /const SQUAD_SIZE = 12/);
@@ -67,6 +68,9 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /O elenco exibido não tem limite/);
   assert.match(gameSource, /className="roster-search"/);
   assert.match(gameSource, /athlete\.photo/);
+  assert.match(gameSource, /athlete\.nickname/);
+  assert.match(gameSource, /getPlayerPhoto/);
+  assert.match(gameSource, /playerDisplayName/);
   assert.match(gameSource, /se apareceu uma vez, está incluído/);
   assert.match(gameSource, /match\.half === 1/);
   assert.match(gameSource, /match\.halftime = true/);
@@ -102,6 +106,7 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(styles, /\.touch-fifteen-bottom/);
   assert.match(styles, /\.roster-grid/);
   assert.match(styles, /\.roster-avatar/);
+  assert.match(styles, /\.roster-nickname/);
   assert.match(styles, /\.roster-search/);
   assert.match(styles, /\.squad-summary/);
   assert.match(rosterSource, /ROSTERS_2026/);
@@ -115,6 +120,7 @@ test("ships lightweight PWA and game assets", async () => {
   assert.ok((rosterSource.match(/"registered2026": true/g) ?? []).length > 1100);
   assert.ok((rosterSource.match(/"appeared2026": true/g) ?? []).length > 700);
   assert.ok((rosterSource.match(/"photo":/g) ?? []).length > 500);
+  assert.ok((rosterSource.match(/"nickname":/g) ?? []).length > 500);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));

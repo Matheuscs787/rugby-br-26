@@ -2,6 +2,7 @@
 // Execute `node scripts/update-club-rosters.mjs` para atualizar.
 export type RosterPlayer = {
   name: string;
+  nickname?: string;
   number?: number;
   photo?: string;
   profile?: string;
@@ -33,6 +34,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/vicente-nery-galvao-",
         "registered2026": true,
         "number": 1,
+        "nickname": "Vicente",
         "appeared2026": true
       },
       {
@@ -41,6 +43,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/endy-willian-de-jesus-pinheiro/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Endy",
         "appeared2026": true
       },
       {
@@ -49,6 +52,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lafaiete-pandolfo-de-paula/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Lafa",
         "appeared2026": true
       },
       {
@@ -57,6 +61,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-marangoni/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Marangoni",
         "appeared2026": true
       },
       {
@@ -65,6 +70,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauricio-aquino-canterle/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Mauri",
         "appeared2026": true
       },
       {
@@ -73,6 +79,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-pandolfo-de-paula/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Leonardo De Paula",
         "appeared2026": true
       },
       {
@@ -87,6 +94,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodolfo-goncalves-de-souza-marthins/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Rodolfo",
         "appeared2026": true
       },
       {
@@ -94,6 +102,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-alexandre-menezes-de-almeida",
         "registered2026": true,
         "number": 9,
+        "nickname": "Menezes",
         "appeared2026": true
       },
       {
@@ -102,6 +111,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-rodrigo-flores/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Facundo",
         "appeared2026": true
       },
       {
@@ -122,6 +132,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-farezin-de-almeida/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Diogo",
         "appeared2026": true
       },
       {
@@ -130,6 +141,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-manosso-zanrosso/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "DUDA",
         "appeared2026": true
       },
       {
@@ -138,6 +150,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/murillo-lazzarotti-bonesso/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Murillo",
         "appeared2026": true
       },
       {
@@ -152,6 +165,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daian-cristian-zonatto-rama/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Daian",
         "appeared2026": true
       },
       {
@@ -160,6 +174,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-vargas-machado/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Jumbão",
         "appeared2026": true
       },
       {
@@ -168,6 +183,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-francisco-gallon-rizzi/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Rizzi",
         "appeared2026": true
       },
       {
@@ -176,6 +192,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cleder-rodrigo-morais-junior/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "ZULLU",
         "appeared2026": true
       },
       {
@@ -184,6 +201,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-borba-de-brito/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Pidi",
         "appeared2026": true
       },
       {
@@ -192,6 +210,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bolivar-zimermann-machado/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Bolívar",
         "appeared2026": true
       },
       {
@@ -199,6 +218,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-rangel-magalhaes-1",
         "registered2026": true,
         "number": 21,
+        "nickname": "Rangel",
         "appeared2026": true
       },
       {
@@ -207,6 +227,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-fernando-civardi/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "civardi",
         "appeared2026": true
       },
       {
@@ -215,6 +236,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/claudinei-jose-wronski/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Pequeno",
         "appeared2026": true
       },
       {
@@ -229,6 +251,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-amaral-dos-santos/1-Thumbnail.jpeg",
         "number": 25,
+        "nickname": "Alisson",
         "appeared2026": true
       },
       {
@@ -237,6 +260,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/otavio-augusto-finatto-taiariol/1-Thumbnail.jpeg",
         "number": 26,
+        "nickname": "finatto",
         "appeared2026": true
       },
       {
@@ -251,6 +275,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-da-silva-marques-/1-Thumbnail.jpeg",
         "number": 28,
+        "nickname": "Bruno Marques",
         "appeared2026": true
       },
       {
@@ -258,6 +283,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/maikon-klaus-de-oliveira",
         "registered2026": true,
         "number": 30,
+        "nickname": "Maikão",
         "appeared2026": true
       },
       {
@@ -266,6 +292,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-carlos-fagundes-junior/1-Thumbnail.jpeg",
         "number": 31,
+        "nickname": "José",
         "appeared2026": true
       },
       {
@@ -384,6 +411,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/julio-ortolan-cole/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Julio Cole",
         "appeared2026": true
       },
       {
@@ -392,6 +420,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-miranda/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "gabiranda",
         "appeared2026": true
       },
       {
@@ -400,6 +429,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-krutzmann-santos/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Krutz",
         "appeared2026": true
       },
       {
@@ -407,6 +437,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/diego-giovanni-pietrobon-teixeira-",
         "registered2026": true,
         "number": 4,
+        "nickname": "Banana",
         "appeared2026": true
       },
       {
@@ -414,6 +445,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/igor-luis-silva-gomes",
         "registered2026": true,
         "number": 5,
+        "nickname": "Minas",
         "appeared2026": true
       },
       {
@@ -422,6 +454,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-boffa-barroso-braga/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "braga",
         "appeared2026": true
       },
       {
@@ -430,6 +463,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yohan-alves-souza-dos-santos/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Super Choque",
         "appeared2026": true
       },
       {
@@ -437,6 +471,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-lanferdini-bordignon",
         "registered2026": true,
         "number": 7,
+        "nickname": "Gustavo Bordignon",
         "appeared2026": true
       },
       {
@@ -444,6 +479,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/ylan-machado-silveira",
         "registered2026": true,
         "number": 7,
+        "nickname": "Mini Mim",
         "appeared2026": true
       },
       {
@@ -451,6 +487,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-quevedo-araujo",
         "registered2026": true,
         "number": 8,
+        "nickname": "Felipe",
         "appeared2026": true
       },
       {
@@ -467,6 +504,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-bitencourt-de-mello/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Pouca",
         "appeared2026": true
       },
       {
@@ -475,6 +513,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-rosa-universindo/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Leozinho",
         "appeared2026": true
       },
       {
@@ -483,6 +522,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cesar-augusto-favoto-alves-pereira/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Cesinha",
         "appeared2026": true
       },
       {
@@ -491,6 +531,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-felipe-simon-ribas/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Crisangel",
         "appeared2026": true
       },
       {
@@ -499,6 +540,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-bolzan-motta/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Gabriel Bolzan",
         "appeared2026": true
       },
       {
@@ -507,6 +549,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-silva-vargas/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Rafael Vargas",
         "appeared2026": true
       },
       {
@@ -514,6 +557,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/wesley-de-souza-ropke",
         "registered2026": true,
         "number": 13,
+        "nickname": "Bigago",
         "appeared2026": true
       },
       {
@@ -522,6 +566,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eros-de-oliveira/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "side show bob",
         "appeared2026": true
       },
       {
@@ -530,6 +575,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/saulo-dalla-cort-filippi/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "sauron",
         "appeared2026": true
       },
       {
@@ -544,6 +590,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomas-rosa-fernandes-dos-santos/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Thomas Rosa",
         "appeared2026": true
       },
       {
@@ -552,6 +599,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cristane-michel/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "fisio",
         "appeared2026": true
       },
       {
@@ -560,6 +608,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-de-melo-leal/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Nego",
         "appeared2026": true
       },
       {
@@ -568,6 +617,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexsandro-barbosa/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Badalado",
         "appeared2026": true
       },
       {
@@ -575,6 +625,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/tiago-goncalves-dos-santos-junior",
         "registered2026": true,
         "number": 17,
+        "nickname": "larika",
         "appeared2026": true
       },
       {
@@ -583,6 +634,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-schlabitz-pitsch/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "guisão",
         "appeared2026": true
       },
       {
@@ -591,6 +643,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-achernar-da-rosa-wendt/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Aqua",
         "appeared2026": true
       },
       {
@@ -599,6 +652,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jesus-duquia/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "jesus",
         "appeared2026": true
       },
       {
@@ -615,6 +669,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/derick-pradie-garcez/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Guri",
         "appeared2026": true
       },
       {
@@ -623,6 +678,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-de-paula-lopes/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Dominico",
         "appeared2026": true
       },
       {
@@ -631,6 +687,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/maiquel-andre-neumann/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Simba",
         "appeared2026": true
       },
       {
@@ -639,6 +696,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-correa-freitas/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Freitas",
         "appeared2026": true
       },
       {
@@ -647,6 +705,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/uary-pacheco-ribeiro-gondim/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "uary",
         "appeared2026": true
       },
       {
@@ -708,6 +767,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-xavier-danielewicz/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Nativo",
         "appeared2026": true
       },
       {
@@ -716,6 +776,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonas-afonso-hauschild/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Jonas",
         "appeared2026": true
       },
       {
@@ -724,6 +785,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mariano-ariel-naimoquin/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Mariano",
         "appeared2026": true
       },
       {
@@ -732,6 +794,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-hausmann/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Guto",
         "appeared2026": true
       },
       {
@@ -740,6 +803,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 2,
+        "nickname": "Thiago",
         "appeared2026": true
       },
       {
@@ -753,6 +817,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/roger-de-lima-pizutti",
         "registered2026": true,
         "number": 3,
+        "nickname": "Rojão",
         "appeared2026": true
       },
       {
@@ -761,6 +826,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matthew-alexander-cox/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Cox",
         "appeared2026": true
       },
       {
@@ -791,6 +857,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-goncalves-fernandes-da-rosa/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Daniel",
         "appeared2026": true
       },
       {
@@ -798,6 +865,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/eduardo-rodrigues-da-silva-1",
         "registered2026": true,
         "number": 6,
+        "nickname": "Eduardo",
         "appeared2026": true
       },
       {
@@ -811,6 +879,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/kaique-mutter-haleplian",
         "registered2026": true,
         "number": 7,
+        "nickname": "kaique",
         "appeared2026": true
       },
       {
@@ -818,6 +887,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-antonio-alli-dos-santos",
         "registered2026": true,
         "number": 7,
+        "nickname": "matheus",
         "appeared2026": true
       },
       {
@@ -826,6 +896,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ruda-biedermann/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Ruds",
         "appeared2026": true
       },
       {
@@ -834,6 +905,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/francisco-carvalho-da-ros/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Fran",
         "appeared2026": true
       },
       {
@@ -842,6 +914,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-scheeren/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Guilherme",
         "appeared2026": true
       },
       {
@@ -850,6 +923,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-artigiani-garcia/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Garcia",
         "appeared2026": true
       },
       {
@@ -858,6 +932,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-zorzan-leonhardt/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Gui",
         "appeared2026": true
       },
       {
@@ -865,6 +940,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-dell-agnolo-franca",
         "registered2026": true,
         "number": 12,
+        "nickname": "Lipe",
         "appeared2026": true
       },
       {
@@ -873,6 +949,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 12,
+        "nickname": "Ibere",
         "appeared2026": true
       },
       {
@@ -881,6 +958,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-valer-horn/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "nicolas",
         "appeared2026": true
       },
       {
@@ -889,6 +967,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-vavolizza-franca/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Caio",
         "appeared2026": true
       },
       {
@@ -913,6 +992,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-roy-de-giacomo/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Lorenzo",
         "appeared2026": true
       },
       {
@@ -921,6 +1001,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-cardoso-vieira/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Gui",
         "appeared2026": true
       },
       {
@@ -929,6 +1010,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-luiz-da-ros/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Ige",
         "appeared2026": true
       },
       {
@@ -937,6 +1019,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-daniel-correia/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Coxinha",
         "appeared2026": true
       },
       {
@@ -945,6 +1028,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-dolsan-correia/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Gusta",
         "appeared2026": true
       },
       {
@@ -953,6 +1037,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alexandre-rodrigues-ribas/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Ribas",
         "appeared2026": true
       },
       {
@@ -961,6 +1046,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tuan-larsen-comin/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Tuan",
         "appeared2026": true
       },
       {
@@ -969,6 +1055,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-fleury-bueno/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Fleury",
         "appeared2026": true
       },
       {
@@ -977,6 +1064,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-mateus-rohrig-niedermeyer/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "WILLIAM ROHRIG",
         "appeared2026": true
       },
       {
@@ -1251,6 +1339,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodinei-da-silva-pereira/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Rud",
         "appeared2026": true
       },
       {
@@ -1259,6 +1348,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/igor-pittigliani-jorge/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "IGÃO",
         "appeared2026": true
       },
       {
@@ -1273,6 +1363,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-ferreira-chaves-de-souza/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Babão",
         "appeared2026": true
       },
       {
@@ -1281,6 +1372,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-horacio-salvatierra/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Fernando",
         "appeared2026": true
       },
       {
@@ -1289,6 +1381,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-penna/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Penna",
         "appeared2026": true
       },
       {
@@ -1297,6 +1390,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-nascimento-de-souza-/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Baiano",
         "appeared2026": true
       },
       {
@@ -1305,6 +1399,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ismael-fernando-bonatto-raizel-da-silva/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Botcha",
         "appeared2026": true
       },
       {
@@ -1313,6 +1408,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-antonio-bonatto-raizel-da-silva/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Feio",
         "appeared2026": true
       },
       {
@@ -1321,6 +1417,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-gattino-reus/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Gabriel Gattino",
         "appeared2026": true
       },
       {
@@ -1336,6 +1433,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/camilo-cordeiro-flores/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Camilo",
         "appeared2026": true
       },
       {
@@ -1344,6 +1442,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-correa-morais/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Indio",
         "appeared2026": true
       },
       {
@@ -1352,6 +1451,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-frederico-marder/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Felino",
         "appeared2026": true
       },
       {
@@ -1368,6 +1468,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-bogorni-bortolas/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Augusto",
         "appeared2026": true
       },
       {
@@ -1376,6 +1477,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-alves-mollerke/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Renatinho",
         "appeared2026": true
       },
       {
@@ -1384,6 +1486,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/airton-spillere-dalmagro-junior/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Airton",
         "appeared2026": true
       },
       {
@@ -1398,6 +1501,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-henrique-dias/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Maringá",
         "appeared2026": true
       },
       {
@@ -1406,6 +1510,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-martins-da-cunha/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Iago",
         "appeared2026": true
       },
       {
@@ -1414,6 +1519,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/antonio-roman-vanz/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Anta",
         "appeared2026": true
       },
       {
@@ -1430,6 +1536,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomi-dimas-bressan/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Thomi",
         "appeared2026": true
       },
       {
@@ -1438,6 +1545,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luciano-garcia-bueno/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Mamute",
         "appeared2026": true
       },
       {
@@ -1446,6 +1554,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolau-clarindo-paulo-neto/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Nico",
         "appeared2026": true
       },
       {
@@ -1454,6 +1563,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/valmir-donato-de-oliveira-neto/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Don",
         "appeared2026": true
       },
       {
@@ -1556,6 +1666,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-hideo-miname/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "hideo",
         "appeared2026": true
       },
       {
@@ -1564,6 +1675,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-alves-baptista-/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Riven",
         "appeared2026": true
       },
       {
@@ -1572,6 +1684,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-gil-melo-da-silva/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Brubs",
         "appeared2026": true
       },
       {
@@ -1580,6 +1693,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edgard-borges-malta/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Ed",
         "appeared2026": true
       },
       {
@@ -1588,6 +1702,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 4,
+        "nickname": "Índio",
         "appeared2026": true
       },
       {
@@ -1596,6 +1711,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-torres-paganini/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Paga",
         "appeared2026": true
       },
       {
@@ -1603,6 +1719,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/sebastiao-de-mira-ferreira-goncalves-da-silva",
         "registered2026": true,
         "number": 6,
+        "nickname": "SEBA",
         "appeared2026": true
       },
       {
@@ -1611,6 +1728,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-bernardes-coppa-xereguin/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Xteta",
         "appeared2026": true
       },
       {
@@ -1618,6 +1736,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/pedro-henrique-soares-aparecido-1",
         "registered2026": true,
         "number": 8,
+        "nickname": "Pedrão",
         "appeared2026": true
       },
       {
@@ -1626,6 +1745,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-giorgi-ferreira-cabral/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "J.P",
         "appeared2026": true
       },
       {
@@ -1634,6 +1754,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isac-lopes/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Lopes da Silva",
         "appeared2026": true
       },
       {
@@ -1642,6 +1763,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-gustavo-servos-willets/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Carneiro",
         "appeared2026": true
       },
       {
@@ -1658,6 +1780,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-mancini-da-silva/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Ivan",
         "appeared2026": true
       },
       {
@@ -1666,6 +1789,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/emerson-bertagnoli-muniz-pontes/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Memé",
         "appeared2026": true
       },
       {
@@ -1674,6 +1798,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-dos-santos-neto/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Jota Pe",
         "appeared2026": true
       },
       {
@@ -1682,6 +1807,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robert-aguinaldo-tenorio-da-silva-santos/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Robert Tenorio",
         "appeared2026": true
       },
       {
@@ -1690,6 +1816,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-fernando-felizardo-taleriga/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Luizinho",
         "appeared2026": true
       },
       {
@@ -1698,6 +1825,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nassor-lukata-faustino-cruz-/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Nassin",
         "appeared2026": true
       },
       {
@@ -1706,6 +1834,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-torres-barria/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Carlos Torres",
         "appeared2026": true
       },
       {
@@ -1713,6 +1842,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/elias-carvalho-dos-santos-1",
         "registered2026": true,
         "number": 15,
+        "nickname": "Caramelo",
         "appeared2026": true
       },
       {
@@ -1721,6 +1851,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gudemberg-cerqueira-silva/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Gudeshi",
         "appeared2026": true
       },
       {
@@ -1728,6 +1859,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/joao-renato-albanese-filho",
         "registered2026": true,
         "number": 16,
+        "nickname": "Mamão",
         "appeared2026": true
       },
       {
@@ -1736,6 +1868,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/john-gabriel-gal-riley/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "DICKINHO",
         "appeared2026": true
       },
       {
@@ -1744,6 +1877,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 18,
+        "nickname": "Barba",
         "appeared2026": true
       },
       {
@@ -1752,6 +1886,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heron-goncalves-leite-de-godoi/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Heron/Pança",
         "appeared2026": true
       },
       {
@@ -1760,6 +1895,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-tardin-garcia-ciongoli/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Arthur",
         "appeared2026": true
       },
       {
@@ -1767,6 +1903,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/patrick-otemoti-de-oliveira-1",
         "registered2026": true,
         "number": 21,
+        "nickname": "Patrick",
         "appeared2026": true
       },
       {
@@ -1775,6 +1912,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-henrique-pompeo-marcelino/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Pompeo",
         "appeared2026": true
       },
       {
@@ -1783,6 +1921,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/helder-bryan-souza-lucio/1-Thumbnail.jpeg",
         "number": 25,
+        "nickname": "Big mike",
         "appeared2026": true
       },
       {
@@ -1791,6 +1930,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-abud-de-andrade/1-Thumbnail.jpeg",
         "number": 28,
+        "nickname": "Abud",
         "appeared2026": true
       },
       {
@@ -1900,7 +2040,8 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106475",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106477",
-      "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106483"
+      "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106483",
+      "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106476"
     ],
     "players": [
       {
@@ -1909,6 +2050,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/braian-vito/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Cherno",
         "appeared2026": true
       },
       {
@@ -1917,6 +2059,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nelson-oliveira-santos-/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Nelsinho",
         "appeared2026": true
       },
       {
@@ -1925,6 +2068,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benedito-rodrigues-filho/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Benê",
         "appeared2026": true
       },
       {
@@ -1933,6 +2077,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-andrade-da-cruz-montejano-1/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Davizão",
         "appeared2026": true
       },
       {
@@ -1941,6 +2086,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-souza-da-silva/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Neymar",
         "appeared2026": true
       },
       {
@@ -1949,6 +2095,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-francisco-fonseca-leao/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Zézão",
         "appeared2026": true
       },
       {
@@ -1957,6 +2104,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-henrique-de-oliveira/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Carlão",
         "appeared2026": true
       },
       {
@@ -1965,6 +2113,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-octavio-palma-nunes/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "DIMITRI",
         "appeared2026": true
       },
       {
@@ -1973,6 +2122,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-pereira-da-silva/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Pirulito",
         "appeared2026": true
       },
       {
@@ -1981,6 +2131,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-henrique-dos-santos-teixeira-1/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Latrell",
         "appeared2026": true
       },
       {
@@ -1989,6 +2140,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/michael-oliveira-lopes-de-moraes/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Ilha",
         "appeared2026": true
       },
       {
@@ -1997,6 +2149,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-moura-cordoba-bottura/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Moura",
         "appeared2026": true
       },
       {
@@ -2005,6 +2158,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-cordeiro-pantalena/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Panta",
         "appeared2026": true
       },
       {
@@ -2013,6 +2167,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-gabriel-fonseca-ribeiro-/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Joãozinho",
         "appeared2026": true
       },
       {
@@ -2021,6 +2176,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-oliveira-santos/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Diguinho",
         "appeared2026": true
       },
       {
@@ -2029,6 +2185,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-de-souza-reis-ferreira-castro/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Bomber",
         "appeared2026": true
       },
       {
@@ -2045,6 +2202,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-henrique-pereira-campos/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Thiago",
         "appeared2026": true
       },
       {
@@ -2053,6 +2211,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patricio-gamarra/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Pato",
         "appeared2026": true
       },
       {
@@ -2061,6 +2220,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-henrique-landim-mendes/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Corvo",
         "appeared2026": true
       },
       {
@@ -2069,6 +2229,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-barreiros-de-albuquerque/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Rambo",
         "appeared2026": true
       },
       {
@@ -2077,6 +2238,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-henrique-da-silva-moreira-2/1.jpg",
         "number": 15,
+        "nickname": "Moreira",
         "appeared2026": true
       },
       {
@@ -2093,6 +2255,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-bueno-lombello/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Pão",
         "appeared2026": true
       },
       {
@@ -2107,6 +2270,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-pinheiro-orlandi/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Orlandi",
         "appeared2026": true
       },
       {
@@ -2123,6 +2287,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jonas-darc-lima-de-figueredo/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Mate",
         "appeared2026": true
       },
       {
@@ -2131,6 +2296,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-de-oliveira-melo-da-conceicao-/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Pex",
         "appeared2026": true
       },
       {
@@ -2139,6 +2305,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicholas-james-robert-van-pelt/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Nick",
         "appeared2026": true
       },
       {
@@ -2147,6 +2314,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-ebram-fiore/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Tulio",
         "appeared2026": true
       },
       {
@@ -2155,6 +2323,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-fernando-correa-dos-santos-/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Pablo(Fiji)",
         "appeared2026": true
       },
       {
@@ -2163,6 +2332,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elizeu-lucas-ramos--1/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Skate",
         "appeared2026": true
       },
       {
@@ -2171,6 +2341,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kleber-luciano-baracho-ferreira/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Chocolate",
         "appeared2026": true
       },
       {
@@ -2361,7 +2532,8 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
     "sheets": [
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106475",
       "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106479",
-      "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106481"
+      "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106481",
+      "https://plataforma.sporti.com.br/cbru/campeonatos/2026-6-super-12---primeira-divisao---masculino-rugby-xv-masculino/sumula/106476"
     ],
     "players": [
       {
@@ -2370,6 +2542,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-lima-borges-silva/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Bombom",
         "appeared2026": true
       },
       {
@@ -2384,6 +2557,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-danilo-gregorio/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Zord",
         "appeared2026": true
       },
       {
@@ -2400,6 +2574,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-paulo-villalba/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Sumô",
         "appeared2026": true
       },
       {
@@ -2408,6 +2583,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-navarro-barbosa-da-silva/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Fester",
         "appeared2026": true
       },
       {
@@ -2416,6 +2592,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaziel-fernando-leandro/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Muay",
         "appeared2026": true
       },
       {
@@ -2438,6 +2615,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-pereira-cardoso-neto/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Zeca",
         "appeared2026": true
       },
       {
@@ -2446,6 +2624,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-glingue-vieira/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Nego",
         "appeared2026": true
       },
       {
@@ -2454,6 +2633,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cichon-franz/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Basquetinho",
         "appeared2026": true
       },
       {
@@ -2462,6 +2642,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/stefano-carnielli-penteado/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Alemão",
         "appeared2026": true
       },
       {
@@ -2478,6 +2659,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alcino-pisani-amato/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Tesouro / Cininho",
         "appeared2026": true
       },
       {
@@ -2492,6 +2674,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-gomes/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Vinicius",
         "appeared2026": true
       },
       {
@@ -2500,6 +2683,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-de-araujo/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Thiagao",
         "appeared2026": true
       },
       {
@@ -2508,6 +2692,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-saborosa-de-carvalho-freire/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Saborosa",
         "appeared2026": true
       },
       {
@@ -2522,6 +2707,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-sellge-le-grazie/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Pedro Delay",
         "appeared2026": true
       },
       {
@@ -2530,6 +2716,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-campana-pereira-silva/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Vini",
         "appeared2026": true
       },
       {
@@ -2538,6 +2725,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-luis-parazi/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Dodo",
         "appeared2026": true
       },
       {
@@ -2546,6 +2734,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tomas-marcondes-de-goycoechea/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Goyco",
         "appeared2026": true
       },
       {
@@ -2554,6 +2743,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-edilmar-sacaca-mamani/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Bolívia",
         "appeared2026": true
       },
       {
@@ -2568,6 +2758,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/otavio-augusto-garcia-de-castro-goncalves-/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Frodo",
         "appeared2026": true
       },
       {
@@ -2590,6 +2781,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-felipe-alves-oliveira-/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Luis",
         "appeared2026": true
       },
       {
@@ -2616,6 +2808,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-antunes-da-cruz/1-Thumbnail.jpeg",
         "number": 30,
+        "nickname": "Samba",
         "appeared2026": true
       },
       {
@@ -3013,6 +3206,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jorge-luis-profeta-de-castro/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Prof",
         "appeared2026": true
       },
       {
@@ -3021,6 +3215,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-villela-alexiades/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Lula",
         "appeared2026": true
       },
       {
@@ -3029,6 +3224,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-alex-de-sousa/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Corumbá",
         "appeared2026": true
       },
       {
@@ -3037,6 +3233,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brian-raphael-dias-franco/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Para",
         "appeared2026": true
       },
       {
@@ -3045,6 +3242,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-germano-de-melo/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Germano",
         "appeared2026": true
       },
       {
@@ -3053,6 +3251,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-batista-1/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Rafa",
         "appeared2026": true
       },
       {
@@ -3061,6 +3260,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giorgio-felippo-ricci-buso/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Buso",
         "appeared2026": true
       },
       {
@@ -3069,6 +3269,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-souza-namiki/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Namiki",
         "appeared2026": true
       },
       {
@@ -3077,6 +3278,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-viana-de-freitas/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "William",
         "appeared2026": true
       },
       {
@@ -3085,6 +3287,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-machea-de-almeida/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Bonitinho",
         "appeared2026": true
       },
       {
@@ -3093,6 +3296,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-fonseca-sampaio/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Tchuco",
         "appeared2026": true
       },
       {
@@ -3101,6 +3305,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-barbosa-lima/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Gui",
         "appeared2026": true
       },
       {
@@ -3109,6 +3314,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guillermo-garces-sanchez-nieto/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "MoMo",
         "appeared2026": true
       },
       {
@@ -3117,6 +3323,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-de-freitas-quintero/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Q9",
         "appeared2026": true
       },
       {
@@ -3125,6 +3332,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-lacerda-pagnozzi/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Pag",
         "appeared2026": true
       },
       {
@@ -3133,6 +3341,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-elisiario-dos-santos/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Léo",
         "appeared2026": true
       },
       {
@@ -3141,6 +3350,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alan-wagner-gabriel-filho/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Alan",
         "appeared2026": true
       },
       {
@@ -3155,6 +3365,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yusett-yonaikel-rivera-parejo-/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Sete",
         "appeared2026": true
       },
       {
@@ -3163,6 +3374,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-tarsitano-schneider/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Vegetal",
         "appeared2026": true
       },
       {
@@ -3177,6 +3389,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/erick-santos-gomes-aparecido/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Erick",
         "appeared2026": true
       },
       {
@@ -3185,6 +3398,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-calvitti-andreghetti/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Rosa",
         "appeared2026": true
       },
       {
@@ -3205,6 +3419,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-rodolfo-oliveira-polanic/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Polanic",
         "appeared2026": true
       },
       {
@@ -3221,6 +3436,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/sergio-antonio-brito-perez-/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "WILOW",
         "appeared2026": true
       },
       {
@@ -3229,6 +3445,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-merino/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Merino",
         "appeared2026": true
       },
       {
@@ -3237,6 +3454,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-martins-torres/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Ceara",
         "appeared2026": true
       },
       {
@@ -3245,6 +3463,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/george-dos-anjos-goncalves-perez/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Yogui",
         "appeared2026": true
       },
       {
@@ -3259,6 +3478,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-james-buchanan/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Soldado",
         "appeared2026": true
       },
       {
@@ -3275,6 +3495,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/cassio-zanatto/1-Thumbnail.jpeg",
         "number": 24,
+        "nickname": "Cássio Zanatto / Portuga",
         "appeared2026": true
       },
       {
@@ -3442,6 +3663,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-inacio-brandao/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "ANDRÉ BRANDÃO",
         "appeared2026": true
       },
       {
@@ -3450,6 +3672,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-brunno-de-sena-matos/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "RAPHA",
         "appeared2026": true
       },
       {
@@ -3466,6 +3689,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 6,
+        "nickname": "nicolas azevedo",
         "appeared2026": true
       },
       {
@@ -3474,6 +3698,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 7,
+        "nickname": "Gutão",
         "appeared2026": true
       },
       {
@@ -3518,6 +3743,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ariel-da-silva-rodrigues-1/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Ariel",
         "appeared2026": true
       },
       {
@@ -3526,6 +3752,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-teixeira-cardoso-10/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "cardoso",
         "appeared2026": true
       },
       {
@@ -3534,6 +3761,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-drudi-romeu/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Drudi",
         "appeared2026": true
       },
       {
@@ -3550,6 +3778,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphaelmoliternovicentechagasfilho/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Chagas",
         "appeared2026": true
       },
       {
@@ -3558,6 +3787,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/richarddiasgoncalves/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Super choque",
         "appeared2026": true
       },
       {
@@ -3574,6 +3804,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-andreoti-pinto/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Barnão",
         "appeared2026": true
       },
       {
@@ -3582,6 +3813,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-lucas-m-de-souza/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Babinha",
         "appeared2026": true
       },
       {
@@ -3590,6 +3822,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joaoguilhermeraspaarraez/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Boi",
         "appeared2026": true
       },
       {
@@ -3598,6 +3831,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/piero-pozzi/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Piero",
         "appeared2026": true
       },
       {
@@ -3621,6 +3855,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elieldasilva/1.jpg",
         "number": 21,
+        "nickname": "eliel",
         "appeared2026": true
       },
       {
@@ -3629,6 +3864,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-machado-marques/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Machado",
         "appeared2026": true
       },
       {
@@ -3637,6 +3873,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-luciano-goncalves-figueiredo-/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Wood",
         "appeared2026": true
       },
       {
@@ -3651,6 +3888,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 25,
+        "nickname": "Marcola",
         "appeared2026": true
       },
       {
@@ -3672,6 +3910,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/anderson-chaves-de-almeida2",
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/anderson-chaves-de-almeida2/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "ANDRÉIA FERNANDES HUBER VICENTE",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-fernandes-huber-vicente-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
+        "nickname": "Huber",
         "appeared2026": false
       },
       {
@@ -3812,13 +4058,6 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "appeared2026": false
       },
       {
-        "name": "Godzila",
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-afonso-de-carvalho-",
-        "registered2026": true,
-        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardoafonsodecarvalho/1.jpg",
-        "appeared2026": false
-      },
-      {
         "name": "Hamburgão",
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/carlosrafaelaparecidosouzademoura",
         "registered2026": true,
@@ -3828,13 +4067,6 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
       {
         "name": "higão",
         "profile": "https://plataforma.sporti.com.br/sporti/atleta/higorruzadeoliveira-ms",
-        "registered2026": true,
-        "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
-        "appeared2026": false
-      },
-      {
-        "name": "Huber",
-        "profile": "https://plataforma.sporti.com.br/cbru/atleta/bruno-fernandes-huber-vicente-",
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "appeared2026": false
@@ -3935,6 +4167,14 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/sporti/atleta/kauamarchesinirodrigues",
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/kauamarchesinirodrigues/1-Thumbnail.jpeg",
+        "appeared2026": false
+      },
+      {
+        "name": "LEONARDO AFONSO DE CARVALHO",
+        "profile": "https://plataforma.sporti.com.br/cbru/atleta/leonardo-afonso-de-carvalho-",
+        "registered2026": true,
+        "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardoafonsodecarvalho/1.jpg",
+        "nickname": "Godzila",
         "appeared2026": false
       },
       {
@@ -4153,6 +4393,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-pecin-silva",
         "registered2026": true,
         "number": 1,
+        "nickname": "Pecin",
         "appeared2026": true
       },
       {
@@ -4161,6 +4402,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-nery-de-araujo-miranda/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Fabinho",
         "appeared2026": true
       },
       {
@@ -4169,6 +4411,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 3,
+        "nickname": "Lango",
         "appeared2026": true
       },
       {
@@ -4177,6 +4420,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-moreira-couto-santos-1/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Cirilo",
         "appeared2026": true
       },
       {
@@ -4214,6 +4458,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tobias-maria-duret/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Tobi",
         "appeared2026": true
       },
       {
@@ -4222,6 +4467,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lorenzo-fonzaghi-ferramola/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Alishow",
         "appeared2026": true
       },
       {
@@ -4238,6 +4484,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-dos-santos-oliveira/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Gui",
         "appeared2026": true
       },
       {
@@ -4262,6 +4509,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/widson-menezes-do-nascimento/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Cafu",
         "appeared2026": true
       },
       {
@@ -4269,6 +4517,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/felipe-peres-ferraz-freitas",
         "registered2026": true,
         "number": 12,
+        "nickname": "Peres",
         "appeared2026": true
       },
       {
@@ -4285,6 +4534,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 14,
+        "nickname": "Dani",
         "appeared2026": true
       },
       {
@@ -4299,6 +4549,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-ramos-de-sousa/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Lucas",
         "appeared2026": true
       },
       {
@@ -4307,6 +4558,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/niklas-daniel-baumer/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Niko",
         "appeared2026": true
       },
       {
@@ -4315,6 +4567,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/constantinos-leandros-cranas-sotiropoulos/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "grego",
         "appeared2026": true
       },
       {
@@ -4322,6 +4575,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gustavo-mendes-mattos",
         "registered2026": true,
         "number": 18,
+        "nickname": "CAIÇARA",
         "appeared2026": true
       },
       {
@@ -4338,6 +4592,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-kemp-de-freitas/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "joãozinho",
         "appeared2026": true
       },
       {
@@ -4359,6 +4614,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 23,
+        "nickname": "Torus",
         "appeared2026": true
       },
       {
@@ -4546,6 +4802,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-wabiszezewicz-baldacim/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Balda",
         "appeared2026": true
       },
       {
@@ -4562,6 +4819,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-fernandes-de-lima-filho/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Paulo Fernandes",
         "appeared2026": true
       },
       {
@@ -4576,6 +4834,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mario-gandini-caldeira-cardoso-neves/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Marito",
         "appeared2026": true
       },
       {
@@ -4584,6 +4843,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mauro-lucas-da-rocha-souza/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Maurão",
         "appeared2026": true
       },
       {
@@ -4592,6 +4852,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wagner-dos-reis-adao/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Gnu",
         "appeared2026": true
       },
       {
@@ -4600,6 +4861,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/louis-moroni-david-1/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Louis",
         "appeared2026": true
       },
       {
@@ -4608,6 +4870,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thomas-thalenberg/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Thomas",
         "appeared2026": true
       },
       {
@@ -4616,6 +4879,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-santos-da-silva/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Renatinho",
         "appeared2026": true
       },
       {
@@ -4624,6 +4888,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wender-dias-de-souza/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Wender",
         "appeared2026": true
       },
       {
@@ -4632,6 +4897,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-della-coletta/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Henricão",
         "appeared2026": true
       },
       {
@@ -4640,6 +4906,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-gobeti-bilecki-/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Gu Gobeti",
         "appeared2026": true
       },
       {
@@ -4648,6 +4915,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-nascimento-/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Zé",
         "appeared2026": true
       },
       {
@@ -4662,6 +4930,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ronaldo-da-silva-santos/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Ronaldo",
         "appeared2026": true
       },
       {
@@ -4670,6 +4939,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-bezian-zeni/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Lipe",
         "appeared2026": true
       },
       {
@@ -4678,6 +4948,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leo-wallaert/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Leo",
         "appeared2026": true
       },
       {
@@ -4686,6 +4957,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-jose-silva-fonseca-1/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Guto",
         "appeared2026": true
       },
       {
@@ -4700,6 +4972,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-rubinstein-girard-1/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Gabi",
         "appeared2026": true
       },
       {
@@ -4714,6 +4987,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bryan-alves-dos-santos-3/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Bryan",
         "appeared2026": true
       },
       {
@@ -4722,6 +4996,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-cavalcante-da-silva-/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Rafa",
         "appeared2026": true
       },
       {
@@ -4730,6 +5005,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bernardo-de-hugo-toffoli-simoens-da-silva/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Platão",
         "appeared2026": true
       },
       {
@@ -4738,6 +5014,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-garcia-rocha/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Nicolas Rocha",
         "appeared2026": true
       },
       {
@@ -4746,6 +5023,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gabriel-bagdonas-de-santana-witzel-/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Baiacu",
         "appeared2026": true
       },
       {
@@ -4754,6 +5032,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-santana-xotta/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Pedro Xotta",
         "appeared2026": true
       },
       {
@@ -4762,6 +5041,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-ribeiro-ferreira-1/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Caminhoneiro",
         "appeared2026": true
       },
       {
@@ -4770,6 +5050,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-martins-gimenez-lopez/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Diegão",
         "appeared2026": true
       },
       {
@@ -4778,6 +5059,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/breno-da-silva-vito/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Malvadão",
         "appeared2026": true
       },
       {
@@ -4786,6 +5068,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-plancke-marcal/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Star",
         "appeared2026": true
       },
       {
@@ -4794,6 +5077,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-calegare-de-oliveira/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Samurai",
         "appeared2026": true
       },
       {
@@ -4802,6 +5086,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcio-fabiano-de-jesus-maciel/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Jorgito",
         "appeared2026": true
       },
       {
@@ -5290,6 +5575,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 1,
         "appeared2026": true,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/victor-hugo-da-mata",
+        "nickname": "Zangado",
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-hugo-da-mata/1-Thumbnail.jpeg",
         "registered2026": false
       },
@@ -5305,6 +5591,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-marcal-soares-batista/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Crazy Cop",
         "appeared2026": true
       },
       {
@@ -5313,6 +5600,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thales-derico-rosa/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Thalão",
         "appeared2026": true
       },
       {
@@ -5333,6 +5621,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-rodrigo-pires-gomes/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Teacher",
         "appeared2026": true
       },
       {
@@ -5347,6 +5636,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ryan-lucas-martins-costa/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Ryan",
         "appeared2026": true
       },
       {
@@ -5355,6 +5645,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/johannes-clemente-das-dores/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Jojo",
         "appeared2026": true
       },
       {
@@ -5363,6 +5654,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lonieri-muller-silva-pereira/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Lolo",
         "appeared2026": true
       },
       {
@@ -5377,6 +5669,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-jorge-soares-goncalves/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Buldogue",
         "appeared2026": true
       },
       {
@@ -5385,6 +5678,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juan-manuel-didiego-/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Juan",
         "appeared2026": true
       },
       {
@@ -5399,6 +5693,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/aislan-cristian-batista-dutra/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Aislan",
         "appeared2026": true
       },
       {
@@ -5413,6 +5708,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-muller-dogiva-de-pascoa/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Bob",
         "appeared2026": true
       },
       {
@@ -5421,6 +5717,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/willian-ribeiro-da-silva-/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Titino",
         "appeared2026": true
       },
       {
@@ -5429,6 +5726,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-pires-santos-pereira-thomaz/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "André Pires",
         "appeared2026": true
       },
       {
@@ -5437,6 +5735,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ferreira-barbosa-franca-/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Felipe",
         "appeared2026": true
       },
       {
@@ -5445,6 +5744,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-santos-simoes/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Gustavão",
         "appeared2026": true
       },
       {
@@ -5459,6 +5759,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-fonseca-sampaio-/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Tchuquinho",
         "appeared2026": true
       },
       {
@@ -5467,6 +5768,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lincoln-rafael-soares-goncaves/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Lincoln",
         "appeared2026": true
       },
       {
@@ -5475,6 +5777,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-brina-corgosinho/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Brina",
         "appeared2026": true
       },
       {
@@ -5483,6 +5786,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-henrique-pereira-vasconcelos/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Tchelo",
         "appeared2026": true
       },
       {
@@ -5497,6 +5801,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-lucas-silva-marques/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Prosty",
         "appeared2026": true
       },
       {
@@ -5526,6 +5831,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alisson-andrade-machado/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "MACHADO",
         "appeared2026": true
       },
       {
@@ -5534,6 +5840,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tiago-padoan-jucas/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Tiago",
         "appeared2026": true
       },
       {
@@ -5542,6 +5849,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/facundo-alejandro-salomon/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Facundo",
         "appeared2026": true
       },
       {
@@ -5715,6 +6023,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/denner-carlos-bressiani/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Denner",
         "appeared2026": true
       },
       {
@@ -5723,6 +6032,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 1,
+        "nickname": "indio",
         "appeared2026": true
       },
       {
@@ -5730,6 +6040,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/guilherme-machado-martini",
         "registered2026": true,
         "number": 2,
+        "nickname": "gui",
         "appeared2026": true
       },
       {
@@ -5738,6 +6049,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gilvan-machado-martini/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "gilvan",
         "appeared2026": true
       },
       {
@@ -5746,6 +6058,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/augusto-detoni-bettio/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "GUTO",
         "appeared2026": true
       },
       {
@@ -5754,6 +6067,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-alexandre-souza-dos-santos/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "BAIANO",
         "appeared2026": true
       },
       {
@@ -5774,6 +6088,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/yuri-britto-da-silva/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Yuri",
         "appeared2026": true
       },
       {
@@ -5782,6 +6097,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/victor-felipe-dos-santos-oliveira-ozekoski/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Victor Felipe",
         "appeared2026": true
       },
       {
@@ -5789,6 +6105,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/volmar-antonio-franceschi-junior",
         "registered2026": true,
         "number": 8,
+        "nickname": "VOLMAR",
         "appeared2026": true
       },
       {
@@ -5797,6 +6114,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andrei-vinicius-dos-santos/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Andrei Santos",
         "appeared2026": true
       },
       {
@@ -5805,6 +6123,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/henrique-ramires-castro/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "kiko",
         "appeared2026": true
       },
       {
@@ -5813,6 +6132,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-juan-morais/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "ARTHUR",
         "appeared2026": true
       },
       {
@@ -5821,6 +6141,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/juliano-cavalcanti/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Professor",
         "appeared2026": true
       },
       {
@@ -5829,6 +6150,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/taina-girardi/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "TAINÃ",
         "appeared2026": true
       },
       {
@@ -5837,6 +6159,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-silvestre/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "vini",
         "appeared2026": true
       },
       {
@@ -5845,6 +6168,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-do-pilar-noll/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "noll",
         "appeared2026": true
       },
       {
@@ -5853,6 +6177,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-cardoso-carvalho/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "GUGA",
         "appeared2026": true
       },
       {
@@ -5861,6 +6186,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/davi-joao-da-silva-chiapetti/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Davi",
         "appeared2026": true
       },
       {
@@ -5868,6 +6194,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/douglas-junior-goncalves-",
         "registered2026": true,
         "number": 17,
+        "nickname": "Dodo",
         "appeared2026": true
       },
       {
@@ -5876,6 +6203,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 18,
+        "nickname": "Felipão",
         "appeared2026": true
       },
       {
@@ -5883,6 +6211,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/mateus-gasparetto",
         "registered2026": true,
         "number": 19,
+        "nickname": "GASPARETTO",
         "appeared2026": true
       },
       {
@@ -5891,6 +6220,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-fernando-dalbosco-de-oliveira/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Kowa",
         "appeared2026": true
       },
       {
@@ -5899,6 +6229,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tulio-de-almeida-bertagnolli/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Tulio",
         "appeared2026": true
       },
       {
@@ -5986,6 +6317,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-vier-dos-santos/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "DUDU",
         "appeared2026": true
       },
       {
@@ -6001,6 +6333,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-de-oliveira-bandeira/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "BANDEIRA",
         "appeared2026": true
       },
       {
@@ -6009,6 +6342,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-henrique-tresoldi/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Limon",
         "appeared2026": true
       },
       {
@@ -6017,6 +6351,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/angelo-alberto-marcucci-velasco/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Angelo Marcucci",
         "appeared2026": true
       },
       {
@@ -6024,6 +6359,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-ramos",
         "registered2026": true,
         "number": 9,
+        "nickname": "Matheus",
         "appeared2026": true
       },
       {
@@ -6032,6 +6368,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 10,
+        "nickname": "Chuck",
         "appeared2026": true
       },
       {
@@ -6051,6 +6388,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/nickolas-de-menezes",
         "registered2026": true,
         "number": 15,
+        "nickname": "CK",
         "appeared2026": true
       },
       {
@@ -6059,6 +6397,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-pasin-souza/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Pasin",
         "appeared2026": true
       },
       {
@@ -6075,6 +6414,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-carniel-ballin/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Fernando Ballin",
         "appeared2026": true
       },
       {
@@ -6099,6 +6439,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-vicente-stefanello-medeiros/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Pedro",
         "appeared2026": true
       },
       {
@@ -6107,6 +6448,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-roberto-barbosa-junior/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Paulo Barbosa",
         "appeared2026": true
       },
       {
@@ -6122,6 +6464,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-fernando-sulzbach/1-Thumbnail.jpeg",
         "number": 25,
+        "nickname": "Nando",
         "appeared2026": true
       },
       {
@@ -6130,6 +6473,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-paulo-de-oliveira-da-silva/1-Thumbnail.jpeg",
         "number": 27,
+        "nickname": "MARCOS",
         "appeared2026": true
       },
       {
@@ -6145,6 +6489,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/italo-rodrigo-soares/1-Thumbnail.jpeg",
         "number": 30,
+        "nickname": "Italo",
         "appeared2026": true
       },
       {
@@ -6294,6 +6639,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-luiz-dos-santos-ribeiro/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Índio",
         "appeared2026": true
       },
       {
@@ -6308,6 +6654,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/clayton-de-camargo/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Clayton",
         "appeared2026": true
       },
       {
@@ -6324,6 +6671,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/edson-pinheiro-junior/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Edson",
         "appeared2026": true
       },
       {
@@ -6340,6 +6688,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rafael-dariva/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Dariva",
         "appeared2026": true
       },
       {
@@ -6366,6 +6715,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joilson-castagna-dos-santos/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Joilson",
         "appeared2026": true
       },
       {
@@ -6374,6 +6724,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/infantil/luan-dos-santos-pires/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Luan",
         "appeared2026": true
       },
       {
@@ -6382,6 +6733,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-carrizo/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Lucas",
         "appeared2026": true
       },
       {
@@ -6390,6 +6742,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vagner-machado-de-oliveira/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Django",
         "appeared2026": true
       },
       {
@@ -6398,6 +6751,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-gimenez-de-matos/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Teteu",
         "appeared2026": true
       },
       {
@@ -6422,6 +6776,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-maizonave-vargas/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Thor",
         "appeared2026": true
       },
       {
@@ -6430,6 +6785,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-paz-sulzbach-/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "pablinho",
         "appeared2026": true
       },
       {
@@ -6438,6 +6794,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/niumar-ampese/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Barba",
         "appeared2026": true
       },
       {
@@ -6446,6 +6803,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luiz-vinicius-santos-ferreira/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Baiano",
         "appeared2026": true
       },
       {
@@ -6454,6 +6812,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-ortiz-correa/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Gigante",
         "appeared2026": true
       },
       {
@@ -6462,6 +6821,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-francisco-manderbach-monassa/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "JOÃO MONASSA",
         "appeared2026": true
       },
       {
@@ -6470,6 +6830,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-ignacio-rosano-pedroso/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "Erick",
         "appeared2026": true
       },
       {
@@ -6484,6 +6845,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-jose-brito-lugo/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Marcos",
         "appeared2026": true
       },
       {
@@ -6500,6 +6862,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-fernandes-ferranti/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Douglas",
         "appeared2026": true
       },
       {
@@ -6622,6 +6985,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/alex-junior-beling-da-silva/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Alecão",
         "appeared2026": true
       },
       {
@@ -6630,6 +6994,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-ricardo-da-silva/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Dani",
         "appeared2026": true
       },
       {
@@ -6638,6 +7003,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-ferreira-dias/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Dias",
         "appeared2026": true
       },
       {
@@ -6654,6 +7020,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-guizoni-bett/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Marcos",
         "appeared2026": true
       },
       {
@@ -6662,6 +7029,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-antunes-paulo-/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Wes",
         "appeared2026": true
       },
       {
@@ -6670,6 +7038,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/benjamim-francisco-de-sousa-neto/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Benjamim",
         "appeared2026": true
       },
       {
@@ -6678,6 +7047,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-levi-guerreiro-soares/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Gabriel Levi",
         "appeared2026": true
       },
       {
@@ -6692,6 +7062,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jeferson-de-azevedo-martins/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "jeff",
         "appeared2026": true
       },
       {
@@ -6714,6 +7085,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-custodio/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Gustavo Eduardo Custodio",
         "appeared2026": true
       },
       {
@@ -6722,6 +7094,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jefferson-andreo-flores/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Jeff",
         "appeared2026": true
       },
       {
@@ -6738,6 +7111,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leandro-grad-de-castro-gouvea/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Rasta",
         "appeared2026": true
       },
       {
@@ -6746,6 +7120,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabricio-luerce-da-silva/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Betânia",
         "appeared2026": true
       },
       {
@@ -6754,6 +7129,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-alves-pereira/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "para",
         "appeared2026": true
       },
       {
@@ -6864,6 +7240,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-nunes-lobato-de-souza/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Shrek/Rondonia",
         "appeared2026": true
       },
       {
@@ -6912,6 +7289,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-de-oliveira-bomfim/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Léo Bomfim",
         "appeared2026": true
       },
       {
@@ -6950,6 +7328,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-medeiros-ferro/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Piloto",
         "appeared2026": true
       },
       {
@@ -6966,6 +7345,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-messias-da-silveira/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Danilo",
         "appeared2026": true
       },
       {
@@ -6990,6 +7370,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-augusto-da-cruz-dantas/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Ultra",
         "appeared2026": true
       },
       {
@@ -6998,6 +7379,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/william-paredes-heckler/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Tio",
         "appeared2026": true
       },
       {
@@ -7006,6 +7388,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-henrique-fernandes-meira/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Bigmike",
         "appeared2026": true
       },
       {
@@ -7030,6 +7413,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-leonardo-dos-santos/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Abobrão",
         "appeared2026": true
       },
       {
@@ -7046,6 +7430,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jaime-procopio-da-silva/1-Thumbnail.jpeg",
         "number": 26,
+        "nickname": "Jaime",
         "appeared2026": true
       },
       {
@@ -7054,6 +7439,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-petkowicz-mariani/1-Thumbnail.jpeg",
         "number": 67,
+        "nickname": "Lucas \"Bolt\" Petkowicz",
         "appeared2026": true
       },
       {
@@ -7068,6 +7454,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/bruno-sposito-gomes-de-siqueira/1-Thumbnail.jpeg",
         "number": 88,
+        "nickname": "Cidão",
         "appeared2026": true
       },
       {
@@ -7214,6 +7601,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jackson-pedro-dos-santos-souza/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "JACKSHOW",
         "appeared2026": true
       },
       {
@@ -7254,6 +7642,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ademir-antonio-dos-santos/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Ademar",
         "appeared2026": true
       },
       {
@@ -7270,6 +7659,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-vinas-vieira/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Bagé",
         "appeared2026": true
       },
       {
@@ -7278,6 +7668,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luis-eduardo-plumacher-diaz/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Lolo",
         "appeared2026": true
       },
       {
@@ -7286,6 +7677,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-jose-da-silva-pontes/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Lucas",
         "appeared2026": true
       },
       {
@@ -7306,6 +7698,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jadson-felipe-dos-santos-1/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Jadinho",
         "appeared2026": true
       },
       {
@@ -7320,6 +7713,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/italo-morais-de-araujo-fernandes/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Alemão",
         "appeared2026": true
       },
       {
@@ -7340,6 +7734,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/peter-valenzuela-autovicz/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Péter",
         "appeared2026": true
       },
       {
@@ -7348,6 +7743,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/patricio-julian-garmendia/1.jpg",
         "number": 20,
+        "nickname": "Guampa",
         "appeared2026": true
       },
       {
@@ -7356,6 +7752,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geimison-marques-tomaz/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Gema",
         "appeared2026": true
       },
       {
@@ -7372,6 +7769,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/brenno-pereira-soares/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Brenno",
         "appeared2026": true
       },
       {
@@ -7380,7 +7778,8 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-jose-da-silva-de-pontes/1-Thumbnail.jpeg",
         "number": 24,
-        "appeared2026": true
+        "appeared2026": true,
+        "nickname": "Felipe"
       },
       {
         "name": "ABRAAO",
@@ -7616,6 +8015,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/nicolas-alkmin-ferreira/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Bacon",
         "appeared2026": true
       },
       {
@@ -7630,6 +8030,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jean-matheus-morgado-santos/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Jean",
         "appeared2026": true
       },
       {
@@ -7638,6 +8039,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/celio-aparecido-de-sousa-barbosa-junior/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Celio",
         "appeared2026": true
       },
       {
@@ -7652,6 +8054,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/derick-estevao-pio/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Pantera",
         "appeared2026": true
       },
       {
@@ -7660,6 +8063,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-zacarias-costa/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Zacarias",
         "appeared2026": true
       },
       {
@@ -7668,6 +8072,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/iago-julioli-dos-santos/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Iago",
         "appeared2026": true
       },
       {
@@ -7675,6 +8080,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "number": 8,
         "appeared2026": true,
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/matheus-da-silva-arantes",
+        "nickname": "Arantes",
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-da-silva-arantes/1-Thumbnail.jpeg",
         "registered2026": false
       },
@@ -7691,6 +8097,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 10,
+        "nickname": "JAC",
         "appeared2026": true
       },
       {
@@ -7699,6 +8106,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/javier-eduardo-garcia-maciel/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Javier",
         "appeared2026": true
       },
       {
@@ -7707,6 +8115,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-brito-de-senne/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Gabriel",
         "appeared2026": true
       },
       {
@@ -7715,6 +8124,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-gustavo-alves-de-lima/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "VITOR GUSTAVO",
         "appeared2026": true
       },
       {
@@ -7723,6 +8133,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rhyan-eduardo-madeira-da-silva-/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Rhyan",
         "appeared2026": true
       },
       {
@@ -7731,6 +8142,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-s-fiorelli-monteiro/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Fernando",
         "appeared2026": true
       },
       {
@@ -7739,6 +8151,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-vianna-da-silva/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Cabelinho",
         "appeared2026": true
       },
       {
@@ -7747,6 +8160,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/filipe-carlin-de-sousa/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Filipe",
         "appeared2026": true
       },
       {
@@ -7773,6 +8187,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-fernandes-de-souza/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Tchelo",
         "appeared2026": true
       },
       {
@@ -7797,6 +8212,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vitor-moreira-de-oliveira/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Vitor",
         "appeared2026": true
       },
       {
@@ -7961,6 +8377,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-da-silva-antonio/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Luquinhas",
         "appeared2026": true
       },
       {
@@ -7977,6 +8394,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diogo-corso-kruk/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Torto",
         "appeared2026": true
       },
       {
@@ -7985,6 +8403,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-oddone/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Danilo Oddone (Menoti)",
         "appeared2026": true
       },
       {
@@ -7993,6 +8412,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-abilel-hipolito/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Loki",
         "appeared2026": true
       },
       {
@@ -8001,6 +8421,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thor-voloshyn-mastrotti/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Thor",
         "appeared2026": true
       },
       {
@@ -8009,6 +8430,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-thales-de-carvalho-simoes/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "Andre",
         "appeared2026": true
       },
       {
@@ -8017,6 +8439,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-santana-melo-dos-santos/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "NÊGO",
         "appeared2026": true
       },
       {
@@ -8025,6 +8448,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-burkhardt-antonoff/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "ANTONOFF",
         "appeared2026": true
       },
       {
@@ -8039,6 +8463,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mateus-santos-marin/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Hamilton",
         "appeared2026": true
       },
       {
@@ -8047,6 +8472,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-de-oliveira-leis/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "LEIS",
         "appeared2026": true
       },
       {
@@ -8055,6 +8481,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gustavo-lessa-tronchin/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Gus",
         "appeared2026": true
       },
       {
@@ -8071,6 +8498,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-moreti-zeitlin/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Eminem",
         "appeared2026": true
       },
       {
@@ -8079,6 +8507,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-andion-de-oliveira-freitas/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Choque",
         "appeared2026": true
       },
       {
@@ -8087,6 +8516,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-de-almeida-freitas/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Pit",
         "appeared2026": true
       },
       {
@@ -8095,6 +8525,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcelo-almeida-leite-dos-santos-/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Dudu",
         "appeared2026": true
       },
       {
@@ -8103,6 +8534,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rodrigo-vion-locheti/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Rodrigo",
         "appeared2026": true
       },
       {
@@ -8111,6 +8543,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luccas-da-cunha-laste/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Luccas",
         "appeared2026": true
       },
       {
@@ -8119,6 +8552,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-antonio-chiri-junior/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Carioca",
         "appeared2026": true
       },
       {
@@ -8127,6 +8561,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/rui-felipe-dos-santos-moura/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Ruizão",
         "appeared2026": true
       },
       {
@@ -8141,6 +8576,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gabriel-kirsten-coelho/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Kirsten",
         "appeared2026": true
       },
       {
@@ -8149,6 +8585,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-queiroz-marques/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Di",
         "appeared2026": true
       },
       {
@@ -8157,6 +8594,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caique-moreira-souto-/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Capão",
         "appeared2026": true
       },
       {
@@ -8165,6 +8603,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/danilo-augusto-silva/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "DNA",
         "appeared2026": true
       },
       {
@@ -8181,6 +8620,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/socrates-kentaro-matsuura/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "ken",
         "appeared2026": true
       },
       {
@@ -8197,6 +8637,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-silva-sousa-/1-Thumbnail.jpeg",
         "number": 25,
+        "nickname": "Xexa",
         "appeared2026": true
       },
       {
@@ -8321,6 +8762,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-eduardo-baptista/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Cadu",
         "appeared2026": true
       },
       {
@@ -8329,6 +8771,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fernando-de-paiva-reis/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Casca",
         "appeared2026": true
       },
       {
@@ -8336,6 +8779,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/gabriel-da-silva-macedo",
         "registered2026": true,
         "number": 0,
+        "nickname": "Macedo",
         "appeared2026": true
       },
       {
@@ -8344,6 +8788,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 0,
+        "nickname": "Ennes",
         "appeared2026": true
       },
       {
@@ -8352,6 +8797,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/geudsy-marins-abib/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "GEUDSY",
         "appeared2026": true
       },
       {
@@ -8360,6 +8806,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/jose-vitor-tavares-da-costa-bessa/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Zé",
         "appeared2026": true
       },
       {
@@ -8368,6 +8815,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 0,
+        "nickname": "BOQUINHA",
         "appeared2026": true
       },
       {
@@ -8375,6 +8823,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/raphael-de-azevedo-rocha-vieira",
         "registered2026": true,
         "number": 0,
+        "nickname": "Cabrunco",
         "appeared2026": true
       },
       {
@@ -8383,6 +8832,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-casalino-teixeira/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "Casalino",
         "appeared2026": true
       },
       {
@@ -8391,6 +8841,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ednilson-da-silva-joaquim/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Ed",
         "appeared2026": true
       },
       {
@@ -8399,6 +8850,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/caio-ferreira-irineu-1/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Caio",
         "appeared2026": true
       },
       {
@@ -8407,6 +8859,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ulisses-miguel-da-costa-correia/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Uli",
         "appeared2026": true
       },
       {
@@ -8423,6 +8876,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-lima-menezes-/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Lucas Lima",
         "appeared2026": true
       },
       {
@@ -8431,6 +8885,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-raymond-marques-kraemer-ferreira/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Matheus",
         "appeared2026": true
       },
       {
@@ -8439,6 +8894,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-luiz-carestiato-villaca/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Villaça",
         "appeared2026": true
       },
       {
@@ -8447,6 +8903,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/hyan-garcia-sousa-silva/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Hyan Garcia",
         "appeared2026": true
       },
       {
@@ -8455,6 +8912,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-lima-cunha/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "Dani",
         "appeared2026": true
       },
       {
@@ -8463,6 +8921,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-hubert-gregg/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Gregg",
         "appeared2026": true
       },
       {
@@ -8471,6 +8930,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/robledo-mesquita-da-veiga/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Robles",
         "appeared2026": true
       },
       {
@@ -8487,6 +8947,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/matheus-siqueira-galveas-/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Mateusinho",
         "appeared2026": true
       },
       {
@@ -8503,6 +8964,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/carlos-borba-nobre-machado/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Carlos Machado",
         "appeared2026": true
       },
       {
@@ -8511,6 +8973,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-seiji-tsumori/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "SEIJI",
         "appeared2026": true
       },
       {
@@ -8519,6 +8982,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/lucas-raymond-marques-kraemer-ferreira/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Kreminho",
         "appeared2026": true
       },
       {
@@ -8532,6 +8996,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/caio-massari-navega",
         "registered2026": true,
         "number": 23,
+        "nickname": "Aguinha",
         "appeared2026": true
       },
       {
@@ -8564,6 +9029,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/celso-candido-de-almeida/1-Thumbnail.jpeg",
         "number": 2,
+        "nickname": "Celso",
         "appeared2026": true
       },
       {
@@ -8578,6 +9044,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-luiz-gaspar-macabu/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Daniel",
         "appeared2026": true
       },
       {
@@ -8586,6 +9053,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br/Images/No_img_200x200.png",
         "number": 5,
+        "nickname": "Gui",
         "appeared2026": true
       },
       {
@@ -8602,6 +9070,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/andre-fernandes-de-araujo-baptista/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Mapimpi",
         "appeared2026": true
       },
       {
@@ -8610,6 +9079,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/merlin-vigneault/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Merlin",
         "appeared2026": true
       },
       {
@@ -8618,6 +9088,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/douglas-holanda/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "Little",
         "appeared2026": true
       },
       {
@@ -8634,6 +9105,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-miliano-de-oliveira-paixao/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "Careca",
         "appeared2026": true
       },
       {
@@ -8642,6 +9114,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-vitor-oaski-do-espirito-santo/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "João",
         "appeared2026": true
       },
       {
@@ -8656,6 +9129,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leonardo-carneiro-de-oliveira-da-silva/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Carneiro",
         "appeared2026": true
       },
       {
@@ -8672,6 +9146,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/isaak-ferreira-da-silva-alves-aguiar/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Isaak ferreira",
         "appeared2026": true
       },
       {
@@ -8686,6 +9161,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marcos-luiz-oliveira-da-silva/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Marcão",
         "appeared2026": true
       },
       {
@@ -8708,6 +9184,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "profile": "https://plataforma.sporti.com.br/cbru/atleta/lucas-emanuel-aquino-chagas",
         "registered2026": true,
         "number": 20,
+        "nickname": "Toquinha",
         "appeared2026": true
       },
       {
@@ -8724,6 +9201,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/miguel-carneiro-de-castro/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Carneirinho",
         "appeared2026": true
       },
       {
@@ -8732,6 +9210,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/heverton-patrick-ferreira-machado-da-silva/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "Heverton",
         "appeared2026": true
       },
       {
@@ -8740,6 +9219,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/noa-chave/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Noa",
         "appeared2026": true
       },
       {
@@ -8841,6 +9321,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-mario-soares-silva/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "João Mário \"MOICANO\" Soares Silva",
         "appeared2026": true
       },
       {
@@ -8855,6 +9336,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/erick-monteiro-quirino/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Viking",
         "appeared2026": true
       },
       {
@@ -8863,6 +9345,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ricardo-fassarella-1/1-Thumbnail.jpeg",
         "number": 3,
+        "nickname": "Grampola",
         "appeared2026": true
       },
       {
@@ -8871,6 +9354,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/paulo-camargo-bertoluci/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Fresno",
         "appeared2026": true
       },
       {
@@ -8879,6 +9363,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/guilherme-chitz-neto/1-Thumbnail.jpeg",
         "number": 5,
+        "nickname": "GUILHERME \"urutau\" CHITZ NETO",
         "appeared2026": true
       },
       {
@@ -8887,6 +9372,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ramon-goncalves-lopes/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "BOMBEIRO",
         "appeared2026": true
       },
       {
@@ -8895,6 +9381,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-valverde-de-assis-duarte/1-Thumbnail.jpeg",
         "number": 7,
+        "nickname": "Smurf",
         "appeared2026": true
       },
       {
@@ -8903,6 +9390,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-pedro-costa-dias/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "JOTAPÊ",
         "appeared2026": true
       },
       {
@@ -8911,6 +9399,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/gianluca-scalzi-sampogna/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Oompa-Loompa",
         "appeared2026": true
       },
       {
@@ -8931,6 +9420,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/luan-camargo-carneiro/1-Thumbnail.jpeg",
         "number": 10,
+        "nickname": "CARNEIRO",
         "appeared2026": true
       },
       {
@@ -8939,6 +9429,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/eduardo-almeida-de-barros/1-Thumbnail.jpeg",
         "number": 11,
+        "nickname": "EDDIE",
         "appeared2026": true
       },
       {
@@ -8947,6 +9438,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/giovanni-scalzi-sampogna/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "GIOVANI",
         "appeared2026": true
       },
       {
@@ -8955,6 +9447,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/harrison-neves-marciano/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Marciano",
         "appeared2026": true
       },
       {
@@ -8963,6 +9456,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/raphael-santos-balmas/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Bumas",
         "appeared2026": true
       },
       {
@@ -8971,6 +9465,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/samuel-martins-de-medeiros/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Samuel",
         "appeared2026": true
       },
       {
@@ -8985,6 +9480,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/joao-victor-nascimento-marques/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "TDAH",
         "appeared2026": true
       },
       {
@@ -8993,6 +9489,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/fabio-goncalves-gomes/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Fabão",
         "appeared2026": true
       },
       {
@@ -9001,6 +9498,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elber-dos-santos-pereira/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "Elber",
         "appeared2026": true
       },
       {
@@ -9009,6 +9507,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-marroque/1-Thumbnail.jpeg",
         "number": 17,
+        "nickname": "PEDRO \"TERNURA\" HENRIQUE MARROQUE",
         "appeared2026": true
       },
       {
@@ -9017,6 +9516,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/arthur-coser-chagas/1-Thumbnail.jpeg",
         "number": 18,
+        "nickname": "Arthur \"Cabelo\" Coser",
         "appeared2026": true
       },
       {
@@ -9205,6 +9705,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/callum-walters/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "BIG RED",
         "appeared2026": true
       },
       {
@@ -9213,6 +9714,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/daniel-bruno-oliveira-de-carvalho/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Big Danny",
         "appeared2026": true
       },
       {
@@ -9229,6 +9731,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/felipe-ignacio-munoz-toledo/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "BIG PHILL",
         "appeared2026": true
       },
       {
@@ -9237,6 +9740,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ivan-franklin-correia-neto/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Ivan",
         "appeared2026": true
       },
       {
@@ -9245,6 +9749,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/mathis-marc-jean-lauzeral/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Mathis",
         "appeared2026": true
       },
       {
@@ -9259,6 +9764,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-henrique-leal-da-rocha/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Pedrinho",
         "appeared2026": true
       },
       {
@@ -9273,6 +9779,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/ulysses-jeronimo-barreira-da-silva-1/1-Thumbnail.jpeg",
         "number": 0,
+        "nickname": "Puxa Frango",
         "appeared2026": true
       },
       {
@@ -9281,6 +9788,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pedro-gabriel-costa-torres-martins/1-Thumbnail.jpeg",
         "number": 1,
+        "nickname": "PG",
         "appeared2026": true
       },
       {
@@ -9295,6 +9803,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/vinicius-pereira/1-Thumbnail.jpeg",
         "number": 4,
+        "nickname": "Taís",
         "appeared2026": true
       },
       {
@@ -9303,6 +9812,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/pablo-bulle-portilho-de-oliveira/1-Thumbnail.jpeg",
         "number": 6,
+        "nickname": "Bônus",
         "appeared2026": true
       },
       {
@@ -9311,6 +9821,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/christopher-david-chatterton/1-Thumbnail.jpeg",
         "number": 8,
+        "nickname": "David",
         "appeared2026": true
       },
       {
@@ -9319,6 +9830,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/thiago-monte-dos-santos/1-Thumbnail.jpeg",
         "number": 9,
+        "nickname": "Montinho",
         "appeared2026": true
       },
       {
@@ -9333,6 +9845,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/elliott-lloyd-wilson/1-Thumbnail.jpeg",
         "number": 12,
+        "nickname": "Elliott",
         "appeared2026": true
       },
       {
@@ -9341,6 +9854,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/leo-afonso-perez/1-Thumbnail.jpeg",
         "number": 13,
+        "nickname": "Leo",
         "appeared2026": true
       },
       {
@@ -9349,6 +9863,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/david-jacob-marques-dantas/1-Thumbnail.jpeg",
         "number": 14,
+        "nickname": "Cabelo",
         "appeared2026": true
       },
       {
@@ -9357,6 +9872,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/marco-aurelio-pacheco-padilha-froes/1-Thumbnail.jpeg",
         "number": 15,
+        "nickname": "Marco",
         "appeared2026": true
       },
       {
@@ -9365,6 +9881,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/diego-fernandes-ximenes/1-Thumbnail.jpeg",
         "number": 16,
+        "nickname": "Xtudo",
         "appeared2026": true
       },
       {
@@ -9387,6 +9904,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/tomas-palacios/1-Thumbnail.jpeg",
         "number": 19,
+        "nickname": "Tom",
         "appeared2026": true
       },
       {
@@ -9395,6 +9913,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/romullo-cardozo-dos-santos/1-Thumbnail.jpeg",
         "number": 20,
+        "nickname": "ROMULLO CARDOZO",
         "appeared2026": true
       },
       {
@@ -9403,6 +9922,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/renato-costa/1-Thumbnail.jpeg",
         "number": 21,
+        "nickname": "Renatinho",
         "appeared2026": true
       },
       {
@@ -9411,6 +9931,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/wesley-rodrigues-mendonca/1-Thumbnail.jpeg",
         "number": 22,
+        "nickname": "wesley",
         "appeared2026": true
       },
       {
@@ -9419,6 +9940,7 @@ export const ROSTERS_2026: Record<string, TeamRoster> = {
         "registered2026": true,
         "photo": "https://painel.sporti.com.br//UserImages/atletas/adulto/klinsman-barbosa-miranda/1-Thumbnail.jpeg",
         "number": 23,
+        "nickname": "Klinsman",
         "appeared2026": true
       },
       {

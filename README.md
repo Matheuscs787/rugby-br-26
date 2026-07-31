@@ -1,8 +1,8 @@
-# vinext-starter
+# Rugby BR 26
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Protótipo leve de rugby sevens 2D com os clubes brasileiros das duas divisões
+nacionais de 2026. A aplicação principal usa [vinext](https://github.com/cloudflare/vinext)
+e também possui uma saída estática para GitHub Pages.
 
 ## Prerequisites
 
@@ -14,6 +14,7 @@ Drizzle support.
 npm install
 npm run dev
 npm run build
+npm run build:pages
 ```
 
 This starter does not use `wrangler.jsonc`.
@@ -91,8 +92,25 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
+- `npm run build:pages`: generate the static GitHub Pages site in `dist-pages/`
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
+
+## Hospedagem gratuita no GitHub Pages
+
+O workflow `.github/workflows/deploy-pages.yml` compila e publica o jogo sempre
+que houver um push para `main`. O build identifica automaticamente tanto um
+repositório de projeto (`usuario.github.io/rugby-br-26/`) quanto um repositório
+de usuário (`usuario.github.io/`).
+
+1. Envie este projeto para um repositório público no GitHub.
+2. Abra **Settings → Pages** no repositório.
+3. Em **Build and deployment → Source**, selecione **GitHub Actions**.
+4. Faça um push para `main` ou execute manualmente o workflow na aba **Actions**.
+
+O GitHub Pages não precisa de servidor: o workflow publica somente o conteúdo
+estático gerado em `dist-pages/`. A hospedagem atual via Sites continua compatível
+com `npm run build` e não é substituída por essa configuração.
 
 ## Learn More
 

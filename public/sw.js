@@ -1,5 +1,8 @@
-const CACHE = "rugby-br-26-v10-bid-rosters";
-const CORE = ["/", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png"];
+const CACHE = "rugby-br-26-v11-player-portraits";
+const SCOPE_URL = new URL("./", self.registration.scope).toString();
+const CORE = ["./", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"].map(
+  (path) => new URL(path, self.registration.scope).toString(),
+);
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)));
@@ -25,7 +28,7 @@ self.addEventListener("fetch", (event) => {
   }
 
   if (event.request.mode === "navigate") {
-    event.respondWith(fetch(event.request).catch(() => caches.match("/")));
+    event.respondWith(fetch(event.request).catch(() => caches.match(SCOPE_URL)));
     return;
   }
 

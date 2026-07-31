@@ -148,6 +148,7 @@ function parseBid(html, source) {
     players.push({
       teamPath: new URL(teamPath, source).pathname.toLocaleLowerCase("pt-BR"),
       name: decodeEntities(rawName),
+      bidName: decodeEntities(rawName),
       profile,
       profileKey: normalize(profileSlug),
       registered2026: true,
@@ -227,11 +228,17 @@ for (const sheet of sheets) {
       );
       const key = matchedEntry?.[0] ?? playerKey;
       const previous = matchedEntry?.[1] ?? roster.players.get(key);
+      const bidName = previous?.bidName ?? previous?.name;
+      const nickname = bidName && normalize(bidName) !== playerKey
+        ? bidName
+        : previous?.nickname;
       roster.players.set(key, {
         ...previous,
         ...player,
         name: player.name,
+        ...(nickname ? { nickname } : {}),
         appeared2026: true,
+        appearanceKeys: [...new Set([...(previous?.appearanceKeys ?? []), playerKey])],
         ...(player.number || previous?.number ? { number: player.number ?? previous.number } : {}),
       });
     }
@@ -247,7 +254,11 @@ for (const [id, clubProfiles] of profiles) {
     );
     if (profile) {
       player.profile = profile.profile;
+      if (player.appeared2026 && normalize(profile.label) !== normalize(player.name) && !player.nickname) {
+        player.nickname = profile.label;
+      }
       if (!player.appeared2026 && normalize(profile.label).length > normalize(player.name).length) {
+        if (normalize(profile.label) !== normalize(player.name)) player.nickname = player.name;
         player.name = profile.label;
       }
       if (profile.photo) player.photo = profile.photo;
@@ -265,23 +276,36 @@ for (const [id, clubProfiles] of profiles) {
       name: player.appeared2026 ? player.name : previous?.name ?? player.name,
       registered2026: Boolean(previous?.registered2026 || player.registered2026),
       appeared2026: Boolean(previous?.appeared2026 || player.appeared2026),
+      nickname: player.nickname ?? previous?.nickname,
+      appearanceKeys: [...new Set([...(previous?.appearanceKeys ?? []), ...(player.appearanceKeys ?? [])])],
       number: player.number ?? previous?.number,
       photo: player.photo ?? previous?.photo,
     });
   }
   roster.players = [...mergedPlayers.values()]
-    .map(({ profileKey, teamPath, ...player }) => player)
+    .map((player) => {
+      const publicPlayer = { ...player };
+      delete publicPlayer.profileKey;
+      delete publicPlayer.teamPath;
+      delete publicPlayer.bidName;
+      return publicPlayer;
+    })
     .sort((a, b) =>
       Number(Boolean(b.appeared2026)) - Number(Boolean(a.appeared2026)) ||
       (a.number ?? 999) - (b.number ?? 999) ||
       a.name.localeCompare(b.name, "pt-BR"),
     );
   roster.sheets = [...roster.sheets];
-  const listedNames = new Set(roster.players.filter((player) => player.appeared2026).map((player) => normalize(player.name)));
+  const listedNames = new Set(roster.players.flatMap((player) => player.appearanceKeys ?? []));
   const missingAppearances = [...sheetAppearances[id]].filter((name) => !listedNames.has(name));
   if (missingAppearances.length) {
     throw new Error(`${id}: ${missingAppearances.length} atletas de súmula não foram incluídos`);
   }
+  roster.players = roster.players.map((player) => {
+    const publicPlayer = { ...player };
+    delete publicPlayer.appearanceKeys;
+    return publicPlayer;
+  });
   const photos = roster.players.filter((player) => player.photo).length;
   const appeared = roster.players.filter((player) => player.appeared2026).length;
   const registered = roster.players.filter((player) => player.registered2026).length;
@@ -290,7 +314,7 @@ for (const [id, clubProfiles] of profiles) {
 
 const generated = `// Gerado do BID, das súmulas masculinas de 2026 e dos perfis públicos dos clubes no Sporti.\n` +
 `// Execute \`node scripts/update-club-rosters.mjs\` para atualizar.\n` +
-`export type RosterPlayer = {\n  name: string;\n  number?: number;\n  photo?: string;\n  profile?: string;\n  registered2026?: boolean;\n  appeared2026?: boolean;\n};\n\n` +
+`export type RosterPlayer = {\n  name: string;\n  nickname?: string;\n  number?: number;\n  photo?: string;\n  profile?: string;\n  registered2026?: boolean;\n  appeared2026?: boolean;\n};\n\n` +
 `export type TeamRoster = {\n  source: string;\n  competition: string;\n  bid: string;\n  sheets: string[];\n  players: RosterPlayer[];\n};\n\n` +
 `export const ROSTERS_2026: Record<string, TeamRoster> = ${JSON.stringify(rosters, null, 2)};\n`;
 

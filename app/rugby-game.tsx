@@ -21,6 +21,7 @@ type Team = {
 type Player = {
   id: number;
   name: string;
+  photo?: string;
   side: 0 | 1;
   slot: number;
   x: number;
@@ -145,6 +146,11 @@ const TEAMS: Team[] = [
 ];
 
 const keyState = new Set<string>();
+type CachedPlayerPhoto = {
+  image: HTMLImageElement;
+  status: "loading" | "ready" | "error";
+};
+const playerPhotoCache = new Map<string, CachedPlayerPhoto>();
 
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(max, value));
@@ -183,6 +189,29 @@ function playerInitials(name: string) {
   return `${parts[0]?.[0] ?? "?"}${parts.length > 1 ? parts.at(-1)?.[0] ?? "" : ""}`.toUpperCase();
 }
 
+function playerDisplayName(player: RosterPlayer) {
+  return player.nickname?.trim() || player.name;
+}
+
+function publicAsset(path: string) {
+  return path.replace(/^\/+/, "");
+}
+
+function getPlayerPhoto(source?: string) {
+  if (!source || typeof Image === "undefined") return null;
+  const existing = playerPhotoCache.get(source);
+  if (existing) return existing.status === "ready" ? existing.image : null;
+
+  const image = new Image();
+  const cached: CachedPlayerPhoto = { image, status: "loading" };
+  image.referrerPolicy = "no-referrer";
+  image.onload = () => { cached.status = "ready"; };
+  image.onerror = () => { cached.status = "error"; };
+  image.src = source;
+  playerPhotoCache.set(source, cached);
+  return null;
+}
+
 function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Player[] {
   const lanes = Array.from(
     { length: PLAYERS_PER_SIDE },
@@ -193,7 +222,8 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
       const athlete = homeSquad[slot] ?? { name: `Atleta ${slot + 1}`, number: slot + 1 };
       return {
         id: slot,
-        name: athlete.name,
+        name: playerDisplayName(athlete),
+        photo: athlete.photo,
         side: 0 as const,
         slot,
         x: TRY_LINE + 210 - Math.abs(MID_SLOT - slot) * 14,
@@ -211,7 +241,8 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
       const athlete = awaySquad[slot] ?? { name: `Atleta ${slot + 1}`, number: slot + 1 };
       return {
         id: slot + PLAYERS_PER_SIDE,
-        name: athlete.name,
+        name: playerDisplayName(athlete),
+        photo: athlete.photo,
         side: 1 as const,
         slot,
         x: RIGHT_TRY_LINE - 210 + Math.abs(MID_SLOT - slot) * 14,
@@ -520,10 +551,42 @@ function drawField(
       ctx.fillRect(player.x, player.y - PLAYER_RADIUS, PLAYER_RADIUS, PLAYER_RADIUS);
       ctx.fillRect(player.x - PLAYER_RADIUS, player.y, PLAYER_RADIUS, PLAYER_RADIUS);
     }
+
+    const photo = getPlayerPhoto(player.photo);
+    if (photo) {
+      const sourceSize = Math.min(photo.naturalWidth, photo.naturalHeight);
+      const sourceX = (photo.naturalWidth - sourceSize) / 2;
+      const sourceY = (photo.naturalHeight - sourceSize) / 2;
+      ctx.globalAlpha = player.stun > 0 ? 0.48 : 1;
+      ctx.drawImage(
+        photo,
+        sourceX,
+        sourceY,
+        sourceSize,
+        sourceSize,
+        player.x - PLAYER_RADIUS + 3,
+        player.y - PLAYER_RADIUS + 3,
+        (PLAYER_RADIUS - 3) * 2,
+        (PLAYER_RADIUS - 3) * 2,
+      );
+      ctx.globalAlpha = 1;
+    } else {
+      ctx.fillStyle = player.stun > 0 ? "#d1dbd6" : team.secondary;
+      ctx.font = "950 10px ui-sans-serif, system-ui";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(playerInitials(player.name), player.x, player.y);
+    }
     ctx.restore();
+
     ctx.beginPath();
     ctx.arc(player.x, player.y, PLAYER_RADIUS, 0, Math.PI * 2);
-    ctx.strokeStyle = "rgba(4,14,10,.62)";
+    ctx.strokeStyle = team.primary;
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(player.x, player.y, PLAYER_RADIUS - 2.5, 0, Math.PI * 2);
+    ctx.strokeStyle = team.secondary;
     ctx.lineWidth = 2;
     ctx.stroke();
 
@@ -540,11 +603,18 @@ function drawField(
       ctx.fillText("SWEEPER", player.x, player.y - 34);
     }
 
-    ctx.fillStyle = team.secondary;
-    ctx.font = "900 10px ui-sans-serif, system-ui";
+    ctx.beginPath();
+    ctx.arc(player.x + 12, player.y + 12, 7.5, 0, Math.PI * 2);
+    ctx.fillStyle = team.primary;
+    ctx.fill();
+    ctx.strokeStyle = team.secondary;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "950 8px ui-sans-serif, system-ui";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(String(player.jersey), player.x, player.y + 0.5);
+    ctx.fillText(String(player.jersey), player.x + 12, player.y + 12.5);
   });
 
   const ball = match.ball;
@@ -646,7 +716,7 @@ function TeamBadge({ team, large = false }: { team: Team; large?: boolean }) {
       style={{ "--team-a": team.primary, "--team-b": team.secondary } as React.CSSProperties}
       aria-hidden="true"
     >
-      <img src={team.logo} alt="" loading="lazy" />
+      <img src={publicAsset(team.logo)} alt="" loading="lazy" />
       <small>{team.short}</small>
     </span>
   );
@@ -704,7 +774,12 @@ export function RugbyGame() {
     const query = rosterQuery.trim().toLocaleLowerCase("pt-BR");
     return homeRoster.players
       .map((athlete, index) => ({ athlete, index }))
-      .filter(({ athlete }) => !query || athlete.name.toLocaleLowerCase("pt-BR").includes(query));
+      .filter(({ athlete }) => {
+        if (!query) return true;
+        return [athlete.name, athlete.nickname]
+          .filter(Boolean)
+          .some((name) => name!.toLocaleLowerCase("pt-BR").includes(query));
+      });
   }, [homeRoster, rosterQuery]);
   const homeRosterStats = useMemo(() => ({
     registered: homeRoster.players.filter((athlete) => athlete.registered2026).length,
@@ -763,7 +838,8 @@ export function RugbyGame() {
       if (tiredDefender && tiredDefender.stamina < 26) {
         const replacement = match.bench[1].shift();
         if (replacement) {
-          tiredDefender.name = replacement.name;
+          tiredDefender.name = playerDisplayName(replacement);
+          tiredDefender.photo = replacement.photo;
           tiredDefender.stamina = 100;
           tiredDefender.jersey = replacement.number ?? tiredDefender.jersey;
           match.substitutesLeft[1] = match.bench[1].length;
@@ -1377,7 +1453,7 @@ export function RugbyGame() {
       message: "Drop-kick inicial: seu time chuta",
       stamina: Array(PLAYERS_PER_SIDE).fill(100),
       jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player, slot) => player.number ?? slot + 1),
-      names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.name),
+      names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map(playerDisplayName),
       bench: selectedSquad.slice(PLAYERS_PER_SIDE),
       substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
@@ -1403,7 +1479,7 @@ export function RugbyGame() {
       message: "Revanche: novo drop-kick inicial",
       stamina: Array(PLAYERS_PER_SIDE).fill(100),
       jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player, slot) => player.number ?? slot + 1),
-      names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.name),
+      names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map(playerDisplayName),
       bench: selectedSquad.slice(PLAYERS_PER_SIDE),
       substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
@@ -1491,7 +1567,8 @@ export function RugbyGame() {
       if (!player) return;
       const replacement = match.bench[0].shift();
       if (!replacement) return;
-      player.name = replacement.name;
+      player.name = playerDisplayName(replacement);
+      player.photo = replacement.photo;
       player.stamina = 100;
       player.jersey = replacement.number ?? player.jersey;
       player.stun = 0;
@@ -1543,7 +1620,7 @@ export function RugbyGame() {
     const savedWins = Number(localStorage.getItem("rugby-br-26-wins") ?? "0");
     setBestWins(Number.isFinite(savedWins) ? savedWins : 0);
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").catch(() => undefined);
+      navigator.serviceWorker.register(publicAsset("/sw.js")).catch(() => undefined);
     }
     const onInstall = (event: Event) => {
       event.preventDefault();
@@ -1992,6 +2069,9 @@ export function RugbyGame() {
                       </span>
                       <span>
                         <strong>{athlete.name}</strong>
+                        {athlete.nickname && (
+                          <em className="roster-nickname">“{athlete.nickname}”</em>
+                        )}
                         <small>
                           {athlete.appeared2026
                             ? `${athlete.number ? `#${athlete.number} · ${rosterRole(athlete.number)} · ` : ""}BID + súmula 2026`
@@ -2028,7 +2108,10 @@ export function RugbyGame() {
                 {selectedSquad.map((athlete, slot) => (
                   <div key={`${slot}-${athlete.profile ?? athlete.name}`}>
                     <span>{slot < PLAYERS_PER_SIDE ? `T${slot + 1}` : `R${slot - PLAYERS_PER_SIDE + 1}`}</span>
-                    <strong>{athlete.number ? `#${athlete.number} ` : ""}{athlete.name}</strong>
+                    <strong>
+                      {athlete.number ? `#${athlete.number} ` : ""}{athlete.name}
+                      {athlete.nickname ? ` · “${athlete.nickname}”` : ""}
+                    </strong>
                   </div>
                 ))}
                 {Array.from({ length: Math.max(0, SQUAD_SIZE - selectedSquad.length) }, (_, index) => (
