@@ -17,6 +17,8 @@ controláveis ou simuladas e modo campeonato.
 - amistoso e campanha de campeonato;
 - opção de controlar o time escolhido ou assistir a duas IAs;
 - velocidade de simulação em 1× e 2×;
+- IA tática com circulação de mão em mão até a ponta, fixação do defensor antes
+  do passe, linha defensiva coordenada e parede diante do próprio in-goal;
 - passe lateral/para trás, passe direcionado, chute à frente, drop e block;
 - fadiga, banco de reservas e substituições durante pausas;
 - reinícios por drop-kick, com o time que marcou cobrando o reinício;
@@ -96,6 +98,43 @@ reserva disponível entra naquele slot. São permitidas até cinco substituiçõ
 Na equipe adversária, a IA pode trocar automaticamente o atleta mais cansado em
 um reinício se ele estiver abaixo de 26% de energia. A equipe escolhida permanece
 sob controle do usuário, inclusive no modo espectador.
+
+A velocidade 2× multiplica o tempo total simulado e o divide em passos curtos de
+no máximo 1/60 s. Relógio, deslocamento e fadiga recebem exatamente o mesmo tempo
+de partida; portanto, a aceleração muda a duração real da exibição, mas não reduz
+o consumo de energia para uma mesma corrida.
+
+### IA ofensiva e defensiva
+
+A IA não decide cada passe isoladamente: ela mantém uma jogada ativa durante a
+posse e movimenta portador e apoios para executá-la.
+
+- **Circulação até a ponta:** a IA mede a pressão defensiva nos dois lados,
+  escolhe a borda mais livre, abre os apoios com profundidade para não produzir
+  passe para frente e faz até cinco passes consecutivos para o companheiro
+  imediatamente mais externo. Quando a bola chega ao ponta, ele acelera se o
+  corredor à frente estiver livre.
+- **Fixar e passar:** a IA escolhe um defensor à frente e um apoio no lado com
+  menos pressão. O portador corre para fixar esse defensor; quando chega a até
+  84 unidades, ainda antes da distância de tackle, passa para o apoio lateral.
+- **Linha de drift:** em campo aberto, os seis defensores da primeira linha
+  preservam espaçamento lateral e avançam quase na mesma profundidade. Isso
+  evita o antigo formato em V. O fullback continua profundo enquanto a linha
+  está íntegra e fecha o portador depois de uma quebra.
+- **Parede nos 22 defensivos:** quando o adversário entra a até 22 m da linha de
+  try, os sete defensores se alinham 24 unidades à frente dela, deslizam juntos
+  para o canal da bola e não podem recuar para dentro do próprio in-goal.
+
+Esses comportamentos foram adaptados para a escala arcade a partir da análise
+do [World Rugby Sevens Series masculino de 2020](https://resources.world.rugby/worldrugby/document/2022/11/29/6b90ee2a-c276-4a92-9a52-b6dc04277bdd/2020-World-Rugby-HSBC-Sevens-Series-Men-s-Analysis-Report.pdf),
+que registrou 3,1 passes antes de cada breakdown e destacou Fiji pelo menor uso
+de contato e maior frequência de offloads; da análise da [World Rugby sobre
+jogadas ensaiadas](https://www.world.rugby/news/786724/game-analysis-the-importance-of-the-set-piece-on-scoring-in-sevens),
+que descreve passes e linhas de corrida usados para manipular a defesa; e dos
+estudos de análise notacional sobre [ataque](https://doi.org/10.24776/jcoaching.32.2_189)
+e [defesa](https://doi.org/10.20776/s09138137-900120805), que apontam a eficácia
+de atacar sobreposições e espaços vagos e de priorizar uma linha coesa sem ser
+rompida.
 
 ## Modos de jogo
 
