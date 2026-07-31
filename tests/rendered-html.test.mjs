@@ -51,7 +51,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v8-official-rosters/);
+  assert.match(serviceWorker, /rugby-br-26-v9-complete-rosters/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
   assert.match(gameSource, /const SQUAD_SIZE = 12/);
@@ -64,6 +64,9 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /100 × 70 m/);
   assert.match(gameSource, /screen === "squad"/);
   assert.match(gameSource, /Escolha seus 12/);
+  assert.match(gameSource, /O elenco exibido não tem limite/);
+  assert.match(gameSource, /className="roster-search"/);
+  assert.match(gameSource, /athlete\.photo/);
   assert.match(gameSource, /match\.half === 1/);
   assert.match(gameSource, /match\.halftime = true/);
   assert.match(gameSource, /5 m da linha de try/);
@@ -97,13 +100,17 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(styles, /\.twenty-two-left/);
   assert.match(styles, /\.touch-fifteen-bottom/);
   assert.match(styles, /\.roster-grid/);
+  assert.match(styles, /\.roster-avatar/);
+  assert.match(styles, /\.roster-search/);
   assert.match(styles, /\.squad-summary/);
   assert.match(rosterSource, /ROSTERS_2026/);
   assert.match(rosterSource, /SÚMULA|súmulas/i);
   assert.match(rosterSource, /MARCOS FERNANDO CIVARDI/);
   assert.match(rosterSource, /NICOLAS DE AZEVEDO RIBEIRO/);
   assert.match(rosterSource, /JOSÉ VÍTOR TAVARES DA COSTA BESSA/);
-  assert.equal((rosterSource.match(/: roster\(/g) ?? []).length, 24);
+  assert.equal((rosterSource.match(/"competition":/g) ?? []).length, 24);
+  assert.ok((rosterSource.match(/"name":/g) ?? []).length > 700);
+  assert.ok((rosterSource.match(/"photo":/g) ?? []).length > 500);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));

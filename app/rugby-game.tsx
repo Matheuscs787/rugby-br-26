@@ -165,7 +165,8 @@ function formatClock(seconds: number) {
   return `${Math.floor(safe / 60)}:${String(safe % 60).padStart(2, "0")}`;
 }
 
-function rosterRole(number: number) {
+function rosterRole(number?: number) {
+  if (!number) return "Atleta do elenco";
   if (number <= 3) return "Primeira linha";
   if (number <= 5) return "Segunda linha";
   if (number <= 8) return "Terceira linha";
@@ -175,6 +176,11 @@ function rosterRole(number: number) {
   if (number === 12 || number === 13) return "Centro";
   if (number === 15) return "Fullback";
   return "Reserva no XV";
+}
+
+function playerInitials(name: string) {
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  return `${parts[0]?.[0] ?? "?"}${parts.length > 1 ? parts.at(-1)?.[0] ?? "" : ""}`.toUpperCase();
 }
 
 function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Player[] {
@@ -195,7 +201,7 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
         stun: 0,
         tackleLock: 0,
         stamina: 100,
-        jersey: athlete.number,
+        jersey: athlete.number ?? slot + 1,
         routeX: 0,
         routeY: 0,
         routeTime: 0,
@@ -213,7 +219,7 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
         stun: 0,
         tackleLock: 0,
         stamina: 100,
-        jersey: athlete.number,
+        jersey: athlete.number ?? slot + 1,
         routeX: 0,
         routeY: 0,
         routeTime: 0,
@@ -654,6 +660,7 @@ export function RugbyGame() {
   const [selectedRosterIndexes, setSelectedRosterIndexes] = useState<number[]>(
     Array.from({ length: SQUAD_SIZE }, (_, index) => index),
   );
+  const [rosterQuery, setRosterQuery] = useState("");
   const [soundOn, setSoundOn] = useState(true);
   const [bestWins, setBestWins] = useState(0);
   const [installPrompt, setInstallPrompt] = useState<Event | null>(null);
@@ -693,6 +700,12 @@ export function RugbyGame() {
     () => selectedRosterIndexes.map((index) => homeRoster.players[index]).filter(Boolean),
     [homeRoster, selectedRosterIndexes],
   );
+  const filteredRoster = useMemo(() => {
+    const query = rosterQuery.trim().toLocaleLowerCase("pt-BR");
+    return homeRoster.players
+      .map((athlete, index) => ({ athlete, index }))
+      .filter(({ athlete }) => !query || athlete.name.toLocaleLowerCase("pt-BR").includes(query));
+  }, [homeRoster, rosterQuery]);
   const visibleTeams = useMemo(
     () => TEAMS.filter((team) => divisionFilter === "all" || team.division === divisionFilter),
     [divisionFilter],
@@ -700,6 +713,7 @@ export function RugbyGame() {
 
   useEffect(() => {
     setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
+    setRosterQuery("");
   }, [homeId]);
 
   const beep = useCallback(
@@ -747,7 +761,7 @@ export function RugbyGame() {
         if (replacement) {
           tiredDefender.name = replacement.name;
           tiredDefender.stamina = 100;
-          tiredDefender.jersey = replacement.number;
+          tiredDefender.jersey = replacement.number ?? tiredDefender.jersey;
           match.substitutesLeft[1] = match.bench[1].length;
         }
       }
@@ -1328,6 +1342,7 @@ export function RugbyGame() {
       if (alternative) setAwayId(alternative.id);
     }
     setSelectedRosterIndexes(Array.from({ length: SQUAD_SIZE }, (_, index) => index));
+    setRosterQuery("");
     setScreen("squad");
   }, [awayId, homeId]);
 
@@ -1357,7 +1372,7 @@ export function RugbyGame() {
       over: false,
       message: "Drop-kick inicial: seu time chuta",
       stamina: Array(PLAYERS_PER_SIDE).fill(100),
-      jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.number),
+      jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player, slot) => player.number ?? slot + 1),
       names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.name),
       bench: selectedSquad.slice(PLAYERS_PER_SIDE),
       substitutesLeft: REPLACEMENTS_PER_SIDE,
@@ -1383,7 +1398,7 @@ export function RugbyGame() {
       over: false,
       message: "Revanche: novo drop-kick inicial",
       stamina: Array(PLAYERS_PER_SIDE).fill(100),
-      jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.number),
+      jerseys: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player, slot) => player.number ?? slot + 1),
       names: selectedSquad.slice(0, PLAYERS_PER_SIDE).map((player) => player.name),
       bench: selectedSquad.slice(PLAYERS_PER_SIDE),
       substitutesLeft: REPLACEMENTS_PER_SIDE,
@@ -1474,7 +1489,7 @@ export function RugbyGame() {
       if (!replacement) return;
       player.name = replacement.name;
       player.stamina = 100;
-      player.jersey = replacement.number;
+      player.jersey = replacement.number ?? player.jersey;
       player.stun = 0;
       player.tackleLock = 0;
       player.routeTime = 0;
@@ -1908,7 +1923,8 @@ export function RugbyGame() {
               <h1>Escolha seus 12</h1>
               <p>
                 Os 7 primeiros selecionados começam em campo. Os outros 5 ficam no banco
-                para entrar durante as pausas ou no intervalo.
+                para entrar durante as pausas ou no intervalo. O elenco exibido não tem limite:
+                o máximo de 12 vale somente para a convocação da partida.
               </p>
             </div>
             <TeamBadge team={home} large />
@@ -1918,30 +1934,58 @@ export function RugbyGame() {
             <section className="roster-picker" aria-label={`Elenco masculino de ${home.name}`}>
               <div className="roster-toolbar">
                 <div>
-                  <p className="eyebrow">SÚMULA OFICIAL 2026</p>
+                  <p className="eyebrow">ELENCO ENCONTRADO · SÚMULAS 2026</p>
                   <h2>{homeRoster.players.length} atletas disponíveis</h2>
                 </div>
                 <strong className={selectedSquad.length === SQUAD_SIZE ? "is-complete" : ""}>
                   {selectedSquad.length}/{SQUAD_SIZE}
                 </strong>
               </div>
+              <div className="roster-search">
+                <label htmlFor="roster-search-input">Buscar atleta</label>
+                <div>
+                  <span aria-hidden="true">⌕</span>
+                  <input
+                    id="roster-search-input"
+                    type="search"
+                    value={rosterQuery}
+                    onChange={(event) => setRosterQuery(event.target.value)}
+                    placeholder={`Nome no elenco do ${home.name}`}
+                    autoComplete="off"
+                  />
+                  {rosterQuery && (
+                    <button type="button" onClick={() => setRosterQuery("")} aria-label="Limpar busca">×</button>
+                  )}
+                </div>
+                <small>{filteredRoster.length} de {homeRoster.players.length} atletas exibidos</small>
+              </div>
               <div className="roster-grid">
-                {homeRoster.players.map((athlete, index) => {
+                {filteredRoster.map(({ athlete, index }) => {
                   const selectedPosition = selectedRosterIndexes.indexOf(index);
                   const isSelected = selectedPosition >= 0;
                   return (
                     <button
                       type="button"
                       className={`roster-player ${isSelected ? "is-selected" : ""}`}
-                      key={`${athlete.number}-${athlete.name}`}
+                      key={athlete.profile ?? `${athlete.number}-${athlete.name}-${index}`}
                       onClick={() => toggleRosterPlayer(index)}
                       disabled={!isSelected && selectedSquad.length >= SQUAD_SIZE}
                       aria-pressed={isSelected}
                     >
-                      <span>#{athlete.number}</span>
+                      <span className="roster-avatar" data-initials={playerInitials(athlete.name)}>
+                        {athlete.photo && (
+                          <img
+                            src={athlete.photo}
+                            alt=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                            onError={(event) => { event.currentTarget.style.display = "none"; }}
+                          />
+                        )}
+                      </span>
                       <span>
                         <strong>{athlete.name}</strong>
-                        <small>{rosterRole(athlete.number)}</small>
+                        <small>{athlete.number ? `#${athlete.number} · ${rosterRole(athlete.number)}` : rosterRole()}</small>
                       </span>
                       <i>
                         {selectedPosition < 0
@@ -1953,10 +1997,15 @@ export function RugbyGame() {
                     </button>
                   );
                 })}
+                {filteredRoster.length === 0 && (
+                  <p className="roster-empty">Nenhum atleta encontrado para “{rosterQuery}”.</p>
+                )}
               </div>
               <p className="roster-source">
-                Nomes e números consultados na súmula masculina do Super 12 de 2026 no{" "}
-                <a href={homeRoster.source} target="_blank" rel="noreferrer">Sporti / Brasil Rugby</a>.
+                Lista formada por todos os atletas encontrados nas {homeRoster.sheets.length} súmulas masculinas
+                disputadas pelo clube em 2026. Fotos exibidas somente quando cadastradas no perfil público.{" "}
+                <a href={homeRoster.competition} target="_blank" rel="noreferrer">Campeonato</a>{" · "}
+                <a href={homeRoster.source} target="_blank" rel="noreferrer">Perfil do clube no Sporti</a>.
               </p>
             </section>
 
@@ -1965,9 +2014,9 @@ export function RugbyGame() {
               <h2>7 titulares + 5 reservas</h2>
               <div className="selected-squad">
                 {selectedSquad.map((athlete, slot) => (
-                  <div key={`${slot}-${athlete.number}-${athlete.name}`}>
+                  <div key={`${slot}-${athlete.profile ?? athlete.name}`}>
                     <span>{slot < PLAYERS_PER_SIDE ? `T${slot + 1}` : `R${slot - PLAYERS_PER_SIDE + 1}`}</span>
-                    <strong>#{athlete.number} {athlete.name}</strong>
+                    <strong>{athlete.number ? `#${athlete.number} ` : ""}{athlete.name}</strong>
                   </div>
                 ))}
                 {Array.from({ length: Math.max(0, SQUAD_SIZE - selectedSquad.length) }, (_, index) => (
@@ -2128,12 +2177,12 @@ export function RugbyGame() {
                     <em>{hud.names[slot]}</em>
                     <i><b style={{ width: `${stamina}%` }} /></i>
                     <small>{Math.round(stamina)}%</small>
-                    <strong>{hud.bench[0] ? `Entra #${hud.bench[0].number}` : "Sem reserva"}</strong>
+                    <strong>{hud.bench[0] ? `Entra ${hud.bench[0].number ? `#${hud.bench[0].number}` : hud.bench[0].name}` : "Sem reserva"}</strong>
                   </button>
                 ))}
               </div>
               <p>
-                Próximo do banco: {hud.bench[0] ? `${hud.bench[0].name} (#${hud.bench[0].number})` : "banco utilizado"}.
+                Próximo do banco: {hud.bench[0] ? `${hud.bench[0].name}${hud.bench[0].number ? ` (#${hud.bench[0].number})` : ""}` : "banco utilizado"}.
                 Pause a partida para trocar qualquer atleta cansado.
               </p>
             </section>
