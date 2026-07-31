@@ -17,6 +17,33 @@ const ATTRIBUTE_WEIGHTS = {
   attack: 0.16,
 };
 
+const TEAM_NAMES = {
+  farrapos: "Farrapos",
+  charrua: "Charrua",
+  joaca: "Joaca",
+  desterro: "Desterro",
+  poli: "Poli",
+  "sao-jose": "São José",
+  tornados: "Tornados Indaiatuba",
+  "rio-branco": "Rio Branco",
+  jacarei: "Jacareí",
+  spac: "SPAC",
+  pasteur: "Pasteur",
+  "nova-lima": "Nova Lima",
+  brummers: "Brummers",
+  colonos: "Colonos",
+  "serra-gaucha": "Serra Gaúcha",
+  joinville: "Joinville",
+  "pe-vermelho": "Pé Vermelho",
+  leoes: "Leões de Paraisópolis",
+  urutu: "Urutu",
+  iguanas: "Iguanas SJC",
+  niteroi: "Niterói",
+  rio: "Rio Rugby",
+  carioca: "Carioca",
+  vitoria: "Vitória",
+};
+
 export const POSITION_SKILLS = {
   frontRow: { speed: 54, tackle: 79, pass: 55, kick: 42, stamina: 72, attack: 66 },
   lock: { speed: 58, tackle: 78, pass: 57, kick: 42, stamina: 75, attack: 67 },
@@ -788,6 +815,127 @@ export function comparisonMarkdown(comparison) {
     `## Nomes oficiais sem atleta correspondente no elenco 2026\n\n${unmatched}\n`;
 }
 
+function divisionForRoster(roster) {
+  return /masculino1\/?$/i.test(roster.competition) ? 2 : 1;
+}
+
+export function buildAllTeamsComparison(teamComparisons) {
+  const teams = teamComparisons.map(({ teamId, comparison, division }) => ({
+    teamId,
+    team: TEAM_NAMES[teamId] ?? teamId,
+    division,
+    currentOverall: comparison.summary.currentSquadOverall,
+    candidateOverall: comparison.summary.candidateSquadOverall,
+    change: comparison.summary.candidateSquadOverall - comparison.summary.currentSquadOverall,
+    rosterPlayers: comparison.summary.rosterPlayers,
+    playersWithOfficialEvidence: comparison.summary.playersWithOfficialEvidence,
+    coverage: Math.round(
+      comparison.summary.playersWithOfficialEvidence / comparison.summary.rosterPlayers * 100,
+    ),
+    officialMatchesFound: comparison.sources.officialMatchesFound,
+    officialSheetsProcessed: comparison.sources.officialSheetsProcessed,
+    failedSheets: comparison.sources.failedSheets.length,
+  }));
+
+  const assignRanks = (divisionTeams, overallKey, rankKey) => {
+    let previousOverall = null;
+    let rank = 0;
+    [...divisionTeams]
+      .sort((a, b) => b[overallKey] - a[overallKey] || a.team.localeCompare(b.team, "pt-BR"))
+      .forEach((team, index) => {
+        if (team[overallKey] !== previousOverall) rank = index + 1;
+        team[rankKey] = rank;
+        previousOverall = team[overallKey];
+      });
+  };
+  [1, 2].forEach((division) => {
+    const divisionTeams = teams.filter((team) => team.division === division);
+    assignRanks(divisionTeams, "currentOverall", "currentRank");
+    assignRanks(divisionTeams, "candidateOverall", "candidateRank");
+  });
+
+  teams.forEach((team) => {
+    team.rankChange = team.currentRank - team.candidateRank;
+  });
+  const total = (key) => teams.reduce((sum, team) => sum + team[key], 0);
+  const uniqueOfficialMatches = new Set(
+    teamComparisons.flatMap((entry) => entry.matchIds ?? []),
+  ).size;
+  return {
+    generatedAt: new Date().toISOString(),
+    productionRatingsChanged: false,
+    model: "candidate-v2-official-history",
+    summary: {
+      teams: teams.length,
+      rosterPlayers: total("rosterPlayers"),
+      playersWithOfficialEvidence: total("playersWithOfficialEvidence"),
+      averageCoverage: Math.round(total("coverage") / teams.length),
+      currentAverageOverall: Number((total("currentOverall") / teams.length).toFixed(1)),
+      candidateAverageOverall: Number((total("candidateOverall") / teams.length).toFixed(1)),
+      uniqueOfficialMatches,
+      officialMatchRelations: total("officialMatchesFound"),
+      officialSheetsProcessed: total("officialSheetsProcessed"),
+      failedSheets: total("failedSheets"),
+    },
+    teams: teams.sort((a, b) =>
+      a.division - b.division ||
+      a.candidateRank - b.candidateRank ||
+      a.team.localeCompare(b.team, "pt-BR"),
+    ),
+  };
+}
+
+export function allTeamsCsv(aggregate) {
+  const header = [
+    "divisao", "time", "ovr_atual", "ovr_candidato", "diferenca",
+    "ranking_atual", "ranking_candidato", "mudanca_ranking", "atletas_elenco",
+    "atletas_com_evidencia", "cobertura_pct", "partidas_oficiais", "sumulas_processadas",
+    "sumulas_com_falha",
+  ];
+  const rows = aggregate.teams.map((team) => [
+    team.division,
+    team.team,
+    team.currentOverall,
+    team.candidateOverall,
+    team.change,
+    team.currentRank,
+    team.candidateRank,
+    team.rankChange,
+    team.rosterPlayers,
+    team.playersWithOfficialEvidence,
+    team.coverage,
+    team.officialMatchesFound,
+    team.officialSheetsProcessed,
+    team.failedSheets,
+  ]);
+  return [header, ...rows].map((row) => row.map(escapeCsv).join(",")).join("\n") + "\n";
+}
+
+export function allTeamsMarkdown(aggregate) {
+  const divisions = [1, 2].map((division) => {
+    const rows = aggregate.teams.filter((team) => team.division === division);
+    return `## ${division}ª divisão\n\n` +
+      `| Rank novo | Time | OVR atual | OVR candidato | Dif. | Rank atual | Cobertura | Súmulas |\n` +
+      `| ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: |\n` +
+      rows.map((team) =>
+        `| ${team.candidateRank} | ${team.team} | ${team.currentOverall} | ${team.candidateOverall} | ${signed(team.change)} | ${team.currentRank} | ${team.playersWithOfficialEvidence}/${team.rosterPlayers} (${team.coverage}%) | ${team.officialSheetsProcessed} |`,
+      ).join("\n");
+  }).join("\n\n");
+  return `# Comparativo de OVR dos clubes\n\n` +
+    `Gerado em ${aggregate.generatedAt}. A fórmula candidata foi executada somente para análise: **os ratings do jogo não foram alterados**.\n\n` +
+    `## Cobertura geral\n\n` +
+    `- ${aggregate.summary.teams} clubes e ${aggregate.summary.rosterPlayers} atletas analisados;\n` +
+    `- ${aggregate.summary.playersWithOfficialEvidence} atletas com participação oficial ponderada;\n` +
+    `- cobertura média dos elencos: ${aggregate.summary.averageCoverage}%;\n` +
+    `- ${aggregate.summary.uniqueOfficialMatches} partidas oficiais adultas únicas; elas geraram ${aggregate.summary.officialMatchRelations} relações clube-partida processadas;\n` +
+    `- OVR médio dos clubes: ${aggregate.summary.currentAverageOverall} atual e ${aggregate.summary.candidateAverageOverall} candidato;\n` +
+    `- súmulas com falha: ${aggregate.summary.failedSheets}.\n\n` +
+    `${divisions}\n\n` +
+    `## Como ler\n\n` +
+    `O OVR de cada clube é a média arredondada dos 12 atletas mais bem avaliados. ` +
+    `O ranking é calculado dentro da divisão. Cobertura baixa não significa elenco fraco: indica apenas que há menos participação oficial conciliada com o elenco atual.\n`;
+}
+
 function parseArguments(argv) {
   const options = {
     teamId: "pe-vermelho",
@@ -796,12 +944,14 @@ function parseArguments(argv) {
     cacheDir: resolve(PROJECT_ROOT, "work/ratings-cache"),
     offline: false,
     refresh: false,
+    all: false,
   };
   for (let index = 0; index < argv.length; index += 1) {
     const argument = argv[index];
     const [key, inlineValue] = argument.split("=", 2);
     const value = inlineValue ?? argv[index + 1];
     if (key === "--team") { options.teamId = value; if (!inlineValue) index += 1; }
+    else if (key === "--all") options.all = true;
     else if (key === "--years") {
       options.years = value.split(",").map(Number).filter(Number.isFinite);
       if (!inlineValue) index += 1;
@@ -816,7 +966,7 @@ function parseArguments(argv) {
 }
 
 function usage() {
-  return `Uso:\n  npm run ratings:compare -- --team pe-vermelho [--years 2024,2025,2026] [--refresh]\n\n` +
+  return `Uso:\n  npm run ratings:compare -- --team pe-vermelho [--years 2024,2025,2026] [--refresh]\n  npm run ratings:compare -- --all [--years 2024,2025,2026] [--refresh]\n\n` +
     `Saídas: JSON, CSV e Markdown. O gerador nunca reescreve app/rosters.ts.\n`;
 }
 
@@ -825,7 +975,7 @@ export async function runComparison(options) {
   const roster = rosters[options.teamId];
   if (!roster) throw new Error(`Clube não encontrado: ${options.teamId}`);
   const teamSlug = new URL(roster.source).pathname.split("/").filter(Boolean).at(-1);
-  const division = /masculino1\/?$/i.test(roster.competition) ? 2 : 1;
+  const division = divisionForRoster(roster);
   const history = await collectOfficialHistory({
     teamSlug,
     years: options.years,
@@ -844,12 +994,49 @@ export async function runComparison(options) {
   return { comparison, files: [`${base}.md`, `${base}.csv`, `${base}.json`] };
 }
 
+export async function runAllComparisons(options) {
+  const rosters = await loadRosters();
+  const teamComparisons = await mapPool(Object.entries(rosters), 3, async ([teamId, roster]) => {
+    const teamSlug = new URL(roster.source).pathname.split("/").filter(Boolean).at(-1);
+    const division = divisionForRoster(roster);
+    const history = await collectOfficialHistory({
+      teamSlug,
+      years: options.years,
+      cacheDir: options.cacheDir,
+      offline: options.offline,
+      refresh: options.refresh,
+    });
+    return {
+      teamId,
+      division,
+      matchIds: history.matches.map((match) => String(match.ID)),
+      comparison: buildComparison({ teamId, roster, division, history }),
+    };
+  });
+  const aggregate = buildAllTeamsComparison(teamComparisons);
+  await mkdir(options.outputDir, { recursive: true });
+  const base = resolve(options.outputDir, "ratings-all-teams");
+  await Promise.all([
+    writeFile(`${base}.json`, JSON.stringify(aggregate, null, 2) + "\n"),
+    writeFile(`${base}.csv`, allTeamsCsv(aggregate)),
+    writeFile(`${base}.md`, allTeamsMarkdown(aggregate)),
+  ]);
+  return { aggregate, files: [`${base}.md`, `${base}.csv`, `${base}.json`] };
+}
+
 const isMain = process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url;
 if (isMain) {
   try {
     const options = parseArguments(process.argv.slice(2));
     if (options.help) {
       process.stdout.write(usage());
+    } else if (options.all) {
+      const result = await runAllComparisons(options);
+      process.stdout.write(
+        `Comparativo concluído: ${result.aggregate.summary.teams} clubes, ` +
+        `${result.aggregate.summary.uniqueOfficialMatches} partidas oficiais únicas.\n` +
+        result.files.map((file) => `${basename(file)}\n`).join(""),
+      );
     } else {
       const result = await runComparison(options);
       process.stdout.write(

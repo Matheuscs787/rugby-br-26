@@ -3,6 +3,8 @@ import test from "node:test";
 
 import {
   analyzeOfficialMatch,
+  allTeamsMarkdown,
+  buildAllTeamsComparison,
   calculateCandidateRating,
   createEmptyEvidence,
   createPlayerMatcher,
@@ -91,4 +93,38 @@ test("participação e eventos oficiais aumentam a nota com limite", () => {
   assert.ok(experienced.overall > provisional.overall);
   assert.equal(experienced.confidenceLabel, "alta");
   assert.ok(Object.values(experienced.skills).every((value) => value >= 40 && value <= 95));
+});
+
+test("consolida e reordena os OVRs dos clubes dentro de cada divisão", () => {
+  const entry = (teamId, division, current, candidate, evidence = 10) => ({
+    teamId,
+    division,
+    comparison: {
+      summary: {
+        currentSquadOverall: current,
+        candidateSquadOverall: candidate,
+        rosterPlayers: 20,
+        playersWithOfficialEvidence: evidence,
+      },
+      sources: {
+        officialMatchesFound: 4,
+        officialSheetsProcessed: 4,
+        failedSheets: [],
+      },
+    },
+  });
+  const aggregate = buildAllTeamsComparison([
+    entry("farrapos", 1, 80, 72),
+    entry("charrua", 1, 75, 74),
+    entry("spac", 1, 75, 74),
+    entry("pe-vermelho", 2, 78, 72),
+  ]);
+  const charrua = aggregate.teams.find((team) => team.teamId === "charrua");
+
+  assert.equal(charrua?.currentRank, 2);
+  assert.equal(charrua?.candidateRank, 1);
+  assert.equal(charrua?.rankChange, 1);
+  assert.equal(aggregate.teams.find((team) => team.teamId === "spac")?.candidateRank, 1);
+  assert.match(allTeamsMarkdown(aggregate), /Pé Vermelho/);
+  assert.equal(aggregate.productionRatingsChanged, false);
 });

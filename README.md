@@ -166,6 +166,15 @@ três arquivos em `outputs/`: um relatório legível em Markdown, uma planilha C
 e os dados completos em JSON. Depois da primeira coleta, `--offline` permite
 repetir a análise usando somente o cache local; `--refresh` renova esse cache.
 
+Para comparar o OVR dos 24 clubes antes de aplicar a fórmula, use:
+
+```bash
+npm run ratings:compare -- --all --years 2024,2025,2026 --refresh
+```
+
+Esse modo gera `ratings-all-teams.md`, `.csv` e `.json`, com OVR e ranking atual
+e candidato, cobertura oficial por elenco e quantidade de súmulas processadas.
+
 O modelo candidato usa critérios mais conservadores para reservas e separa a
 posição do nível geral do atleta:
 
