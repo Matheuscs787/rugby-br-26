@@ -56,7 +56,8 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v22-match-audio/);
+  assert.match(serviceWorker, /rugby-br-26-v23-referee-whistle/);
+  assert.match(serviceWorker, /audio\/referee-whistle\.mp3/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
   assert.match(gameSource, /const HALF_SECONDS = 60/);
@@ -89,8 +90,13 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /Sound is optional and must never prevent a match from starting/);
   assert.match(gameSource, /ensureAudioContext/);
   assert.match(gameSource, /audioPrimedRef/);
+  assert.match(gameSource, /whistleBufferRef/);
+  assert.match(gameSource, /decodeAudioData/);
+  assert.match(gameSource, /\/audio\/referee-whistle\.mp3/);
   assert.match(gameSource, /playWhistle/);
   assert.match(gameSource, /playCrowdCelebration/);
+  assert.doesNotMatch(gameSource, /beep\(480, 0\.06\)/);
+  assert.doesNotMatch(gameSource, /beep\(680, 0\.08\)/);
   assert.match(gameSource, /onClick=\{toggleSound\}/);
   assert.match(gameSource, /const beginDropAim/);
   assert.match(gameSource, /const finishDropAim/);
@@ -207,10 +213,12 @@ test("ships lightweight PWA and game assets", async () => {
   assert.doesNotMatch(readme, /chatgpt\.site/i);
   assert.match(readme, /## Como os atributos afetam a partida/);
   assert.match(readme, /## Regras e simplificações do protótipo/);
+  assert.match(readme, /Creative Commons CC0/);
 
   await access(new URL("../public/icon-192.png", import.meta.url));
   await access(new URL("../public/icon-512.png", import.meta.url));
   await access(new URL("../public/og.png", import.meta.url));
+  await access(new URL("../public/audio/referee-whistle.mp3", import.meta.url));
   const clubLogos = await readdir(new URL("../public/clubs", import.meta.url));
   assert.equal(clubLogos.length, 24);
   await assert.rejects(access(new URL("../app/_sites-preview/SkeletonPreview.tsx", import.meta.url)));

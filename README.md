@@ -41,8 +41,8 @@ controláveis ou simuladas e modo campeonato.
 - nomes, apelidos, fotos e estatísticas quando disponíveis nas fontes públicas;
 - escalação automática dos 12 maiores overalls, que pode ser alterada pelo usuário;
 - PWA instalável, funcionamento offline básico e layout adaptado para celular;
-- áudio procedural leve, com apito no início/reinícios, efeitos das ações e
-  torcida comemorando tries e drop goals, sem baixar arquivos grandes de som;
+- áudio leve, com uma amostra real de apito no início/reinícios, efeitos das
+  ações importantes e torcida comemorando tries e drop goals;
 - publicação estática compatível com GitHub Pages.
 
 ## Como jogar
@@ -91,12 +91,22 @@ O áudio começa ligado. No primeiro toque, clique ou tecla, o jogo desbloqueia 
 ou `Som off` alterna o áudio; ao reativar, um sinal curto confirma imediatamente
 que o navegador liberou a saída.
 
-- o drop-kick de início e cada reinício recebem um apito duplo;
+- o drop-kick de início e cada reinício recebem um sopro curto de apito real de
+  árbitro;
 - tries e drop goals recebem uma comemoração de torcida com aproximadamente
   2,35 segundos;
-- passes, tackles, chutes e rucks mantêm efeitos curtos de resposta;
-- todos os sons são sintetizados no navegador, preservando o tamanho reduzido
-  e o funcionamento offline do jogo.
+- tackles, chutes, drops e rucks mantêm efeitos curtos de resposta;
+- passes e substituições são silenciosos para não poluir a partida com sons a
+  cada ação ou clique;
+- o apito ocupa aproximadamente 10 KB; torcida e demais efeitos continuam sendo
+  sintetizados no navegador. Todos os sons funcionam offline depois que o jogo
+  é instalado ou carregado uma vez.
+
+A amostra `public/audio/referee-whistle.mp3` foi adaptada de
+[“Referee whistle blow, gymnasium.wav”, de SpliceSound](https://freesound.org/people/SpliceSound/sounds/218318/),
+publicada em [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+O arquivo foi convertido para mono, recortado no primeiro sopro e comprimido
+para manter o jogo leve.
 
 ### Celular e tablet
 

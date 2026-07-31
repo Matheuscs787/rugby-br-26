@@ -1183,6 +1183,8 @@ export function RugbyGame() {
   const gestureRef = useRef({ active: false, x: 0, y: 0 });
   const audioRef = useRef<AudioContext | null>(null);
   const audioPrimedRef = useRef(false);
+  const whistleBufferRef = useRef<AudioBuffer | null>(null);
+  const whistleLoadRef = useRef<Promise<AudioBuffer | null> | null>(null);
   const soundOnRef = useRef(true);
   const controlModeRef = useRef<ControlMode>("control");
   const simulationSpeedRef = useRef<1 | 2>(1);
@@ -1290,9 +1292,33 @@ export function RugbyGame() {
     }
   }, []);
 
+  const loadWhistle = useCallback((audio: AudioContext) => {
+    if (whistleBufferRef.current) return Promise.resolve(whistleBufferRef.current);
+    if (whistleLoadRef.current) return whistleLoadRef.current;
+
+    const request = fetch(publicAsset("/audio/referee-whistle.mp3"))
+      .then((response) => {
+        if (!response.ok) throw new Error("Whistle audio unavailable");
+        return response.arrayBuffer();
+      })
+      .then((encodedAudio) => audio.decodeAudioData(encodedAudio))
+      .then((buffer) => {
+        whistleBufferRef.current = buffer;
+        return buffer;
+      })
+      .catch(() => null)
+      .finally(() => {
+        whistleLoadRef.current = null;
+      });
+    whistleLoadRef.current = request;
+    return request;
+  }, []);
+
   useEffect(() => {
     const unlock = () => {
-      if (soundOnRef.current) ensureAudioContext();
+      if (!soundOnRef.current) return;
+      const audio = ensureAudioContext();
+      if (audio) void loadWhistle(audio);
     };
     window.addEventListener("pointerdown", unlock, { passive: true });
     window.addEventListener("keydown", unlock);
@@ -1300,7 +1326,7 @@ export function RugbyGame() {
       window.removeEventListener("pointerdown", unlock);
       window.removeEventListener("keydown", unlock);
     };
-  }, [ensureAudioContext]);
+  }, [ensureAudioContext, loadWhistle]);
 
   const beep = useCallback(
     (frequency: number, duration = 0.08) => {
@@ -1327,43 +1353,26 @@ export function RugbyGame() {
   const playWhistle = useCallback(() => {
     const audio = ensureAudioContext();
     if (!audio) return;
-    const scheduleBurst = (offset: number, duration: number, frequency: number) => {
-      const start = audio.currentTime + offset;
-      const gain = audio.createGain();
-      const primary = audio.createOscillator();
-      const overtone = audio.createOscillator();
-      const vibrato = audio.createOscillator();
-      const vibratoDepth = audio.createGain();
-      primary.type = "sine";
-      overtone.type = "triangle";
-      primary.frequency.setValueAtTime(frequency * 0.92, start);
-      primary.frequency.exponentialRampToValueAtTime(frequency, start + 0.045);
-      overtone.frequency.setValueAtTime(frequency * 1.52, start);
-      vibrato.frequency.setValueAtTime(23, start);
-      vibratoDepth.gain.setValueAtTime(34, start);
-      vibrato.connect(vibratoDepth);
-      vibratoDepth.connect(primary.detune);
-      gain.gain.setValueAtTime(0.001, start);
-      gain.gain.exponentialRampToValueAtTime(0.16, start + 0.018);
-      gain.gain.setValueAtTime(0.13, start + duration * 0.72);
-      gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
-      primary.connect(gain);
-      overtone.connect(gain);
-      gain.connect(audio.destination);
-      primary.start(start);
-      overtone.start(start);
-      vibrato.start(start);
-      primary.stop(start + duration);
-      overtone.stop(start + duration);
-      vibrato.stop(start + duration);
+    const playBuffer = (buffer: AudioBuffer | null) => {
+      if (!buffer || !soundOnRef.current) return;
+      try {
+        const source = audio.createBufferSource();
+        const gain = audio.createGain();
+        source.buffer = buffer;
+        gain.gain.setValueAtTime(0.52, audio.currentTime);
+        source.connect(gain);
+        gain.connect(audio.destination);
+        source.start();
+      } catch {
+        // Audio effects must never interrupt the match loop.
+      }
     };
-    try {
-      scheduleBurst(0.01, 0.2, 2380);
-      scheduleBurst(0.25, 0.28, 2550);
-    } catch {
-      // Audio effects must never interrupt the match loop.
+    if (whistleBufferRef.current) {
+      playBuffer(whistleBufferRef.current);
+    } else {
+      void loadWhistle(audio).then(playBuffer);
     }
-  }, [ensureAudioContext]);
+  }, [ensureAudioContext, loadWhistle]);
 
   const playCrowdCelebration = useCallback(() => {
     const audio = ensureAudioContext();
@@ -1408,12 +1417,13 @@ export function RugbyGame() {
     soundOnRef.current = next;
     setSoundOn(next);
     if (next) {
-      ensureAudioContext(true);
+      const audio = ensureAudioContext(true);
+      if (audio) void loadWhistle(audio);
       window.setTimeout(() => beep(720, 0.11), 0);
     } else if (audioRef.current?.state === "running") {
       void audioRef.current.suspend().catch(() => undefined);
     }
-  }, [beep, ensureAudioContext]);
+  }, [beep, ensureAudioContext, loadWhistle]);
 
   const setMessage = useCallback((match: Match, message: string, duration = 1.1) => {
     match.message = message;
@@ -1524,10 +1534,9 @@ export function RugbyGame() {
       if (side === 0) {
         setMessage(match, completed ? `Passe para o ${target.slot + 1}` : "Passe impreciso — bola viva!");
         haptic();
-        beep(480, 0.06);
       }
     },
-    [beep, setMessage],
+    [setMessage],
   );
 
   const beginDropAim = useCallback(() => {
@@ -2709,9 +2718,8 @@ export function RugbyGame() {
           substitutesLeft: match.substitutesLeft[0],
         };
       });
-      beep(680, 0.08);
     },
-    [beep, setMessage],
+    [setMessage],
   );
 
   useEffect(() => {
