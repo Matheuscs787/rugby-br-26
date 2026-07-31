@@ -3064,7 +3064,7 @@ export function RugbyGame() {
                   {campaign && (
                     <button className="saved-campaign" type="button" onClick={resumeCampaign}>
                       <TeamBadge team={teamById(campaign.teamId)} />
-                      <span><small>CAMPANHA SALVA</small><strong>Continuar com {teamById(campaign.teamId).name}</strong></span>
+                      <span className="saved-campaign-copy"><small>CAMPANHA SALVA</small><strong>Continuar com {teamById(campaign.teamId).name}</strong></span>
                       <i>→</i>
                     </button>
                   )}

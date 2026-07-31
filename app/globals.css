@@ -525,10 +525,16 @@ select:focus-visible {
   width: 100%;
 }
 
-.saved-campaign > span {
+.saved-campaign-copy {
   display: flex;
   flex: 1;
   flex-direction: column;
+}
+
+.saved-campaign > .team-badge {
+  flex: 0 0 42px;
+  height: 42px;
+  width: 42px;
 }
 
 .saved-campaign small {

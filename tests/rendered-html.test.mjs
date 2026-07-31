@@ -56,7 +56,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v25-whistle-crowd-only/);
+  assert.match(serviceWorker, /rugby-br-26-v26-saved-campaign-badge/);
   assert.match(serviceWorker, /audio\/referee-whistle\.mp3/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
@@ -141,6 +141,7 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /recordCampaignMatch/);
   assert.match(gameSource, /Assistir duas IAs/);
   assert.match(gameSource, /CAMPAIGN_STORAGE_KEY/);
+  assert.match(gameSource, /className="saved-campaign-copy"/);
   assert.match(gameSource, /bestSquadIndexes/);
   assert.match(gameSource, /squadOverall/);
   assert.match(gameSource, /OVR DO TIME/);
@@ -186,6 +187,8 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(styles, /\.ratings-method/);
   assert.match(styles, /\.roster-search/);
   assert.match(styles, /\.squad-summary/);
+  assert.match(styles, /\.saved-campaign > \.team-badge/);
+  assert.match(styles, /flex: 0 0 42px/);
   assert.match(rosterSource, /ROSTERS_2026/);
   assert.match(rosterSource, /SÚMULA|súmulas/i);
   assert.match(rosterSource, /MARCOS FERNANDO CIVARDI/);
