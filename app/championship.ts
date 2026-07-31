@@ -12,6 +12,33 @@ export type ChampionshipFixture = {
   awayId: string;
 };
 
+export type PlayerMatchStatistics = {
+  playerId: string;
+  teamId: string;
+  name: string;
+  jersey: number;
+  photo?: string;
+  started: boolean;
+  tackles: number;
+  tries: number;
+  metresCarried: number;
+  enteredAt: number;
+  exitedAt?: number;
+};
+
+export type SubstitutionStatistics = {
+  teamId: string;
+  outgoingName: string;
+  incomingName: string;
+  elapsedSeconds: number;
+  half: 1 | 2;
+};
+
+export type MatchStatistics = {
+  players: PlayerMatchStatistics[];
+  substitutions: SubstitutionStatistics[];
+};
+
 export type ChampionshipResult = {
   fixtureId: string;
   phase: ChampionshipPhase;
@@ -21,6 +48,7 @@ export type ChampionshipResult = {
   awayScore: number;
   homeTries: number;
   awayTries: number;
+  statistics?: MatchStatistics;
 };
 
 export type CampaignStatus =

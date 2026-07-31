@@ -1,4 +1,4 @@
-const CACHE = "rugby-br-26-v26-saved-campaign-badge";
+const CACHE = "rugby-br-26-v27-match-statistics";
 const SCOPE_URL = new URL("./", self.registration.scope).toString();
 const CORE = ["./", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./audio/referee-whistle.mp3"].map(
   (path) => new URL(path, self.registration.scope).toString(),

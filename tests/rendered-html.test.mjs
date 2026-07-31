@@ -56,7 +56,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v26-saved-campaign-badge/);
+  assert.match(serviceWorker, /rugby-br-26-v27-match-statistics/);
   assert.match(serviceWorker, /audio\/referee-whistle\.mp3/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
@@ -111,6 +111,16 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /const kickBall/);
   assert.match(gameSource, /flightDuration/);
   assert.match(gameSource, /const substitutePlayer/);
+  assert.match(gameSource, /type CampaignStatisticsSummary/);
+  assert.match(gameSource, /function replacePlayer/);
+  assert.match(gameSource, /recordPlayerStat\(match, tackler, "tackles"\)/);
+  assert.match(gameSource, /recordPlayerStat\(match, newCarrier, "tries"\)/);
+  assert.match(gameSource, /recordCarriedMetres/);
+  assert.match(gameSource, /function MatchStatisticsPanel/);
+  assert.match(gameSource, /function CampaignStatisticsPage/);
+  assert.match(gameSource, /screen === "campaign-stats"/);
+  assert.match(gameSource, /statistics: snapshotMatchStatistics\(match\)/);
+  assert.match(gameSource, /Momento das trocas/);
   assert.match(gameSource, /SWEEPER_SLOT/);
   assert.match(gameSource, /arrangeRestart/);
   assert.match(gameSource, /fullbackSide/);
@@ -170,6 +180,8 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(championshipSource, /hexagonal/);
   assert.match(championshipSource, /repechage/);
   assert.match(championshipSource, /OFFICIAL_RESULTS_2026/);
+  assert.match(championshipSource, /export type PlayerMatchStatistics/);
+  assert.match(championshipSource, /statistics\?: MatchStatistics/);
   assert.match(championshipSource, /homeId: "leoes", awayId: "pe-vermelho", homeScore: 48, awayScore: 50/);
   assert.match(championshipSource, /homeId: "urutu", awayId: "pe-vermelho", homeScore: 19, awayScore: 49/);
   assert.equal((championshipSource.match(/^  \[[12], "[ABC]",/gm) ?? []).length, 54);
@@ -189,6 +201,9 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(styles, /\.squad-summary/);
   assert.match(styles, /\.saved-campaign > \.team-badge/);
   assert.match(styles, /flex: 0 0 42px/);
+  assert.match(styles, /\.match-statistics-panel/);
+  assert.match(styles, /\.campaign-stat-summary/);
+  assert.match(styles, /\.substitution-timeline/);
   assert.match(rosterSource, /ROSTERS_2026/);
   assert.match(rosterSource, /SÚMULA|súmulas/i);
   assert.match(rosterSource, /MARCOS FERNANDO CIVARDI/);
@@ -223,6 +238,7 @@ test("ships lightweight PWA and game assets", async () => {
   assert.doesNotMatch(readme, /chatgpt\.site/i);
   assert.match(readme, /## Como os atributos afetam a partida/);
   assert.match(readme, /## Regras e simplificações do protótipo/);
+  assert.match(readme, /relatório pós-jogo com tackles, tries e metros carregados/);
   assert.match(readme, /Creative Commons CC0/);
 
   await access(new URL("../public/icon-192.png", import.meta.url));

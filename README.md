@@ -21,6 +21,8 @@ controláveis ou simuladas e modo campeonato.
   do passe, linha defensiva coordenada e parede diante do próprio in-goal;
 - passe lateral/para trás, passe direcionado, chute à frente, drop e block;
 - fadiga, banco de reservas e substituições durante pausas;
+- relatório pós-jogo com tackles, tries e metros carregados por atleta, além do
+  instante de cada substituição;
 - reinícios por drop-kick, com o time que marcou cobrando o reinício;
 - troca real de campo no intervalo: direção de corrida, passes, chutes, drops,
   linha de try e posicionamento acompanham os lados do segundo tempo;
@@ -124,6 +126,15 @@ Na equipe adversária, a IA pode trocar automaticamente o atleta mais cansado em
 um reinício se ele estiver abaixo de 26% de energia. A equipe escolhida permanece
 sob controle do usuário, inclusive no modo espectador.
 
+Cada troca registra quem saiu, quem entrou e o momento no formato `1ºT · 0:42`
+ou `2ºT · 0:17`. Ao fim da partida, o relatório separa os números dos dois times
+e mantém titulares e reservas em linhas próprias.
+
+Um tackle entra na estatística somente quando derruba o portador e leva à
+disputa do ruck; tentativas quebradas não contam. `Metros` representa a distância
+percorrida pelo atleta enquanto carregava a bola, convertida pela escala oficial
+do campo, e não todo o deslocamento ofensivo ou defensivo sem posse.
+
 A velocidade 2× multiplica o tempo total simulado e o divide em passos curtos de
 no máximo 1/60 s. Relógio, deslocamento e fadiga recebem exatamente o mesmo tempo
 de partida; portanto, a aceleração muda a duração real da exibição, mas não reduz
@@ -188,6 +199,10 @@ O progresso é salvo em `localStorage` no próprio navegador.
 - Classificação: 4 pontos por vitória, 2 por empate, 1 bônus por quatro tries e
   1 bônus por derrota de até 7 pontos.
 - Desempates: pontos de tabela, saldo, tries, pontos marcados e id do clube.
+- Estatísticas: a página `Ver estatísticas` agrega jogos, vitórias, pontos,
+  tries, tackles e metros, além da produção de cada atleta. Tackles, metros e
+  substituições são persistidos a partir das novas partidas; campanhas antigas
+  continuam válidas e passam a acumular esses detalhes nos jogos seguintes.
 
 Na tela do confronto aparecem o OVR-base das equipes e a campanha oficial já
 observada em 2026. Na partida jogável, a IA usa os atletas convocados e um ajuste
@@ -510,6 +525,8 @@ adaptados a formações de sete atletas no protótipo.
 - **CSS:** interface responsiva e controles móveis, sem biblioteca visual pesada;
 - **Service Worker + Web App Manifest:** instalação como PWA e cache básico;
 - **localStorage:** campanha e recorde local, sem conta e sem servidor de dados.
+  As estatísticas detalhadas das partidas da campanha acompanham o mesmo save
+  somente neste aparelho.
 
 Arquivos principais:
 

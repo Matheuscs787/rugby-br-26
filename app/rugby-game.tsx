@@ -9,8 +9,11 @@ import {
   createRoundRobinFixtures,
   type ChampionshipCampaign,
   type ChampionshipFixture,
+  type MatchStatistics,
+  type PlayerMatchStatistics,
   type ChampionshipPhase,
   type ChampionshipResult,
+  type SubstitutionStatistics,
 } from "./championship";
 
 type Division = 1 | 2;
@@ -44,6 +47,7 @@ type Player = {
   routeX: number;
   routeY: number;
   routeTime: number;
+  statId: string;
 };
 
 type Ball = {
@@ -71,6 +75,9 @@ type AttackPlay = {
 type Match = {
   players: Player[];
   bench: [RosterPlayer[], RosterPlayer[]];
+  teamIds: [string, string];
+  playerStats: PlayerMatchStatistics[];
+  substitutions: SubstitutionStatistics[];
   ball: Ball;
   score: [number, number];
   tries: [number, number];
@@ -110,6 +117,26 @@ type Standing = {
   pointsAgainst: number;
   tries: number;
   tablePoints: number;
+};
+
+type AggregatedPlayerStatistics = PlayerMatchStatistics & {
+  appearances: number;
+  starts: number;
+};
+
+type CampaignStatisticsSummary = {
+  played: number;
+  wins: number;
+  draws: number;
+  losses: number;
+  pointsFor: number;
+  pointsAgainst: number;
+  tries: number;
+  tackles: number;
+  metresCarried: number;
+  detailedMatches: number;
+  players: AggregatedPlayerStatistics[];
+  substitutions: SubstitutionStatistics[];
 };
 
 type Hud = {
@@ -581,7 +608,16 @@ function getPlayerPhoto(source?: string) {
   return null;
 }
 
-function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Player[] {
+function matchPlayerId(teamId: string, athlete: RosterPlayer | undefined, slot: number) {
+  return `${teamId}:${athlete?.profile ?? athlete?.name ?? `slot-${slot}`}`;
+}
+
+function makePlayers(
+  homeSquad: RosterPlayer[],
+  awaySquad: RosterPlayer[],
+  homeTeamId: string,
+  awayTeamId: string,
+): Player[] {
   const lanes = Array.from(
     { length: PLAYERS_PER_SIDE },
     (_, slot) => 80 + slot * ((FIELD_H - 160) / (PLAYERS_PER_SIDE - 1)),
@@ -605,6 +641,7 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
         routeX: 0,
         routeY: 0,
         routeTime: 0,
+        statId: matchPlayerId(homeTeamId, athlete, slot),
       };
     }),
     ...lanes.map((y, slot) => {
@@ -625,6 +662,7 @@ function makePlayers(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[]): Play
         routeX: 0,
         routeY: 0,
         routeTime: 0,
+        statId: matchPlayerId(awayTeamId, athlete, slot),
       };
     }),
   ];
@@ -652,10 +690,25 @@ function arrangeRestart(match: Match, kickingSide: 0 | 1) {
 }
 
 function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[], homeTeamId: string, awayTeamId: string): Match {
-  const players = makePlayers(homeSquad, awaySquad);
+  const players = makePlayers(homeSquad, awaySquad, homeTeamId, awayTeamId);
+  const teamIds: [string, string] = [homeTeamId, awayTeamId];
   const match: Match = {
     players,
     bench: [homeSquad.slice(PLAYERS_PER_SIDE), awaySquad.slice(PLAYERS_PER_SIDE)],
+    teamIds,
+    playerStats: players.map((player) => ({
+      playerId: player.statId,
+      teamId: teamIds[player.side],
+      name: player.name,
+      jersey: player.jersey,
+      photo: player.photo,
+      started: true,
+      tackles: 0,
+      tries: 0,
+      metresCarried: 0,
+      enteredAt: 0,
+    })),
+    substitutions: [],
     ball: {
       x: FIELD_W / 2,
       y: CENTRE_Y,
@@ -704,6 +757,167 @@ function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[], homeTe
     match.ball.owner = firstKicker;
   }
   return match;
+}
+
+function elapsedMatchSeconds(match: Match) {
+  const firstHalf = match.half === 2 ? HALF_SECONDS : 0;
+  return clamp(firstHalf + HALF_SECONDS - match.seconds, 0, HALF_SECONDS * 2);
+}
+
+function formatMatchMoment(elapsedSeconds: number) {
+  const safe = clamp(elapsedSeconds, 0, HALF_SECONDS * 2);
+  const half: 1 | 2 = safe < HALF_SECONDS ? 1 : 2;
+  const withinHalf = half === 1 ? safe : safe - HALF_SECONDS;
+  return `${half}ºT · ${formatClock(withinHalf)}`;
+}
+
+function replacePlayer(match: Match, player: Player, replacement: RosterPlayer) {
+  const elapsedSeconds = elapsedMatchSeconds(match);
+  const outgoingName = player.name;
+  const outgoing = match.playerStats.find((stat) => stat.playerId === player.statId);
+  if (outgoing && outgoing.exitedAt === undefined) outgoing.exitedAt = elapsedSeconds;
+
+  const teamId = match.teamIds[player.side];
+  const incomingName = playerDisplayName(replacement);
+  const statId = matchPlayerId(teamId, replacement, match.playerStats.length);
+  match.playerStats.push({
+    playerId: statId,
+    teamId,
+    name: incomingName,
+    jersey: replacement.number ?? player.jersey,
+    photo: replacement.photo,
+    started: false,
+    tackles: 0,
+    tries: 0,
+    metresCarried: 0,
+    enteredAt: elapsedSeconds,
+  });
+  match.substitutions.push({
+    teamId,
+    outgoingName,
+    incomingName,
+    elapsedSeconds,
+    half: match.half,
+  });
+
+  player.statId = statId;
+  player.name = incomingName;
+  player.photo = replacement.photo;
+  player.skills = replacement.skills;
+  player.stamina = 100;
+  player.jersey = replacement.number ?? player.jersey;
+  player.stun = 0;
+  player.tackleLock = 0;
+  player.routeTime = 0;
+}
+
+function recordPlayerStat(match: Match, player: Player, stat: "tackles" | "tries", amount = 1) {
+  const playerStat = match.playerStats.find((item) => item.playerId === player.statId);
+  if (playerStat) playerStat[stat] += amount;
+}
+
+function recordCarriedMetres(match: Match, player: Player, canvasDistance: number) {
+  if (!Number.isFinite(canvasDistance) || canvasDistance <= 0) return;
+  const playerStat = match.playerStats.find((item) => item.playerId === player.statId);
+  if (playerStat) playerStat.metresCarried += canvasDistance / METRE_SCALE;
+}
+
+function snapshotMatchStatistics(match: Match): MatchStatistics {
+  return {
+    players: match.playerStats.map((stat) => ({
+      ...stat,
+      tackles: Math.round(stat.tackles),
+      tries: Math.round(stat.tries),
+      metresCarried: Math.round(stat.metresCarried),
+      enteredAt: Math.round(stat.enteredAt * 10) / 10,
+      exitedAt: stat.exitedAt === undefined ? undefined : Math.round(stat.exitedAt * 10) / 10,
+    })),
+    substitutions: match.substitutions.map((substitution) => ({
+      ...substitution,
+      elapsedSeconds: Math.round(substitution.elapsedSeconds * 10) / 10,
+    })),
+  };
+}
+
+function matchTeamTotals(statistics: MatchStatistics, teamId: string) {
+  const players = statistics.players.filter((player) => player.teamId === teamId);
+  return {
+    tackles: players.reduce((total, player) => total + player.tackles, 0),
+    tries: players.reduce((total, player) => total + player.tries, 0),
+    metresCarried: players.reduce((total, player) => total + player.metresCarried, 0),
+    substitutions: statistics.substitutions.filter((event) => event.teamId === teamId).length,
+  };
+}
+
+function aggregateCampaignStatistics(campaign: ChampionshipCampaign): CampaignStatisticsSummary {
+  const teamResults = campaign.results.filter(
+    (result) => result.homeId === campaign.teamId || result.awayId === campaign.teamId,
+  );
+  const playerMap = new Map<string, AggregatedPlayerStatistics>();
+  const substitutions: SubstitutionStatistics[] = [];
+  let wins = 0;
+  let draws = 0;
+  let pointsFor = 0;
+  let pointsAgainst = 0;
+  let tries = 0;
+  let tackles = 0;
+  let metresCarried = 0;
+  let detailedMatches = 0;
+
+  teamResults.forEach((result) => {
+    const isHome = result.homeId === campaign.teamId;
+    const ownScore = isHome ? result.homeScore : result.awayScore;
+    const opponentScore = isHome ? result.awayScore : result.homeScore;
+    pointsFor += ownScore;
+    pointsAgainst += opponentScore;
+    tries += isHome ? result.homeTries : result.awayTries;
+    if (ownScore > opponentScore) wins += 1;
+    else if (ownScore === opponentScore) draws += 1;
+
+    if (!result.statistics) return;
+    detailedMatches += 1;
+    result.statistics.players
+      .filter((player) => player.teamId === campaign.teamId)
+      .forEach((player) => {
+        tackles += player.tackles;
+        metresCarried += player.metresCarried;
+        const current = playerMap.get(player.playerId);
+        if (current) {
+          current.appearances += 1;
+          current.starts += player.started ? 1 : 0;
+          current.tackles += player.tackles;
+          current.tries += player.tries;
+          current.metresCarried += player.metresCarried;
+          current.exitedAt = player.exitedAt;
+          return;
+        }
+        playerMap.set(player.playerId, {
+          ...player,
+          appearances: 1,
+          starts: player.started ? 1 : 0,
+        });
+      });
+    substitutions.push(
+      ...result.statistics.substitutions.filter((event) => event.teamId === campaign.teamId),
+    );
+  });
+
+  return {
+    played: teamResults.length,
+    wins,
+    draws,
+    losses: teamResults.length - wins - draws,
+    pointsFor,
+    pointsAgainst,
+    tries,
+    tackles,
+    metresCarried: Math.round(metresCarried),
+    detailedMatches,
+    players: [...playerMap.values()].sort(
+      (a, b) => b.tackles + b.tries * 5 + b.metresCarried / 20 - (a.tackles + a.tries * 5 + a.metresCarried / 20),
+    ),
+    substitutions,
+  };
 }
 
 function drawRoundedRect(
@@ -1143,8 +1357,136 @@ function TeamBadge({ team, large = false }: { team: Team; large?: boolean }) {
   );
 }
 
+function PlayerStatisticsTable({ players }: { players: PlayerMatchStatistics[] }) {
+  const ordered = [...players].sort(
+    (a, b) => b.metresCarried + b.tackles * 8 + b.tries * 35 - (a.metresCarried + a.tackles * 8 + a.tries * 35),
+  );
+  return (
+    <div className="player-stat-table" role="table" aria-label="Estatísticas por jogador">
+      <div className="player-stat-row player-stat-head" role="row">
+        <span>Jogador</span><span>TAC</span><span>TRY</span><span>METROS</span>
+      </div>
+      {ordered.map((player) => (
+        <div className="player-stat-row" role="row" key={player.playerId}>
+          <span className="player-stat-identity">
+            <span className="match-stat-avatar" data-initials={playerInitials(player.name)}>
+              {player.photo && <img src={player.photo} alt="" loading="lazy" referrerPolicy="no-referrer" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
+            </span>
+            <span>
+              <strong>#{player.jersey} {player.name}</strong>
+              <small>
+                {player.started
+                  ? player.exitedAt === undefined ? "Titular" : `Saiu · ${formatMatchMoment(player.exitedAt)}`
+                  : `Entrou · ${formatMatchMoment(player.enteredAt)}`}
+              </small>
+            </span>
+          </span>
+          <b>{player.tackles}</b>
+          <b>{player.tries}</b>
+          <b>{Math.round(player.metresCarried)} m</b>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function MatchStatisticsPanel({ match, home, away }: { match: Match; home: Team; away: Team }) {
+  const statistics = snapshotMatchStatistics(match);
+  const sides = [
+    { team: home, teamId: match.teamIds[0] },
+    { team: away, teamId: match.teamIds[1] },
+  ];
+  return (
+    <section className="match-statistics-panel" aria-label="Estatísticas da partida">
+      <div className="section-heading match-statistics-heading">
+        <div><p className="eyebrow">NÚMEROS FINAIS</p><h2>Estatísticas da partida</h2></div>
+        <span className="record-chip">2 tempos · dados do motor de jogo</span>
+      </div>
+      <div className="match-stat-team-cards">
+        {sides.map(({ team, teamId }) => {
+          const totals = matchTeamTotals(statistics, teamId);
+          return (
+            <article key={teamId}>
+              <div><TeamBadge team={team} /><strong>{team.name}</strong></div>
+              <span><b>{totals.tackles}</b><small>Tackles</small></span>
+              <span><b>{totals.tries}</b><small>Tries</small></span>
+              <span><b>{totals.metresCarried}</b><small>Metros</small></span>
+              <span><b>{totals.substitutions}</b><small>Trocas</small></span>
+            </article>
+          );
+        })}
+      </div>
+      <div className="match-player-stat-grid">
+        {sides.map(({ team, teamId }) => (
+          <article key={teamId}>
+            <h3><TeamBadge team={team} /> {team.short} · por jogador</h3>
+            <PlayerStatisticsTable players={statistics.players.filter((player) => player.teamId === teamId)} />
+          </article>
+        ))}
+      </div>
+      <div className="substitution-timeline">
+        <div><p className="eyebrow">SUBSTITUIÇÕES</p><h3>Momento das trocas</h3></div>
+        {statistics.substitutions.length ? (
+          <div>
+            {statistics.substitutions.map((event, index) => (
+              <span key={`${event.teamId}-${event.elapsedSeconds}-${index}`}>
+                <TeamBadge team={teamById(event.teamId)} />
+                <b>{formatMatchMoment(event.elapsedSeconds)}</b>
+                <small>{event.outgoingName} saiu · {event.incomingName} entrou</small>
+              </span>
+            ))}
+          </div>
+        ) : <p>Nenhuma substituição foi realizada.</p>}
+      </div>
+    </section>
+  );
+}
+
+function CampaignStatisticsPage({ campaign, onBack }: { campaign: ChampionshipCampaign; onBack: () => void }) {
+  const team = teamById(campaign.teamId);
+  const summary = aggregateCampaignStatistics(campaign);
+  return (
+    <section className="campaign-stage campaign-statistics-page">
+      <div className="campaign-stats-hero">
+        <button className="back-button" type="button" onClick={onBack}>← Voltar à campanha</button>
+        <div><TeamBadge team={team} large /><span><p className="eyebrow">CENTRAL DE DESEMPENHO · 2026</p><h1>{team.name}</h1><small>{campaign.group} · campanha atual</small></span></div>
+      </div>
+      <div className="campaign-stat-summary">
+        <article><b>{summary.played}</b><small>Jogos</small></article>
+        <article><b>{summary.wins}</b><small>Vitórias</small></article>
+        <article><b>{summary.draws}</b><small>Empates</small></article>
+        <article><b>{summary.losses}</b><small>Derrotas</small></article>
+        <article><b>{summary.pointsFor}</b><small>Pontos pró</small></article>
+        <article><b>{summary.pointsAgainst}</b><small>Pontos contra</small></article>
+        <article><b>{summary.tries}</b><small>Tries</small></article>
+        <article><b>{summary.metresCarried}</b><small>Metros</small></article>
+        <article><b>{summary.tackles}</b><small>Tackles</small></article>
+      </div>
+      <section className="campaign-player-leaders">
+        <div className="section-heading">
+          <div><p className="eyebrow">ELENCO NA CAMPANHA</p><h2>Produção por jogador</h2></div>
+          <span className="record-chip">{summary.detailedMatches}/{summary.played} jogos com dados detalhados</span>
+        </div>
+        {summary.players.length ? (
+          <div className="campaign-player-table" role="table" aria-label="Estatísticas dos jogadores na campanha">
+            <div className="campaign-player-row campaign-player-head" role="row"><span>Jogador</span><span>J</span><span>TIT</span><span>TAC</span><span>TRY</span><span>METROS</span></div>
+            {summary.players.map((player) => (
+              <div className="campaign-player-row" role="row" key={player.playerId}>
+                <span className="player-stat-identity"><span className="match-stat-avatar" data-initials={playerInitials(player.name)}>{player.photo && <img src={player.photo} alt="" loading="lazy" referrerPolicy="no-referrer" onError={(event) => { event.currentTarget.style.display = "none"; }} />}</span><strong>#{player.jersey} {player.name}</strong></span>
+                <b>{player.appearances}</b><b>{player.starts}</b><b>{player.tackles}</b><b>{player.tries}</b><b>{Math.round(player.metresCarried)} m</b>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="campaign-stats-empty"><strong>As estatísticas detalhadas começam na próxima partida.</strong><p>Placares e tries das partidas anteriores continuam contabilizados; tackles, metros e substituições são registrados nas novas partidas jogadas ou simuladas.</p></div>
+        )}
+      </section>
+    </section>
+  );
+}
+
 export function RugbyGame() {
-  const [screen, setScreen] = useState<"setup" | "campaign" | "squad" | "match">("setup");
+  const [screen, setScreen] = useState<"setup" | "campaign" | "campaign-stats" | "squad" | "match">("setup");
   const [gameMode, setGameMode] = useState<GameMode>("friendly");
   const [controlMode, setControlMode] = useState<ControlMode>("control");
   const [campaign, setCampaign] = useState<ChampionshipCampaign | null>(null);
@@ -1434,11 +1776,7 @@ export function RugbyGame() {
       if (!tiredPlayer || tiredPlayer.stamina >= 26) return;
       const replacement = match.bench[side].shift();
       if (!replacement) return;
-      tiredPlayer.name = playerDisplayName(replacement);
-      tiredPlayer.photo = replacement.photo;
-      tiredPlayer.skills = replacement.skills;
-      tiredPlayer.stamina = 100;
-      tiredPlayer.jersey = replacement.number ?? tiredPlayer.jersey;
+      replacePlayer(match, tiredPlayer, replacement);
       match.substitutesLeft[side] = match.bench[side].length;
     });
 
@@ -1668,6 +2006,7 @@ export function RugbyGame() {
       tackler.tackleLock = 1;
       carrier.stamina = Math.max(0, carrier.stamina - 3);
       tackler.stamina = Math.max(0, tackler.stamina - 5);
+      recordPlayerStat(match, tackler, "tackles");
 
       const support = match.players
         .filter((player) => player.side === carrier.side && player !== carrier && player.stun <= 0)
@@ -2372,6 +2711,7 @@ export function RugbyGame() {
         if (tryScored) {
           match.score[newCarrier.side] += 5;
           match.tries[newCarrier.side] += 1;
+          recordPlayerStat(match, newCarrier, "tries");
           prepareRestart(match, newCarrier.side);
           match.kickoff = SCORE_RESTART_SECONDS;
           setMessage(
@@ -2402,7 +2742,12 @@ export function RugbyGame() {
       const simulationSteps = Math.max(1, Math.ceil(matchTimeDelta / (1 / 60)));
       const simulationDt = matchTimeDelta / simulationSteps;
       for (let step = 0; step < simulationSteps; step += 1) {
+        const carrier = match.kickoff <= 0 ? match.ball.owner : null;
+        const carrierStart = carrier ? { x: carrier.x, y: carrier.y } : null;
         updateMatch(match, simulationDt);
+        if (carrier && carrierStart && match.ball.owner === carrier && match.kickoff <= 0) {
+          recordCarriedMetres(match, carrier, distance(carrierStart, carrier));
+        }
       }
       drawField(ctx, match, home, away, now, aimRef.current, controlModeRef.current === "simulate");
 
@@ -2514,6 +2859,7 @@ export function RugbyGame() {
       awayScore,
       homeTries,
       awayTries,
+      statistics: snapshotMatchStatistics(match),
     };
     setCampaign((current) => current ? advanceCampaign(current, result) : current);
     matchRef.current = null;
@@ -2670,14 +3016,7 @@ export function RugbyGame() {
       if (!player) return;
       const replacement = match.bench[0].shift();
       if (!replacement) return;
-      player.name = playerDisplayName(replacement);
-      player.photo = replacement.photo;
-      player.skills = replacement.skills;
-      player.stamina = 100;
-      player.jersey = replacement.number ?? player.jersey;
-      player.stun = 0;
-      player.tackleLock = 0;
-      player.routeTime = 0;
+      replacePlayer(match, player, replacement);
       match.substitutesLeft[0] = match.bench[0].length;
       setMessage(match, `${player.name} entrou com energia total`, 1.3);
       setHud((previous) => {
@@ -3226,7 +3565,7 @@ export function RugbyGame() {
               </div>
 
               <section className="campaign-calendar-card">
-                <div className="section-heading"><div><p className="eyebrow">CALENDÁRIO</p><h2>Todos os jogos do seu clube</h2></div><span className="record-chip">datas oficiais na fase de grupos</span></div>
+                <div className="section-heading"><div><p className="eyebrow">CALENDÁRIO</p><h2>Todos os jogos do seu clube</h2></div><button className="campaign-stats-button" type="button" onClick={() => setScreen("campaign-stats")}>Ver estatísticas <span>→</span></button></div>
                 <div className="campaign-calendar">
                   {campaignCalendar.map((fixture) => {
                     const result = campaign.results.find((item) => item.fixtureId === fixture.id);
@@ -3244,6 +3583,12 @@ export function RugbyGame() {
             </>
           )}
         </section>
+      ) : screen === "campaign-stats" ? (
+        campaign ? (
+          <CampaignStatisticsPage campaign={campaign} onBack={() => setScreen("campaign")} />
+        ) : (
+          <section className="campaign-stage"><div className="campaign-empty"><h1>Nenhuma campanha salva</h1><button className="play-button" type="button" onClick={() => setScreen("setup")}>Escolher um clube <span>→</span></button></div></section>
+        )
       ) : screen === "squad" ? (
         <section className="squad-stage">
           <div className="squad-heading">
@@ -3576,6 +3921,8 @@ export function RugbyGame() {
               </p>
             </section>
           )}
+
+          {hud.over && matchRef.current && <MatchStatisticsPanel match={matchRef.current} home={home} away={away} />}
 
           {hud.over && (
             <div className="result-actions">
