@@ -87,6 +87,7 @@ type Match = {
   kickoff: number;
   restartSide: 0 | 1 | null;
   restartReceivingSide: 0 | 1 | null;
+  whistleOnKickoff: boolean;
   fullbackSide: 0 | 1;
   looseBallSeconds: number;
   attackPlay: AttackPlay | null;
@@ -159,6 +160,8 @@ const SQUAD_SIZE = 12;
 const MID_SLOT = Math.floor(PLAYERS_PER_SIDE / 2);
 const SWEEPER_SLOT = 6;
 const REPLACEMENTS_PER_SIDE = 5;
+const SCORE_CROWD_DELAY_MS = 1150;
+const SCORE_RESTART_SECONDS = 3;
 const CAMPAIGN_STORAGE_KEY = "rugby-br-26-championship-v1";
 const NEUTRAL_SKILLS: PlayerSkills = {
   overall: 65,
@@ -679,6 +682,7 @@ function freshMatch(homeSquad: RosterPlayer[], awaySquad: RosterPlayer[], homeTe
     kickoff: 1.15,
     restartSide: 0,
     restartReceivingSide: 1,
+    whistleOnKickoff: true,
     fullbackSide: 0,
     looseBallSeconds: 0,
     attackPlay: null,
@@ -1412,6 +1416,12 @@ export function RugbyGame() {
     }
   }, [ensureAudioContext]);
 
+  const celebrateScore = useCallback(() => {
+    if (!soundOnRef.current) return;
+    playWhistle();
+    window.setTimeout(playCrowdCelebration, SCORE_CROWD_DELAY_MS);
+  }, [playCrowdCelebration, playWhistle]);
+
   const toggleSound = useCallback(() => {
     const next = !soundOnRef.current;
     soundOnRef.current = next;
@@ -1430,7 +1440,7 @@ export function RugbyGame() {
     match.messageUntil = duration;
   }, []);
 
-  const prepareRestart = useCallback((match: Match, kickingSide: 0 | 1) => {
+  const prepareRestart = useCallback((match: Match, kickingSide: 0 | 1, startsHalf = false) => {
     arrangeRestart(match, kickingSide);
     match.fullbackSide = kickingSide;
     match.looseBallSeconds = 0;
@@ -1473,6 +1483,7 @@ export function RugbyGame() {
     match.kickoff = 1.15;
     match.restartSide = kickingSide;
     match.restartReceivingSide = (1 - kickingSide) as 0 | 1;
+    match.whistleOnKickoff = startsHalf;
     match.blockWindow = 0;
     match.actionLock = 0.45;
     match.cpuActionLock = 0.8;
@@ -1578,16 +1589,16 @@ export function RugbyGame() {
         match.score[0] += 3;
         owner.stamina = Math.max(0, owner.stamina - 7);
         prepareRestart(match, 0);
+        match.kickoff = SCORE_RESTART_SECONDS;
         setMessage(match, "DROP GOAL! · +3 · seu time reinicia", 1.8);
-        playCrowdCelebration();
-        beep(760, 0.22);
+        celebrateScore();
       } else {
         prepareRestart(match, 1);
         setMessage(match, "Drop para fora — drop-out adversário", 1.6);
         beep(160, 0.14);
       }
     },
-    [beep, playCrowdCelebration, prepareRestart, setMessage],
+    [beep, celebrateScore, prepareRestart, setMessage],
   );
 
   const performBlock = useCallback(() => {
@@ -1743,7 +1754,10 @@ export function RugbyGame() {
           match.actionLock = 0.22;
           if (kicker) kicker.stamina = Math.max(0, kicker.stamina - 3);
           setMessage(match, "Drop-kick de reinício — bola viva!", 1.25);
-          playWhistle();
+          if (match.whistleOnKickoff) {
+            match.whistleOnKickoff = false;
+            playWhistle();
+          }
         }
         return;
       }
@@ -1774,7 +1788,7 @@ export function RugbyGame() {
           match.seconds = HALF_SECONDS;
           match.paused = true;
           match.halftime = true;
-          prepareRestart(match, 1);
+          prepareRestart(match, 1, true);
           setMessage(match, "Intervalo · prepare o time para o 2º tempo", 60);
           beep(420, 0.18);
           return;
@@ -2392,6 +2406,7 @@ export function RugbyGame() {
           match.score[newCarrier.side] += 5;
           match.tries[newCarrier.side] += 1;
           prepareRestart(match, newCarrier.side);
+          match.kickoff = SCORE_RESTART_SECONDS;
           setMessage(
             match,
             newCarrier.side === 0
@@ -2399,12 +2414,11 @@ export function RugbyGame() {
               : "Try adversário · eles cobram o reinício",
             1.8,
           );
-          playCrowdCelebration();
-          beep(newCarrier.side === 0 ? 880 : 120, newCarrier.side === 0 ? 0.22 : 0.2);
+          celebrateScore();
         }
       }
     },
-    [beep, bestWins, gameMode, passBall, playCrowdCelebration, playWhistle, prepareRestart, setMessage, tackle],
+    [beep, bestWins, celebrateScore, gameMode, passBall, playWhistle, prepareRestart, setMessage, tackle],
   );
 
   const frame = useCallback(
@@ -2582,8 +2596,7 @@ export function RugbyGame() {
       substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
     setScreen("match");
-    beep(520, 0.12);
-  }, [away.id, awayRoster, beep, controlMode, home.id, selectedSquad]);
+  }, [away.id, awayRoster, controlMode, home.id, selectedSquad]);
 
   const restartMatch = useCallback(() => {
     const cpuSquad = bestSquadIndexes(awayRoster.players).map((index) => awayRoster.players[index]);
@@ -2607,8 +2620,7 @@ export function RugbyGame() {
       bench: selectedSquad.slice(PLAYERS_PER_SIDE),
       substitutesLeft: REPLACEMENTS_PER_SIDE,
     });
-    beep(520, 0.12);
-  }, [away.id, awayRoster, beep, home.id, selectedSquad]);
+  }, [away.id, awayRoster, home.id, selectedSquad]);
 
   const togglePause = useCallback(() => {
     const match = matchRef.current;

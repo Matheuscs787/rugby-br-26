@@ -41,8 +41,8 @@ controláveis ou simuladas e modo campeonato.
 - nomes, apelidos, fotos e estatísticas quando disponíveis nas fontes públicas;
 - escalação automática dos 12 maiores overalls, que pode ser alterada pelo usuário;
 - PWA instalável, funcionamento offline básico e layout adaptado para celular;
-- áudio leve, com uma amostra real de apito no início/reinícios, efeitos das
-  ações importantes e torcida comemorando tries e drop goals;
+- áudio leve, com uma amostra real de apito na abertura de cada tempo e na
+  confirmação dos pontos, além de efeitos das ações importantes;
 - publicação estática compatível com GitHub Pages.
 
 ## Como jogar
@@ -91,10 +91,10 @@ O áudio começa ligado. No primeiro toque, clique ou tecla, o jogo desbloqueia 
 ou `Som off` alterna o áudio; ao reativar, um sinal curto confirma imediatamente
 que o navegador liberou a saída.
 
-- o drop-kick de início e cada reinício recebem um sopro curto de apito real de
-  árbitro;
-- tries e drop goals recebem uma comemoração de torcida com aproximadamente
-  2,35 segundos;
+- o 1º e o 2º tempo começam com um sopro curto de apito real de árbitro; os
+  reinícios depois de pontuação não recebem outro apito;
+- tries e drop goals são confirmados pelo apito e, cerca de um segundo depois,
+  recebem uma comemoração de torcida com aproximadamente 2,35 segundos;
 - tackles, chutes, drops e rucks mantêm efeitos curtos de resposta;
 - passes e substituições são silenciosos para não poluir a partida com sons a
   cada ação ou clique;

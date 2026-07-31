@@ -56,7 +56,7 @@ test("ships lightweight PWA and game assets", async () => {
 
   assert.match(manifest, /"display": "standalone"/);
   assert.match(manifest, /icon-192\.png/);
-  assert.match(serviceWorker, /rugby-br-26-v23-referee-whistle/);
+  assert.match(serviceWorker, /rugby-br-26-v24-scoring-whistles/);
   assert.match(serviceWorker, /audio\/referee-whistle\.mp3/);
   assert.match(serviceWorker, /self\.registration\.scope/);
   assert.match(serviceWorker, /text\/x-component/);
@@ -95,6 +95,15 @@ test("ships lightweight PWA and game assets", async () => {
   assert.match(gameSource, /\/audio\/referee-whistle\.mp3/);
   assert.match(gameSource, /playWhistle/);
   assert.match(gameSource, /playCrowdCelebration/);
+  assert.match(gameSource, /const SCORE_CROWD_DELAY_MS = 1150/);
+  assert.match(gameSource, /window\.setTimeout\(playCrowdCelebration, SCORE_CROWD_DELAY_MS\)/);
+  assert.match(gameSource, /whistleOnKickoff/);
+  assert.match(gameSource, /prepareRestart\(match, 1, true\)/);
+  assert.match(gameSource, /match\.kickoff = SCORE_RESTART_SECONDS/);
+  assert.equal((gameSource.match(/\bplayWhistle\(\);/g) ?? []).length, 2);
+  assert.equal((gameSource.match(/\bcelebrateScore\(\);/g) ?? []).length, 2);
+  assert.doesNotMatch(gameSource, /beep\(760, 0\.22\)/);
+  assert.doesNotMatch(gameSource, /beep\(520, 0\.12\)/);
   assert.doesNotMatch(gameSource, /beep\(480, 0\.06\)/);
   assert.doesNotMatch(gameSource, /beep\(680, 0\.08\)/);
   assert.match(gameSource, /onClick=\{toggleSound\}/);

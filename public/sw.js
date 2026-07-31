@@ -1,4 +1,4 @@
-const CACHE = "rugby-br-26-v23-referee-whistle";
+const CACHE = "rugby-br-26-v24-scoring-whistles";
 const SCOPE_URL = new URL("./", self.registration.scope).toString();
 const CORE = ["./", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./audio/referee-whistle.mp3"].map(
   (path) => new URL(path, self.registration.scope).toString(),
